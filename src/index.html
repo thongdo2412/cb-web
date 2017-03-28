@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  <meta charset="UTF-8">
+	<title>City Beauty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,900|Playfair+Display:300,400,400i">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <style type="text/css">
+  /* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
+
+*{
+  margin:0 auto;
+}
+header,footer{background: #091e37 center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: contain;}
+/*.container{width: 960px;margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;}
+/*.greyline{border-width: 1px;border-color: rgb(235, 235, 235);border-style: solid;background-color: rgb(255, 255, 255);}*/
+.nav{height: 20px;display: flex; flex-flow: row nowrap;justify-content: space-around;}
+.nav_item{width: 110px;font-size: 12px;}
+.biggerfont{font-family: "Playfair Display",serif;font-size: 38px;}
+.smallerfont{font-size: 20px;font-weight: 300}
+.button{width: 150px;height: 30px;font-size: 14px;border-width: 1px;
+border-color: rgb(6, 16, 42);
+border-style: solid;
+background-color: rgb(6, 16, 42);
+color: rgb(255, 255, 255);text-align: center;padding-top: 5px;}
+
+.button_wht{width: 150px;height: 30px;font-size: 14px;border-width: 1px;
+border-color: rgb(6, 16, 42);
+border-style: solid;
+background-color: rgb(255, 255, 255);
+color: rgb(6, 16, 42);text-align: center;margin: 0 auto;padding-top: 5px;}
+.banner1{display: flex;
+  align-items: center;
+  justify-content: center;
+margin-left: auto;
+margin-right: auto;
+}
+.banner2{width: 748px;height: 540px;display: flex;
+  align-items: center;
+  justify-content: center;
+margin-left: auto;
+margin-right: auto;
+}
+.banner3{background-image: url("../img/gift_bg.png");background-size: cover;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+margin: 0 auto;
+}
+.banner4{height: 480px;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      justify-content: space-around;
+}
+.banner5{width: 90%;display: flex;
+  align-items: center;
+  justify-content: center;padding-left: 150px;}
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+ margin-right: auto;
+  > li {
+    float: none;
+    display: inline-block;
+  }
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {display: inline-block;padding: 0 15px;position: relative;}
+h2:before,h2:after {background: #000;content: "";display: block;height: 1px;position: absolute;top: 50%;width: 20%;}
+h2:before {right: 80%;}
+h2:after {left: 80%;}
+.line-on-side{overflow: hidden;text-align: center;}
+body{text-align: center;font-family: "Montserrat",sans-serif;width: 100%;
+height: 100%;
+margin:0px;
+padding:0px;
+overflow-x: hidden;}
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+}
+  </style>
+  <body>
+    <header>
+      <div class="container-fluid">
+        <div style="padding-top:20px"><img src="../img/citylogo.png"></img></div>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">LIPS</a></li>
+          <li><a href="#">LASH</a></li>
+          <li><a href="#">SKIN</a></li>
+          <li><a href="#">BODY</a></li>
+          <li><a href="#">MEDIA</a></li>
+          <li><a href="#">VIEW CART</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+    <div class="row" style="padding-left:100px">
+      <div class="col-md-5">
+        <div style="text-align:left">
+        <p class="biggerfont">News!</p>
+        <p class="biggerfont">Experience Instantly</p>
+        <p class="biggerfont" style="font-style:italic">Brighter Eyes</p>
+        <p>&nbsp</p>
+        <p class="smallerfont"><p>WITH UNDER EYES RECOVERY</p>
+          <p>BY CITY BEAUTY</p>
+        </p>
+        <p>&nbsp</p>
+        <div class="button">DISCOVER</div>
+      </div>
+    </div>
+      <div class="col-sm-3">
+        <img src="../img/undereye.png"></img>
+    </div>
+      <div class="col-sm-3">
+        <img src="../img/cream.png"></img>
+    </div>
+    </div>
+  </div>
+
+<hr>
+      <div class="container">
+        <div class="row" style="padding-left:100px">
+            <div class="col-md-5" style="text-align:left">
+              <p class="biggerfont">City Lips</p>
+              <p class="biggerfont" style="font-style:italic">Plump, Hydrate &amp; Repair</p>
+              <p>&nbsp</p>
+              <div class="button">SHOP NOW</div>
+            </div>
+            <div class="col-sm-3">
+              <img src="../img/citylips.png"></img>
+            </div>
+            <div class="col-sm-3">
+              <img src="../img/bf_aft.png"></img>
+            </div>
+        </div>
+      </div>
+
+<hr>
+
+    <div class="banner3">
+      <div class="row vertical-center">
+        <div class="col-md-6" style="background-color: rgb(255, 255, 255)">
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <p class="biggerfont">Enjoy Free Shipping</p>
+          <p class="biggerfont" style="font-style:italic">with Any &#36;50 Purchase</p>
+          <p>&nbsp</p>
+          <p class="smallerfont">NO CODE NEEDED.</p>
+          <p>&nbsp</p>
+          <div class="button"style="margin:0 auto;">SHOP NOW</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+          <div> &nbsp</div>
+      </div>
+  </div>
+</div>
+
+<hr>
+  <div id="b4">
+    <div class="container">
+      <div class="biggerfont">Top Sellers</div>
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="../img/rated_citylip.png"></img>
+          <div class="button_wht">SHOP NOW</div>
+        </div>
+        <div class="col-sm-3">
+          <img src="../img/rated_dkspot.png"></img>
+        </div>
+        <div class="col-sm-3">
+          <img src="../img/rated_citylash.png"></img>
+        </div>
+        <div class="col-sm-3">
+          <img src="../img/rated_undereye.png"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+
+    <div class="container">
+      <div class="banner5">
+        <div style="text-align:left">
+          <p class="biggerfont">Stay Up to Date</p>
+          <p>&nbsp </p>
+          <p class="smallerfont">WE HAVE SOME EXCITING THINGS PLANNED FOR 2017 -</p>
+          <p style="font-size:16px;font-weight:300px">including a highly anticipated tweak
+            to your favorite product and new additions. Its starting this Spring, so don't miss out.
+          </p>
+          <p> &nbsp </p>
+         <p style="font-size:16px;font-weight:300px">Sign up below for instant notifications and get a sneak peak at what's ahead.</p>
+         <p> &nbsp </p>
+         <div class="row">
+           <div class="col-md-3">
+             <div class="input-group">
+               <input type="text" class="form-control" placeholder="First name...">
+
+             </div>
+           </div>
+           <div class="col-md-3">
+             <div class="input-group">
+               <input type="text" class="form-control" placeholder="Email address...">
+             </div>
+           </div>
+           <div class="col-md-3">
+             <span class="input-group-btn">
+               <button class="button">SUBMIT</button>
+             </span>
+           </div>
+         </div>
+      </div>
+      </div>
+      <div> &nbsp</div>
+      <div> &nbsp</div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row" style="font-size:10px; font-weight:300px;color: rgb(255,255,255);padding-top:20px">
+          <div class="col-md-8">
+          <p>&reg; City Cosmetics 2017. City Lips and City Lash are registered trademarks of City Cosmetics, LLC.
+            All rights reserved. </p>
+        </div>
+        <div class="col-md-3">
+          <p>PRIVACY POLICY  |  TERMS &amp; CONDITIONS  |  SITEMAP</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1">
+        <img style="padding-left:95px;padding-top:5px" src="../img/social_icon.png"></img>
+      </div>
+      </div>
+    </div>
+    </footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  <meta charset="UTF-8">
+	<title>City Lips</title>
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Raleway:100,300,300i,400,600,600i|Playfair+Display">
+
+  </head>
+  <style type="text/css">
+  /* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
+
+*{
+  margin:0 auto;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background-size: 100% auto;
+  min-width: 20%;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  background: #000000 repeat;
+  color: #fff;
+  height: 84px;
+  margin: 0 auto;
+}
+.footer {
+  background: #000000 repeat;
+  color: #fff;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.office_hours{
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  text-align: center;
+  height: 30px;
+}
+
+.sup{
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-align: center;
+  vertical-align: super;
+}
+
+.sup1{
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  vertical-align: super;
+}
+
+.Shape_3_copy_3 {
+  border-width: 1px;
+  border-color: rgb(235, 235, 235);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  left: -57px;
+  top: 118px;
+  height: 0px;
+  z-index: 15;
+}
+
+.topsection {font-family: "Raleway", sans-serif;color: rgb(51, 51, 51);text-align: center;display: flex;justify-content: center;align-items: center;}
+
+.toptext{
+  height: 380px;
+  width: 530px;
+}
+
+.packageoptions{
+  width: 960px;
+  height: 340px;
+}
+
+.Rectangle_2 {
+  border-width: 1px;
+  text-align: center;
+  float:left;
+  position: relative;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  width: 226px;
+  height: 340px;
+  z-index: 32;
+}
+.box_title {
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  font-style:italic;
+  overflow: hidden;
+  text-align: center;
+}
+.box_bottom{
+  height: 100px;
+}
+
+
+.orderButton{background: url("../img/addToCart.png") no-repeat; width: 200px; height: 39px; margin: auto; margin-top: 10px; text-align: center;}
+.orderButton:hover{background-position: 0 -39px; cursor: pointer;}
+.orderButton a{text-decoration: none; color: #fff; font-weight: bold; font-size: 18px; line-height: 40px;}
+
+.darker_bg{
+  background: #f8f9f9 repeat;
+  background-size: cover;
+
+}
+
+.video_box{
+  width: 854px;
+  height: 479px;
+  margin: 0 auto;
+}
+
+.testi_box{
+  width: 960px;
+  height: 240px;
+  border-width: 1px;
+  border-top-color: rgb(235, 235, 235);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-style: solid;
+  text-align: left;
+}
+.testi_usr{
+  width: 218px;
+  float:left;
+}
+.testi_wrd{
+  width: 743px;
+  float:right;
+}
+
+.trythis_box{
+  width: 280px;
+  font-size: 14px;
+}
+
+.faq_box{
+  width: 732px;
+  text-align: left;
+  border-bottom: 1px solid rgba(235, 235, 235, 1);
+}
+
+.wrapper {
+  width: 960px;
+  height: 260px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+fieldset {
+  width: 100%;
+  height: 100%;
+  margin-top: .7em;
+  transform: rotate3d(1, 180deg, 0, 0);
+  border: 1px solid rgba(235, 235, 235, 1);
+}
+
+h1 {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+
+h1:before,
+h1:after {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+    width: 400%;
+}
+
+h1:before {
+  right: 100%;
+}
+
+h1:after {
+  left: 100%;
+}
+
+.line-on-side {
+  overflow: hidden;
+  text-align: center;
+}
+
+.clearfloat{
+  clear:both;
+}
+
+h2 {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+
+h2:before,
+h2:after {
+  background: #000;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+    width: 400%;
+}
+
+h2:before {
+  right: 100%;
+}
+
+h2:after {
+  left: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+}
+body{
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+}
+</style>
+<body>
+
+  <header class="header">
+        <div class="container">
+          <div style="display:flex;justify-content:center;align-items:center;padding-top:20px;"><img src="../img/logo.png"></img></div>
+          <div class="sup" style="position:relative; bottom:45px;left:72px;">&reg;</div>
+      </div>
+    </header>
+
+    <div class="office_hours">
+      <div class="container" style="padding-top:5px">
+        <p><span style="font-weight:900;font-size:12px;">1-800-347-1558</span>  /   Monday-Friday: 5am-7pm PT   /   Saturday-Sunday: 6am-4:30pm PT</p>
+      </div>
+  </div>
+    <div class="Shape_3_copy_3"></div>
+
+    <!--main content -->
+<div id="mainContent">
+    <div class="topsection">
+      <div class="container" style="width:854px;height:420px;padding-top:20px;">
+            <div style="width:556px">
+              <div style="font-size:38px;">Special <span style="font-style:italic;font-weight:600">Internet Only Offer</span> On City Lips<span class="sup1" style="font-size:28px">&reg;</span>
+              </div>
+              <div>&nbsp</div>
+              <div>
+                  <p>YOU'RE ABOUT TO JOIN THOUSANDS OF WOMEN WHO ENJOYING PLUMP, YOUNGER-LOOKING LIPS.</p>
+                  <div>&nbsp</div>
+                  <p style="font-weight:300">And to make it even easier, we're offering additional savings on multi-tube packages.
+                    This allows us to save on the cost of processing each other individually, savings that we pass on to you.</p>
+                  <div>&nbsp</div>
+                    <p style="font-style:italic">All order are one-time purchases.</p>
+                    <p style="font-weight:300;font-style:italic">We do not auto-bill your credit card.</p>
+                </div>
+            </div>
+            <div style="padding-left:600px;position:relative; bottom:340px"><img src="../img/bf_aft.png"></img></div>
+        </div>
+        <div class="clearfloat"></div>
+      </div>
+
+      <!--choose packages section -->
+        <div class="Shape_3_copy_3"></div>
+        <div id="orderSection">
+          <div class="container">
+            <div style="font-weight:600;font-size:24px;padding-top:30px;display:flex;justify-content:center;">Choose Your Package</div>
+          <div style="padding-left:250px;padding-top:10px"><img src="../img/mostPop2.png"></img></div>
+          <div class="packageoptions">
+            <div class="Rectangle_2">
+              <div class="box_title" style="padding-top:24px;"><h2>Basic</h2></div>
+              <div>&nbsp</div>
+              <p style="font-weight:300">1 TUBE OF CITY LIPS<span style="font-size:11px;vertical-align:top">&reg;</span></p>
+              <div>&nbsp</div>
+              <p style="font-weight:300;font-size:18px">RETAIL: <span style="text-decoration: line-through">$45</span></p>
+              <div>&nbsp</div>
+              <p style="font-weight:600;font-size:18px;font-style:italic">ONLY $35</p>
+              <div class="box_bottom" style="padding-top:23px">
+                <div class="orderButton"><a href="http://citycosmetics.com/cmd.php?pid=9fa8539faceb4050bbc0ddff0d905b65&bn=1&clear=1"
+                  onclick="showExit = false;"><div>Get Started</div></a></div>
+                <div>&nbsp</div>
+                <p style="font-weight:400;font-size:16px">+ FREE SHIPPING</p>
+            </div>
+            </div>
+            <div class="Rectangle_2" style="left:30px;">
+                <div class="box_title" style="padding-top:24px;"><h2>Combo</h2></div>
+                <div>&nbsp</div>
+                <p style="font-weight:300">2 TUBES OF CITY LIPS<span style="font-size:11px;vertical-align:top">&reg;</span></p>
+                <div>&nbsp</div>
+                <p style="font-weight:300;font-size:18px">RETAIL: <span style="text-decoration: line-through">$90</span></p>
+                <p style="font-weight:300;font-size:18px">NOW: $60</p>
+                <p style="font-weight:600;font-size:18px;font-style:italic">ONLY $30 EACH</p>
+                <div class="box_bottom" style="padding-top:20px;">
+                  <div class="orderButton"><a href="http://citycosmetics.com/cmd.php?pid=8c458d66ae344e4eb37385fc36bfb9f4&bn=1&clear=1"
+                    onclick="showExit = false;"><div>Get Started</div></a></div>
+                  <div>&nbsp</div>
+                  <p style="font-weight:400;font-size:16px">+ FREE SHIPPING</p>
+                </div>
+            </div>
+
+            <div class="Rectangle_2" style="left:60px;">
+                <div class="box_title" style="padding-top:24px;"><h2>Value</h2></div>
+                <div>&nbsp</div>
+                <p style="font-weight:300">3 TUBES OF CITY LIPS<span style="font-size:11px;vertical-align:top">&reg;</span></p>
+                <div>&nbsp</div>
+                <p style="font-weight:300;font-size:18px">RETAIL: <span style="text-decoration: line-through">$135</span></p>
+                <p style="font-weight:300;font-size:18px">NOW: $70</p>
+                <p style="font-weight:600;font-size:18px;font-style:italic">ONLY $23 EACH</p>
+                <div class="box_bottom" style="padding-top:20px;">
+                  <div class="orderButton"><a href="http://citycosmetics.com/cmd.php?pid=24869bee26d24d3d8234086936e3e967&bn=1&clear=1"
+                    onclick="showExit = false;"><div>Get Started</div></a></div>
+                  <div>&nbsp</div>
+                  <p style="font-weight:400;font-size:16px">+ FREE SHIPPING</p>
+                </div>
+            </div>
+            <div style="float:right;position: relative; bottom:60px;"><img src="../img/product.png"></img></div>
+          </div>
+          <div class="60days" style="width:960px;text-align:left;float:left">
+            <div style="font-size:20px;">60 DAY MONEY BACK GUARANTEE</div>
+            <div style="width:764px;font-weight:300;">You have 60 days to try City Lips<span id="sup1">&reg;</span>
+            and see the results for yourself. If you are not 100% satisfied, if you do not experience fuller, healthier,
+          younger looking lips, simply contact us and we will gladly refund your money.
+          <span style="font-style:italic">No questions asked.</span></div>
+          </div>
+          <div style="float:right;position:relative; bottom:120px; right:24px"><img src="../img/guarantee-1.png"></img></div>
+        </div>
+        <div class="clearfloat"></div>
+      </div>
+
+
+      <div class="Shape_3_copy_3"></div>
+
+      <div class="darker_bg">
+        <div class="container" style="width:854px;height:2300px">
+          <div>&nbsp</div>
+          <div style="font-size:33px; font-weight:600;">In the Media</div>
+          <div>&nbsp</div>
+          <div>&nbsp</div>
+          <div class="line-on-side" style="display:flex;justify-content:center;align-items:center;">
+            <h1><img src="../img/abc_logo.png"></img></h1>
+        </div>
+        <div>&nbsp</div>
+        <div class="video_box">
+          <iframe width="854" height="479" src="https://www.youtube.com/embed/JK-0A1ILtNw" frameborder="0" allowfullscreen></iframe>
+        </div>
+      <div>&nbsp</div>
+      <div>&nbsp</div>
+        <div style="text-align:center;">
+          <div class="line-on-side" style="font-size:26px;"><h1>GH Research Institute Test</h1></div>
+          <div>&nbsp</div>
+          <p style="font-size:20px; font-weight: 300;">FOUND THAT CITY LIPS<span class="sup1">&reg;</span> INCREASED LIP VOLUME BY AN AVERAGE OF 3 MILLIMETERS</p>
+      </div>
+
+        <div class="ghresearch">
+          <div>&nbsp</div>
+          <div style="display:flex;justify-content:center;align-items:center;width:854px;">
+            <div style="float:left"><img src="../img/research_screenshot.png"></img></div>
+            <div style="font-weight:300; font-size:18px;width:260px; float:right;padding-left:20px;text-align:left"><p>A group of 15 women ages 17-40 applied City Lips<span class="sup1">&reg;</span>
+               Advanced formula every night for 30 days. Instant visible results are shown after 10 minutes of application and long term results are shown after 30 days of continued use.</p>
+              <p><span style="font-style:italic">Photos are all actual results.</span></p>
+            </div>
+          </div>
+        </div>
+
+      <div class="goodhousekeeping">
+        <div class="line-on-side"><h1><img src="../img/goodhousekeeping.png"></img></h1></div>
+      <div>&nbsp</div>
+        <div style="float:left"><img src="../img/winslet.png"></img> </div>
+
+        <div>
+          <div style="float:left;padding-left:60px"><img src="../img/quotes.png"></img></div>
+          <div style="width: 512px;font-size:18px; font-weight:300; text-align:left;float:right">
+          <p>Want lips this lush? Our testers did, so we asked them to try different
+          treatments for a month, in hopes of releasing their inner Angelina Jolie. THE WINNERS: City Lips<span class="sup1">&reg;</span> clear gloss Lip
+          Plumping Treatment created the fullest smoochers.</p>
+          <p style="font-size:13px;">- GOOD HOUSEKEEPING MAGAZINE, PAGE 45.</p>
+          &nbsp
+          </div>
+
+          <div style="float:left;padding-left:60px;padding-top:105px"><img src="../img/quotes.png"></img></div>
+          <div style="width: 512px;font-size:18px; font-weight:300; text-align:left;float:right">
+            <p>...The original winner. City Lips<span class="sup1">&reg;</span> is still champion.</p>
+              <p style="font-size:13px;">- GOOD HOUSEKEEPING</p>
+        </div>
+      </div>
+
+      </div>
+      <div class="clearfloat"></div>
+      <div> &nbsp</div>
+      <div> &nbsp</div>
+      <div>
+        <div class="line-on-side"><h1><img src="../img/fox_logo.png"></img></h1></div>
+        <div> &nbsp</div>
+        <div class="video_box"><iframe width="854" height="479" src="https://www.youtube.com/embed/x89HqXshZvQ" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Shape_3_copy_3"></div>
+  <div>&nbsp</div>
+  <div class="testi">
+    <div class="container">
+      <div style="font-size:33px;">Real stories from recent customers</div>
+    <div>&nbsp</div>
+    <div>&nbsp</div>
+      <div class="testi_box">
+        <div class="testi_usr" style="position:relative; top: 20px">
+          <div><img src="../img/stars_rating.png"></img></div>
+          <div><p style="font-size:16px;">KW &nbsp</p>
+            <p> <span style="font-style:italic">Texas</span></p>
+          </div>
+        </div>
+        <div class="testi_wrd" style="position:relative; bottom:70px">
+          <div> <p style="font-size:22px;">I love the product</p>
+            <div>&nbsp</div>
+             <p style="font-weight:300;">
+              I LOVE this stuff. The warm tingle (not a burning or stinging,a warm pleasant tingle) feels SO good.
+              My lips are so soft now. Plumper as well (people have noticed and commented...someone actually asked me if I got some collagen
+              ,LOL), but I bought it originally for the smoothing, moisturizing properties because I always thought those products
+              were pure BS. I used it in a sample I got and woke up with much puffier lips. Awesome! I'm on my...what,fifth tube now? I love it!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="testi_box">
+        <div class="testi_usr">
+          <div><img src="../img/stars_rating.png"></img></div>
+          <div><p style="font-size:16px;">Loren &nbsp</p>
+            <p> <span style="font-style:italic">California</span></p>
+          </div>
+        </div>
+        <div class="testi_wrd" style="position:relative; bottom:90px">
+          <div> <p style="font-size:22px;">I woke up and I swear my lips are bigger</p>
+            <div>&nbsp</div>
+             <p style="font-weight:300;">
+               Wow, I'm impressed. My lips are actually full - not Angelina full but people always comment that they are big.
+               1. I can use this over/under anything. 2. I rushed to apply OVER lipstick and forgot about it until 30 min
+               later when I felt like my lips were swollen. It worked over my lipstick! 3. I used this before bed
+               (rubbed with my finger so it wasn't as goopy) and it did tingle more when applied directly on skin.
+               I woke up and I swear my lips are bigger and my lips are really smooth. so we'll see what this does long-term.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="testi_box">
+        <div class="testi_usr" style="position:relative; bottom: 50px">
+          <div><img src="../img/stars_rating.png"></img></div>
+          <div><p style="font-size:16px;">Jill &nbsp</p>
+            <p> <span style="font-style:italic">Connecticut</span></p>
+          </div>
+        </div>
+        <div class="testi_wrd" style="position:relative; bottom: 140px">
+          <div> <p style="font-size:22px;">I love the product</p>
+            <div>&nbsp</div>
+             <p style="font-weight:300;">
+               All I ask of a beauty product is that it lives up to advertising claims. City Lips® Advanced
+               Formula lip plumper does what it's supposed to do. It's also the best available lip moisturizer.
+               Even in the dryest desert weather, one coat at night keeps lips from drying until morning.
+               And the customer service at City Lips is the best around!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfloat"></div>
+    </div>
+  </div>
+  <div class="Shape_3_copy_3"></div>
+
+  <div class="citylipschallenge">
+    <div class="container">
+      <div style="margin: 0 auto;">
+      <div style="font-size:33px; margin-top: 60px;">The City Lips<span class="sup1">&reg;</span> Challenge</div>
+      <div style="font-size:43px;margin-top:20px;float:left;padding-left:180px">&verbar;</img></div>
+      <div style="text-align:left;font-size:18px; padding-left: 200px; padding-top:26px">Results from our test
+        group showed that using City Lips for 30 days resulted in an average increase in lip volume by 3mm.</div>
+      </div>
+
+      <div class="clearfloat"></div>
+      <div>&nbsp</div>
+      <div style="font-weight:300; font-size:20px;">WE WANT YOU TO EXPERIENCE IT FOR YOURSELF.</div>
+      <div>&nbsp</div>
+      <div class="wrapper">
+          <fieldset>
+            <legend align="center"><span style="font-size:26px;">So try this</span>
+            </legend>
+            <div style="padding-left:60px">
+              <div class="trythis_box" style="float:left;padding-top:2px">
+                <div style="font-family:Playfair Display;font-size:37px;">1</div>
+                <div>Take out your phone and snap a picture of your lips as it is right now.
+                  This is will be your "before" picture.
+                </div>
+              </div>
+              <div class="trythis_box" style="float:left;padding-left:26px">
+                <div style="font-family:Playfair Display;font-size:37px;">2</div>
+                <div>Then, when your order arrives, use City Lips<span class="sup1" style="font-size:14px;">&reg;</span> every night -
+                  and as often as you like throughout the day - for 30 days.
+                </div>
+              </div>
+              <div class="trythis_box" style="float:left;padding-left:26px">
+                <div style="font-family:Playfair Display;font-size:37px;">3</div>
+                <div>After 30 days, take an "after" photo and send it in! We'd love to see
+                  you enjoying your naturally fuller lips!
+                </div>
+              </div>
+              <div class="clearfloat"></div>
+            </div>
+
+            <div>&nbsp</div>
+            <div style="width:840px; padding-left:64px;font-size:16px; font-style:italic;">However, if you don't notice smoother, softer, fuller lips...and if you don't think it's the best lip treatment
+              ever...send back the unused portion and we'll refund every penny.</div>
+          </fieldset>
+        </div>
+    </div>
+<div>&nbsp</div>
+  </div>
+
+  <div class="Shape_3_copy_3"></div>
+  <div class="darker_bg">
+    <div class="container">
+      <div style="font-size:33px; padding-top: 20px">100% Money-Back Guarantee</div>
+          <div style="text-align:left;padding-top:20px;float:left; width:800px">
+            <div>This could be the best investment you make for your lips and we want to make the decision easy for you. </div>
+            <div>&nbsp</div>
+            <div>You have 60 days to try City Lips<span class="sup1">&reg;</span> and see the results for yourself. If you are not 100% satisfied,
+              If you do not experience fuller, healthier, younger looking lips, simply contact us and we will gladly
+              refund your money. No questions asked.</div>
+          </div>
+            <div style="float:right"> <img src="../img/guarantee-1.png"></img></div>
+      <div class="clearfloat"></div>
+      <div>&nbsp</div>
+    </div>
+  </div>
+  <div class="Shape_3_copy_3"></div>
+    <div>&nbsp</div>
+      <div>&nbsp</div>
+  <div class="FAQs">
+    <div class="container">
+              <div style="font-size:33px;text-align:left;float:left"><p>Frequently</p>
+                <p>Asked</p> <p>Questions</p></div>
+              <div class="faq_box" style="float:right">
+                  <p>WHICH ORDER OPTIONS IS RIGHT FOR ME?</p>
+                  <div>&nbsp</div>
+                  <p>Many of our returning customers appreciate the 3-pack because it
+                  offers the best value. And we're happy to do it because it saves us the cost of processing individual units.
+                  If you just want to try 1 tube, we've already reduced the price far below original retail.
+                  So you can't go wrong with any of the options. And I just know that you'll fall in love with your new lips either way.</p>
+                    <div>&nbsp</div>
+              </div>
+              <div class="faq_box" style="float:right">
+                  <div>&nbsp</div>
+                  <p>WHEN CAN I EXPECT MY ORDER TO ARRIVE?</p>
+                  <div>&nbsp</div>
+                  <p>
+                    We know you can't wait to start trying City Lips<span class="sup1">&reg;</span> and experiencing the amazing difference for yourself.
+                    That's why our shipping department is operational 7 days a week. That way, your order leaves our facilities
+                    within 24-hours. Transit usually takes 3-5 business days depending on what part of the country you're in.
+                  </p>
+                    <div>&nbsp</div>
+              </div>
+              <div style="width:732px;text-align:left;float:right">
+                <div>
+                  <div>&nbsp</div>
+                  <p>WHICH ORDER OPTIONS IS RIGHT FOR ME?</p>
+                  <div>&nbsp</div>
+                  <p>
+                    We take your privacy very seriously. That's why we use a variety of security measures to
+                    maintain the safety of your personal information. </p>
+                    <div>&nbsp</div>
+                    <p>When you place an order or access your personal information, everything goes through a
+                      secure server. All of your personal information, including credit card number, name, and address,
+                       is transmitted via Secure Socket Layer (SSL) technology — the industry standard for secure online transactions.</p>
+                       <div>&nbsp</div>
+                       <p>If you would rather not shop online, you can place your order over the phone by calling us at 1-800 347-1558</p>
+                  </p>
+                  <div>&nbsp</div>
+                  <div>&nbsp</div>
+              </div>
+            </div>
+            <div class="clearfloat"></div>
+    </div>
+  </div>
+  <div class="darker_bg">
+    <div style="width:564px;height:300px; margin: 0 auto;padding-top:40px;">
+      <table>
+        <col width="194">
+        <col width="370">
+        <tr>
+          <th>
+            <div><img src="../img/swatch-clear.png"></img></div>
+          </th>
+          <th style="position:relative; bottom:90px;">
+            <div style="font-size:33px">Try City Lips<span class="sup1">&reg;</span> Risk-Free</div>
+            <div>&nbsp</div>
+            <div style="font-size:20px;">60 DAY MONEY BACK GUARANTEE</div>
+            <div>&nbsp</div>
+            <div class="orderButton"><a href="#orderSection" class="smoothScroll"><div>Order Now</div></a></div>
+          </th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+    <footer class="footer">
+        <div class="container">
+            <div style="font-size:12px;font-weight:300; padding-top:14px">
+              <div style="float:left;">&copy; City Cosmetics 2017. City Lips® is a registered trademark of City Cosmetics, LLC. All rights reserved.</div>
+              <div style="float:right;">PRIVACY POLICY   | TERMS &amp; CONDITIONS | SITEMAP</div>
+              <div class="clearfloat"></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

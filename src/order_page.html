@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  <meta charset="UTF-8">
+	<title>City Lips</title>
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,700|Raleway:100,300,300i,400,600,600i|Playfair+Display">
+
+  </head>
+  <style type="text/css">
+  /* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
+
+*{
+  margin:0 auto;
+}
+.container {width: 70%;margin: 0 auto;background-size: 100% auto;min-width: 20%;background-size: cover;}
+
+header {background: #000000 repeat;color: #fff;height: 84px;margin: 0 auto;}
+footer {background: #000000 repeat;color: #fff;height: 50px;margin: 0 auto;}
+
+.office_hours{
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  text-align: center;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sup{
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-align: center;
+  vertical-align: super;
+}
+
+.sup1{
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  vertical-align: super;
+}
+
+.greyline {border-width: 1px;border-color: rgb(235, 235, 235);border-style: solid;background-color: rgb(255, 255, 255);height: 0px;}
+.topsection {font-family: "Raleway", sans-serif;color: rgb(51, 51, 51);text-align: center;display: flex; display: -webkit-flex;
+justify-content: center;align-items: center;flex-flow: row nowrap; -webkit-flex-flow:row nowrap}
+
+.toptext{
+  height: 380px;
+  width: 530px;
+}
+
+
+.choosepackage{
+  height: 650px;
+}
+
+.packageoptions{
+  width: 960px;
+  height: 340px;
+}
+
+.Rectangle_2 {
+  border-width: 1px;
+  text-align: center;
+  float:left;
+  position: relative;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  width: 226px;
+  height: 340px;
+  z-index: 32;
+}
+.box_title {
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  font-style:italic;
+  overflow: hidden;
+  text-align: center;
+}
+.box_bottom{
+  height: 100px;
+}
+
+
+.orderButton{background: url("../img/addToCart.png") no-repeat; width: 200px; height: 39px; margin: auto; margin-top: 10px; text-align: center;}
+.orderButton:hover{background-position: 0 -39px; cursor: pointer;}
+.orderButton a{text-decoration: none; color: #fff; font-weight: bold; font-size: 18px; line-height: 40px;}
+
+.darker_bg{
+  background: #f8f9f9 repeat;
+  background-size: cover;
+
+}
+
+.video_box{
+  width: 854px;
+  height: 479px;
+  margin: 0 auto;
+}
+
+.testi_box{
+  width: 960px;
+  height: 240px;
+  border-width: 1px;
+  border-top-color: rgb(235, 235, 235);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-style: solid;
+  text-align: left;
+}
+.testi_usr{
+  width: 218px;
+  float:left;
+}
+.testi_wrd{
+  width: 743px;
+  float:right;
+}
+
+.trythis_box{
+  width: 280px;
+  font-size: 14px;
+}
+
+.faq_box{
+  width: 732px;
+  text-align: left;
+  border-bottom: 1px solid rgba(235, 235, 235, 1);
+}
+
+.wrapper {
+  width: 960px;
+  height: 260px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+fieldset {
+  width: 100%;
+  height: 100%;
+  margin-top: .7em;
+  transform: rotate3d(1, 180deg, 0, 0);
+  border: 1px solid rgba(235, 235, 235, 1);
+}
+
+h1 {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+
+h1:before,
+h1:after {
+  background: #ddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+    width: 400%;
+}
+
+h1:before {
+  right: 100%;
+}
+
+h1:after {
+  left: 100%;
+}
+
+.line-on-side {
+  overflow: hidden;
+  text-align: center;
+}
+
+.clearfloat{
+  clear:both;
+}
+
+h2 {
+  display: inline-block;
+  padding: 0 15px;
+  position: relative;
+}
+
+h2:before,
+h2:after {
+  background: #000;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+    width: 400%;
+}
+
+h2:before {
+  right: 100%;
+}
+
+h2:after {
+  left: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+}
+body{
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+}
+</style>
+<body>
+
+  <header>
+    <div style="display:flex;justify-content:center;align-items:center;padding-top:20px;"><img src="../img/logo.png"></img></div>
+    <div class="sup" style="position:relative; bottom:45px;left:72px;">&reg;</div>
+  </header>
+
+  <div class="office_hours">
+    <p><span style="font-weight:900;font-size:12px;">1-800-347-1558</span>  /   Monday-Friday: 5am-7pm PT   /   Saturday-Sunday: 6am-4:30pm PT</p>
+  </div>
+  <div class="greyline"></div>
+
+      <div class="topsection">
+        <div class="container">
+          <div style="padding-top:20px;justify-content:center">
+            <div style="width:460px;display:inline-block;">
+              <div style="font-size:38px;">Special <span style="font-style:italic;font-weight:600">Internet Only Offer</span> On City Lips<span class="sup1" style="font-size:28px">&reg;</span>
+              </div>
+              <div>&nbsp</div>
+              <div>
+                <p>YOU'RE ABOUT TO JOIN THOUSANDS OF WOMEN WHO ENJOYING PLUMP, YOUNGER-LOOKING LIPS.</p>
+                <div>&nbsp</div>
+                <p style="font-weight:300">And to make it even easier, we're offering additional savings on multi-tube packages.
+                  This allows us to save on the cost of processing each other individually, savings that we pass on to you.</p>
+                <div>&nbsp</div>
+                  <p style="font-style:italic">All order are one-time purchases.</p>
+                  <p style="font-weight:300;font-style:italic">We do not auto-bill your credit card.</p>
+              </div>
+              </div>
+              <div style="display:inline-block;width:100px"><img src="../img/bf_aft.png"></img></div>
+            </div>
+          </div>
+        </div>
+    <div class="greyline"></div>
+test
+
+
+    <footer>
+      <div style="font-size:12px;font-weight:300; padding-top:14px">
+        <div style="float:left;">&copy; City Cosmetics 2017. City Lips® is a registered trademark of City Cosmetics, LLC. All rights reserved.</div>
+        <div style="padding-left:10%;float:left;">PRIVACY POLICY   | TERMS &amp; CONDITIONS | SITEMAP</div>
+        <div class="clearfloat"></div>
+      </div>
+    </footer>
+
+</body>
+</html>
