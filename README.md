@@ -1,2 +1,2 @@
 # cb-web
-test 1
+This is the front end for citybeauty
