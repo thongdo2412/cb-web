@@ -49,16 +49,16 @@ toBold{font-weight: 600;}
 .textarea2 p{white-space: pre;}
 .form-control-static{width: 290px;}
 .lastname{margin-left: 80px;}
-.emailaddr{margin-left: 46px;}
-.subject{margin-left: 102px;}
-.msgboxarea{margin-left: 22px;}
-.buttonform{text-align: right;margin-right: 49px;}
+.emailaddr{margin-left: 48px;}
+.subject{margin-left: 106px;}
+.msgboxarea{margin-left: 23px;}
+.buttonform{text-align: right;margin-right: 40px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 1;}
 h4{font-size: 20px;line-height: 1;font-weight: 300;}
 select{width: 290px;height: 40px;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;font-weight: 300;}
-textarea{width: 773px;height: 114px; border: 1px solid #ccc;}
+textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
 
 /*Responsive for different screen*/
 @media screen and (min-width: 1200px) {.socialicons{margin-left: 80px;}}
@@ -136,51 +136,51 @@ textarea{width: 773px;height: 114px; border: 1px solid #ccc;}
         <div class="textarea2 centered">
           <h4>EMAIL US</h4>
           <div class="movedown5p"></div>
-          <form id="contact_form" method="post" action="contact.php" role="form">
-          <div class="form-inline">
-            <div class="form-group">
-              <p>FIRST NAME*   <input id="form_fname" type="text" name="fname" class="form-control-static" required="required" data-error="First name is required."></p>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-              <div class="lastname">
-                <p>LAST NAME*   <input id="form_lname" type="text" name="lname" class="form-control-static" required="required" data-error="Last name is required."></p>
+          <form id="contact_form" method="post" action="test/mailtest.php" role="form">
+            <div class="form-inline">
+              <div class="form-group">
+                <p>FIRST NAME*   <input id="form_fname" type="text" name="fname" class="form-control-static" required="required" data-error="First name is required."></p>
                 <div class="help-block with-errors"></div>
               </div>
-            </div>
-          </div>
-          <div class="movedown2p"></div>
-          <div class="form-inline">
-            <div class="form-group">
-              <div class="emailaddr">
-                <p>EMAIL*   <input id="form_email" type="email" name="email" class="form-control-static" required="required" data-error="Valid email is required."></p>
-                <div class="help-block with-errors"></div>
+              <div class="form-group">
+                <div class="lastname">
+                  <p>LAST NAME*   <input id="form_lname" type="text" name="lname" class="form-control-static" required="required" data-error="Last name is required."></p>
+                  <div class="help-block with-errors"></div>
+                </div>
               </div>
             </div>
-            <div class="form-group">
-              <div class="subject">
-                <p>SUBJECT*  <input id="form_subject" type="text" name="subject" class="form-control-static"></p>
-                <div class="help-block with-errors"></div>
+            <div class="movedown2p"></div>
+            <div class="form-inline">
+              <div class="form-group">
+                <div class="emailaddr">
+                  <p>EMAIL*   <input id="form_email" type="email" name="email" class="form-control-static" required="required" data-error="Valid email is required."></p>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="subject">
+                  <p>SUBJECT*  <input id="form_subject" type="text" name="subject" class="form-control-static"></p>
+                  <div class="help-block with-errors"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="movedown2p"></div>
-          <div class="form-inline">
-            <div class="form-group">
-              <div class="msgboxarea">
-                <p>MESSAGE*  <textarea></textarea></p>
-                <div class="help-block with-errors"></div>
+            <div class="movedown2p"></div>
+            <div class="form-inline">
+              <div class="form-group">
+                <div class="msgboxarea">
+                  <p>MESSAGE*  <textarea id="form_message" name="message"></textarea></p>
+                  <div class="help-block with-errors"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="movedown2p"></div>
-          <div class="form-inline">
-            <div class="buttonform">
-            <div class="form-group">
-                <button type="submit" class="button button_blue">SUBMIT</button>
+            <div class="movedown2p"></div>
+            <div class="form-inline">
+              <div class="buttonform">
+                <div class="form-group">
+                  <button type="submit" class="button button_blue">SUBMIT</button>
+                </div>
               </div>
             </div>
-          </div>
           </form>
 
 
