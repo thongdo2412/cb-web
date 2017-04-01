@@ -51,7 +51,8 @@ toBold{font-weight: 600;}
 .lastname{margin-left: 80px;}
 .emailaddr{margin-left: 48px;}
 .subject{margin-left: 106px;}
-.msgboxarea{margin-left: 23px;}
+.msgheading{margin-left: 20px;}
+.msgboxarea{margin-left: 114px;}
 .buttonform{text-align: right;margin-right: 40px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 1;}
 h4{font-size: 20px;line-height: 1;font-weight: 300;}
@@ -136,7 +137,7 @@ textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
         <div class="textarea2 centered">
           <h4>EMAIL US</h4>
           <div class="movedown5p"></div>
-          <form id="contact_form" method="post" action="test/mailtest.php" role="form">
+          <form id="contact_form" method="post" action="scripts/mailform.php" role="form">
             <div class="form-inline">
               <div class="form-group">
                 <p>FIRST NAME*   <input id="form_fname" type="text" name="fname" class="form-control-static" required="required" data-error="First name is required."></p>
@@ -167,8 +168,9 @@ textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
             <div class="movedown2p"></div>
             <div class="form-inline">
               <div class="form-group">
+                <div class="msgheading">MESSAGE*</div>
                 <div class="msgboxarea">
-                  <p>MESSAGE*  <textarea id="form_message" name="message"></textarea></p>
+                  <textarea id="form_message" name="message"></textarea>
                   <div class="help-block with-errors"></div>
                 </div>
               </div>

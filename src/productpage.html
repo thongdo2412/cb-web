@@ -11,13 +11,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,400i,600,600i,700,900|Playfair+Display:300,300i,400,400i">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i,700,900|Playfair+Display:300,300i,400,400i">
 <style type="text/css">
  a {text-decoration: none;}
  *{margin:0 auto;}
 header, footer{background: rgb(9,30,55);height: 94px;background-size: cover;}
 footer{color: rgb(255,255,255);}
 footer p{font-size: 11px; font-weight: 300; text-align: center; line-height: 1;word-wrap:break-word;}
+footer a,a:hover{text-decoration: none; color: #ffffff}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .container{width: 960px;margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .centered_flex{display: flex;justify-content: center;align-items: center;}
@@ -53,16 +54,16 @@ toRegular{font-weight: 400;}
 .faq_heading{text-align: left;width: 160px;}
 .faq_words{text-align: left;}
 .review_link{font-size: 14px; text-decoration: underline;}
-.testi_usr{width: 170px;text-align: left;margin-top: 6px;}
+.testi_usr{width: 170px;text-align: left;margin-top: 8px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 1;}
 h4{font-family: "Playfair Display",serif;font-size: 33px;line-height: 1;}
 h5{font-family: "Playfair Display",serif;font-size: 22px;font-weight: 400;font-style: italic;}
 h6{font-size: 20px;line-height: 0.5;display: inline;}
-toItalic{font-style: italic;}
+i{font-style: italic;}
 body,html {margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300;}
 /*handle responsive*/
-@media screen and (min-width: 1199px){.socialicons{margin-left: 12px;}}
+@media screen and (min-width: 1199px){.socialicons{margin-left: 29px;}}
 @media screen and (max-width:1199px){.faq_words{margin-top: 30px;} .socialicons{margin: 0;}}
 @media screen and (max-width:767px){.centered_nav{display: block;}}
 @media screen and (max-width:479px){.word_wrapper{margin-left: 12.5%; margin-bottom: 5%;}}
@@ -73,7 +74,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   <!--main content-->
   <header class="centered_flex">
     <div class="container">
-      <img src="../img/citylogo1.png" alt="citylogo">
+      <a href="/"><img src="../img/citylogo1.png" alt="citylogo"></a>
     </div>
   </header>
 
@@ -316,24 +317,24 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
     </div>
   </div>
 
- <footer class="centered_flex">
-  <div class="container">
+  <footer class="centered_flex">
+   <div class="container">
+     <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12  col-xs-12">
+        <p>&reg; City Beauty 2017. City Lips and City Lash are registered trademarks of City Beauty, LLC. All rights reserved.</p>
+      </div>
+      <div class="col-lg-4 col-md-12 ol-sm-12 col-xs-12">
+        <p><a href="privacy.php">PRIVACY POLICY</a> &nbsp|&nbsp <a href="terms.php">TERMS &amp; CONDITIONS</a></p>
+      </div>
+    </div>
     <div class="row">
-     <div class="col-lg-8 col-md-12 col-sm-12  col-xs-12">
-       <p>&reg; City Cosmetics 2017. City Lips and City Lash are registered trademarks of City Cosmetics, LLC. All rights reserved.</p>
-     </div>
-     <div class="col-lg-4 col-md-12 ol-sm-12 col-xs-12">
-       <p>PRIVACY POLICY &nbsp|&nbsp TERMS &amp; CONDITIONS &nbsp|&nbsp SITEMAP</p>
-     </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1">
+        <div class="socialicons"><img src="../img/social_icon.png" alt="social icons"></div>
+      </div>
+    </div>
+     <div class="clearfix"></div>
    </div>
-   <div class="row">
-     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1">
-       <div class="socialicons"><img src="../img/social_icon.png" alt="social icons"></div>
-     </div>
-   </div>
-    <div class="clearfix"></div>
-  </div>
-</footer>
+  </footer>
 
     <!-- link and script section-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
