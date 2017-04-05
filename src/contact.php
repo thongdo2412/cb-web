@@ -55,10 +55,10 @@ toBold{font-weight: 600;}
 .msgboxarea{margin-left: 114px;}
 .buttonform{text-align: right;margin-right: 40px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 1;}
-h4{font-size: 20px;line-height: 1;font-weight: 300;}
+h4{font-size: 20px;line-height: 24px;font-weight: 300;display: inline;}
 select{width: 290px;height: 40px;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
-body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;font-weight: 300;}
+body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;font-weight: 300; line-height: 24px;}
 textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
 
 /*Responsive for different screen*/
