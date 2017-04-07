@@ -23,6 +23,7 @@ footer a,a:hover{text-decoration: none; color: #ffffff}
 .container{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .centered_flex{display: flex;justify-content:center;align-items: center; }
 .centered_nav{display: flex;justify-content: center;align-items: center;}
+.flexcontainer{padding: 0;margin: 0 auto;list-style: none;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-flow: row nowrap;justify-content: space-around;}
 .nav{font-size: 14px;font-family: "Montserrat", sans-serif; font-weight: 300;}
 nav2 {display: inline-block;padding: 0 15px;position: relative;}
 nav2:hover:before,nav2:hover:after {background: #000;content: "";display: block;height: 1px;position: absolute;top: 50%;width: 12px;}
@@ -59,6 +60,7 @@ toBold{font-weight: 600;}
 .cream_wrapper{margin-top: 10%;}
 .productwrapper{}
 .carousel-control.left,.carousel-control.right{background-image: none;}
+.colorsquare{width: 38px; height: 38px;}
 .arrowWrapper{ position: relative;top: 50%;transform: translateY(-50%);}
 div.productwrapper .button_wht{display: none;}
 div.productwrapper:hover .button_wht {display: flex;}
@@ -136,13 +138,26 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
     <div class="clearfix"></div>
 
     <div class="row">
-      <div class="col">
-
+      <div class="col-lg-5">
+        this space for product preview
+        
       </div>
-      <div class="col">
-
+      <div class="col-lg-5">
+        <div class="row">
+          <div class="col-lg-12">
+        this space for color palette and color preview
+          </div>
+          <div class="col-lg-12">
+            this space for add to cart button
+          </div>
+        </div>
       </div>
     </div>
+<hr>
+test area
+
+
+
   </div>
 
 
@@ -172,5 +187,7 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
   </body>
   </html>
