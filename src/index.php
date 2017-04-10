@@ -65,7 +65,6 @@ div.productwrapper:hover .button_wht {display: flex;}
 .button_wht:hover {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 .button_wht:hover a {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 div.form-group input{margin-left: 18px;margin-right: 40px;}
-.form-control-static{width: 190px;height: 30px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 30px;font-weight: 300;}
 h4{font-size: 20px;line-height: 24px;font-weight: 300;}
 h3,h4 {display: inline;}

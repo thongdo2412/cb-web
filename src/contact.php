@@ -19,8 +19,9 @@
  *{margin:0 auto;}
 header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 footer{color: rgb(255,255,255);font-size: 11px; font-weight: 300; line-height: 1;}
+footer a,a:hover{text-decoration: none; color: #ffffff}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
-.container{text-align:center;margin-left: auto;margin-right: auto;margin: 0 auto;padding: 0;}
+.container{width: 960px;text-align:center;margin-left: auto;margin-right: auto;margin: 0 auto;padding: 0;}
 .centered_flex{display: flex;justify-content: center;align-items: center;}
 .centered_nav{display: flex;justify-content: center;align-items: center;}
 .nav{font-size: 14px;font-family: "Montserrat", sans-serif;}
@@ -28,6 +29,7 @@ nav2 {display: inline-block;padding: 0 15px;position: relative;}
 nav2:hover:before,nav2:hover:after {background: #000;content: "";display: block;height: 1px;position: absolute;top: 50%;width: 12px;}
 nav2:hover:before {right: 90%;}
 nav2:hover:after {left: 90%;}
+.navbar-default .navbar-nav > li > a {color: #333; padding-left: 32px;}
 .line-on-sides{overflow: hidden;}
 toBold{font-weight: 600;}
 .button{width: 110px;height: 30px;font-size: 14px;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;}
@@ -38,50 +40,56 @@ toBold{font-weight: 600;}
 .jumbotron p{font-size: 16px;margin: 0 auto;font-weight: 300;font-size: 16px;}
 .jumbotron_wht{background: rgb(255,255,255);}
 .jumbotron_w_bg{background: rgb(248,249,249);background-size: cover;border: 1px solid rgb(235, 235, 235);margin: 0 auto;}
-.callmailus{margin-top: 50px;}
+.callmailus{margin-top: 50px; margin-left: 15px;}
 .movedown2p{margin-top: 2%;}
 .movedown5p{margin-top: 5%;}
-.textbox{width: 450px;height: 182px;border: 1px solid rgb(235, 235, 235);}
+.textbox1{width: 450px;height: 184px;border: 1px solid rgb(235, 235, 235);display: flex;justify-content: center;align-items: center;}
 .textarea1{text-align: left;margin-left: 50px;}
-.textarea1 p{line-height: 1;}
-.emailform{width: 1000px;height: 500px;border: 1px solid rgb(235, 235, 235);margin-top: 50px;}
+.emailus{margin-top: 40px;}
+.emailbox{width: 960px; height: 400px;border: 1px solid rgb(235, 235, 235);display: flex;align-items: center;}
 .textarea2{text-align: left;margin-left: 64px;}
-.textarea2 p{white-space: pre;}
-.form-control-static{width: 290px;}
-.lastname{margin-left: 80px;}
+.lastname{margin-left: 40px;}
 .emailaddr{margin-left: 48px;}
-.subject{margin-left: 106px;}
-.msgheading{margin-left: 20px;}
-.msgboxarea{margin-left: 114px;}
-.buttonform{text-align: right;margin-right: 40px;}
+.subject{margin-left: 60.5px;}
+.msgtextbox{margin-left: 14px;}
+.linebreak{margin-top: 20px;}
+.linebreak2{margin-top: 16px;}
+div.form-group input.form-control{border-radius: 0;width: 292px;}
+div.form-group input{margin-left: 18px;}
+div.form-group label{font-weight: 300;}
+div.form-group textarea.form-control{border-radius: 0;margin-left: 18px;width: 744px;height: 102px;}
+div.form-group select.form-control{margin-left: 14px; width: 292px; border-radius: 0;-webkit-appearance: none; background: url("../img/selectarrows.png") no-repeat right 10px center #f8f9f9;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 1;}
-h4{font-size: 20px;line-height: 24px;font-weight: 300;display: inline;}
-select{width: 290px;height: 40px;}
+h4{font-size: 20px;font-weight: 300;display: inline;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
-body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;font-weight: 300; line-height: 24px;}
-textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
+body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;font-weight: 300;line-height: 24px;}
 
 /*Responsive for different screen*/
-@media screen and (min-width: 1200px) {.socialicons{margin-left: 80px;}}
-@media screen and (max-width: 1199px) {.textbox{margin-top: 50px;} .socialicons{margin:0;}}
-@media screen and (max-width: 1034px) {.textarea2{margin-left: 64px;} .form-inline .form-group{display: block;} .lastname{margin-left: 6px;margin-top: 10px;} .emailaddr{margin-left: 47px;} .subject{margin-top: 10px;margin-left: 29px;}
-.msgboxarea {margin-left: 20px;}}
-@media screen and (min-width: 991px) and (max-width:1199px) {.callmailus{display: block; margin: 0 auto;}}
-@media screen and (max-width: 991px){.buttonform{text-align: center;} .emailform{width: 91%;}textarea{width: 80%;} .textbox{width: 87%;}}
-@media screen and (max-width: 767px){.textarea2{margin-left: 0;} .centered_nav{display: block;}}
-@media screen and (max-width: 479px){.form-control-static{width: 160px;}}
+@media screen and (min-width: 1200px) {.socialicons{margin-left: 28px;} .mailus{margin-left: 60px;}}
+@media screen and (max-width: 1199px) {.socialicons{margin:0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;}}
+@media screen and (max-width: 991px){.linebreak3{margin-top: 16px;} .emailus{margin-left: 14px;} .emailbox{width: 450px; height: 600px;} .textarea2{margin-right: 92px;} .linebreak2{margin: 0;} div.form-group textarea.form-control{width: 292px;}
+div.form-group input{margin-left: 0;} .lastname,.emailaddr,.subject,.msgtextbox{margin-left: 0;} .mailus{margin-left: auto;margin-top: 28px;} .centered_nav{display: block;}
+.navbar-header {float: none;} .navbar-left,.navbar-right {float: none !important;} .navbar-toggle {display: block; margin-right: 25px;} .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
+.navbar-fixed-top {top: 0;border-width: 0 0 1px;} .navbar-collapse.collapse {display: none!important;} .navbar-nav {float: none!important;margin-top: 7.5px;} .navbar-nav>li {float:none;}
+.navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;} .collapse.in{display:block !important;} div.form-group select.form-control{margin-left: 0;} div.form-group textarea.form-control{margin-left: 0;}}
+@media screen and (max-width: 767px){.navbar-toggle{margin-right: 40px;} footer .container{margin-left: 30px;margin-right: 30px;}}
+@media screen and (max-width: 525px){.textbox1{width: 344px;} .textarea1{margin-left: 25px;} .emailbox{width: 344px;} .textarea2{margin-left: 40px;margin-right: 28px;} div.form-group input.form-control{width: 260px;}
+div.form-group select.form-control{width: 260px;} div.form-group textarea.form-control{width: 260px;}}
+@media screen and (max-width: 399px){.textbox1{width: auto;margin-left: 30px; margin-right: 40px;} .textarea1{margin-left: 10px;} .emailbox{width: auto;margin-left: 30px; margin-right: 40px;} .textarea2{margin-left: 30px;}
+div.form-group input.form-control{width: 200px;} div.form-group select.form-control{width: 200px;} div.form-group textarea.form-control{width: 200px;}}
 </style>
 </head>
 <body>
   <!--main content-->
   <header class="centered_flex">
     <div class="container-fluid">
-      <img src="../img/citylogo1.png"></img>
+      <a href="/"><img src="../img/citylogo1.png" alt="citylogo"></a>
     </div>
   </header>
+
   <!--nav bar-->
-  <nav class="navbar navbar-default centered_nav" role="navigation">
-  <div class="container-fluid">
+  <nav class="navbar navbar-default">
+  <div class="container-fluid centered_nav">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -100,10 +108,12 @@ textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
         <li><a href="#"><nav2>SKIN</nav2></a></li>
         <li><a href="#"><nav2>BODY</nav2></a></li>
         <li><a href="media.php"><nav2>MEDIA</nav2></a></li>
+        <li><a href="contact.php"><nav2>CONTACT</nav2></a></li>
         <li><a href="#"><nav2>VIEW CART</nav2></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+  <div class="clearfix"></div>
   </nav>
 
   <div class="jumbotron jumbotron_wht">
@@ -111,19 +121,19 @@ textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
       <h3>Contact Us</h3>
       <div class="callmailus">
         <div class="row">
-          <div class="col-md-6 col-lg-6 col-md-offset-4 col-lg-offset-1 textbox centered_flex">
+          <div class="col-lg-4 col-md-4 textbox1">
             <div class="textarea1">
               <h4>CALL US</h4>
-              &nbsp;
+              <div class="linebreak"></div>
               <p>1-800-347-1558</p>
               <p>Monday - Friday / 5am-7pm PT</p>
               <p>Saturday - Sunday / 6am - 4:30pm</p>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6 col-md-offset-4 col-lg-offset-1 textbox centered_flex">
+          <div class="col-lg-4 col-md-4 textbox1 mailus">
             <div class="textarea1">
               <h4>MAIL US</h4>
-              &nbsp;
+              <div class="linebreak"></div>
               <p>CITY BEAUTY</p>
               <p>XXXXXXXXXXXXXXX</p>
               <p>Salt Lake City, UT 81406</p>
@@ -132,60 +142,61 @@ textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
           <div class="clearfix"></div>
         </div>
       </div>
-
-      <div class="emailform">
-        <div class="textarea2 centered">
-          <h4>EMAIL US</h4>
-          <div class="movedown5p"></div>
-          <form id="contact_form" method="post" action="scripts/mailform.php" role="form">
-            <div class="form-inline">
-              <div class="form-group">
-                <p>FIRST NAME*   <input id="form_fname" type="text" name="fname" class="form-control-static" required="required" data-error="First name is required."></p>
-                <div class="help-block with-errors"></div>
-              </div>
-              <div class="form-group">
-                <div class="lastname">
-                  <p>LAST NAME*   <input id="form_lname" type="text" name="lname" class="form-control-static" required="required" data-error="Last name is required."></p>
-                  <div class="help-block with-errors"></div>
+      <div class="emailus">
+        <div class="row">
+          <div class="col emailbox">
+            <div class="textarea2">
+              <h4>EMAIL US</h4>
+              <div class="linebreak"></div>
+              <form id="contact_form" method="post" action="scripts/mailform.php" role="form">
+                <div class="form-inline">
+                  <div class="form-group">
+                    <p>FIRST NAME*<input id="form_fname" type="text" name="fname" class="form-control" required="required" data-error="First name is required."></p>
+                    <div class="help-block with-errors"></div>
+                    <div class="linebreak3"></div>
+                  </div>
+                  <div class="form-group lastname">
+                    <p>LAST NAME*<input id="form_lname" type="text" name="lname" class="form-control" required="required" data-error="Last name is required."></p>
+                    <div class="help-block with-errors"></div>
+                    <div class="linebreak3"></div>
+                  </div>
                 </div>
-              </div>
+                <div class="linebreak2"></div>
+                <div class="form-inline">
+                  <div class="form-group emailaddr">
+                    <p>EMAIL*<input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required."></p>
+                    <div class="help-block with-errors"></div>
+                    <div class="linebreak3"></div>
+                  </div>
+                  <div class="form-group subject">
+                    <p>SUBJECT*
+                      <select class="form-control">
+                        <option selected disabled class="hideoption">choose subject</option>
+                        <option value="Subject1">Subject1</option>
+                        <option value="Subject2">Subject2</option>
+                        <option value="Subject3">Subject3</option>
+                        <option value="Subject4">Subject4</option>
+                      </select>
+                    </p>
+                    <div class="help-block with-errors"></div>
+                    <div class="linebreak3"></div>
+                  </div>
+                </div>
+                <div class="linebreak2"></div>
+                <div class="form-inline">
+                  <div class="form-group msgtextbox">
+                    <label for="form_message">MESSAGE*</label>
+                    <textarea id="form_message" name="message" class="form-control" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                    <div class="linebreak3"></div>
+                  </div>
+                </div>
+                <div class="linebreak2"></div>
+                <input type="submit" class="button button_blue pull-right" value="SUBMIT">
+                <div class="clearfix"></div>
+              </form>
             </div>
-            <div class="movedown2p"></div>
-            <div class="form-inline">
-              <div class="form-group">
-                <div class="emailaddr">
-                  <p>EMAIL*   <input id="form_email" type="email" name="email" class="form-control-static" required="required" data-error="Valid email is required."></p>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="subject">
-                  <p>SUBJECT*  <input id="form_subject" type="text" name="subject" class="form-control-static"></p>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-            </div>
-            <div class="movedown2p"></div>
-            <div class="form-inline">
-              <div class="form-group">
-                <div class="msgheading">MESSAGE*</div>
-                <div class="msgboxarea">
-                  <textarea id="form_message" name="message"></textarea>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div>
-            </div>
-            <div class="movedown2p"></div>
-            <div class="form-inline">
-              <div class="buttonform">
-                <div class="form-group">
-                  <button type="submit" class="button button_blue">SUBMIT</button>
-                </div>
-              </div>
-            </div>
-          </form>
-
-
+          </div>
         </div>
       </div>
 
@@ -195,11 +206,11 @@ textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
   <footer class="centered_flex">
    <div class="container">
      <div class="row">
-      <div class="col-lg-8 col-md-12 col-sm-12  col-xs-12">
-        <p>&reg; City Cosmetics 2017. City Lips and City Lash are registered trademarks of City Cosmetics, LLC. All rights reserved.</p>
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+        <p>&reg; City Beauty 2017. City Lips and City Lash are registered trademarks of City Beauty, LLC. All rights reserved.</p>
       </div>
       <div class="col-lg-4 col-md-12 ol-sm-12 col-xs-12">
-        <p>PRIVACY POLICY &nbsp|&nbsp TERMS &amp; CONDITIONS &nbsp|&nbsp SITEMAP</p>
+        <p><a href="privacy.php">PRIVACY POLICY</a> &nbsp|&nbsp <a href="terms.php">TERMS &amp; CONDITIONS</a></p>
       </div>
     </div>
     <div class="row">
@@ -209,7 +220,7 @@ textarea{width: 778px;height: 114px; border: 1px solid #ccc;}
     </div>
      <div class="clearfix"></div>
    </div>
- </footer>
+  </footer>
 
     <!-- link and script section-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
