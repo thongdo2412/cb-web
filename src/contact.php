@@ -67,11 +67,30 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;fon
 /*Responsive for different screen*/
 @media screen and (min-width: 1200px) {.socialicons{margin-left: 28px;} .mailus{margin-left: 60px;}}
 @media screen and (max-width: 1199px) {.socialicons{margin:0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;}}
-@media screen and (max-width: 991px){.linebreak3{margin-top: 16px;} .emailus{margin-left: 14px;} .emailbox{width: 450px; height: 600px;} .textarea2{margin-right: 92px;} .linebreak2{margin: 0;} div.form-group textarea.form-control{width: 292px;}
-div.form-group input{margin-left: 0;} .lastname,.emailaddr,.subject,.msgtextbox{margin-left: 0;} .mailus{margin-left: auto;margin-top: 28px;} .centered_nav{display: block;}
-.navbar-header {float: none;} .navbar-left,.navbar-right {float: none !important;} .navbar-toggle {display: block; margin-right: 25px;} .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
-.navbar-fixed-top {top: 0;border-width: 0 0 1px;} .navbar-collapse.collapse {display: none!important;} .navbar-nav {float: none!important;margin-top: 7.5px;} .navbar-nav>li {float:none;}
-.navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;} .collapse.in{display:block !important;} div.form-group select.form-control{margin-left: 0;} div.form-group textarea.form-control{margin-left: 0;}}
+@media screen and (max-width: 991px){
+  .linebreak3{margin-top: 16px;}
+  .emailus{margin-left: 14px;}
+  .emailbox{width: 450px; height: 600px;}
+  .textarea2{margin-right: 92px;}
+  .linebreak2{margin: 0;}
+  div.form-group textarea.form-control{width: 292px;}
+  div.form-group input{margin-left: 0;}
+  .lastname,.emailaddr,.subject,.msgtextbox{margin-left: 0;}
+  .mailus{margin-left: auto;margin-top: 28px;}
+  .centered_nav{display: block;}
+  .navbar-header {float: none;}
+  .navbar-left,.navbar-right {float: none !important;}
+  .navbar-toggle {display: block; margin-right: 25px;}
+  .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
+  .navbar-fixed-top {top: 0;border-width: 0 0 1px;}
+  .navbar-collapse.collapse {display: none!important;}
+  .navbar-nav {float: none!important;margin-top: 7.5px;}
+  .navbar-nav>li {float:none;}
+  .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
+  .collapse.in{display:block !important;}
+  div.form-group select.form-control{margin-left: 0;}
+  div.form-group textarea.form-control{margin-left: 0;}
+}
 @media screen and (max-width: 767px){.navbar-toggle{margin-right: 40px;} footer .container{margin-left: 30px;margin-right: 30px;}}
 @media screen and (max-width: 525px){.textbox1{width: 344px;} .textarea1{margin-left: 25px;} .emailbox{width: 344px;} .textarea2{margin-left: 40px;margin-right: 28px;} div.form-group input.form-control{width: 260px;}
 div.form-group select.form-control{width: 260px;} div.form-group textarea.form-control{width: 260px;}}
@@ -148,7 +167,7 @@ div.form-group input.form-control{width: 200px;} div.form-group select.form-cont
             <div class="textarea2">
               <h4>EMAIL US</h4>
               <div class="linebreak"></div>
-              <form id="contact_form" method="post" action="scripts/mailform.php" role="form">
+              <form id="contact_form" method="post" action="scripts/contactform_mail.php" role="form">
                 <div class="form-inline">
                   <div class="form-group">
                     <p>FIRST NAME*<input id="form_fname" type="text" name="fname" class="form-control" required="required" data-error="First name is required."></p>
@@ -170,7 +189,7 @@ div.form-group input.form-control{width: 200px;} div.form-group select.form-cont
                   </div>
                   <div class="form-group subject">
                     <p>SUBJECT*
-                      <select class="form-control">
+                      <select class="form-control" id="form_subject" type="text" name="subject" required="required" data-error="Subject is required.">
                         <option selected disabled class="hideoption">choose subject</option>
                         <option value="Subject1">Subject1</option>
                         <option value="Subject2">Subject2</option>

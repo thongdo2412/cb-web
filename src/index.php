@@ -275,12 +275,12 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
         <div class="movedown20"></div>
        <p><b>Sign up below for instant notifications and get a sneak peak at what's ahead.</b></p>
        <div class="movedown20"></div>
-       <form class="form-inline">
+       <form class="form-inline" id="email_form" method="post" action="scripts/emailform.php" role="form">
          <div class="form-group">
-           <p>FIRST NAME*<input type="text" class="form-control" id="name"></p>
+           <p>FIRST NAME*<input type="text" class="form-control" name="fname" id="fname"></p>
          </div>
          <div class="form-group">
-           <p class="emailinput">EMAIL*<input type="email" class="form-control" id="email"></p>
+           <p class="emailinput">EMAIL*<input type="email" name="email" class="form-control" id="email"></p>
          </div>
          <button type="submit" class="submitbtn button_blue">SUBMIT</button>
        </form>

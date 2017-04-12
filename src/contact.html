@@ -167,7 +167,7 @@ div.form-group input.form-control{width: 200px;} div.form-group select.form-cont
             <div class="textarea2">
               <h4>EMAIL US</h4>
               <div class="linebreak"></div>
-              <form id="contact_form" method="post" action="scripts/mailform.php" role="form">
+              <form id="contact_form" method="post" action="scripts/contactform_mail.php" role="form">
                 <div class="form-inline">
                   <div class="form-group">
                     <p>FIRST NAME*<input id="form_fname" type="text" name="fname" class="form-control" required="required" data-error="First name is required."></p>
@@ -189,7 +189,7 @@ div.form-group input.form-control{width: 200px;} div.form-group select.form-cont
                   </div>
                   <div class="form-group subject">
                     <p>SUBJECT*
-                      <select class="form-control">
+                      <select class="form-control" id="form_subject" type="text" name="subject" required="required" data-error="Subject is required.">
                         <option selected disabled class="hideoption">choose subject</option>
                         <option value="Subject1">Subject1</option>
                         <option value="Subject2">Subject2</option>
