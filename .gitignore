@@ -20,4 +20,5 @@ Thumbs.db
 venv
 node_modules
 bootstrap-3.3.7
+five-star-rating
 .sass-cache
