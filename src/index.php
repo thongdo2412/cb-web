@@ -50,7 +50,7 @@ toBold{font-weight: 600;}
 .movedown5p{padding-top: 5%;}
 .movedown10p{padding-top: 10%;}
 .movedown14p{padding-top: 14%;}
-.b2margin{margin-left: 17%;}
+/*.b2margin{margin-left: 17%;}*/
 .word_wrapper{text-align: left; margin-top: 22%;}
 .b2word_wrapper{text-align: left; margin-top: 28%;}
 .bfaft_wrapper{margin-top: 10%;}
@@ -59,7 +59,7 @@ toBold{font-weight: 600;}
 .cream_wrapper{margin-top: 10%;}
 .productwrapper{}
 .carousel-control.left,.carousel-control.right{background-image: none;}
-.arrowWrapper{ position: relative;top: 50%;transform: translateY(-50%);}
+.carousel-control {position: absolute;top: 50%; /* pushes the icon in the middle of the height */z-index: 5;display: inline-block;}
 div.productwrapper .button_wht{display: none;}
 div.productwrapper:hover .button_wht {display: flex;}
 .button_wht:hover {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
@@ -73,20 +73,57 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
 
 /*handle responsive for different screens*/
 @media screen and (min-width: 1199px){.socialicons{margin-left: 74px;}}
-@media screen and (max-width:1199px) {.b2margin{margin-left: 7%;} .socialicons{margin:0;} .cream_wrapper{margin-top: 12%;margin-left: 4%;}}
-@media screen and (max-width:991px) {.cream_wrapper{margin-left: 0;margin-top: 16%;} .centered_nav{display: block;} .b2margin{margin: 0 auto;} .navbar-header {float: none;}
-.navbar-left,.navbar-right {float: none !important;} .navbar-toggle {display: block;} .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
-.navbar-fixed-top {top: 0;border-width: 0 0 1px;} .navbar-collapse.collapse {display: none!important;} .navbar-nav {float: none!important;margin-top: 7.5px;} .navbar-nav>li {float:none;}
-.navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;} .collapse.in{display:block !important;}}
-@media screen and (max-width:767px){.navbar-toggle{margin-right: 45px;} .word_wrapper{margin-top: 16%;margin-left: 25%;} .b2word_wrapper{margin-top: 0;margin-left: 25%;}
-.bfaft_wrapper{margin-top: 0;} .b2word_wrapper{margin-top: 25%;margin-left: 30%;} .b3textbox{margin-left: 15px;margin-right: 15px;} .form-control{width: 100%;height: 100%;} .updateform{margin-left: 30px; margin-right: 30px;}
-div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{margin-left: 30px;margin-right: 30px;}}
-@media screen and (max-width:606px){.word_wrapper{margin-top: 16%;}}
-@media screen and (max-width:572px){.word_wrapper{margin-left: 14%;} .b2word_wrapper{margin-left: 15%;} .bfaft_wrapper{margin-left: -30px;}}
-@media screen and (max-width:542px){.undereye{margin-right: 40px;} .bfaft_wrapper>img{width: 220%;}}
-@media screen and (max-width:450px){.word_wrapper{margin-left: 30px;} .b2word_wrapper{margin-left: 15px;margin-top: 12%;} .undereye{margin-right: 50px;} .bfaft_wrapper{margin-left: -20px;} .bfaft_wrapper>img{width: 200%;}}
-@media screen and (max-width:414px){.undereye{margin-right: 45px;}}
-@media screen and (max-width:399px){.hidden-xxs{display: none} .col-xxs-12{width: 100%;}.word_wrapper,.b2word_wrapper{margin-top: 0;} }
+@media screen and (max-width:1199px) {
+  .b2margin{margin-left: 7%;}
+  .socialicons{margin:0;}
+  .cream_wrapper{margin-top: 12%;margin-left: 4%;}
+}
+@media screen and (max-width:991px) {
+  .cream_wrapper{margin-left: 0;margin-top: 16%;}
+  .centered_nav{display: block;}
+  .b2margin{margin: 0 auto;}
+  .navbar-header {float: none;}
+  .navbar-left,.navbar-right {float: none !important;}
+  .navbar-toggle {display: block;}
+  .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
+  .navbar-fixed-top {top: 0;border-width: 0 0 1px;}
+  .navbar-collapse.collapse {display: none!important;}
+  .navbar-nav {float: none!important;margin-top: 7.5px;}
+  .navbar-nav>li {float:none;}
+  .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
+  .collapse.in{display:block !important;}
+}
+@media screen and (max-width:858px) {
+  .lip_wrapper,.bfaft_wrapper{margin-left: -40px;}
+}
+@media screen and (max-width:767px){.navbar-toggle{margin-right: 45px;}
+  .word_wrapper{margin-top: 10%;margin-left: 17%;}
+  .b2word_wrapper{margin-top: 7%;margin-left: 17%;}
+  .bfaft_wrapper{margin-top: 0;}
+  .b3textbox{margin-left: 15px;margin-right: 15px;}
+  .form-control{width: 100%;height: 100%;}
+  .updateform{margin-left: 30px; margin-right: 30px;}
+  div.form-group input{margin: 0;}
+  .submitbtn{float: right;}
+  footer .container{margin-left: 30px;margin-right: 30px;}
+}
+@media screen and (max-width:572px){
+  .word_wrapper{margin-top:6%;}
+}
+@media screen and (max-width:542px){
+  .word_wrapper{margin-left: 30px;}
+  .b2word_wrapper{margin-left: 15px;}
+  .undereye{margin-left:-10px;}
+  .bfaft_wrapper{margin-left: -20px;}
+}
+@media screen and (max-width:450px){
+  .bfaft_wrapper{margin-left: -20px;}
+}
+@media screen and (max-width:399px){
+  .hidden-xxs{display: none!important}
+  .col-xxs-11{width: 91.66666667%;}
+  .word_wrapper,.b2word_wrapper{margin-top: 0;}
+}
 @media screen and (min-width:330px) and (max-width:628px){.lip_wrapper{margin-right: 12%;}}
 </style>
 </head>
@@ -130,7 +167,7 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
  <div class="jumbotron jumbotron_wht">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-0 col-xxs-12">
+      <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-0 col-xxs-11">
         <div class="word_wrapper">
           <h3>New!</h3>
           <p></p>
@@ -147,8 +184,11 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
         <div class="clearfix"></div>
       </div>
     </div>
-      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-1 hidden-xxs">
+      <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs">
         <div class="undereye"><img src="../img/undereye.png" alt="undereye cream"></div>
+    </div>
+    <div class="visible-xs col-xs-2 hidden-xxs">
+      <div class="undereye"><img src="../img/undereye_sm.png" alt="undereye cream small"></div>
     </div>
       <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs cream_wrapper">
         <img src="../img/cream.png" alt="cream">
@@ -162,7 +202,7 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
 <div class="jumbotron jumbotron_wht">
  <div class="container">
    <div class="row b2margin">
-     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+     <div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-0 col-sm-7 col-sm-offset-0 col-xs-7 col-xxs-11">
        <div class="b2word_wrapper">
          <h3>City Lips</h3>
          <p></p>
@@ -171,11 +211,14 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
          <div class="button button_blue pull-left">SHOP NOW</div>
        </div>
      </div>
-     <div class="col-lg-2 col-md-2 col-sm-2 col-sm-pull-1 hidden-xs">
+     <div class="col-lg-2 col-md-2 col-md-pull-0 col-sm-1 col-sm-pull-1 hidden-xs">
        <div class="lip_wrapper"><img src="../img/citylips.png" alt="citylips"></div>
      </div>
-     <div class="col-lg-3 col-md-3 col-sm-4 col-sm-pull-1 col-xs-3 col-xs-pull-0 hidden-xxs">
+     <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
        <div class="bfaft_wrapper"><img src="../img/bf_aft.png" alt="before n after lips"></div>
+     </div>
+     <div class="visible-xs hidden-xxs col-xs-4">
+       <div class="bfaft_wrapper"><img src="../img/bf_aft_sm.png" alt="before n after lips small"></div>
      </div>
    </div>
  </div>
@@ -218,7 +261,7 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
        <div class="button button_wht"><a href="undereye.php">SHOP NOW</a></div>
      </div>
      <div class="visible-xs productwrapper">
-       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+       <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
          <!-- Wrapper for slides -->
          <div class="carousel-inner" role="listbox">
            <div class="item active">
@@ -248,10 +291,10 @@ div.form-group input{margin: 0;} .submitbtn{float: right;} footer .container{mar
 
          <!-- Left and right controls -->
          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-           <div class="arrowWrapper"><img src="../img/prevArr.png"></div>
+           <img src="../img/prevArr.png">
          </a>
          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-           <div class="arrowWrapper"><img src="../img/nextArr.png"></div>
+           <img src="../img/nextArr.png">
          </a>
          <div class="clearfix"></div>
        </div>

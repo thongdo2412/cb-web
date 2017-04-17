@@ -12,7 +12,7 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i|Playfair+Display:300,300i,400,400i">
-  <link rel="stylesheet" href="../components/five-star-rating/css/rating.min.css">
+  <link rel="stylesheet" href="../components/raty-master/lib/jquery.raty.css">
 <style type="text/css">
   a {text-decoration: none;}
   *{margin:0 auto;}
@@ -501,7 +501,7 @@
                     </div>
                     <div class="form-group yourrating">
                       <div class="rating_label">YOUR RATING*</div>
-                      <div class="c-rating" id="form_rating" name="rating" required="required" data-error="Rating is required."></div>
+                      <div id="form_rating" name="rating" required="required" data-error="Rating is required."></div>
                       <div class="help-block with-errors"></div>
                       <div class="linebreak5"></div>
                       <div class="clearfix"></div>
@@ -681,7 +681,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="../components/five-star-rating/js/dist/rating.min.js"></script>
+    <script src="../components/raty-master/lib/jquery.raty.js"></script>
     <script type="text/javascript">
     $(function(){
       var $select = $(".quantity,.xsquantity");
@@ -715,23 +715,10 @@
       $(this).css('display','none');
     });
 
-    $(function(){
-      // target element
-      var el = document.querySelector('#form_rating');
-
-      // current rating, or initial rating
-      var currentRating = 0;
-
-      // max rating, i.e. number of stars you want
-      var maxRating= 5;
-
-      // callback to run after setting the rating
-      var callback = function(rating) { alert(rating); };
-
-      // rating instance
-      var myRating = rating(el, currentRating, maxRating, callback);
+    $(function() {
+      $.fn.raty.defaults.path = '../components/raty-master/lib/images';
+      $('#form_rating').raty();
     });
-
     </script>
 
   </body>
