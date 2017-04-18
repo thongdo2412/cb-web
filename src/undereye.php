@@ -12,6 +12,7 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i|Playfair+Display:300,300i,400,400i">
+  <link rel="stylesheet" href="../components/raty-master/lib/jquery.raty.css">
 <style type="text/css">
   a {text-decoration: none;}
   *{margin:0 auto;}
@@ -33,6 +34,7 @@
   .sup1{vertical-align: super;}
   .button{width: 150px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
+  .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
   .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
   .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
   .nav{font-size: 14px;font-family: "Montserrat", sans-serif;}
@@ -43,7 +45,7 @@
   .movedown2p{padding-top: 2%;}
   .movedown5p{padding-top: 5%;}
   .movedown10p{padding-top: 10%;}
-  .creamphoto{margin-right: 100px;margin-top: 150px;}
+  .creamphoto{margin-right: 96px;margin-top: 150px;}
   .product_info{text-align: left;}
   .product_notes{text-align: left; margin-top: 10px;}
   .productnotes_head{width: 148px;margin-top: 16px;}
@@ -62,12 +64,27 @@
   .yousave{margin-left: -52px;}
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
-  .quantity{margin-left: 20px; font-family: "Playfair Display", serif; font-size: 30px; font-style: italic;}
+  .quantityword{margin-top: 6px;}
+  .quantity{margin-left: 10px;font-family: "Playfair Display", serif; font-size: 30px; font-style: italic;}
   select.quantity{border: 0; border-radius: 0;-webkit-appearance: none; background: url("../img/quantityarrw.png") no-repeat 20px 5px #ffffff;}
   .xsquantity{font-family: "Playfair Display", serif;font-size: 20.45px;}
   select.xsquantity{width: 75px;height: 32px; border: 1px solid rgb(235, 235, 235);border-radius: 0;-webkit-appearance: none; background: url("../img/quantityarrw_sm.png") no-repeat 38px 13px #ffffff; text-align-last:left;padding-left: 22px;direction: rtl;}
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
+  div.form-group input.form-control{border-radius: 0;width: 290px;height: 32px;}
+  div.form-group input{margin-left: 18px;}
+  div.form-group label{font-weight: 300;}
+  div.form-group textarea.form-control{border-radius: 0;margin-left: 18px;width: 774px;height: 104px;}
+  #reviewpanel{margin: 0 auto;}
+  #review_form{text-align: left;margin-left: 32px;}
+  .firstname{margin-left: 14px;}
+  .email{margin-left: 114px;}
+  .subjectrating{margin-top: 16px;}
+  .yourrating{margin-left: 54px;}
+  .rating_label{float: left;margin-top: 2px;}
+  #form_rating{float: left;margin-left: 14px;}
+  .msgtextbox{margin-left: 28px;margin-top: 16px;}
+  .btn_wrapper{float: right;margin-right: 50px;}
   h3{font-family: "Playfair Display",serif;font-size: 38px; display: inline;}
   h4{font-family: "Playfair Display",serif;font-size: 33px;}
   h5{font-family: "Playfair Display",serif;font-size: 22px;font-weight: 400;font-style: italic;}
@@ -92,14 +109,23 @@
     .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
     .collapse.in{display:block !important;}
     .product_notes{margin-top: 20px;}
-    #testi hr{width: 82%;}
+    #testi hr{width: 86%;}
+    .firstname,.email,.subjectline,.yourrating,.subjectrating{margin: 0;}
+    .msgtextbox{margin-left: 0;}
+    div.form-group input{margin-left: 0;}
+    div.form-group textarea.form-control{margin-left: 0; width: 290px;}
+    .quantity{margin-left: 20px;}
+    .btn_wrapper{margin-right: 10px;}
+    #review_form{width: 300px;margin-left: 35%;}
   }
+
   @media screen and (max-width:767px){
     footer .container{margin-left: 30px;margin-right: 30px;}
     .navbar-toggle{margin-right: 40px;}
     .undereyephoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
     .guarantee_wrd{margin-left: 100px;}
     .product_notes{padding-left: 28px;padding-right: 28px;}
+    #review_form{width: 300px;margin:auto;}
   }
   @media screen and (max-width:479px){
     .word_wrapper{margin-left: 12.5%; margin-bottom: 5%;}
@@ -111,6 +137,10 @@
   }
   @media screen and (max-width:399px){
     .button_bg{width: 150px;margin-left: 20px;}
+    #review_form{padding-left: 28px; padding-right: 28px;}
+    div.form-group input.form-control{width: 244px;}
+    div.form-group textarea.form-control{width: 244px;}
+    .btn_wrapper{margin: 0;}
   }
 
 </style>
@@ -191,14 +221,17 @@
           <hr>
           <div class="row">
             <div class="col-lg-12 hidden-xs">
-              <p>QUANTITY<select class="quantity"></select></p>
+              <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity"></select></div>
+              </div>
               <div class="linebreak2"></div>
               <div class="button button_blue pull-left">ADD TO CART</div>
               <div class="clearfix"></div>
-              <div class="linebreak2"></div>
+              <div class="linebreak4"></div>
             </div>
             <div class="visible-xs col-xs-12">
-              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(12 Reviews)</span></p>
+              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(144 Reviews)</span></p>
               <div class="linebreak2"></div>
               <div class="row">
                 <div class="col-xs-3">
@@ -208,7 +241,7 @@
                   <div class="button_bg button_blue">ADD TO CART</div>
                 </div>
               </div>
-              <div class="linebreak4"></div>
+            <div class="clearfix"></div>
             </div>
           </div>
           <hr>
@@ -295,7 +328,7 @@
               </div>
             </div>
           </div>
-
+          <div class="clearfix"></div>
         </div>
 
       </div>
@@ -436,16 +469,66 @@
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1">
           <h4>Real stories from recent customers</h4>
-          <div class="review_link">WRITE A REVIEW</div>
-          <!--review system inserted here-->
         </div>
       </div>
+      <div class="linebreak2"></div>
+        <div data-toggle="collapse" data-target="#reviewpanel" class="review_link">WRITE A REVIEW</div>
+          <!--review system inserted here-->
+        <div class="linebreak3"></div>
+        <div id="reviewpanel" class="collapse">
+          <hr>
+          <div class="row">
+            <div class="col">
+                <form id="review_form" method="post" action="" role="form">
+                  <div class="form-inline">
+                    <div class="form-group firstname">
+                      <p>FIRST NAME*<input id="form_fname" type="text" name="fname" class="form-control" required="required" data-error="First name is required."></p>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                    </div>
+                    <div class="form-group email">
+                      <p>EMAIL*<input id="form_email" type="text" name="email" class="form-control" required="required" data-error="Email is required."></p>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="form-inline subjectrating">
+                    <div class="form-group subjectline">
+                      <p>SUBJECT LINE*<input id="form_subject" type="text" name="subject" class="form-control" required="required" data-error="Subject line is required."></p>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                    </div>
+                    <div class="form-group yourrating">
+                      <div class="rating_label">YOUR RATING*</div>
+                      <div id="form_rating" name="rating" required="required" data-error="Rating is required."></div>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="form-inline">
+                    <div class="form-group msgtextbox">
+                      <label for="form_message">MESSAGE*</label>
+                      <textarea id="form_message" name="message" class="form-control" required="required" data-error="Please,leave us a message."></textarea>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                    </div>
+                  </div>
+                  <div class="linebreak2"></div>
+                  <div class="btn_wrapper"><input type="submit" class="submitbtn button_blue" value="SUBMIT"></div>
+                  <div class="clearfix"></div>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="linebreak2"></div>
       <hr>
       <div class="row">
         <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
           <img src="../img/stars_rating.png"></img>
           <p>KW &nbsp</p>
-          <p> <i>Texas</i></p>
+          <p><i>Texas</i></p>
         </div>
         <div class="col-lg-9 col-lg-offset-0 col-md-9 col-md-offset-0 col-sm-8 col-sm-offset-0 hidden-xs text-left">
           <p><h5>I love the product</h5></p>
@@ -457,23 +540,16 @@
         </div>
         <div class="visible-xs col-xs-12">
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 col-xs-offset-1 text-left" id="preview1">
-              <img src="../img/stars_rating.png"></img>
-              <p><h5>I love the product</h5></p>
-              <p>I LOVE this stuff. The warm tingle (not a burning or stinging, a warm pleasant tingle)...</p>
-            </div>
-            <!--collapse content goes here -->
-            <div class="col-xs-1 pull-right col-xs-pull-1">
-              <div data-toggle="collapse" data-target="#testi1" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="testi1" class="collapse">
-            <div class="row">
-              <div class="col-xs-10 col-xs-offset-1 text-left">
-                <div class="linebreak2"></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9 col-xs-offset-1 text-left">
+              <div id="preview1">
+                <img src="../img/stars_rating.png"></img>
+                <p><h5>I love the product</h5></p>
+                <p>I LOVE this stuff. The warm tingle (not a burning or stinging, a warm pleasant tingle)...</p>
+              </div>
+              <div id="testi1" class="collapse">
                 <img src="../img/stars_rating.png"></img>
                 <p>KW &nbsp</p>
-                <p> <i>Texas</i></p>
+                <p><i>Texas</i></p>
                 <p><h5>I love the product</h5></p>
                 <p>I LOVE this stuff. The warm tingle (not a burning or stinging, a warm pleasant tingle) feels SO good.
                   My lips are so soft now. Plumper as well (people have noticed and commented...someone actually asked me if I got some collagen
@@ -481,6 +557,10 @@
                   were pure BS. I used it in a sample I got and woke up with much puffier lips. Awesome! I'm on my...what, fifth tube now? I love it!
                 </p>
               </div>
+            </div>
+            <!--collapse content goes here -->
+            <div class="col-xs-1 pull-right col-xs-pull-1">
+              <div data-toggle="collapse" data-target="#testi1" class="plusminus">+</div>
             </div>
           </div>
           <div class="clearfix"></div>
@@ -491,7 +571,7 @@
         <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
           <img src="../img/stars_rating.png"></img>
           <p>Loren &nbsp</p>
-          <p> <i>California</i></p>
+          <p><i>California</i></p>
         </div>
         <div class="col-lg-9 col-lg-offset-0 col-md-9 col-md-offset-0 col-sm-8 col-sm-offset-0 hidden-xs text-left">
           <p><h5>I woke up and I swear my lips are bigger</h5></p>
@@ -504,31 +584,28 @@
         </div>
         <div class="visible-xs col-xs-12">
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 col-xs-offset-1 text-left" id="preview2">
-              <img src="../img/stars_rating.png"></img>
-              <p><h5>I woke up and I swear my lips are bigger</h5></p>
-              <p>Wow, I'm impressed. My lips are actually full - not Angelina full but people always comment that they are...</p>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9 col-xs-offset-1 text-left">
+              <div id="preview2">
+                <img src="../img/stars_rating.png"></img>
+                <p><h5>I woke up and I swear my lips are bigger</h5></p>
+                <p>Wow, I'm impressed. My lips are actually full - not Angelina full but people always comment that they are...</p>
+              </div>
+              <div id="testi2" class="collapse">
+                <img src="../img/stars_rating.png"></img>
+                <p>Loren &nbsp</p>
+                <p><i>California</i></p>
+                <p><h5>I woke up and I swear my lips are bigger</h5></p>
+                <p>Wow, I'm impressed. My lips are actually full - not Angelina full but people always comment that they are big.
+                  1. I can use this over/under anything. 2. I rushed to apply OVER lipstick and forgot about it until 30 min
+                  later when I felt like my lips were swollen. It worked over my lipstick! 3. I used this before bed
+                  (rubbed with my finger so it wasn't as goopy) and it did tingle more when applied directly on skin.
+                  I woke up and I swear my lips are bigger and my lips are really smooth. so we'll see what this does long-term.
+                </p>
+              </div>
             </div>
             <!--collapse content goes here -->
             <div class="col-xs-1 pull-right col-xs-pull-1">
               <div data-toggle="collapse" data-target="#testi2" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="testi2" class="collapse">
-            <div class="row">
-              <div class="col-xs-10 col-xs-offset-1 text-left">
-                <div class="linebreak2"></div>
-                <img src="../img/stars_rating.png"></img>
-                <p>Loren &nbsp</p>
-                <p> <i>California</i></p>
-                <p><h5>I woke up and I swear my lips are bigger</h5></p>
-                <p>Wow, I'm impressed. My lips are actually full - not Angelina full but people always comment that they are big.
-                   1. I can use this over/under anything. 2. I rushed to apply OVER lipstick and forgot about it until 30 min
-                   later when I felt like my lips were swollen. It worked over my lipstick! 3. I used this before bed
-                   (rubbed with my finger so it wasn't as goopy) and it did tingle more when applied directly on skin.
-                   I woke up and I swear my lips are bigger and my lips are really smooth. so we'll see what this does long-term.
-                  </p>
-              </div>
             </div>
           </div>
           <div class="clearfix"></div>
@@ -539,7 +616,7 @@
         <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
           <img src="../img/stars_rating.png"></img>
           <p>Jill &nbsp</p>
-          <p> <i>Connecticut</i></p>
+          <p><i>Connecticut</i></p>
         </div>
         <div class="col-lg-9 col-lg-offset-0 col-md-9 col-md-offset-0 col-sm-8 col-sm-offset-0 hidden-xs text-left">
           <p><h5>I love the product</h5></p>
@@ -551,31 +628,28 @@
         </div>
         <div class="visible-xs col-xs-12">
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 col-xs-offset-1 text-left" id="preview3">
-              <img src="../img/stars_rating.png"></img>
-              <p><h5>I love the product</h5></p>
-              <p>All I ask of a beauty product is that it lives up to advertising claims. City Lips® Advanced
-                 Formula lip plumper does...</p>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9 col-xs-offset-1 text-left">
+              <div id="preview3">
+                <img src="../img/stars_rating.png"></img>
+                <p><h5>I love the product</h5></p>
+                <p>All I ask of a beauty product is that it lives up to advertising claims. City Lips® Advanced
+                  Formula lip plumper does...</p>
+              </div>
+              <div id="testi3" class="collapse">
+                <img src="../img/stars_rating.png"></img>
+                <p>Jill &nbsp</p>
+                <p><i>Connecticut</i></p>
+                <p><h5>I love the product</h5></p>
+                <p>All I ask of a beauty product is that it lives up to advertising claims. City Lips® Advanced
+                  Formula lip plumper does what it's supposed to do. It's also the best available lip moisturizer.
+                  Even in the dryest desert weather, one coat at night keeps lips from drying until morning.
+                  And the customer service at City Lips is the best around!
+                </p>
+              </div>
             </div>
             <!--collapse content goes here -->
             <div class="col-xs-1 pull-right col-xs-pull-1">
               <div data-toggle="collapse" data-target="#testi3" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="testi3" class="collapse">
-            <div class="row">
-              <div class="col-xs-10 col-xs-offset-1 text-left">
-                <div class="linebreak2"></div>
-                <img src="../img/stars_rating.png"></img>
-                <p>Jill &nbsp</p>
-                <p> <i>Connecticut</i></p>
-                <p><h5>I love the product</h5></p>
-                <p>All I ask of a beauty product is that it lives up to advertising claims. City Lips® Advanced
-                   Formula lip plumper does what it's supposed to do. It's also the best available lip moisturizer.
-                   Even in the dryest desert weather, one coat at night keeps lips from drying until morning.
-                   And the customer service at City Lips is the best around!
-                </p>
-              </div>
             </div>
           </div>
           <div class="clearfix"></div>
@@ -607,6 +681,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="../components/raty-master/lib/jquery.raty.js"></script>
     <script type="text/javascript">
     $(function(){
       var $select = $(".quantity,.xsquantity");
@@ -618,14 +693,16 @@
       var sign;
       var getDatatarget = $(this).attr("data-target");
 
+      //change + to - sign when toggle the collapse
       $(this).text(function(i,old){
         sign=old;
         return old=='+' ?  '-' : '+';
       });
 
-      if(!isNaN(getDatatarget.substr(getDatatarget.length - 1))){
-        var newId = "preview" + getDatatarget.substr(getDatatarget.length - 1);
-        if (sign=='+'){
+      //this to display the first 5 rewiews
+      if(!isNaN(getDatatarget.substr(getDatatarget.length - 1))){ //check if the id ends with a number
+       var newId = "preview" + getDatatarget.substr(getDatatarget.length - 1); //assign with the preview
+       if (sign=='+'){
           document.getElementById(newId).style.display ='none';
         }
         else{
@@ -634,6 +711,14 @@
       }
     });
 
+    $('.review_link').click(function(){
+      $(this).css('display','none');
+    });
+
+    $(function() {
+      $.fn.raty.defaults.path = '../components/raty-master/lib/images';
+      $('#form_rating').raty();
+    });
     </script>
 
   </body>
