@@ -318,7 +318,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
         <div class="movedown20"></div>
        <p><b>Sign up below for instant notifications and get a sneak peak at what's ahead.</b></p>
        <div class="movedown20"></div>
-       <form class="form-inline" id="email_form" method="post" action="scripts/emailform.php" role="form">
+       <form class="form-inline" id="email_form" method="post" action="../scripts/emailform.php" role="form">
          <div class="form-group">
            <p>FIRST NAME*<input type="text" class="form-control" name="fname" id="fname"></p>
          </div>

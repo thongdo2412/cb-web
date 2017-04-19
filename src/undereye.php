@@ -479,7 +479,7 @@
           <hr>
           <div class="row">
             <div class="col">
-                <form id="review_form" method="post" action="" role="form">
+                <form id="review_form" method="post" action="../scripts/insert.php" role="form">
                   <div class="form-inline">
                     <div class="form-group firstname">
                       <p>FIRST NAME*<input id="form_fname" type="text" name="fname" class="form-control" required="required" data-error="First name is required."></p>
@@ -501,7 +501,8 @@
                     </div>
                     <div class="form-group yourrating">
                       <div class="rating_label">YOUR RATING*</div>
-                      <div id="form_rating" name="rating" required="required" data-error="Rating is required."></div>
+                      <div id="form_rating" required="required" data-error="Rating is required."></div>
+                      <input type="hidden" id="form-rating-score" type="text" name="rating" value="" />
                       <div class="help-block with-errors"></div>
                       <div class="linebreak5"></div>
                       <div class="clearfix"></div>
@@ -715,10 +716,17 @@
       $(this).css('display','none');
     });
 
-    $(function() {
-      $.fn.raty.defaults.path = '../components/raty-master/lib/images';
-      $('#form_rating').raty();
-    });
+      //include Jquery raty rating stars plugin
+      $('#form_rating').raty({
+        path : '../components/raty-master/lib/images',
+        halfShow:false,
+        hints: ['1','2','3','4','5'],
+        targetKeep:true,
+        click: function(score, evt) {
+          document.getElementById('form-rating-score').value = score;
+        }
+      });
+
     </script>
 
   </body>
