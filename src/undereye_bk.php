@@ -1,7 +1,6 @@
 <?php
   $pid = 'undereye';
   include("../scripts/conn_init.php");
-  include("../scripts/insert.php");
  ?>
 
 <!DOCTYPE HTML>
@@ -479,7 +478,190 @@
       </div>
       <div class="linebreak2"></div>
       <div id="reviewsection">
-        <?php include('../scripts/comments.php'); ?>
+        <div data-toggle="collapse" data-target="#reviewpanel" class="review_link">WRITE A REVIEW</div>
+          <!--review system inserted here-->
+        <div class="linebreak3"></div>
+        <div id="reviewpanel" class="collapse">
+          <hr>
+          <div class="row">
+            <div class="col">
+                <form id="review_form" method="post" action="../scripts/insert.php" role="form">
+                  <div class="form-inline">
+                    <div class="form-group firstname">
+                      <p>FIRST NAME*<input id="form_fname" type="text" name="fname" class="form-control" required="required" data-error="First name is required."></p>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                    </div>
+                    <div class="form-group email">
+                      <p>EMAIL*<input id="form_email" type="text" name="email" class="form-control" required="required" data-error="Email is required."></p>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="form-inline subjectrating">
+                    <div class="form-group subjectline">
+                      <p>SUBJECT LINE*<input id="form_subject" type="text" name="subject" class="form-control" required="required" data-error="Subject line is required."></p>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                    </div>
+                    <div class="form-group yourrating">
+                      <div class="rating_label">YOUR RATING*</div>
+                      <div id="form_rating" required="required" data-error="Rating is required."></div>
+                      <input type="hidden" id="form-rating-score" type="text" name="rating" value="" />
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="form-inline">
+                    <div class="form-group msgtextbox">
+                      <label for="form_message">MESSAGE*</label>
+                      <textarea id="form_message" name="message" class="form-control" required="required" data-error="Please,leave us a message."></textarea>
+                      <div class="help-block with-errors"></div>
+                      <div class="linebreak5"></div>
+                    </div>
+                  </div>
+                  <div class="linebreak2"></div>
+                  <div class="btn_wrapper"><input type="submit" class="submitbtn button_blue" value="SUBMIT"></div>
+                  <div class="clearfix"></div>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="linebreak2"></div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
+          <img src="../img/stars_rating.png"></img>
+          <p>KW &nbsp</p>
+          <p><i>Texas</i></p>
+        </div>
+        <div class="col-lg-9 col-lg-offset-0 col-md-9 col-md-offset-0 col-sm-8 col-sm-offset-0 hidden-xs text-left">
+          <p><h5>I love the product</h5></p>
+          <p>I LOVE this stuff. The warm tingle (not a burning or stinging,a warm pleasant tingle) feels SO good.
+            My lips are so soft now. Plumper as well (people have noticed and commented...someone actually asked me if I got some collagen
+           ,LOL), but I bought it originally for the smoothing, moisturizing properties because I always thought those products
+            were pure BS. I used it in a sample I got and woke up with much puffier lips. Awesome! I'm on my...what, fifth tube now? I love it!
+          </p>
+        </div>
+        <div class="visible-xs col-xs-12">
+          <div class="row">
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9 col-xs-offset-1 text-left">
+              <div id="preview1">
+                <img src="../img/stars_rating.png"></img>
+                <p><h5>I love the product</h5></p>
+                <p>I LOVE this stuff. The warm tingle (not a burning or stinging, a warm pleasant tingle)...</p>
+              </div>
+              <div id="testi1" class="collapse">
+                <img src="../img/stars_rating.png"></img>
+                <p>KW &nbsp</p>
+                <p><i>Texas</i></p>
+                <p><h5>I love the product</h5></p>
+                <p>I LOVE this stuff. The warm tingle (not a burning or stinging, a warm pleasant tingle) feels SO good.
+                  My lips are so soft now. Plumper as well (people have noticed and commented...someone actually asked me if I got some collagen
+                  ,LOL), but I bought it originally for the smoothing, moisturizing properties because I always thought those products
+                  were pure BS. I used it in a sample I got and woke up with much puffier lips. Awesome! I'm on my...what, fifth tube now? I love it!
+                </p>
+              </div>
+            </div>
+            <!--collapse content goes here -->
+            <div class="col-xs-1 pull-right col-xs-pull-1">
+              <div data-toggle="collapse" data-target="#testi1" class="plusminus">+</div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
+          <img src="../img/stars_rating.png"></img>
+          <p>Loren &nbsp</p>
+          <p><i>California</i></p>
+        </div>
+        <div class="col-lg-9 col-lg-offset-0 col-md-9 col-md-offset-0 col-sm-8 col-sm-offset-0 hidden-xs text-left">
+          <p><h5>I woke up and I swear my lips are bigger</h5></p>
+          <p>Wow, I'm impressed. My lips are actually full - not Angelina full but people always comment that they are big.
+             1. I can use this over/under anything. 2. I rushed to apply OVER lipstick and forgot about it until 30 min
+             later when I felt like my lips were swollen. It worked over my lipstick! 3. I used this before bed
+             (rubbed with my finger so it wasn't as goopy) and it did tingle more when applied directly on skin.
+             I woke up and I swear my lips are bigger and my lips are really smooth. so we'll see what this does long-term.
+            </p>
+        </div>
+        <div class="visible-xs col-xs-12">
+          <div class="row">
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9 col-xs-offset-1 text-left">
+              <div id="preview2">
+                <img src="../img/stars_rating.png"></img>
+                <p><h5>I woke up and I swear my lips are bigger</h5></p>
+                <p>Wow, I'm impressed. My lips are actually full - not Angelina full but people always comment that they are...</p>
+              </div>
+              <div id="testi2" class="collapse">
+                <img src="../img/stars_rating.png"></img>
+                <p>Loren &nbsp</p>
+                <p><i>California</i></p>
+                <p><h5>I woke up and I swear my lips are bigger</h5></p>
+                <p>Wow, I'm impressed. My lips are actually full - not Angelina full but people always comment that they are big.
+                  1. I can use this over/under anything. 2. I rushed to apply OVER lipstick and forgot about it until 30 min
+                  later when I felt like my lips were swollen. It worked over my lipstick! 3. I used this before bed
+                  (rubbed with my finger so it wasn't as goopy) and it did tingle more when applied directly on skin.
+                  I woke up and I swear my lips are bigger and my lips are really smooth. so we'll see what this does long-term.
+                </p>
+              </div>
+            </div>
+            <!--collapse content goes here -->
+            <div class="col-xs-1 pull-right col-xs-pull-1">
+              <div data-toggle="collapse" data-target="#testi2" class="plusminus">+</div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
+          <img src="../img/stars_rating.png"></img>
+          <p>Jill &nbsp</p>
+          <p><i>Connecticut</i></p>
+        </div>
+        <div class="col-lg-9 col-lg-offset-0 col-md-9 col-md-offset-0 col-sm-8 col-sm-offset-0 hidden-xs text-left">
+          <p><h5>I love the product</h5></p>
+          <p>All I ask of a beauty product is that it lives up to advertising claims. City Lips® Advanced
+             Formula lip plumper does what it's supposed to do. It's also the best available lip moisturizer.
+             Even in the dryest desert weather, one coat at night keeps lips from drying until morning.
+             And the customer service at City Lips is the best around!
+          </p>
+        </div>
+        <div class="visible-xs col-xs-12">
+          <div class="row">
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9 col-xs-offset-1 text-left">
+              <div id="preview3">
+                <img src="../img/stars_rating.png"></img>
+                <p><h5>I love the product</h5></p>
+                <p>All I ask of a beauty product is that it lives up to advertising claims. City Lips® Advanced
+                  Formula lip plumper does...</p>
+              </div>
+              <div id="testi3" class="collapse">
+                <img src="../img/stars_rating.png"></img>
+                <p>Jill &nbsp</p>
+                <p><i>Connecticut</i></p>
+                <p><h5>I love the product</h5></p>
+                <p>All I ask of a beauty product is that it lives up to advertising claims. City Lips® Advanced
+                  Formula lip plumper does what it's supposed to do. It's also the best available lip moisturizer.
+                  Even in the dryest desert weather, one coat at night keeps lips from drying until morning.
+                  And the customer service at City Lips is the best around!
+                </p>
+              </div>
+            </div>
+            <!--collapse content goes here -->
+            <div class="col-xs-1 pull-right col-xs-pull-1">
+              <div data-toggle="collapse" data-target="#testi3" class="plusminus">+</div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        </div>
       </div>
     </div>
   </div>
@@ -541,10 +723,9 @@
       $(this).css('display','none');
     });
 
-    $(function(){ //handle with jQuery raty plugin
-      $.fn.raty.defaults.path = '../components/raty-master/lib/images';
       //include Jquery raty rating stars plugin
       $('#form_rating').raty({
+        path : '../components/raty-master/lib/images',
         halfShow:false,
         hints: ['1','2','3','4','5'],
         targetKeep:true,
@@ -553,13 +734,6 @@
         }
       });
 
-      $('.scorecallback').raty({
-        readOnly  : true,
-        score: function() {
-          return $(this).attr('data-score');
-        }
-      });
-    });
     </script>
 
   </body>
