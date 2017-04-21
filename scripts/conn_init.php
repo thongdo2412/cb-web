@@ -1,7 +1,7 @@
 <?php
   session_start();
   $_SESSION[$page] = $pid;
-  include("../scripts/db_connect.php");
+  include("scripts/db_connect.php");
   $link = mysqli_connect($host, $user, $pass, $dbname);
   // Check connection
   if($link === false){

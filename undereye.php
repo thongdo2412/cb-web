@@ -74,7 +74,7 @@
   .quantity{margin-left: 10px;font-family: "Playfair Display", serif; font-size: 30px; font-style: italic;}
   select.quantity{border: 0; border-radius: 0;-webkit-appearance: none; background: url("../img/quantityarrw.png") no-repeat 20px 5px #ffffff;}
   .xsquantity{font-family: "Playfair Display", serif;font-size: 20.45px;}
-  select.xsquantity{width: 75px;height: 32px; border: 1px solid rgb(235, 235, 235);border-radius: 0;-webkit-appearance: none; background: url("../img/quantityarrw_sm.png") no-repeat 38px 13px #ffffff; text-align-last:left;padding-left: 22px;direction: rtl;}
+  select.xsquantity{width: 75px;height: 32px; border: 1px solid rgb(235, 235, 235);border-radius: 0;-webkit-appearance: none; background: url("../img/quantityarrw_sm.png") no-repeat 42px 13px #ffffff; text-align-last:left;padding-left: 22px;direction: rtl;}
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
   div.form-group input.form-control{border-radius: 0;width: 290px;height: 32px;}
@@ -518,6 +518,8 @@
     $('.plusminus').click(function(){
       var sign;
       var getDatatarget = $(this).attr("data-target");
+      var numberPattern = /\d+/g;
+      var number = getDatatarget.match(numberPattern);
 
       //change + to - sign when toggle the collapse
       $(this).text(function(i,old){
@@ -525,16 +527,13 @@
         return old=='+' ?  '-' : '+';
       });
 
-      //this to display the first 5 rewiews
-      if(!isNaN(getDatatarget.substr(getDatatarget.length - 1))){ //check if the id ends with a number
-       var newId = "preview" + getDatatarget.substr(getDatatarget.length - 1); //assign with the preview
+      var newId = "preview" + number.toString();
        if (sign=='+'){
           document.getElementById(newId).style.display ='none';
         }
         else{
           document.getElementById(newId).style.display ='block';
         }
-      }
     });
 
     $('.review_link').click(function(){

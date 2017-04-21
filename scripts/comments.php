@@ -78,12 +78,12 @@
   <div class="visible-xs col-xs-12">
     <div class="row">
       <div class="col-xs-9 col-xs-offset-1 text-left">
-        <div id="preview1">
+        <div id="preview<?php echo $rateid;?>">
           <div class="scorecallback" data-score="<?php echo $rating; ?>"></div>
           <p><h5><?php echo $subject;?></h5></p>
           <p><?php echo limit_text($message, 19)?></p>
         </div>
-        <div id="testi1" class="collapse">
+        <div id="testi<?php echo $rateid;?>" class="collapse">
           <img src="../img/stars_rating.png"></img>
           <p><?php echo $name;?> &nbsp</p>
           <p><?php echo $emailaddr;?></p>
@@ -94,7 +94,7 @@
       </div>
       <!--collapse content goes here -->
       <div class="col-xs-1 pull-right col-xs-pull-1">
-        <div data-toggle="collapse" data-target="#testi1" class="plusminus">+</div>
+        <div data-toggle="collapse" data-target="#testi<?php echo $rateid;?>" class="plusminus">+</div>
       </div>
     </div>
     <div class="clearfix"></div>
