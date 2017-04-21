@@ -70,18 +70,18 @@
     <p><?php echo $name;?> &nbsp</p>
     <p><i><?php echo $emailaddr;?></i></p>
   </div>
-  <div class="col-lg-9 col-lg-offset-0 col-md-9 col-md-offset-0 col-sm-8 col-sm-offset-0 hidden-xs text-left">
+  <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-7 col-sm-offset-1 hidden-xs text-left">
     <p><h5><?php echo $subject;?></h5></p>
     <p><?php echo $message;?>
     </p>
   </div>
   <div class="visible-xs col-xs-12">
     <div class="row">
-      <div class="col-lg-11 col-md-11 col-sm-11 col-xs-9 col-xs-offset-1 text-left">
+      <div class="col-xs-9 col-xs-offset-1 text-left">
         <div id="preview1">
           <div class="scorecallback" data-score="<?php echo $rating; ?>"></div>
           <p><h5><?php echo $subject;?></h5></p>
-          <p>add preview</p>
+          <p><?php echo limit_text($message, 19)?></p>
         </div>
         <div id="testi1" class="collapse">
           <img src="../img/stars_rating.png"></img>
@@ -109,6 +109,14 @@
 		}
 		$link->close();
 	}
-?>
 
+  function limit_text($text, $limit) { //function to display the first amount of words of a text
+      if (str_word_count($text, 0) > $limit) {
+          $words = str_word_count($text, 2);
+          $pos = array_keys($words);
+          $text = substr($text, 0, $pos[$limit]) . '...';
+      }
+      return $text;
+    }
+?>
 </div>

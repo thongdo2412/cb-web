@@ -61,7 +61,7 @@
   .faq_heading{text-align: left;width: 160px;}
   .faq_words{text-align: left;margin-top: 18px;}
   .review_link{font-size: 14px; text-decoration: underline;}
-  .testi_usr{width: 170px;text-align: left;margin-top: 8px;}
+  .testi_usr{width: 170px;text-align: left;margin-top: 10px;}
   .linebreak1{margin-top: 5px;}
   .linebreak2{margin-top: 18px;}
   .linebreak3{margin-top: 30px;}
