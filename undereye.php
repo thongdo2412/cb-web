@@ -70,11 +70,19 @@
   .yousave{margin-left: -52px;}
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
-  .quantityword{margin-top: 6px;}
+  .quantityword{margin-top: 5px;}
   .quantity{margin-left: 10px;font-family: "Playfair Display", serif; font-size: 30px; font-style: italic;}
-  select.quantity{border: 0; border-radius: 0;-webkit-appearance: none; background: url("../img/quantityarrw.png") no-repeat 20px 5px #ffffff;}
+  select.quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
+    background: url("../img/quantityarrw.png") no-repeat 20px 4px #ffffff;
+  }
   .xsquantity{font-family: "Playfair Display", serif;font-size: 20.45px;}
-  select.xsquantity{width: 75px;height: 32px; border: 1px solid rgb(235, 235, 235);border-radius: 0;-webkit-appearance: none; background: url("../img/quantityarrw_sm.png") no-repeat 42px 13px #ffffff; text-align-last:left;padding-left: 22px;direction: rtl;}
+  select.xsquantity{width: 75px;height: 32px; border: 1px solid rgb(235, 235, 235);border-radius: 0;-webkit-appearance: none;-moz-appearance: none; background: url("../img/quantityarrw_sm.png") no-repeat 42px 13px #ffffff; text-align-last:left;padding-left: 22px;direction: rtl;}
+  /*For FF */
+  @-moz-document url-prefix() {
+    .quantityword{margin-top: 14px;}
+    select.quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
+      background: url("../img/quantityarrw.png") no-repeat 20px 15px #ffffff;}
+  }
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
   div.form-group input.form-control{border-radius: 0;width: 290px;height: 32px;}
@@ -152,40 +160,8 @@
 </style>
 </head>
 <body>
+  <?php include("header.php") ?>
   <!--main content-->
-  <header class="centered_flex">
-    <div class="container">
-      <a href="/"><img src="../img/citylogo1.png" alt="citylogo"></a>
-    </div>
-  </header>
-
-  <!--nav bar-->
-  <nav class="navbar navbar-default">
-  <div class="container-fluid centered_nav">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header text-right">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav line-on-sides">
-        <li><a href="#"><nav2>LIPS</nav2></a></li>
-        <li><a href="#"><nav2>LASH</nav2></a></li>
-        <li><a href="#"><nav2>SKIN</nav2></a></li>
-        <li><a href="#"><nav2>BODY</nav2></a></li>
-        <li><a href="media.php"><nav2>MEDIA</nav2></a></li>
-        <li><a href="contact.php"><nav2>CONTACT</nav2></a></li>
-        <li><a href="#"><nav2>VIEW CART</nav2></a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-  </nav>
 
 <div class="jumbotron jumbotron_wht">
   <div class="section1">
@@ -515,20 +491,27 @@
         $select.append($('<option></option>').val(i).html(i))
       }
     });
-    $('.plusminus').click(function(){
-      var sign;
-      var getDatatarget = $(this).attr("data-target");
-      var numberPattern = /\d+/g;
-      var number = getDatatarget.match(numberPattern);
+    $('.plusminus').click(function(){ //handle click for regular + and - collapse
+      $(this).text(function(i,old){
+        sign=old;
+        return old=='+' ?  '-' : '+';
+      });
+    });
 
-      //change + to - sign when toggle the collapse
+    $('.plusminus_revw').click(function(){ //handle review +/- collapse
+      var sign;
+
       $(this).text(function(i,old){
         sign=old;
         return old=='+' ?  '-' : '+';
       });
 
+      var getDatatarget = $(this).attr("data-target");
+      var numberPattern = /\d+/g;
+      var number = getDatatarget.match(numberPattern);
       var newId = "preview" + number.toString();
-       if (sign=='+'){
+
+      if (sign=='+'){
           document.getElementById(newId).style.display ='none';
         }
         else{

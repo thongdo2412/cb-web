@@ -94,7 +94,7 @@
       </div>
       <!--collapse content goes here -->
       <div class="col-xs-1 pull-right col-xs-pull-1">
-        <div data-toggle="collapse" data-target="#testi<?php echo $rateid;?>" class="plusminus">+</div>
+        <div data-toggle="collapse" data-target="#testi<?php echo $rateid;?>" class="plusminus_revw">+</div>
       </div>
     </div>
     <div class="clearfix"></div>

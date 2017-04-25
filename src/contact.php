@@ -154,8 +154,8 @@ div.form-group input.form-control{width: 200px;} div.form-group select.form-cont
               <h4>MAIL US</h4>
               <div class="linebreak"></div>
               <p>CITY BEAUTY</p>
-              <p>XXXXXXXXXXXXXXX</p>
-              <p>Salt Lake City, UT 81406</p>
+              <p>9361 Canoga Avenue</p>
+              <p>Chatsworth, CA 91311</p>
             </div>
           </div>
           <div class="clearfix"></div>

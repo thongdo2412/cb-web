@@ -26,8 +26,8 @@ footer a,a:hover{text-decoration: none; color: #ffffff}
 .nav{font-size: 14px;font-family: "Montserrat", sans-serif; font-weight: 300;}
 nav2 {display: inline-block;padding: 0 15px;position: relative;}
 nav2:hover:before,nav2:hover:after {background: #000;content: "";display: block;height: 1px;position: absolute;top: 50%;width: 12px;}
-nav2:hover:before {right: 90%;}
-nav2:hover:after {left: 90%;}
+nav2:hover:before {right: 95%;}
+nav2:hover:after {left: 95%;}
 .navbar-default .navbar-nav > li > a {color: #333; padding-left: 32px;}
 .line-on-sides{overflow: hidden;}
 toBold{font-weight: 600;}
@@ -72,7 +72,7 @@ body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300;line-height: 24px;}
 
 /*handle responsive for different screens*/
-@media screen and (min-width: 1199px){.socialicons{margin-left: 74px;}}
+@media screen and (min-width: 1199px){.socialicons{margin-left: 54px;}}
 @media screen and (max-width:1199px) {
   .b2margin{margin-left: 7%;}
   .socialicons{margin:0;}
@@ -128,41 +128,9 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
 </style>
 </head>
 <body>
+  <!--header and navigation content-->
+  <?php include("header.php"); ?>
   <!--main content-->
-  <header class="centered_flex">
-    <div class="container">
-      <a href="/"><img src="../img/citylogo1.png" alt="citylogo"></a>
-    </div>
-  </header>
-
-  <!--nav bar-->
-  <nav class="navbar navbar-default">
-  <div class="container centered_nav">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav line-on-sides">
-        <li><a href="#"><nav2>LIPS</nav2></a></li>
-        <li><a href="#"><nav2>LASH</nav2></a></li>
-        <li><a href="#"><nav2>SKIN</nav2></a></li>
-        <li><a href="#"><nav2>BODY</nav2></a></li>
-        <li><a href="media.php"><nav2>MEDIA</nav2></a></li>
-        <li><a href="contact.php"><nav2>CONTACT</nav2></a></li>
-        <li><a href="#"><nav2>VIEW CART</nav2></a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-  <div class="clearfix"></div>
-  </nav>
 <!-- 1st section -->
  <div class="jumbotron jumbotron_wht">
   <div class="container">
@@ -333,29 +301,6 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   </div>
   </div>
 </div>
-<!-- footer -->
-<footer class="centered_flex">
- <div class="container">
-   <div class="row">
-    <div class="col-lg-8 col-md-12 col-sm-12  col-xs-12">
-      <p>&reg; City Beauty 2017. City Lips and City Lash are registered trademarks of City Beauty, LLC. All rights reserved.</p>
-    </div>
-    <div class="col-lg-4 col-md-12 ol-sm-12 col-xs-12">
-      <p><a href="privacy.php">PRIVACY POLICY</a> &nbsp|&nbsp <a href="terms.php">TERMS &amp; CONDITIONS</a></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1">
-      <div class="socialicons"><img src="../img/social_icon.png" alt="social icons"></div>
-    </div>
-  </div>
-   <div class="clearfix"></div>
- </div>
-</footer>
 
-  <!-- link and script section-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
-</html>
+<!--include PHP footer template -->
+<?php include ("footer.php"); ?>
