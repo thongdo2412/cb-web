@@ -84,7 +84,7 @@
           <div class="scorecallback" data-score="<?php echo $rating; ?>"></div>
           <p><h5><?php echo $subject;?></h5></p>
           <div class="linebreak2"></div>
-          <p><?php echo limit_text($message, 19)?></p>
+          <?php echo limit_text($message, 19)?>
         </div>
         <div id="testi<?php echo $rateid;?>" class="collapse">
           <img src="../img/stars_rating.png"></img>
@@ -94,7 +94,7 @@
           <div class="linebreak2"></div>
           <p><?php echo $message;?></p>
           <div class="linebreak2"></div>
-          <p>*Results may vary by individual.</p>
+          *Results may vary by individual.
         </div>
       </div>
       <!--collapse content goes here -->

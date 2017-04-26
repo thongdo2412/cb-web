@@ -2,7 +2,7 @@ a {text-decoration: none;}
 *{margin:0 auto;}
 header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 footer{color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
-footer a,a:hover{text-decoration: none; color: #ffffff}
+footer a,a:hover{text-decoration: none; color: #ffffff;}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .container{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .centered_flex{display: flex;justify-content:center;align-items: center; }
@@ -23,7 +23,7 @@ toBold{font-weight: 400;}
 .button_blue a{color: #ffffff;}
 .button_wht a{color: rgb(6, 16, 42);}
 .nav{font-size: 14px;font-family: "Montserrat", sans-serif;}
-.jumbotron p{font-size: 16px;margin: 0 auto;font-weight: 300; line-height: 24px;}
+.jumbotron p{font-size: 16px;font-weight: 300; line-height: 24px;}
 .jumbotron_wht{background: rgb(255,255,255);}
 .jumbotron_w_bg{background: rgb(248,249,249);background-size: cover;border: 1px solid rgb(235, 235, 235);margin: 0 auto;}
 .jumbotron_w_imgbg{height: 528px;background-image: url("../img/gift_bg.png");border: 1px solid rgb(235, 235, 235);background-size:100% cover;background-position:center;}

@@ -25,7 +25,7 @@
   header, footer{background: rgb(9,30,55);height: 94px;background-size: cover;}
   footer{color: rgb(255,255,255);}
   footer p{font-size: 11px; font-weight: 300; text-align: center; line-height: 1;word-wrap:break-word;}
-  footer a,a:hover{text-decoration: none; color: #ffffff}
+  footer a,a:hover{text-decoration: none; color: #ffffff;}
   .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
   .container{width: 960px;margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
   .centered_flex{display: flex;justify-content: center;align-items: center;}
@@ -42,15 +42,12 @@
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
   .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
+  .button_blue a {color: #ffffff;}
   .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
   .nav{font-size: 14px;font-family: "Montserrat", sans-serif;}
   .jumbotron p{font-size: 16px;font-weight: 300;}
   .jumbotron_wht{background: rgb(255,255,255);}
   .jumbotron_w_bg{background: rgb(248,249,249);background-size: cover;border: 1px solid rgb(235, 235, 235);margin: 0 auto;}
-  .movedown20{padding-top: 20px;}
-  .movedown2p{padding-top: 2%;}
-  .movedown5p{padding-top: 5%;}
-  .movedown10p{padding-top: 10%;}
   .creamphoto{margin-right: 96px;margin-top: 150px;}
   .product_info{text-align: left;}
   .product_notes{text-align: left; margin-top: 10px;}
@@ -64,19 +61,29 @@
   .testi_usr{width: 170px;text-align: left;margin-top: 14px;}
   .linebreak1{margin-top: 5px;}
   .linebreak2{margin-top: 18px;}
+  .linebreak12{margin-top: 12px;}
   .linebreak3{margin-top: 30px;}
-  .linebreak4{margin-top: 12px;}
+  .linebreak4{margin-top: 40px;}
   .ratingwrapper{margin-top: 16px;}
   .yousave{margin-left: -52px;}
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
-  .quantityword{margin-top: 5px;}
-  .quantity{margin-left: 10px;font-family: "Playfair Display", serif; font-size: 30px; font-style: italic;}
-  select.quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
-    background: url("../img/quantityarrw.png") no-repeat 20px 4px #ffffff;
+  .quantityword{margin-top: 12px;}
+  .quantity{margin-left: 10px;}
+  select.quantity{font-family: "Playfair Display", serif; font-size: 30px; font-style: italic;
+    border: 0;
+    -moz-appearance: none;
+    background: url("../img/quantityarrw.png") no-repeat 32px 14px #ffffff;
   }
   .xsquantity{font-family: "Playfair Display", serif;font-size: 20.45px;}
-  select.xsquantity{width: 75px;height: 32px; border: 1px solid rgb(235, 235, 235);border-radius: 0;-webkit-appearance: none;-moz-appearance: none; background: url("../img/quantityarrw_sm.png") no-repeat 42px 13px #ffffff; text-align-last:left;padding-left: 22px;direction: rtl;}
+  select.xsquantity{width: 75px;
+    height: 32px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("../img/quantityarrw_sm.png") no-repeat 42px 13px #ffffff;
+    text-align-last:left;padding-left: 22px;direction: rtl;}
   /*For FF */
   @-moz-document url-prefix() {
     .quantityword{margin-top: 14px;}
@@ -192,12 +199,8 @@
           </div>
           <hr>
           <div class="row">
-            <div class="col-lg-12 hidden-xs">
-              <p><h6>$99.00</h6> + <i>free shipping</i> </p>
-            </div>
-            <div class="col-xs-12 visible-xs">
-              <p><h6>$99.00</h6></p>
-              <p>+ <i>free shipping</i></p>
+            <div class="col-lg-12">
+              <h6>$39.00</h6>
             </div>
           </div>
           <hr>
@@ -205,24 +208,25 @@
             <div class="col-lg-12 hidden-xs">
               <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
-                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity"></select></div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity" id="qty" name="quantityselect"></select></div>
               </div>
               <div class="linebreak2"></div>
-              <div class="button button_blue pull-left">ADD TO CART</div>
+              <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
               <div class="clearfix"></div>
-              <div class="linebreak4"></div>
+              <div class="linebreak2"></div>
             </div>
             <div class="visible-xs col-xs-12">
-              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(3 Reviews)</span></p>
+              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(144 Reviews)</span></p>
               <div class="linebreak2"></div>
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="xsquantity"></select>
+                  <select class="xsquantity" id="xsqty" name="quantityselect"></select>
                 </div>
                 <div class="col-xs-4">
-                  <div class="button_bg button_blue">ADD TO CART</div>
+                  <div class="button_bg button_blue"><a name="addToCart" href="#">ADD TO CART</a></div>
                 </div>
               </div>
+            <div class="linebreak2"></div>
             <div class="clearfix"></div>
             </div>
           </div>
@@ -254,7 +258,7 @@
             </div>
             <div class="col-xs-12 visible-xs">
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>DESCRIPTION</p></div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">DESCRIPTION</div>
                 <!--collapse content goes here -->
                 <div class="col-lg-1">
                   <div data-toggle="collapse" data-target="#description" class="plusminus">+</div>
@@ -276,7 +280,7 @@
               </div>
               <hr>
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>DETAILS</p></div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">DETAILS</div>
                 <!--collapse content goes here -->
                 <div class="col-lg-1">
                   <div data-toggle="collapse" data-target="#details_drop" class="plusminus">+</div>
@@ -294,7 +298,7 @@
           </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>INGREDIENTS</p></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">INGREDIENTS</div>
               <!--collapse content goes here -->
               <div class="col-lg-1">
                 <div data-toggle="collapse" data-target="#ingredients" class="plusminus">+</div>
@@ -302,7 +306,7 @@
             </div>
             <div class="linebreak2"></div>
             <div id="ingredients" class="collapse">
-            <p>Water, Glycerin, Caprylic/Capric Triglyceride, Nylon-12 Fluorescent Brightener 230 Salt, Isopentyldiol, Polymethylsilsesquioxane, Pentylene Glycol, Caffeine, Cetearyl Alcohol, Glyceryl Stearate, Potassium Olivoyl Hydrolized Oat Protein, Cyclopentasiloxane, Dimethicone, Jojoba Esters, Olea Europaea (Olive) Fruit Unsaponifiables, Cocos Nucifera (Coconut) Oil, Albizia Julibrissin Bark Extract, Coffea Arabica (Coffee) Seed Extract, Passiflora Incarnata Flower Extract, Phenoxyethanol, Glyceryl Oleate, Strelitzia Nicolai Seed Aril Extract, Polyvinylalcohol Crosspolymer, Sodium Hyaluronate, Caprylyl Glycol, Lecithin, Chlorphenesin, Algae Extract, Xanthan Gum, Cyamopsis Tetragonoloba (Guar) Gum, Steareth-20, Tetrasodium Glutamate Diacetate, Hexylene Glycol, Palmitoyl Oligopeptide, Darutoside, Caprooyl Tetrapeptide-3, Dextran, Palmitoyl Tetrapeptide-7, Hydroxyacetophenone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance.</p>
+            Water, Glycerin, Caprylic/Capric Triglyceride, Nylon-12 Fluorescent Brightener 230 Salt, Isopentyldiol, Polymethylsilsesquioxane, Pentylene Glycol, Caffeine, Cetearyl Alcohol, Glyceryl Stearate, Potassium Olivoyl Hydrolized Oat Protein, Cyclopentasiloxane, Dimethicone, Jojoba Esters, Olea Europaea (Olive) Fruit Unsaponifiables, Cocos Nucifera (Coconut) Oil, Albizia Julibrissin Bark Extract, Coffea Arabica (Coffee) Seed Extract, Passiflora Incarnata Flower Extract, Phenoxyethanol, Glyceryl Oleate, Strelitzia Nicolai Seed Aril Extract, Polyvinylalcohol Crosspolymer, Sodium Hyaluronate, Caprylyl Glycol, Lecithin, Chlorphenesin, Algae Extract, Xanthan Gum, Cyamopsis Tetragonoloba (Guar) Gum, Steareth-20, Tetrasodium Glutamate Diacetate, Hexylene Glycol, Palmitoyl Oligopeptide, Darutoside, Caprooyl Tetrapeptide-3, Dextran, Palmitoyl Tetrapeptide-7, Hydroxyacetophenone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance.
             </div>
             <hr>
             <div class="row">
@@ -412,7 +416,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What is Under Eye Recovery?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">What is Under Eye Recovery?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq1" class="plusminus">+</div>
@@ -426,7 +430,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>How does Under Eye Recovery work?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">How does Under Eye Recovery work?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq2" class="plusminus">+</div>
@@ -436,11 +440,9 @@
             <div class="linebreak2"></div>
               <p>Under Eye Recovery takes a two-pronged approach to combating dark circles. In addition to reducing the underlying causes of dark circles that occur within the skin, our formula uses an advanced, state-of-the-art ingredient that actually refracts and reflects light, helping to eliminate the small shadows caused by skin imperfections that are a major contributor to dark circles.</p>
           </div>
-
-
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What are the main ingredients in Under Eye Recovery?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">What are the main ingredients in Under Eye Recovery?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq3" class="plusminus">+</div>
@@ -457,11 +459,9 @@
               <p><i>RejuvenOX</i>: Infuses aging, suffocated tissues with revitalizing oxygen to improve blood flow, reduce fine lines and smooth out your skin's texture
                 Silk Tree Extract: Reduces puffiness at its source for a refreshed, vibrant look</p>
           </div>
-
-
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What makes Under Eye Recovery different from similar products?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">What makes Under Eye Recovery different from similar products?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq4" class="plusminus">+</div>
@@ -476,7 +476,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>How do I use Under Eye Recovery?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">How do I use Under Eye Recovery?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq5" class="plusminus">+</div>
@@ -491,7 +491,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>Other eye creams feel heavy and oily on my skin. Will Under Eye Recovery feel like that?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">Other eye creams feel heavy and oily on my skin. Will Under Eye Recovery feel like that?</div>
             <!--collapse content goe</b>s here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq6" class="plusminus">+</div>
@@ -504,7 +504,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>Is Under Eye Recovery suitable for all skin types?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">Is Under Eye Recovery suitable for all skin types?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq7" class="plusminus">+</div>
@@ -517,7 +517,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What is the recommended age group for Under Eye Recovery?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">What is the recommended age group for Under Eye Recovery?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq8" class="plusminus">+</div>
@@ -530,7 +530,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>Will it work for men?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">Will it work for men?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq9" class="plusminus">+</div>
@@ -543,7 +543,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>Will it irritate my sensitive skin?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">Will it irritate my sensitive skin?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq10" class="plusminus">+</div>
@@ -556,7 +556,7 @@
 
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What does it feel like to use Under Eye Recovery?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">What does it feel like to use Under Eye Recovery?</div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
               <div data-toggle="collapse" data-target="#faq11" class="plusminus">+</div>
@@ -612,65 +612,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="../components/raty-master/lib/jquery.raty.js"></script>
-    <script type="text/javascript">
-    $(function(){
-      var $select = $(".quantity,.xsquantity");
-      for (i=1;i<=100;i++){
-        $select.append($('<option></option>').val(i).html(i))
-      }
-    });
-    $('.plusminus').click(function(){ //handle click for regular + and - collapse
-      $(this).text(function(i,old){
-        sign=old;
-        return old=='+' ?  '-' : '+';
-      });
-    });
-
-    $('.plusminus_revw').click(function(){ //handle review +/- collapse
-      var sign;
-
-      $(this).text(function(i,old){
-        sign=old;
-        return old=='+' ?  '-' : '+';
-      });
-
-      var getDatatarget = $(this).attr("data-target");
-      var numberPattern = /\d+/g;
-      var number = getDatatarget.match(numberPattern);
-      var newId = "preview" + number.toString();
-
-      if (sign=='+'){
-          document.getElementById(newId).style.display ='none';
-        }
-        else{
-          document.getElementById(newId).style.display ='block';
-        }
-    });
-
-    $('.review_link').click(function(){
-      $(this).css('display','none');
-    });
-
-    $(function(){ //handle with jQuery raty plugin
-      $.fn.raty.defaults.path = '../components/raty-master/lib/images';
-      //include Jquery raty rating stars plugin
-      $('#form_rating').raty({
-        halfShow:false,
-        hints: ['1','2','3','4','5'],
-        targetKeep:true,
-        click: function(score, evt) {
-          document.getElementById('form-rating-score').value = score;
-        }
-      });
-
-      $('.scorecallback').raty({
-        readOnly  : true,
-        score: function() {
-          return $(this).attr('data-score');
-        }
-      });
-    });
-    </script>
-
+    <script src="scripts/citybeauty.js"></script>
   </body>
   </html>
