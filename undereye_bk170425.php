@@ -1,3 +1,4 @@
+<!-- include PHP header and other prerequisite files-->
 <?php
   $pid = 'undereye';
   include("scripts/conn_init.php");
@@ -44,7 +45,7 @@
   .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
   .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
   .nav{font-size: 14px;font-family: "Montserrat", sans-serif;}
-  .jumbotron p{font-size: 16px;font-weight: 300;}
+  .jumbotron p{font-size: 16px;margin: 0 auto;font-weight: 300;}
   .jumbotron_wht{background: rgb(255,255,255);}
   .jumbotron_w_bg{background: rgb(248,249,249);background-size: cover;border: 1px solid rgb(235, 235, 235);margin: 0 auto;}
   .movedown20{padding-top: 20px;}
@@ -61,7 +62,7 @@
   .faq_heading{text-align: left;width: 160px;}
   .faq_words{text-align: left;margin-top: 18px;}
   .review_link{font-size: 14px; text-decoration: underline;}
-  .testi_usr{width: 170px;text-align: left;margin-top: 14px;}
+  .testi_usr{width: 170px;text-align: left;margin-top: 10px;}
   .linebreak1{margin-top: 5px;}
   .linebreak2{margin-top: 18px;}
   .linebreak3{margin-top: 30px;}
@@ -108,7 +109,7 @@
   body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300; line-height: 24px;}
 
   /*handle responsive*/
-  @media screen and (min-width: 1199px){.socialicons{margin-left: 29px;}}
+  @media screen and (min-width: 1199px){.socialicons{margin-left: 10px;}}
   @media screen and (max-width:1199px){.socialicons{margin: 0;}}
   @media screen and (max-width:991px){
     .centered_nav{display: block;}
@@ -160,6 +161,7 @@
 </style>
 </head>
 <body>
+  <!-- include header and navigation content -->
   <?php include("header.php") ?>
   <!--main content-->
 
@@ -193,7 +195,7 @@
           <hr>
           <div class="row">
             <div class="col-lg-12 hidden-xs">
-              <p><h6>$99.00</h6> + <i>free shipping</i> </p>
+              <p><h6>$99.00</h6> + <i>free shipping</i> / YOU SAVE <toRegular>$10</toRegular></p>
             </div>
             <div class="col-xs-12 visible-xs">
               <p><h6>$99.00</h6></p>
@@ -213,7 +215,7 @@
               <div class="linebreak4"></div>
             </div>
             <div class="visible-xs col-xs-12">
-              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(3 Reviews)</span></p>
+              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(144 Reviews)</span></p>
               <div class="linebreak2"></div>
               <div class="row">
                 <div class="col-xs-3">
@@ -232,16 +234,14 @@
               <div class="linebreak1"></div>
               <p>DESCRIPTION</p>
               <div class="linebreak2"></div>
-              <p>Under Eye Recovery is a unique formula that uses both advanced color correctors and instant light-scattering optics to give you the bright, youthful eyes you've always wanted.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget enim enim. Nulla facilisi. In et lacus nulla. Fusce tincidunt blandit tellus, ut faucibus urna ultrices egestas. Vestibulum turpis augue, egestas in tellus ut, facilisis consectetur sem. </p>
               <div class="linebreak2"></div>
               <p>FEATURES</p>
               <div class="linebreak2"></div>
               <ul class="features">
-                <li>Reduces the appearance of discoloration under the eyes</li>
-                <li>Diminishes the appearance of skin-aging shadows</li>
-                <li>Helps correct puffiness and wrinkles around the eye area</li>
-                <li>Deeply hydrates and smoothes skin</li>
-                <li>Provides rapid results that build over time</li>
+                <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
+                <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
+                <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
               </ul>
               <hr>
               <p>DETAILS</p>
@@ -262,16 +262,14 @@
               </div>
               <div id="description" class="collapse">
                 <div class="linebreak2"></div>
-                <p>Under Eye Recovery is a unique formula that uses both advanced color correctors and instant light-scattering optics to give you the bright, youthful eyes you've always wanted. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget enim enim. Nulla facilisi. In et lacus nulla. Fusce tincidunt blandit tellus, ut faucibus urna ultrices egestas. Vestibulum turpis augue, egestas in tellus ut, facilisis consectetur sem. </p>
                 <div class="linebreak2"></div>
                 <p>FEATURES</p>
                 <div class="linebreak2"></div>
                 <ul class="features">
-                  <li>Reduces the appearance of discoloration under the eyes</li>
-                  <li>Diminishes the appearance of skin-aging shadows</li>
-                  <li>Helps correct puffiness and wrinkles around the eye area</li>
-                  <li>Deeply hydrates and smoothes skin</li>
-                  <li>Provides rapid results that build over time</li>
+                  <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
+                  <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
+                  <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
                 </ul>
               </div>
               <hr>
@@ -366,207 +364,83 @@
           <h4>Frequently Asked Questions</h4>
         </div>
         <div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-10 col-sm-offset-1 hidden-xs faq_words">
-          <p><b>What is Under Eye Recovery?</b></p>
-          <p>Under Eye Recovery’s advanced formula takes skincare technology to the next level. A uniquely sophisticated combination of powerful ingredients works to dramatically reduce the appearance of dark circles under your eyes, both immediately and over time.</p>
+          <p>WHICH ORDER OPTIONS IS RIGHT FOR ME?</p>
           <br>
-          <p><b>How does Under Eye Recovery work?</b></p>
-          <p>Under Eye Recovery takes a two-pronged approach to combating dark circles. In addition to reducing the underlying causes of dark circles that occur within the skin, our formula uses an advanced, state-of-the-art ingredient that actually refracts and reflects light, helping to eliminate the small shadows caused by skin imperfections that are a major contributor to dark circles.</p>
+          <p>Many of our returning customers appreciate the 3-pack because it
+          offers the best value. And we're happy to do it because it saves us the cost of processing individual units.</p>
           <br>
-          <p><b>What are the main ingredients in Under Eye Recovery?</b></p>
-          <p>LipoLight® OAP/PVA uses microscopic, fluorescent particles to emit and diffuse light, blurring imperfections instantly for a dramatically younger appearance</p>
-          <p>Haloxyl: Uses peptides and flavonoids to lighten dark circles, giving the face a younger, more rested, "happier" appearance</p>
-          <p>Chronoline: An amino acid sequence derived from natural growth factors that helps firm and tighten skin by increasing collagen production and strengthening skin's structure</p>
-          <p>Hyalusphere: Uses a direct delivery system to push plumping, hydrating hyaluronic acid deep into your skin, helping to reduce dryness, hollowness, and shadows</p>
-          <p>SYN-AKE: Relaxes wrinkles on contact, with dramatic reduction in as little as two hours</p>
-          <p>BeauifEYE: A sequence of peptides that work together to tighten the skin in your eyelids</p>
-          <p>RejuvenOX: Infuses aging, suffocated tissues with revitalizing oxygen to improve blood flow, reduce fine lines and smooth out your skin's texture
-            Silk Tree Extract: Reduces puffiness at its source for a refreshed, vibrant look</p>
+          <p>If you just want to try 1 tube, we've already reduced the price far below original retail. So you can't go wrong with any of the options. And I just know that you'll fall in love with your new lips either way.</p>
+          <div class="linebreak3"></div>
+          <hr>
+          <div class="linebreak3"></div>
+          <p>WHEN CAN I EXPECT MY ORDER TO ARRIVE?</p>
           <br>
-          <p><b>What makes Under Eye Recovery different from similar products?</b></p>
-          <p>Most eye treatments focus only on treating dark circles by fixing the problems within the skin, such as rebuilding collagen, removing pigmentation, and evening out puffiness and hollowness. That’s important, and our formula deals with those issues too.</p>
-          <p>But what sets our Under Eye Recovery apart is that it also addresses the issue of shadows. By reflecting light away from your under eye area, our formula gives your eyes a brightening effect that simply isn’t achievable by only going after the problems occurring beneath the skin.</p>
+          <p>We know you can't wait to start trying City Lips<span class="sup1">&reg;</span> and experiencing the amazing difference for yourself.
+          That's why our shipping department is operational 7 days a week. That way, your order leaves our facilities
+          within 24-hours. Transit usually takes 3-5 business days depending on what part of the country you're in.</p>
+          <div class="linebreak3"></div>
+          <hr>
+          <div class="linebreak3"></div>
+          <p>IS MY INFORMATION SAFE?</p>
           <br>
-          <p><b>How do I use Under Eye Recovery?</b></p>
-          <p>After cleansing your skin, gently pat Under Eye Recovery onto the skin under your eyes, up to two times a daily.</p>
-          <p>Be sure to include a bedtime application of Under Eye Recovery in your skincare regimen, as this allows active ingredients to work alongside the skin’s natural nighttime regenerating processes.</p>
+          <p>We take your privacy very seriously. That's why we use a variety of security measures to
+          maintain the safety of your personal information. </p>
           <br>
-          <p><b>Other eye creams feel heavy and oily on my skin. Will Under Eye Recovery feel like that?</b></p>
-          <p>No. Under Eye Recovery is lighter-weight than similar products, so it does not weigh down the delicate skin around the eyes. The serum formulation feels refreshing and moisturizing, and allows skin to be lifted, instead of "dragged down" like a heavy cream.</p>
+          <p>When you place an order or access your personal information, everything goes through a
+          secure server. All of your personal information, including credit card number, name, and address,
+          is transmitted via Secure Socket Layer (SSL) technology — the industry standard for secure online transactions.</p>
           <br>
-          <p><b>Is Under Eye Recovery suitable for all skin types?</b></p>
-          <p>Absolutely. Under Eye Recovery can provide excellent anti-aging results to dry, oily, combination, normal, and sensitive skin alike...as well as all skin tones and colors. (As always, if you have a history of adverse reactions to skincare products, or if you have any other concerns, it's always best to perform a patch test on the inside of your arm 24 hours before beginning regular use of any new product, to ensure the formula will be appropriate for your skin.)</p>
-          <br>
-          <p><b>What is the recommended age group for Under Eye Recovery?</b></p>
-          <p>Under Eye Recovery is suitable for all age groups. For more mature skin, its innovative formula can help reduce the existing signs of visible aging - while for younger skin, it can help prevent the signs of aging from appearing prematurely.</p>
-          <br>
-          <p><b>Will it work for men?</b></p>
-          <p>Absolutely. We have many happy male users, as it can give a man spectacular look-younger results around their eyes. In fact, this formula is far superior to other eye treatments for men, as men have thicker skin and require an easily-absorbed formula like Under Eye Recovery in order to really see results.</p>
-          <br>
-          <p><b>Will it irritate my sensitive skin?</b></p>
-          <p>No. Under Eye Recovery’s formula does not contain harsh ingredients that often lead to adverse effects. This complex contains safe and effective ingredients that should be safe for even the most sensitive skin. Of course, if you do have exceptionally sensitive skin, a patch test is always advisable with ANY new product, 24 hours before you begin regular treatment.</p>
-          <br>
-          <p><b>What does it feel like to use Under Eye Recovery?</b></p>
-          <p>Shortly after applying Under Eye Recovery, you may experience a subtle "tightening" sensation in your skin, signaling that the peptides are going to work on your protein structure on a subdermal level. The formula is absorbed into the skin almost immediately, leaving your skin soft, stimulated, and firm - never sticky or greasy.</p>
+          <p>If you would rather not shop online, you can place your order over the phone by calling us at 1-800 347-1558.</p>
         </div>
         <div class="visible-xs col-xs-10 col-xs-offset-1 faq_words">
-
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What is Under Eye Recovery?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>WHICH ORDER OPTIONS IS RIGHT FOR ME?</p></div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq1" class="plusminus">+</div>
+              <div data-toggle="collapse" data-target="#orderoptions" class="plusminus">+</div>
             </div>
           </div>
-          <div id="faq1" class="collapse">
+          <div id="orderoptions" class="collapse">
             <div class="linebreak2"></div>
-              <p>Under Eye Recovery’s advanced formula takes skincare technology to the next level. A uniquely sophisticated combination of powerful ingredients works to dramatically reduce the appearance of dark circles under your eyes, both immediately and over time.</p>
+            <p>Many of our returning customers appreciate the 3-pack because it
+            offers the best value. And we're happy to do it because it saves us the cost of processing individual units.</p>
+            <br>
+            <p>If you just want to try 1 tube, we've already reduced the price far below original retail. So you can't go wrong with any of the options. And I just know that you'll fall in love with your new lips either way.</p>
           </div>
-
-
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>How does Under Eye Recovery work?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>WHEN CAN I EXPECT MY ORDER TO ARRIVE?</p></div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq2" class="plusminus">+</div>
+              <div data-toggle="collapse" data-target="#orderarrival" class="plusminus">+</div>
             </div>
           </div>
-          <div id="faq2" class="collapse">
+          <div id="orderarrival" class="collapse">
             <div class="linebreak2"></div>
-              <p>Under Eye Recovery takes a two-pronged approach to combating dark circles. In addition to reducing the underlying causes of dark circles that occur within the skin, our formula uses an advanced, state-of-the-art ingredient that actually refracts and reflects light, helping to eliminate the small shadows caused by skin imperfections that are a major contributor to dark circles.</p>
+            <p>We know you can't wait to start trying City Lips<span class="sup1">&reg;</span> and experiencing the amazing difference for yourself.
+            That's why our shipping department is operational 7 days a week. That way, your order leaves our facilities
+            within 24-hours. Transit usually takes 3-5 business days depending on what part of the country you're in.</p>
           </div>
-
-
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What are the main ingredients in Under Eye Recovery?</p></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>IS MY INFORMATION SAFE?</p></div>
             <!--collapse content goes here -->
             <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq3" class="plusminus">+</div>
+              <div data-toggle="collapse" data-target="#infosafety" class="plusminus">+</div>
             </div>
           </div>
-          <div id="faq3" class="collapse">
+          <div id="infosafety" class="collapse">
             <div class="linebreak2"></div>
-              <p><i>LipoLight® OAP/PVA</i> uses microscopic, fluorescent particles to emit and diffuse light, blurring imperfections instantly for a dramatically younger appearance</p>
-              <p><i>Haloxyl</i>: Uses peptides and flavonoids to lighten dark circles, giving the face a younger, more rested, "happier" appearance</p>
-              <p><i>Chronoline</i>: An amino acid sequence derived from natural growth factors that helps firm and tighten skin by increasing collagen production and strengthening skin's structure</p>
-              <p><i>Hyalusphere</i>: Uses a direct delivery system to push plumping, hydrating hyaluronic acid deep into your skin, helping to reduce dryness, hollowness, and shadows</p>
-              <p><i>SYN-AKE</i>: Relaxes wrinkles on contact, with dramatic reduction in as little as two hours</p>
-              <p><i>BeauifEYE</i>: A sequence of peptides that work together to tighten the skin in your eyelids</p>
-              <p><i>RejuvenOX</i>: Infuses aging, suffocated tissues with revitalizing oxygen to improve blood flow, reduce fine lines and smooth out your skin's texture
-                Silk Tree Extract: Reduces puffiness at its source for a refreshed, vibrant look</p>
+            <p>We take your privacy very seriously. That's why we use a variety of security measures to
+            maintain the safety of your personal information. </p>
+            <br>
+            <p>When you place an order or access your personal information, everything goes through a
+            secure server. All of your personal information, including credit card number, name, and address,
+            is transmitted via Secure Socket Layer (SSL) technology — the industry standard for secure online transactions.</p>
+            <br>
+            <p>If you would rather not shop online, you can place your order over the phone by calling us at 1-800 347-1558.</p>
           </div>
-
-
-          <hr>
-          <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What makes Under Eye Recovery different from similar products?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq4" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="faq4" class="collapse">
-            <div class="linebreak2"></div>
-              <p>Most eye treatments focus only on treating dark circles by fixing the problems within the skin, such as rebuilding collagen, removing pigmentation, and evening out puffiness and hollowness. That’s important, and our formula deals with those issues too.</p>
-              <br>
-              <p>But what sets our Under Eye Recovery apart is that it also addresses the issue of shadows. By reflecting light away from your under eye area, our formula gives your eyes a brightening effect that simply isn’t achievable by only going after the problems occurring beneath the skin.</p>
-          </div>
-
-          <hr>
-          <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>How do I use Under Eye Recovery?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq5" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="faq5" class="collapse">
-            <div class="linebreak2"></div>
-              <p>After cleansing your skin, gently pat Under Eye Recovery onto the skin under your eyes, up to two times a daily.</p>
-              <br>
-              <p>Be sure to include a bedtime application of Under Eye Recovery in your skincare regimen, as this allows active ingredients to work alongside the skin’s natural nighttime regenerating processes.</p>
-          </div>
-
-          <hr>
-          <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>Other eye creams feel heavy and oily on my skin. Will Under Eye Recovery feel like that?</p></div>
-            <!--collapse content goe</b>s here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq6" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="faq6" class="collapse">
-            <div class="linebreak2"></div>
-              <p>No. Under Eye Recovery is lighter-weight than similar products, so it does not weigh down the delicate skin around the eyes. The serum formulation feels refreshing and moisturizing, and allows skin to be lifted, instead of "dragged down" like a heavy cream.</p>
-          </div>
-
-          <hr>
-          <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>Is Under Eye Recovery suitable for all skin types?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq7" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="faq7" class="collapse">
-            <div class="linebreak2"></div>
-              <p>Absolutely. Under Eye Recovery can provide excellent anti-aging results to dry, oily, combination, normal, and sensitive skin alike...as well as all skin tones and colors. (As always, if you have a history of adverse reactions to skincare products, or if you have any other concerns, it's always best to perform a patch test on the inside of your arm 24 hours before beginning regular use of any new product, to ensure the formula will be appropriate for your skin.)</p>
-          </div>
-
-          <hr>
-          <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What is the recommended age group for Under Eye Recovery?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq8" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="faq8" class="collapse">
-            <div class="linebreak2"></div>
-              <p>Under Eye Recovery is suitable for all age groups. For more mature skin, its innovative formula can help reduce the existing signs of visible aging - while for younger skin, it can help prevent the signs of aging from appearing prematurely.</p>
-          </div>
-
-          <hr>
-          <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>Will it work for men?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq9" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="faq9" class="collapse">
-            <div class="linebreak2"></div>
-            <p>Absolutely. We have many happy male users, as it can give a man spectacular look-younger results around their eyes. In fact, this formula is far superior to other eye treatments for men, as men have thicker skin and require an easily-absorbed formula like Under Eye Recovery in order to really see results.</p>
-          </div>
-
-          <hr>
-          <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>Will it irritate my sensitive skin?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq10" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="faq10" class="collapse">
-            <div class="linebreak2"></div>
-            <p>No. Under Eye Recovery’s formula does not contain harsh ingredients that often lead to adverse effects. This complex contains safe and effective ingredients that should be safe for even the most sensitive skin. Of course, if you do have exceptionally sensitive skin, a patch test is always advisable with ANY new product, 24 hours before you begin regular treatment.</p>
-          </div>
-
-          <hr>
-          <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>What does it feel like to use Under Eye Recovery?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#faq11" class="plusminus">+</div>
-            </div>
-          </div>
-          <div id="faq11" class="collapse">
-            <div class="linebreak2"></div>
-            <p>Shortly after applying Under Eye Recovery, you may experience a subtle "tightening" sensation in your skin, signaling that the peptides are going to work on your protein structure on a subdermal level. The formula is absorbed into the skin almost immediately, leaving your skin soft, stimulated, and firm - never sticky or greasy.</p>
-          </div>
-
           <hr>
         </div>
       </div>
@@ -588,29 +462,9 @@
     </div>
   </div>
 
-  <footer class="centered_flex">
-   <div class="container">
-     <div class="row">
-      <div class="col-lg-8 col-md-12 col-sm-12  col-xs-12">
-        <p>&reg; City Beauty 2017. City Lips and City Lash are registered trademarks of City Beauty, LLC. All rights reserved.</p>
-      </div>
-      <div class="col-lg-4 col-md-12 ol-sm-12 col-xs-12">
-        <p><a href="privacy.php">PRIVACY POLICY</a> &nbsp|&nbsp <a href="terms.php">TERMS &amp; CONDITIONS</a></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1">
-        <div class="socialicons"><img src="../img/social_icon.png" alt="social icons"></div>
-      </div>
-    </div>
-     <div class="clearfix"></div>
-   </div>
-  </footer>
+  <!--include footer and javascript-->
+  <?php include ("footer.php"); ?>
 
-    <!-- link and script section-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="../components/raty-master/lib/jquery.raty.js"></script>
     <script type="text/javascript">
     $(function(){

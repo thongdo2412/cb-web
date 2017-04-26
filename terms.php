@@ -1,13 +1,13 @@
 <!-- include PHP template header file-->
 <?php include("head.php"); ?>
-<title>Privacy Policy</title>
+<title>Terms &amp; Conditions</title>
 
 <style type="text/css">
 
 body{font-family: "Raleway",sans-serif;}
 h5{display: inline;}
 /*handle responsive for different screens*/
-@media screen and (min-width: 1199px){.socialicons{margin-left: 66px;}}
+@media screen and (min-width: 1199px){.socialicons{margin-left: 68px;}}
 </style>
 </head>
 <body>
@@ -200,3 +200,5 @@ h5{display: inline;}
 
   <!--include PHP footer template -->
   <?php include ("footer.php"); ?>
+  </body>
+  </html>

@@ -168,5 +168,7 @@ body{text-align: center;font-family: "Raleway",sans-serif;font-size: 16px; font-
   </div>
 </div>
 
-<!--footer content-->
+<!--include PHP footer template -->
 <?php include ("footer.php"); ?>
+</body>
+</html>

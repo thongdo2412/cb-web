@@ -72,5 +72,7 @@
     </div>
   </div>
 </div>
-<!-- footer section -->
+<!--include PHP footer template -->
 <?php include ("footer.php"); ?>
+</body>
+</html>

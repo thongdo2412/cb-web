@@ -6,7 +6,7 @@
 	<![endif]-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact Form</title>
+	<title>Contact Us</title>
   <!--include Bootstrap-->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -65,7 +65,7 @@ body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;font-weight: 300;line-height: 24px;}
 
 /*Responsive for different screen*/
-@media screen and (min-width: 1200px) {.socialicons{margin-left: 28px;} .mailus{margin-left: 60px;}}
+@media screen and (min-width: 1199px) {.socialicons{margin-left: 10px;} .mailus{margin-left: 60px;}}
 @media screen and (max-width: 1199px) {.socialicons{margin:0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;}}
 @media screen and (max-width: 991px){
   .linebreak3{margin-top: 16px;}
@@ -190,28 +190,7 @@ div.form-group input.form-control{width: 200px;} div.form-group select.form-cont
     </div>
   </div>
 
-  <footer class="centered_flex">
-   <div class="container">
-     <div class="row">
-      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-        <p>&reg; City Beauty 2017. City Lips and City Lash are registered trademarks of City Beauty, LLC. All rights reserved.</p>
-      </div>
-      <div class="col-lg-4 col-md-12 ol-sm-12 col-xs-12">
-        <p><a href="privacy.php">PRIVACY POLICY</a> &nbsp|&nbsp <a href="terms.php">TERMS &amp; CONDITIONS</a></p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1">
-        <div class="socialicons"><img src="../img/social_icon.png" alt="social icons"></div>
-      </div>
-    </div>
-     <div class="clearfix"></div>
-   </div>
-  </footer>
-
-    <!-- link and script section-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!--include PHP footer template -->
+  <?php include ("footer.php"); ?>
 </body>
 </html>

@@ -84,3 +84,5 @@ h5{display: inline;}
 
   <!--include PHP footer template -->
   <?php include ("footer.php"); ?>
+</body>
+</html>
