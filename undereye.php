@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i|Playfair+Display:300,300i,400,400i">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i|Playfair+Display:300,300i,400,400i|Raleway:300,300i">
   <link rel="stylesheet" href="../components/raty-master/lib/jquery.raty.css">
 <style type="text/css">
   a {text-decoration: none;}
@@ -32,8 +32,8 @@
   .centered_nav{display: flex;justify-content: center;align-items: center;}
   nav2 {display: inline-block;padding: 0 15px;position: relative;}
   nav2:hover:before,nav2:hover:after {background: #000;content: "";display: block;height: 1px;position: absolute;top: 50%;width: 12px;}
-  nav2:hover:before {right: 90%;}
-  nav2:hover:after {left: 90%;}
+  nav2:hover:before {right: 95%;}
+  nav2:hover:after {left: 95%;}
   .navbar-default .navbar-nav > li > a {color: #333; padding-left: 32px;}
   .line-on-sides{overflow: hidden;}
   toRegular{font-weight: 400;}
@@ -68,12 +68,12 @@
   .yousave{margin-left: -52px;}
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
-  .quantityword{margin-top: 12px;}
-  .quantity{margin-left: 10px;}
-  select.quantity{font-family: "Playfair Display", serif; font-size: 30px; font-style: italic;
+  .quantityword{margin-top: 4px;}
+  .quantity{margin-left: 10px;background: url("../img/quantityarrw.png") no-repeat 25px 4px #ffffff;}
+  select.quantity{font-family: "Playfair Display", serif; font-size: 23px; font-style: italic;
     border: 0;
+    -webkit-appearance: none;
     -moz-appearance: none;
-    background: url("../img/quantityarrw.png") no-repeat 32px 14px #ffffff;
   }
   .xsquantity{font-family: "Playfair Display", serif;font-size: 20.45px;}
   select.xsquantity{width: 75px;
@@ -83,12 +83,13 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     background: url("../img/quantityarrw_sm.png") no-repeat 42px 13px #ffffff;
-    text-align-last:left;padding-left: 22px;direction: rtl;}
+    text-align-last:left;padding-left: 22px;
+  }
   /*For FF */
   @-moz-document url-prefix() {
-    .quantityword{margin-top: 14px;}
-    select.quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
-      background: url("../img/quantityarrw.png") no-repeat 20px 15px #ffffff;}
+    .quantityword{margin-top: 8px;}
+    .quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
+      background: url("../img/quantityarrw.png") no-repeat 28px 8px #ffffff;}
   }
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
@@ -613,5 +614,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="../components/raty-master/lib/jquery.raty.js"></script>
     <script src="scripts/citybeauty.js"></script>
+    <script type="text/javascript">
+      $(function(){ //handles add to cart with quantity selected above
+        var quantity;
+        var selectId;
+        //handle regular quantity selection or mobile selection
+        if ($("*[name='quantityselect']").attr('id') == 'qty') {
+          quantity = document.getElementById("qty").value;
+          selectId = 'select#qty';
+        }
+        if ($("*[name='quantityselect']").attr('id') == 'xsqty') {
+          quantity = document.getElementById("xsqty").value;
+          selectId = 'select#xsqty';
+        }
+
+        var link = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
+        $("*[name='addToCart']").attr("href", link);
+
+        $(selectId).change(function() {//handle change of quantity
+          quantity = $(this).find('option:selected').text();
+          link = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
+          $("*[name='addToCart']").attr("href", link);
+        });
+      });
+    </script>
   </body>
   </html>

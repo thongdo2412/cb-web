@@ -55,26 +55,3 @@ $(function(){ //handle with jQuery raty plugin
     }
   });
 });
-
-$(function(){ //handles add to cart with quantity selected above
-  var quantity;
-  var selectId;
-  //handle regular quantity selection or mobile selection
-  if ($("*[name='quantityselect']").attr('id') == 'qty') {
-    quantity = document.getElementById("qty").value;
-    selectId = 'select#qty';
-  }
-  if ($("*[name='quantityselect']").attr('id') == 'xsqty') {
-    quantity = document.getElementById("xsqty").value;
-    selectId = 'select#xsqty';
-  }
-
-  var link = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
-  $("*[name='addToCart']").attr("href", link);
-
-  $(selectId).change(function() {
-    quantity = $(this).find('option:selected').text();
-    link = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
-    $("*[name='addToCart']").attr("href", link);
-  });
-});

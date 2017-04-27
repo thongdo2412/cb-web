@@ -15,7 +15,7 @@
   footer p{font-size: 11px; word-wrap:break-word;}
   .container{width: 960px;}
   .sup1{vertical-align: super;}
-  .lipsphoto{margin-left: 10px;margin-top: 150px;}
+  .lipsphoto{margin-left: 30px;margin-top: 150px;}
   .product_info{text-align: left;}
   .product_notes{text-align: left; margin-top: 10px;}
   .productnotes_head{width: 148px;margin-top: 16px;}
@@ -27,15 +27,15 @@
   .review_link{font-size: 14px; text-decoration: underline;}
   .testi_usr{width: 170px;text-align: left;margin-top: 10px;}
   .linebreak1{margin-top: 5px;}
+  .linebreak12{margin-top: 12px;}
   .linebreak2{margin-top: 18px;}
   .linebreak3{margin-top: 30px;}
-  .linebreak4{margin-top: 12px;}
   .ratingwrapper{margin-top: 16px;}
   .yousave{margin-left: -52px;}
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
-  .quantityword{margin-top: 5px;}
-  .quantity{margin-left: 10px;font-family: "Playfair Display", serif; font-size: 30px; font-style: italic;}
+
+  /* css for product gallery and changing color*/
   .swatch-container{width: 39px; height: 39px;margin: 5px}
   .swatch-holder{display:inline-table;text-align: center;}
   .swatch-unit{width: 39px; height: 39px;}
@@ -49,7 +49,7 @@
     border: 2px solid black;
   }
   .product-gallery {
-    margin-left: -330px;
+    margin-left: -220px;
   }
   .product-gallery img {
       display: none;
@@ -63,16 +63,30 @@
   div.main-swatch img.active {
       display: inline-block;
   }
-  select.quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
-    background: url("../img/quantityarrw.png") no-repeat 20px 4px #ffffff;
+
+  /* css for quantity select/option box */
+  .quantityword{margin-top: 4px;}
+  .quantity{margin-left: 10px;background: url("../img/quantityarrw.png") no-repeat 25px 4px #ffffff;}
+  select.quantity{font-family: "Playfair Display", serif; font-size: 23px; font-style: italic;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
   .xsquantity{font-family: "Playfair Display", serif;font-size: 20.45px;}
-  select.xsquantity{width: 75px;height: 32px; border: 1px solid rgb(235, 235, 235);border-radius: 0;-webkit-appearance: none;-moz-appearance: none; background: url("../img/quantityarrw_sm.png") no-repeat 42px 13px #ffffff; text-align-last:left;padding-left: 22px;direction: rtl;}
-  /*For FF */
+  select.xsquantity{width: 75px;
+    height: 32px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("../img/quantityarrw_sm.png") no-repeat 42px 13px #ffffff;
+    text-align-last:left;padding-left: 22px;
+  }
+  /*For FF display*/
   @-moz-document url-prefix() {
-    .quantityword{margin-top: 14px;}
-    select.quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
-      background: url("../img/quantityarrw.png") no-repeat 20px 15px #ffffff;}
+    .quantityword{margin-top: 8px;}
+    .quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
+      background: url("../img/quantityarrw.png") no-repeat 28px 8px #ffffff;}
   }
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
@@ -127,31 +141,29 @@
   @media screen and (max-width:767px){
     footer .container{margin-left: 30px;margin-right: 30px;}
     .navbar-toggle{margin-right: 40px;}
-    .undereyephoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
+    .xslipsphoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
     .guarantee_wrd{margin-left: 100px;}
     .product_notes{padding-left: 28px;padding-right: 28px;}
     #review_form{width: 300px;margin:auto;}
-    .product-gallery{margin-left: -100px;}
     .swatch-holder{margin-top: 10px;}
   }
-  @media screen and (max-width:662px){
-    div.product-gallery img{width: 95%;}
-    .product-gallery{margin-left: -20px;}
-  }
+
   @media screen and (max-width:549px){
     .col-xxs-12{width: 100%;}
+    .xscolordiv{margin-left: 24%;}
   }
   @media screen and (max-width:479px){
-    div.product-gallery img{width: 120%;}
-    .product-gallery{margin-left: -100px;}
     .word_wrapper{margin-left: 12.5%; margin-bottom: 5%;}
     .guarantee_wrd{font-size: 14px;}
     .guarantee_logo{margin-top: 6%;}
+    .xslipsphoto{margin-left: -8%;}
+    .xscolordiv{margin-left: 14%;}
   }
   @media screen and (max-width:400px){
     .guarantee_logo{margin-top: 9%;}
   }
   @media screen and (max-width:399px){
+    .xscolordiv{margin-left: 5%;margin-right: 30px;}
     .button_bg{width: 150px;margin-left: 20px;}
     #review_form{padding-left: 28px; padding-right: 28px;}
     div.form-group input.form-control{width: 244px;}
@@ -196,7 +208,6 @@
                 <img src="img/citylips/swatch-tinseltown.png" id="tinseltown">
                 <img src="img/citylips/swatch-holly.png" id="holly">
                 <img src="img/citylips/swatch-clear.png" id="clear" class="active">
-
               </div>
             </div>
           </div>
@@ -210,7 +221,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
               <div class="ratingwrapper"><img src="../img/ratingstars.png" alt="144 ratings stars"></div>
             </div>
-            <div class="hidden-lg hidden-md hidden-sm visible-xs col-xs-12 undereyephoto">
+            <div class="visible-xs col-xs-1 col-xs-pull-5 xslipsphoto">
               <div class="col product-gallery">
                 <img src="img/citylips/product_city_advanced_clear.jpg" id="clear" class="active">
                 <img src="img/citylips/product_city_los_angelips.jpg" id="losangelips">
@@ -310,7 +321,7 @@
               </div>
               <div class="linebreak2"></div>
               <div class="shadeinfo">
-                <span><toBold>Shade Description:</toBold> <span id="shadeDes">Clear</span></span>
+                <span><toBold>Shade Description:</toBold> <span class="shadeDes">clear</span></span>
               </div>
               <div class="price-holder">
                 <div class="price">
@@ -318,7 +329,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 visible-xs">
+            <div class="col-xs-12 visible-xs xscolordiv">
               <div class="row">
                 <div class="col-xs-4 col-xxs-12">
                   <div class="main-swatch" style="display:inline-table" id="subnav">
@@ -417,6 +428,15 @@
                   </div>
                 </div>
               </div>
+              <div class="linebreak2"></div>
+              <div class="shadeinfo">
+                <span><toBold>Shade Description:</toBold> <span class="shadeDes">clear</span></span>
+              </div>
+              <div class="price-holder">
+                <div class="price">
+                  <toBold>Price: </toBold><span>$35.00</span>
+                </div>
+              </div>
             </div>
           </div>
           <hr>
@@ -424,60 +444,39 @@
             <div class="col-lg-12 hidden-xs">
               <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
-                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity"></select></div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity" id="qty" name="quantityselect"></select></div>
               </div>
               <div class="linebreak2"></div>
-              <div class="button button_blue pull-left">ADD TO CART</div>
+              <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
               <div class="clearfix"></div>
-              <div class="linebreak4"></div>
+              <div class="linebreak2"></div>
             </div>
             <div class="visible-xs col-xs-12">
               <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(144 Reviews)</span></p>
               <div class="linebreak2"></div>
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="xsquantity"></select>
+                  <select class="xsquantity" id="xsqty" name="quantityselect"></select>
                 </div>
                 <div class="col-xs-4">
-                  <div class="button_bg button_blue">ADD TO CART</div>
+                  <div class="button_bg button_blue"><a name="addToCart" href="#">ADD TO CART</a></div>
                 </div>
               </div>
+              <div class="linebreak2"></div>
             <div class="clearfix"></div>
             </div>
           </div>
           <hr>
           <div class="row">
-            <div class="col-lg-12 hidden-xs">
-              <div class="linebreak1"></div>
-              <p>DESCRIPTION</p>
-              <div class="linebreak2"></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget enim enim. Nulla facilisi. In et lacus nulla. Fusce tincidunt blandit tellus, ut faucibus urna ultrices egestas. Vestibulum turpis augue, egestas in tellus ut, facilisis consectetur sem. </p>
-              <div class="linebreak2"></div>
-              <p>FEATURES</p>
-              <div class="linebreak2"></div>
-              <ul class="features">
-                <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
-                <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
-                <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
-              </ul>
-              <hr>
-              <p>DETAILS</p>
-              <div class="linebreak2"></div>
-              <ul class="details">
-                <li>0.5 FL OZ / 15 ML</li>
-                <li>CRUELTY-FREE</li>
-                <li>MANUFACTURED IN THE USA</li>
-              </ul>
-            </div>
-            <div class="col-xs-12 visible-xs">
+            <div class="col-lg-12">
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>DESCRIPTION</p></div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">DESCRIPTION</div>
                 <!--collapse content goes here -->
-                <div class="col-lg-1">
-                  <div data-toggle="collapse" data-target="#description" class="plusminus">+</div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1">
+                  <div data-toggle="collapse" data-target="#description" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
                 </div>
               </div>
-              <div id="description" class="collapse">
+              <div id="description" class="collapse in" name="collapse_content">
                 <div class="linebreak2"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget enim enim. Nulla facilisi. In et lacus nulla. Fusce tincidunt blandit tellus, ut faucibus urna ultrices egestas. Vestibulum turpis augue, egestas in tellus ut, facilisis consectetur sem. </p>
                 <div class="linebreak2"></div>
@@ -491,13 +490,13 @@
               </div>
               <hr>
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>DETAILS</p></div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">DETAILS</div>
                 <!--collapse content goes here -->
-                <div class="col-lg-1">
-                  <div data-toggle="collapse" data-target="#details_drop" class="plusminus">+</div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1">
+                  <div data-toggle="collapse" data-target="#details_drop" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
                 </div>
               </div>
-              <div id="details_drop" class="collapse">
+              <div id="details_drop" class="collapse in" name="collapse_content">
                 <div class="linebreak2"></div>
                 <ul class="details">
                   <li>0.5 FL OZ / 15 ML</li>
@@ -505,20 +504,20 @@
                   <li>MANUFACTURED IN THE USA</li>
                 </ul>
               </div>
+              <hr>
+              <div class="row">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">INGREDIENTS</div>
+                <!--collapse content goes here -->
+                <div class="col-lg-1 col-md-1 col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1">
+                  <div data-toggle="collapse" data-target="#ingredients" class="plusminus">+</div>
+                </div>
+              </div>
+            <div id="ingredients" class="collapse">
+              <div class="linebreak2"></div>
+              <p>Water, Glycerin, Caprylic/Capric Triglyceride, Nylon-12 Fluorescent Brightener 230 Salt, Isopentyldiol, Polymethylsilsesquioxane, Pentylene Glycol, Caffeine, Cetearyl Alcohol, Glyceryl Stearate, Potassium Olivoyl Hydrolized Oat Protein, Cyclopentasiloxane, Dimethicone, Jojoba Esters, Olea Europaea (Olive) Fruit Unsaponifiables, Cocos Nucifera (Coconut) Oil, Albizia Julibrissin Bark Extract, Coffea Arabica (Coffee) Seed Extract, Passiflora Incarnata Flower Extract, Phenoxyethanol, Glyceryl Oleate, Strelitzia Nicolai Seed Aril Extract, Polyvinylalcohol Crosspolymer, Sodium Hyaluronate, Caprylyl Glycol, Lecithin, Chlorphenesin, Algae Extract, Xanthan Gum, Cyamopsis Tetragonoloba (Guar) Gum, Steareth-20, Tetrasodium Glutamate Diacetate, Hexylene Glycol, Palmitoyl Oligopeptide, Darutoside, Caprooyl Tetrapeptide-3, Dextran, Palmitoyl Tetrapeptide-7, Hydroxyacetophenone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance.</p>
             </div>
           </div>
-            <hr>
-            <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>INGREDIENTS</p></div>
-              <!--collapse content goes here -->
-              <div class="col-lg-1">
-                <div data-toggle="collapse" data-target="#ingredients" class="plusminus">+</div>
-              </div>
-            </div>
-            <div class="linebreak2"></div>
-            <div id="ingredients" class="collapse">
-            <p>Water, Glycerin, Caprylic/Capric Triglyceride, Nylon-12 Fluorescent Brightener 230 Salt, Isopentyldiol, Polymethylsilsesquioxane, Pentylene Glycol, Caffeine, Cetearyl Alcohol, Glyceryl Stearate, Potassium Olivoyl Hydrolized Oat Protein, Cyclopentasiloxane, Dimethicone, Jojoba Esters, Olea Europaea (Olive) Fruit Unsaponifiables, Cocos Nucifera (Coconut) Oil, Albizia Julibrissin Bark Extract, Coffea Arabica (Coffee) Seed Extract, Passiflora Incarnata Flower Extract, Phenoxyethanol, Glyceryl Oleate, Strelitzia Nicolai Seed Aril Extract, Polyvinylalcohol Crosspolymer, Sodium Hyaluronate, Caprylyl Glycol, Lecithin, Chlorphenesin, Algae Extract, Xanthan Gum, Cyamopsis Tetragonoloba (Guar) Gum, Steareth-20, Tetrasodium Glutamate Diacetate, Hexylene Glycol, Palmitoyl Oligopeptide, Darutoside, Caprooyl Tetrapeptide-3, Dextran, Palmitoyl Tetrapeptide-7, Hydroxyacetophenone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance.</p>
-            </div>
+        </div>
             <hr>
             <div class="row">
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 guarantee_logo">
@@ -682,68 +681,10 @@
   <!--include footer and javascript-->
   <?php include ("footer.php"); ?>
 
-    <script src="../components/raty-master/lib/jquery.raty.js"></script>
-    <script type="text/javascript">
-    $(function(){
-      var $select = $(".quantity,.xsquantity");
-      for (i=1;i<=100;i++){
-        $select.append($('<option></option>').val(i).html(i))
-      }
-    });
-    $('.plusminus').click(function(){ //handle click for regular + and - collapse
-      $(this).text(function(i,old){
-        sign=old;
-        return old=='+' ?  '-' : '+';
-      });
-    });
-
-    $('.plusminus_revw').click(function(){ //handle review +/- collapse
-      var sign;
-
-      $(this).text(function(i,old){
-        sign=old;
-        return old=='+' ?  '-' : '+';
-      });
-
-      var getDatatarget = $(this).attr("data-target");
-      var numberPattern = /\d+/g;
-      var number = getDatatarget.match(numberPattern);
-      var newId = "preview" + number.toString();
-
-      if (sign=='+'){
-          document.getElementById(newId).style.display ='none';
-        }
-        else{
-          document.getElementById(newId).style.display ='block';
-        }
-    });
-
-    $('.review_link').click(function(){
-      $(this).css('display','none');
-    });
-
-    $(function(){ //handle with jQuery raty plugin
-      $.fn.raty.defaults.path = '../components/raty-master/lib/images';
-      //include Jquery raty rating stars plugin
-      $('#form_rating').raty({
-        halfShow:false,
-        hints: ['1','2','3','4','5'],
-        targetKeep:true,
-        click: function(score, evt) {
-          document.getElementById('form-rating-score').value = score;
-        }
-      });
-
-      $('.scorecallback').raty({
-        readOnly  : true,
-        score: function() {
-          return $(this).attr('data-score');
-        }
-      });
-    });
-
+  <script src="../components/raty-master/lib/jquery.raty.js"></script>
+  <script src="scripts/citybeauty.js"></script>
+  <script type="text/javascript">
     $(function(){//handle color picker
-
       $(".swatch-unit").hover(
           function(){
               id = $(this).closest('a').attr('id');
@@ -751,7 +692,7 @@
               $(".product-gallery img.active").hide();
               $(".main-swatch #" + id).show();
               $(".product-gallery #" + id).show();
-              $("#shadeDes").text(id);
+              $(".shadeDes").text(id);
               if(id!="clear"){
                   $(".price span").text("$40.00");
               } else {
@@ -763,7 +704,7 @@
                $(".main-swatch img.active").show();
                $(".product-gallery img.active").show();
                activeColor = $(".swatch-container.active").closest('a').attr('id');
-               $("#shadeDes").text(activeColor);
+               $(".shadeDes").text(activeColor);
               if(activeColor!="clear"){
                 $(".price span").text("$40.00");
               } else {
@@ -782,17 +723,30 @@
           $(".main-swatch #" + id2).addClass("active");
           $(".product-gallery #" + id2).addClass("active");
 
-          $("#shadeDes").text(id2);
+          $(".shadeDes").text(id2);
           if(id2!="clear"){
               $(".price span").text("$40.00");
           } else {
               $(".price span").text("$35.00");
           }
       });
+      //handle ios single tap as single click
+      $(".swatch-unit").on('touchstart', function(event) {
+        event.preventDefault();
+        $(this).trigger('click');
+      });
+
+      if($(window).width() > 768 ) {//handle collapse with desktop and mobile widths
+        $("*[name='collapse_plus']").css('display','none');
+      }
+      else {
+        $("*[name='collapse_plus']").css('display','block');
+        $("*[name='collapse_plus']").attr('aria-expanded','false');
+        $("*[name='collapse_content']").removeClass('collapse in');
+        $("*[name='collapse_content']").addClass('collapse');
+      }
 
     });
-
-    </script>
-
-  </body>
-  </html>
+  </script>
+</body>
+</html>
