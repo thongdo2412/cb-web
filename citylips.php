@@ -115,17 +115,6 @@
   @media screen and (min-width: 1199px){.socialicons{margin-left: 10px;}}
   @media screen and (max-width:1199px){.socialicons{margin: 0;}}
   @media screen and (max-width:991px){
-    .centered_nav{display: block;}
-    .navbar-header {float: none;}
-    .navbar-left,.navbar-right {float: none !important;}
-    .navbar-toggle {display: block; margin-right: 25px;}
-    .navbar-collapse {border-top: 1px solid transparent;box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);}
-    .navbar-fixed-top {top: 0;border-width: 0 0 1px;}
-    .navbar-collapse.collapse {display: none!important;}
-    .navbar-nav {float: none!important;margin-top: 7.5px;}
-    .navbar-nav>li {float:none;}
-    .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
-    .collapse.in{display:block !important;}
     .product_notes{margin-top: 20px;}
     #testi hr{width: 86%;}
     .firstname,.email,.subjectline,.yourrating{margin: 0 auto;}
@@ -139,13 +128,13 @@
   }
 
   @media screen and (max-width:767px){
-    footer .container{margin-left: 30px;margin-right: 30px;}
-    .navbar-toggle{margin-right: 40px;}
     .xslipsphoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
+    .swatch-holder{margin-top: 10px;}
+    .navbar-toggle{margin-right: 40px;}
+    .undereyephoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
     .guarantee_wrd{margin-left: 100px;}
     .product_notes{padding-left: 28px;padding-right: 28px;}
     #review_form{width: 300px;margin:auto;}
-    .swatch-holder{margin-top: 10px;}
   }
 
   @media screen and (max-width:549px){
@@ -472,7 +461,7 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 collapse_heading"><b>DESCRIPTION</b></div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>DESCRIPTION</b></div>
                   <!-- collapse button -->
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                   <div data-toggle="collapse" data-target="#description" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -493,7 +482,9 @@
               </div>
               <hr>
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>DETAILS</b></div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>DETAILS</b>
+
+                </div>
                 <!-- collapse button -->
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                   <div data-toggle="collapse" data-target="#details_drop" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -516,13 +507,13 @@
                   <div data-toggle="collapse" data-target="#ingredients" class="plusminus">+</div>
                 </div>
               </div>
-            <div id="ingredients" class="collapse">
-              <div class="linebreak2"></div>
-              <p>Water, Glycerin, Caprylic/Capric Triglyceride, Nylon-12 Fluorescent Brightener 230 Salt, Isopentyldiol, Polymethylsilsesquioxane, Pentylene Glycol, Caffeine, Cetearyl Alcohol, Glyceryl Stearate, Potassium Olivoyl Hydrolized Oat Protein, Cyclopentasiloxane, Dimethicone, Jojoba Esters, Olea Europaea (Olive) Fruit Unsaponifiables, Cocos Nucifera (Coconut) Oil, Albizia Julibrissin Bark Extract, Coffea Arabica (Coffee) Seed Extract, Passiflora Incarnata Flower Extract, Phenoxyethanol, Glyceryl Oleate, Strelitzia Nicolai Seed Aril Extract, Polyvinylalcohol Crosspolymer, Sodium Hyaluronate, Caprylyl Glycol, Lecithin, Chlorphenesin, Algae Extract, Xanthan Gum, Cyamopsis Tetragonoloba (Guar) Gum, Steareth-20, Tetrasodium Glutamate Diacetate, Hexylene Glycol, Palmitoyl Oligopeptide, Darutoside, Caprooyl Tetrapeptide-3, Dextran, Palmitoyl Tetrapeptide-7, Hydroxyacetophenone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance.</p>
+              <div id="ingredients" class="collapse">
+                <div class="linebreak2"></div>
+                <p>Water, Glycerin, Caprylic/Capric Triglyceride, Nylon-12 Fluorescent Brightener 230 Salt, Isopentyldiol, Polymethylsilsesquioxane, Pentylene Glycol, Caffeine, Cetearyl Alcohol, Glyceryl Stearate, Potassium Olivoyl Hydrolized Oat Protein, Cyclopentasiloxane, Dimethicone, Jojoba Esters, Olea Europaea (Olive) Fruit Unsaponifiables, Cocos Nucifera (Coconut) Oil, Albizia Julibrissin Bark Extract, Coffea Arabica (Coffee) Seed Extract, Passiflora Incarnata Flower Extract, Phenoxyethanol, Glyceryl Oleate, Strelitzia Nicolai Seed Aril Extract, Polyvinylalcohol Crosspolymer, Sodium Hyaluronate, Caprylyl Glycol, Lecithin, Chlorphenesin, Algae Extract, Xanthan Gum, Cyamopsis Tetragonoloba (Guar) Gum, Steareth-20, Tetrasodium Glutamate Diacetate, Hexylene Glycol, Palmitoyl Oligopeptide, Darutoside, Caprooyl Tetrapeptide-3, Dextran, Palmitoyl Tetrapeptide-7, Hydroxyacetophenone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance.</p>
+              </div>
             </div>
+            <div class="clearfix"></div>
           </div>
-          <div class="clearfix"></div>
-        </div>
             <hr>
             <div class="row">
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 hidden-xxs guarantee_logo">
@@ -535,11 +526,9 @@
           </div>
           <div class="clearfix"></div>
         </div>
-
       </div>
     </div>
   </div>
-</div>
 
   <div class="jumbotron jumbotron_w_bg">
     <div class="container">
@@ -587,7 +576,7 @@
         <div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 faq_words">
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 collapse_heading"><b>WHICH ORDER OPTIONS IS RIGHT FOR ME?</b></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>WHICH ORDER OPTIONS IS RIGHT FOR ME?</b></div>
              <!-- collapse button -->
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
               <div data-toggle="collapse" data-target="#faq1" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -603,7 +592,7 @@
           </div>
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 collapse_heading"><b>WHEN CAN I EXPECT MY ORDER TO ARRIVE?</b></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>WHEN CAN I EXPECT MY ORDER TO ARRIVE?</b></div>
             <!-- collapse button -->
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
               <div data-toggle="collapse" data-target="#faq2" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -618,7 +607,7 @@
           </div>
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 collapse_heading"><b>IS MY INFORMATION SAFE?</b></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>IS MY INFORMATION SAFE?</b></div>
           <!-- collapse button -->
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
               <div data-toggle="collapse" data-target="#faq3" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -663,7 +652,7 @@
   <script src="../components/raty-master/lib/jquery.raty.js"></script>
   <script src="scripts/citybeauty.js"></script>
   <script type="text/javascript">
-    $(function(){//handle color picker
+    $(function qtyselection(el){//handle color picker
       $(".swatch-unit").hover(
           function(){
               id = $(this).closest('a').attr('id');
@@ -715,47 +704,12 @@
         $(this).trigger('click');
       });
       //handle each color to add to cart
-      $(function(){ //handles add to cart with quantity selected above
         var quantity;
         var selectId;
         var link;
 
-        //select active color
-        switch (id2) {
-			       case "plumsprings": {
-               link = "http://citycosmetics.com/cmd.php?pid=4de3527dd0384b6798a10806709ab72b&qty=";
-             } break;
-		         case "tokyokiss": {
-               link = "http://citycosmetics.com/cmd.php?pid=88053a3fe25c4aee983306a9fcbaf6a0&qty=";
-             } break;
-             case "losangelips": {
-               link = "http://citycosmetics.com/cmd.php?pid=ae2d751c814848c99e79ebf1bfbf98a3&qty=";
-             } break;
-             case "nudeyork": {
-               link = "http://citycosmetics.com/cmd.php?pid=7888e4d5e5164a5f8d8cd07a02799566&qty=";
-             } break;
-             case "orchid": {
-               link = "http://citylips.com/cmd.php?pid=d4035529578c4638beabe2f1da1ff6d7&qty=";
-             } break;
-             case "sangria": {
-               link = "http://citycosmetics.com/cmd.php?pid=7799892e241242e4bd2b9e7b6b398a48&qty=";
-             } break;
-             case "sundiego": {
-               link = "http://citycosmetics.com/cmd.php?pid=da80e759f0c642c9a349b30dbc6790fd&qty=";
-             } break;
-             case "tinseltown": {
-               link = "http://citylips.com/cmd.php?pid=46a249a3f7df436f852577e221e19e06&qty=";
-             } break;
-             case "holly": {
-               link = "http://citylips.com/cmd.php?pid=1df7b026b9e74e96a09e018ce9a7b50a&qty=";
-             } break;
-             case "clear": {
-               link = "http://citylips.com/cmd.php?pid=3ea53eb3ed29409ab947a3ba05e0459f&qty=";
-             } break;
-        }
-
         //handle regular quantity selection or mobile selection
-        if ($(window).width() > 768 ) {
+        if ( $(window).width() > 768  ) {
           quantity = document.getElementById("qty").value;
           selectId = 'select#qty';
         }
@@ -764,28 +718,46 @@
           selectId = 'select#xsqty';
         }
 
-        link = link + quantity.toString();
-        $("*[name='addToCart']").attr("href", link);
-
         $(selectId).change(function() {//handle change of quantity
-          link = link.substr(0, link.indexOf('&')) + '&qty=';
           quantity = $(this).find('option:selected').text();
-          link = link + quantity.toString();
-          $("*[name='addToCart']").attr("href", link);
-        });
-      });
+        })
 
-
-      if($(window).width() > 768 ) {//handle collapse with desktop and mobile widths
-        $("*[name='collapse_plus']").css('display','none');
-      }
-      else {
-        $("*[name='collapse_plus']").css('display','block');
-        $("*[name='collapse_plus']").attr('aria-expanded','false');
-        $("*[name='collapse_content']").removeClass('collapse in');
-        $("*[name='collapse_content']").addClass('collapse');
-        $(".collapse_heading").find('b').contents().unwrap();
-      }
+        $("*[name='addToCart']").click(function(event){ //handle click event of Add to Cart button
+          event.preventDefault();
+          //select active color
+          switch (id2) {
+               case "plumsprings": {
+                 window.location = "http://citycosmetics.com/cmd.php?pid=4de3527dd0384b6798a10806709ab72b&qty=" + quantity.toString();
+               } break;
+               case "tokyokiss": {
+                 window.location = "http://citycosmetics.com/cmd.php?pid=88053a3fe25c4aee983306a9fcbaf6a0&qty=" + quantity.toString();
+               } break;
+               case "losangelips": {
+                 window.location = "http://citycosmetics.com/cmd.php?pid=ae2d751c814848c99e79ebf1bfbf98a3&qty=" + quantity.toString();
+               } break;
+               case "nudeyork": {
+                 window.location = "http://citycosmetics.com/cmd.php?pid=7888e4d5e5164a5f8d8cd07a02799566&qty=" + quantity.toString();
+               } break;
+               case "orchid": {
+                 window.location = "http://citylips.com/cmd.php?pid=d4035529578c4638beabe2f1da1ff6d7&qty=" + quantity.toString();
+               } break;
+               case "sangria": {
+                 window.location = "http://citycosmetics.com/cmd.php?pid=7799892e241242e4bd2b9e7b6b398a48&qty=" + quantity.toString();
+               } break;
+               case "sundiego": {
+                 window.location = "http://citycosmetics.com/cmd.php?pid=da80e759f0c642c9a349b30dbc6790fd&qty=" + quantity.toString();
+               } break;
+               case "tinseltown": {
+                 window.location = "http://citylips.com/cmd.php?pid=46a249a3f7df436f852577e221e19e06&qty=" + quantity.toString();
+               } break;
+               case "holly": {
+                 window.location = "http://citylips.com/cmd.php?pid=1df7b026b9e74e96a09e018ce9a7b50a&qty=" + quantity.toString();
+               } break;
+               case "clear": {
+                 window.location = "http://citylips.com/cmd.php?pid=3ea53eb3ed29409ab947a3ba05e0459f&qty=" + quantity.toString();
+               } break;
+          }
+        })
 
     });
   </script>

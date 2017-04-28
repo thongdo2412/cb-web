@@ -55,3 +55,16 @@ $(function(){ //handle with jQuery raty plugin
     }
   });
 });
+
+$(function() {
+  if($(window).width() > 768 ) {//handle collapse with desktop and mobile widths
+    $("*[name='collapse_plus']").css('display','none');
+  }
+  else {
+    $("*[name='collapse_plus']").css('display','block');
+    $("*[name='collapse_plus']").attr('aria-expanded','false');
+    $("*[name='collapse_content']").removeClass('collapse in');
+    $("*[name='collapse_content']").addClass('collapse');
+    $(".collapse_heading").find('b').contents().unwrap();
+  }
+});
