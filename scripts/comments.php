@@ -67,10 +67,10 @@
 <div class="row">
   <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
     <div class="scorecallback" data-score=<?php echo $rating; ?>></div>
+    <div class="linebreak1"></div>
     <p><?php echo $name;?> &nbsp</p>
-    <p><i></i></p>
   </div>
-  <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-7 col-sm-offset-1 hidden-xs text-left">
+  <div class="col-lg-9 col-md-9 col-sm-8 hidden-xs text-left">
     <p><h5><?php echo $subject;?></h5></p>
     <div class="linebreak2"></div>
     <p><?php echo $message;?></p>

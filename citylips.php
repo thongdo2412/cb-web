@@ -22,14 +22,12 @@
   .productnotes_words{text-align: left;font-family: "Playfair Display",serif;font-style: italic;font-size: 20px;border-bottom: solid 0.5px rgb(235,235,235);margin-top: 10px;}
   .product_img{margin-top: 10px;}
   .cream_box{border: 1px solid rgb(235, 235, 235);background-color: rgb(255, 255, 255);width: 276px;height: 276px;}
-  .faq_heading{text-align: left;width: 160px;}
-  .faq_words{text-align: left;margin-top: 18px;}
+  .faq_heading{text-align: left;width: 160px; margin-top: 6px;}
+  .faq_words{text-align: left;}
   .review_link{font-size: 14px; text-decoration: underline;}
-  .testi_usr{width: 170px;text-align: left;margin-top: 10px;}
-  .linebreak1{margin-top: 5px;}
-  .linebreak12{margin-top: 12px;}
-  .linebreak2{margin-top: 18px;}
-  .linebreak3{margin-top: 30px;}
+  .testi_usr{width: 170px;text-align: left;margin-top: 14px;}
+  .plusminus{cursor: pointer; cursor: hand;}
+  .review_link{cursor: pointer; cursor: hand;}
   .ratingwrapper{margin-top: 16px;}
   .yousave{margin-left: -52px;}
   .guarantee_wrd{margin-left: 70px;}
@@ -88,6 +86,7 @@
     .quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
       background: url("../img/quantityarrw.png") no-repeat 28px 8px #ffffff;}
   }
+  /* css for review setion */
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
   div.form-group input.form-control{border-radius: 0;width: 290px;height: 32px;}
@@ -97,9 +96,9 @@
   #reviewpanel{margin: 0 auto;}
   #review_form{text-align: left;margin-left: 32px;}
   .firstname{margin-left: 14px;}
-  .email{margin-left: 114px;}
-  .subjectrating{margin-top: 16px;}
-  .yourrating{margin-left: 54px;}
+  .email{margin-left: 76px;}
+  .subjectline{margin-top: 16px;}
+  .yourrating{margin-left: 16px;}
   .rating_label{float: left;margin-top: 2px;}
   #form_rating{float: left;margin-left: 14px;}
   .msgtextbox{margin-left: 28px;margin-top: 16px;}
@@ -129,7 +128,8 @@
     .collapse.in{display:block !important;}
     .product_notes{margin-top: 20px;}
     #testi hr{width: 86%;}
-    .firstname,.email,.subjectline,.yourrating,.subjectrating{margin: 0;}
+    .firstname,.email,.subjectline,.yourrating{margin: 0 auto;}
+    .faq_heading{margin-top: 0;}
     .msgtextbox{margin-left: 0;}
     div.form-group input{margin-left: 0;}
     div.form-group textarea.form-control{margin-left: 0; width: 290px;}
@@ -150,7 +150,9 @@
 
   @media screen and (max-width:549px){
     .col-xxs-12{width: 100%;}
-    .xscolordiv{margin-left: 24%;}
+    .xscolordiv{margin-left: 20%;}
+    .hidden-xxs {display: none !important;}
+    .guarantee_wrd{margin: 0 auto;}
   }
   @media screen and (max-width:479px){
     .word_wrapper{margin-left: 12.5%; margin-bottom: 5%;}
@@ -321,11 +323,11 @@
               </div>
               <div class="linebreak2"></div>
               <div class="shadeinfo">
-                <span><toBold>Shade Description:</toBold> <span class="shadeDes">clear</span></span>
+                <span><b>Shade Description:</b> <span class="shadeDes">clear</span></span>
               </div>
               <div class="price-holder">
                 <div class="price">
-                  <toBold>Price: </toBold><span>$35.00</span>
+                  <b>Price: </b><span>$35.00</span>
                 </div>
               </div>
             </div>
@@ -430,11 +432,11 @@
               </div>
               <div class="linebreak2"></div>
               <div class="shadeinfo">
-                <span><toBold>Shade Description:</toBold> <span class="shadeDes">clear</span></span>
+                <span><b>Shade Description:</b> <span class="shadeDes">clear</span></span>
               </div>
               <div class="price-holder">
                 <div class="price">
-                  <toBold>Price: </toBold><span>$35.00</span>
+                  <b>Price: </b><span>$35.00</span>
                 </div>
               </div>
             </div>
@@ -470,17 +472,18 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">DESCRIPTION</div>
-                <!--collapse content goes here -->
-                <div class="col-lg-1 col-md-1 col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 collapse_heading"><b>DESCRIPTION</b></div>
+                  <!-- collapse button -->
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                   <div data-toggle="collapse" data-target="#description" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
                 </div>
               </div>
+              <!--collapse content goes here -->
               <div id="description" class="collapse in" name="collapse_content">
                 <div class="linebreak2"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget enim enim. Nulla facilisi. In et lacus nulla. Fusce tincidunt blandit tellus, ut faucibus urna ultrices egestas. Vestibulum turpis augue, egestas in tellus ut, facilisis consectetur sem. </p>
                 <div class="linebreak2"></div>
-                <p>FEATURES</p>
+                <b>FEATURES</b>
                 <div class="linebreak2"></div>
                 <ul class="features">
                   <li>lorem ipsum dolor sit amet, traiso dod consectur adipiscing traiso elit dolor sit amet.</li>
@@ -490,12 +493,13 @@
               </div>
               <hr>
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">DETAILS</div>
-                <!--collapse content goes here -->
-                <div class="col-lg-1 col-md-1 col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>DETAILS</b></div>
+                <!-- collapse button -->
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                   <div data-toggle="collapse" data-target="#details_drop" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
                 </div>
               </div>
+              <!--collapse content goes here -->
               <div id="details_drop" class="collapse in" name="collapse_content">
                 <div class="linebreak2"></div>
                 <ul class="details">
@@ -506,9 +510,9 @@
               </div>
               <hr>
               <div class="row">
-                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">INGREDIENTS</div>
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading">INGREDIENTS</div>
                 <!--collapse content goes here -->
-                <div class="col-lg-1 col-md-1 col-sm-1 col-sm-offset-0 col-xs-1 col-xs-offset-1">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                   <div data-toggle="collapse" data-target="#ingredients" class="plusminus">+</div>
                 </div>
               </div>
@@ -517,13 +521,14 @@
               <p>Water, Glycerin, Caprylic/Capric Triglyceride, Nylon-12 Fluorescent Brightener 230 Salt, Isopentyldiol, Polymethylsilsesquioxane, Pentylene Glycol, Caffeine, Cetearyl Alcohol, Glyceryl Stearate, Potassium Olivoyl Hydrolized Oat Protein, Cyclopentasiloxane, Dimethicone, Jojoba Esters, Olea Europaea (Olive) Fruit Unsaponifiables, Cocos Nucifera (Coconut) Oil, Albizia Julibrissin Bark Extract, Coffea Arabica (Coffee) Seed Extract, Passiflora Incarnata Flower Extract, Phenoxyethanol, Glyceryl Oleate, Strelitzia Nicolai Seed Aril Extract, Polyvinylalcohol Crosspolymer, Sodium Hyaluronate, Caprylyl Glycol, Lecithin, Chlorphenesin, Algae Extract, Xanthan Gum, Cyamopsis Tetragonoloba (Guar) Gum, Steareth-20, Tetrasodium Glutamate Diacetate, Hexylene Glycol, Palmitoyl Oligopeptide, Darutoside, Caprooyl Tetrapeptide-3, Dextran, Palmitoyl Tetrapeptide-7, Hydroxyacetophenone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance.</p>
             </div>
           </div>
+          <div class="clearfix"></div>
         </div>
             <hr>
             <div class="row">
-              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 guarantee_logo">
+              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 hidden-xxs guarantee_logo">
                 <img src="../img/60daysicon2.png" alt="60 days icon #2">
               </div>
-              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8.5 guarantee_wrd">
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8.5 col-xxs-12 guarantee_wrd">
                 <p>You have 60 days to try our products and see the results for yourself. If you are not 100% satisfied, simply contact us and we will gladly refund your money. No questions asked.</p>
               </div>
             </div>
@@ -579,83 +584,57 @@
         <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0 col-sm-2 col-sm-offset-1 col-xs-2 col-xs-offset-1 faq_heading">
           <h4>Frequently Asked Questions</h4>
         </div>
-        <div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-10 col-sm-offset-1 hidden-xs faq_words">
-          <p>WHICH ORDER OPTIONS IS RIGHT FOR ME?</p>
-          <br>
-          <p>Many of our returning customers appreciate the 3-pack because it
-          offers the best value. And we're happy to do it because it saves us the cost of processing individual units.</p>
-          <br>
-          <p>If you just want to try 1 tube, we've already reduced the price far below original retail. So you can't go wrong with any of the options. And I just know that you'll fall in love with your new lips either way.</p>
-          <div class="linebreak3"></div>
-          <hr>
-          <div class="linebreak3"></div>
-          <p>WHEN CAN I EXPECT MY ORDER TO ARRIVE?</p>
-          <br>
-          <p>We know you can't wait to start trying City Lips<span class="sup1">&reg;</span> and experiencing the amazing difference for yourself.
-          That's why our shipping department is operational 7 days a week. That way, your order leaves our facilities
-          within 24-hours. Transit usually takes 3-5 business days depending on what part of the country you're in.</p>
-          <div class="linebreak3"></div>
-          <hr>
-          <div class="linebreak3"></div>
-          <p>IS MY INFORMATION SAFE?</p>
-          <br>
-          <p>We take your privacy very seriously. That's why we use a variety of security measures to
-          maintain the safety of your personal information. </p>
-          <br>
-          <p>When you place an order or access your personal information, everything goes through a
-          secure server. All of your personal information, including credit card number, name, and address,
-          is transmitted via Secure Socket Layer (SSL) technology — the industry standard for secure online transactions.</p>
-          <br>
-          <p>If you would rather not shop online, you can place your order over the phone by calling us at 1-800 347-1558.</p>
-        </div>
-        <div class="visible-xs col-xs-10 col-xs-offset-1 faq_words">
+        <div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 faq_words">
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>WHICH ORDER OPTIONS IS RIGHT FOR ME?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#orderoptions" class="plusminus">+</div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 collapse_heading"><b>WHICH ORDER OPTIONS IS RIGHT FOR ME?</b></div>
+             <!-- collapse button -->
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
+              <div data-toggle="collapse" data-target="#faq1" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
             </div>
           </div>
-          <div id="orderoptions" class="collapse">
+          <!--collapse content goes here -->
+          <div id="faq1" class="collapse in" name="collapse_content">
             <div class="linebreak2"></div>
             <p>Many of our returning customers appreciate the 3-pack because it
             offers the best value. And we're happy to do it because it saves us the cost of processing individual units.</p>
-            <br>
-            <p>If you just want to try 1 tube, we've already reduced the price far below original retail. So you can't go wrong with any of the options. And I just know that you'll fall in love with your new lips either way.</p>
+            <p></p>
+            If you just want to try 1 tube, we've already reduced the price far below original retail. So you can't go wrong with any of the options. And I just know that you'll fall in love with your new lips either way.
           </div>
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>WHEN CAN I EXPECT MY ORDER TO ARRIVE?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#orderarrival" class="plusminus">+</div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 collapse_heading"><b>WHEN CAN I EXPECT MY ORDER TO ARRIVE?</b></div>
+            <!-- collapse button -->
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
+              <div data-toggle="collapse" data-target="#faq2" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
             </div>
           </div>
-          <div id="orderarrival" class="collapse">
+          <!--collapse content goes here -->
+          <div id="faq2" class="collapse in" name="collapse_content">
             <div class="linebreak2"></div>
-            <p>We know you can't wait to start trying City Lips<span class="sup1">&reg;</span> and experiencing the amazing difference for yourself.
-            That's why our shipping department is operational 7 days a week. That way, your order leaves our facilities
-            within 24-hours. Transit usually takes 3-5 business days depending on what part of the country you're in.</p>
+              We know you can't wait to start trying City Lips<span class="sup1">&reg;</span> and experiencing the amazing difference for yourself.
+              That's why our shipping department is operational 7 days a week. That way, your order leaves our facilities
+              within 24-hours. Transit usually takes 3-5 business days depending on what part of the country you're in.
           </div>
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><p>IS MY INFORMATION SAFE?</p></div>
-            <!--collapse content goes here -->
-            <div class="col-lg-1">
-              <div data-toggle="collapse" data-target="#infosafety" class="plusminus">+</div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 collapse_heading"><b>IS MY INFORMATION SAFE?</b></div>
+          <!-- collapse button -->
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
+              <div data-toggle="collapse" data-target="#faq3" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
             </div>
           </div>
-          <div id="infosafety" class="collapse">
+          <!--collapse content goes here -->
+          <div id="faq3" class="collapse in" name="collapse_content">
             <div class="linebreak2"></div>
-            <p>We take your privacy very seriously. That's why we use a variety of security measures to
-            maintain the safety of your personal information. </p>
-            <br>
-            <p>When you place an order or access your personal information, everything goes through a
-            secure server. All of your personal information, including credit card number, name, and address,
-            is transmitted via Secure Socket Layer (SSL) technology — the industry standard for secure online transactions.</p>
-            <br>
-            <p>If you would rather not shop online, you can place your order over the phone by calling us at 1-800 347-1558.</p>
+              <p>We take your privacy very seriously. That's why we use a variety of security measures to
+                maintain the safety of your personal information. </p>
+              <p></p>
+              <p>When you place an order or access your personal information, everything goes through a
+                secure server. All of your personal information, including credit card number, name, and address,
+                is transmitted via Secure Socket Layer (SSL) technology — the industry standard for secure online transactions.</p>
+              <p></p>
+              If you would rather not shop online, you can place your order over the phone by calling us at 1-800 347-1558.
           </div>
           <hr>
         </div>
@@ -735,6 +714,67 @@
         event.preventDefault();
         $(this).trigger('click');
       });
+      //handle each color to add to cart
+      $(function(){ //handles add to cart with quantity selected above
+        var quantity;
+        var selectId;
+        var link;
+
+        //select active color
+        switch (id2) {
+			       case "plumsprings": {
+               link = "http://citycosmetics.com/cmd.php?pid=4de3527dd0384b6798a10806709ab72b&qty=";
+             } break;
+		         case "tokyokiss": {
+               link = "http://citycosmetics.com/cmd.php?pid=88053a3fe25c4aee983306a9fcbaf6a0&qty=";
+             } break;
+             case "losangelips": {
+               link = "http://citycosmetics.com/cmd.php?pid=ae2d751c814848c99e79ebf1bfbf98a3&qty=";
+             } break;
+             case "nudeyork": {
+               link = "http://citycosmetics.com/cmd.php?pid=7888e4d5e5164a5f8d8cd07a02799566&qty=";
+             } break;
+             case "orchid": {
+               link = "http://citylips.com/cmd.php?pid=d4035529578c4638beabe2f1da1ff6d7&qty=";
+             } break;
+             case "sangria": {
+               link = "http://citycosmetics.com/cmd.php?pid=7799892e241242e4bd2b9e7b6b398a48&qty=";
+             } break;
+             case "sundiego": {
+               link = "http://citycosmetics.com/cmd.php?pid=da80e759f0c642c9a349b30dbc6790fd&qty=";
+             } break;
+             case "tinseltown": {
+               link = "http://citylips.com/cmd.php?pid=46a249a3f7df436f852577e221e19e06&qty=";
+             } break;
+             case "holly": {
+               link = "http://citylips.com/cmd.php?pid=1df7b026b9e74e96a09e018ce9a7b50a&qty=";
+             } break;
+             case "clear": {
+               link = "http://citylips.com/cmd.php?pid=3ea53eb3ed29409ab947a3ba05e0459f&qty=";
+             } break;
+        }
+
+        //handle regular quantity selection or mobile selection
+        if ($(window).width() > 768 ) {
+          quantity = document.getElementById("qty").value;
+          selectId = 'select#qty';
+        }
+        else {
+          quantity = document.getElementById("xsqty").value;
+          selectId = 'select#xsqty';
+        }
+
+        link = link + quantity.toString();
+        $("*[name='addToCart']").attr("href", link);
+
+        $(selectId).change(function() {//handle change of quantity
+          link = link.substr(0, link.indexOf('&')) + '&qty=';
+          quantity = $(this).find('option:selected').text();
+          link = link + quantity.toString();
+          $("*[name='addToCart']").attr("href", link);
+        });
+      });
+
 
       if($(window).width() > 768 ) {//handle collapse with desktop and mobile widths
         $("*[name='collapse_plus']").css('display','none');
@@ -744,6 +784,7 @@
         $("*[name='collapse_plus']").attr('aria-expanded','false');
         $("*[name='collapse_content']").removeClass('collapse in');
         $("*[name='collapse_content']").addClass('collapse');
+        $(".collapse_heading").find('b').contents().unwrap();
       }
 
     });

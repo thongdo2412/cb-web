@@ -36,7 +36,7 @@
   nav2:hover:after {left: 95%;}
   .navbar-default .navbar-nav > li > a {color: #333; padding-left: 32px;}
   .line-on-sides{overflow: hidden;}
-  toRegular{font-weight: 400;}
+  b{font-weight: 400;}
   .sup1{vertical-align: super;}
   .button{width: 150px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
@@ -59,6 +59,8 @@
   .faq_words{text-align: left;margin-top: 18px;}
   .review_link{font-size: 14px; text-decoration: underline;}
   .testi_usr{width: 170px;text-align: left;margin-top: 14px;}
+  .plusminus{cursor: pointer; cursor: hand;}
+  .review_link{cursor: pointer; cursor: hand;}
   .linebreak1{margin-top: 5px;}
   .linebreak2{margin-top: 18px;}
   .linebreak12{margin-top: 12px;}
@@ -101,7 +103,7 @@
   #review_form{text-align: left;margin-left: 32px;}
   .firstname{margin-left: 14px;}
   .email{margin-left: 114px;}
-  .subjectrating{margin-top: 16px;}
+  .subjectline{margin-top: 16px;}
   .yourrating{margin-left: 54px;}
   .rating_label{float: left;margin-top: 2px;}
   #form_rating{float: left;margin-left: 14px;}
@@ -132,7 +134,7 @@
     .collapse.in{display:block !important;}
     .product_notes{margin-top: 20px;}
     #testi hr{width: 86%;}
-    .firstname,.email,.subjectline,.yourrating,.subjectrating{margin: 0;}
+    .firstname,.email,.subjectline,.yourrating{margin: 0;}
     .msgtextbox{margin-left: 0;}
     div.form-group input{margin-left: 0;}
     div.form-group textarea.form-control{margin-left: 0; width: 290px;}
@@ -209,7 +211,7 @@
             <div class="col-lg-12 hidden-xs">
               <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
-                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity" id="qty" name="quantityselect"></select></div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity" id="qty"></select></div>
               </div>
               <div class="linebreak2"></div>
               <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
@@ -221,7 +223,7 @@
               <div class="linebreak2"></div>
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="xsquantity" id="xsqty" name="quantityselect"></select>
+                  <select class="xsquantity" id="xsqty"></select>
                 </div>
                 <div class="col-xs-4">
                   <div class="button_bg button_blue"><a name="addToCart" href="#">ADD TO CART</a></div>
@@ -615,28 +617,27 @@
     <script src="../components/raty-master/lib/jquery.raty.js"></script>
     <script src="scripts/citybeauty.js"></script>
     <script type="text/javascript">
-      $(function(){ //handles add to cart with quantity selected above
-        var quantity;
-        var selectId;
-        //handle regular quantity selection or mobile selection
-        if ($("*[name='quantityselect']").attr('id') == 'qty') {
-          quantity = document.getElementById("qty").value;
-          selectId = 'select#qty';
-        }
-        if ($("*[name='quantityselect']").attr('id') == 'xsqty') {
-          quantity = document.getElementById("xsqty").value;
-          selectId = 'select#xsqty';
-        }
+    $(function(){ //handles add to cart with quantity selected above
+      var quantity;
+      var selectId;
+      //handle regular quantity selection or mobile selection
+      if ($(window).width() > 768 ) {
+        quantity = document.getElementById("qty").value;
+        selectId = 'select#qty';
+      }
+      else {
+        quantity = document.getElementById("xsqty").value;
+        selectId = 'select#xsqty';
+      }
+      var link = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
+      $("*[name='addToCart']").attr("href", link);
 
-        var link = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
+      $(selectId).change(function() {//handle change of quantity
+        quantity = $(this).find('option:selected').text();
+        link = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
         $("*[name='addToCart']").attr("href", link);
-
-        $(selectId).change(function() {//handle change of quantity
-          quantity = $(this).find('option:selected').text();
-          link = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
-          $("*[name='addToCart']").attr("href", link);
-        });
       });
+    });
     </script>
   </body>
   </html>

@@ -44,11 +44,10 @@ toBold{font-weight: 600;}
 .movedown2p{margin-top: 2%;}
 .movedown5p{margin-top: 5%;}
 .movedown10p{margin-top: 10%;}
-.lifestyle_word{margin-top: 20%; margin-left: 12%;}
+.lifestyle_content{margin-top: 60px;}
 .ghk_word{text-align: left;}
 .ghk_wording{margin-left: 20px;}
 .textbox{width: 748px;}
-.magazine_word{text-align: left;width: 290px;height: 82px;padding-left: 40px;padding-top: 20px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 24px;}
 h4{font-size: 20px;}
 h5{font-size: 13px;font-weight: 300;}
@@ -56,15 +55,11 @@ body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Raleway",sans-serif;font-size: 16px; font-weight: 300; line-height: 24px;}
 @media screen and (min-width: 1199px){.socialicons{margin-left: 54px;}}
 @media screen and (max-width:1199px){
-  .jumbotron_w_bg .textbox{width: 80%}
   .ghk_quotes{margin-left: 20%;}
-  .lifestyle_word{margin-left: 20%;}
   .img_wrapper{margin-left: 5%;}
-  .magazine_word{padding-left: 18px;}
 }
 @media screen and (max-width:991px){
-  .lifestyle_word{margin-left: -10px;}
-  .magazine_word{padding-left: 40px;}
+  .lifestyle_logo{margin-left: 0;}
   .centered_nav{display: block;}
   .jumbotron_w_bg .textbox{width: 100%;}
   .ghk_quotes{margin-left: 0;} .img_wrapper{margin:0;}
@@ -78,19 +73,22 @@ body{text-align: center;font-family: "Raleway",sans-serif;font-size: 16px; font-
   .navbar-nav>li {float:none;}
   .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
   .collapse.in{display:block !important;}
+  .magazine_word{margin-left: 46px;}
 }
 @media screen and (max-width:767px){
+  .lifestyle_content{margin: 0;}
   div.img_wrapper img{max-width: 100%; height: auto; width: auto\9;}
   div.img_wrapper {padding-left: 30px; padding-right: 30px;}
-  .lifestyle_word{margin-top: 5%;margin-left: -30px;}
+  .lifestyle_logo{margin-top: 5%;}
   .navbar-toggle {margin-right: 40px;}
   .img_wrapper{text-align: center;}
   .ghk_word{margin-top: 10%; margin-left: 25%; margin-right: 30px;}
   .textbox{width: 99%;} footer{padding-left: 30px; padding-right: 30px;}
+  .magazine_word{margin-bottom: 10px;margin-left: 70px;}
 }
 @media screen and (max-width:700px){.ghk_word{margin-left: 12.5%;}}
 @media screen and (max-width:640px){.ghk_word{margin-left: 30px;}}
-@media screen and (max-width:469px){div.magazine_wrapper img{width: 95%;} .magazine_wrapper,.lifestyle_word{padding-left: 30px;padding-right: 30px;}}
+@media screen and (max-width:469px){div.magazine_wrapper img{width: 95%;} .magazine_wrapper,.lifestyle_logo{padding-left: 30px;padding-right: 30px;}}
 </style>
 </head>
 <body>
@@ -142,18 +140,11 @@ body{text-align: center;font-family: "Raleway",sans-serif;font-size: 16px; font-
   <div class="container">
     <div class="textbox">
       <div class="row">
-        <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-1 col-sm-6 col-xs-12">
+        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
           <div class="magazine_wrapper"><img src="../img/magfeature.png" alt="magazine features"></div>
         </div>
-        <div class="col-lg-6 col-md-5 col-sm-6 col-xs-12">
-          <div class="lifestyle_word"><img src="../img/lifestyle_logo.png" alt="lifestyle logo">
-            <div class="magazine_word">
-              April 2014 ISSUE
-              Celebrity dermatologist Simon
-              Ourian, M.D. recommends City Lips
-              to all his clients.
-            </div>
-          </div>
+        <div class="col-lg-5 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 col-xs-offset-0 lifestyle_content">
+          <img src="../img/lifestyle_media1.png" alt="ls mag">
         </div>
       </div>
       <div class="clearfix"></div>

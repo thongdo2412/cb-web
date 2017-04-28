@@ -176,7 +176,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
          <p></p>
          <h3><i>Plump, Hydrate &amp; Repair</i></h3>
          <div class="movedown20"></div>
-         <div class="button button_blue pull-left">SHOP NOW</div>
+         <div class="button button_blue pull-left"><a href="citylips.php">SHOP NOW</a></div>
        </div>
      </div>
      <div class="col-lg-2 col-md-2 col-md-pull-0 col-sm-1 col-sm-pull-1 hidden-xs">
@@ -211,7 +211,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
      <div class="hidden-xs col-sm-3 col-md-3 productwrapper">
        <img src="../img/rated_citylip.png" alt="rated_lips">
        <div class="movedown5p"></div>
-       <div class="button button_wht">SHOP NOW</div>
+       <div class="button button_wht"><a href="citylips.php">SHOP NOW</a></div>
      </div>
      <div class="hidden-xs col-sm-3 col-md-3 productwrapper">
        <img src="../img/rated_dkspot.png" alt="rated dark spot">
@@ -235,7 +235,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
            <div class="item active">
              <img src="../img/rated_citylip.png" alt="rated_lips">
              <div class="movedown5p"></div>
-             <div class="button button_wht">SHOP NOW</div>
+             <div class="button button_wht"><a href="citylips.php">SHOP NOW</a></div>
            </div>
 
            <div class="item">
