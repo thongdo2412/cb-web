@@ -11,12 +11,10 @@
               <div class="form-group firstname">
                 <p>FIRST NAME*<input id="form_fname" type="text" name="fname" class="form-control" required="required" data-error="First name is required."></p>
                 <div class="help-block with-errors"></div>
-                <div class="linebreak5"></div>
               </div>
               <div class="form-group email">
                 <p>EMAIL*<input id="form_email" type="text" name="email" class="form-control" required="required" data-error="Email is required."></p>
                 <div class="help-block with-errors"></div>
-                <div class="linebreak5"></div>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -24,14 +22,12 @@
               <div class="form-group subjectline">
                 <p>SUBJECT LINE*<input id="form_subject" type="text" name="subject" class="form-control" required="required" data-error="Subject line is required."></p>
                 <div class="help-block with-errors"></div>
-                <div class="linebreak5"></div>
               </div>
               <div class="form-group yourrating">
                 <div class="rating_label">YOUR RATING*</div>
                 <div id="form_rating" required="required" data-error="Rating is required."></div>
                 <input type="hidden" id="form-rating-score" type="text" name="rating" value="" />
                 <div class="help-block with-errors"></div>
-                <div class="linebreak5"></div>
                 <div class="clearfix"></div>
               </div>
             </div>
@@ -40,7 +36,13 @@
                 <label for="form_message">MESSAGE*</label>
                 <textarea id="form_message" name="message" class="form-control" required="required" data-error="Please,leave us a message."></textarea>
                 <div class="help-block with-errors"></div>
-                <div class="linebreak5"></div>
+              </div>
+            </div>
+            <div class="form-group recommenddiv">
+              <div>I would recommend this to a friend*</div>
+              <div>
+                <label class="radio-inline"><input type="radio" name="recradio" value="yes">Yes</label>
+                <label class="radio-inline"><input type="radio" name="recradio" value="no">No</label>
               </div>
             </div>
             <div class="linebreak2"></div>
@@ -57,24 +59,31 @@
   <?php
   if (!$connErr){
     //prepare query
-    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate FROM `cc_$pid` ORDER BY rateid DESC LIMIT 0,5")){
+    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y') FROM `cc_$pid` ORDER BY postdate DESC LIMIT 0,5")){
 			$stmt->execute();
-			$stmt->bind_result($rateid,$name,$emailaddr,$subject,$message,$rating);
+			$stmt->bind_result($rateid,$name,$emailaddr,$subject,$message,$rating,$recommend,$date);
 			$stmt->store_result();
-
       while ($stmt->fetch()){
     ?>
 <div class="row">
   <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
     <div class="scorecallback" data-score=<?php echo $rating; ?>></div>
     <div class="linebreak1"></div>
-    <p><?php echo $name;?> &nbsp</p>
+    <div><?php echo $name; ?> &nbsp</div>
+    <div class="linebreak1"></div>
+    <div><?php echo $date; ?></div>
   </div>
   <div class="col-lg-9 col-md-9 col-sm-8 hidden-xs text-left">
     <p><h5><?php echo $subject;?></h5></p>
     <div class="linebreak2"></div>
     <p><?php echo $message;?></p>
     <div class="linebreak2"></div>
+    <?php if ($recommend == '1') {
+      echo '<div><img src="img/checked.png" alt="checked box"> I would recommend ' .$page_title. ' to a friend!</div>';
+    }
+      ?>
+    <div class="linebreak2"></div>
+    <!--insert the helpful feature-->
     <p>*Results may vary by individual.</p>
   </div>
   <div class="visible-xs col-xs-12">
@@ -88,11 +97,18 @@
         </div>
         <div id="testi<?php echo $rateid;?>" class="collapse">
           <img src="../img/stars_rating.png"></img>
-          <p><?php echo $name;?> &nbsp</p>
-          <p></p>
+          <div><?php echo $name;?> &nbsp</div>
+          <div class="linebreak1"></div>
+          <div><?php echo $date; ?></div>
+          <div class="linebreak1"></div>
           <p><h5><?php echo $subject;?></h5></p>
           <div class="linebreak2"></div>
           <p><?php echo $message;?></p>
+          <div class="linebreak2"></div>
+          <?php if ($recommend == '1') {
+            echo '<div><img src="img/checked.png" alt="checked box"> I would recommend this to a friend!</div>';
+          }
+            ?>
           <div class="linebreak2"></div>
           *Results may vary by individual.
         </div>

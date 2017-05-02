@@ -1,5 +1,6 @@
 <?php
   $pid = 'undereye';
+  $page_title ='Under Eye Recovery';
   include("scripts/conn_init.php");
   include("scripts/insert.php");
  ?>
@@ -12,7 +13,7 @@
 	<![endif]-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Under Eye Recovery</title>
+	<title><?php echo $page_title;?></title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
@@ -106,6 +107,7 @@
   .subjectline{margin-top: 16px;}
   .yourrating{margin-left: 54px;}
   .rating_label{float: left;margin-top: 2px;}
+  .recommenddiv{margin-top: 16px; margin-left: 134px;}
   #form_rating{float: left;margin-left: 14px;}
   .msgtextbox{margin-left: 28px;margin-top: 16px;}
   .btn_wrapper{float: right;margin-right: 50px;}
@@ -136,7 +138,7 @@
     #testi hr{width: 86%;}
     .faq_heading{margin-top: 0;}
     .firstname,.email,.subjectline,.yourrating{margin: 0;}
-    .msgtextbox{margin-left: 0;}
+    .msgtextbox,.recommenddiv{margin-left: 0;}
     div.form-group input{margin-left: 0;}
     div.form-group textarea.form-control{margin-left: 0; width: 290px;}
     .quantity{margin-left: 20px;}

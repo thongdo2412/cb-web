@@ -1,6 +1,7 @@
 <!-- include PHP header and other prerequisite files-->
 <?php
   $pid = 'citylips';
+  $page_title = 'City Lips';
   include("scripts/conn_init.php");
   include("scripts/insert.php");
  ?>
@@ -8,7 +9,7 @@
 <!--include head and other css templates-->
 <?php  include("head.php"); ?>
 
-<title>City Lips</title>
+<title><?php echo $page_title;?></title>
 
 <link rel="stylesheet" href="../components/raty-master/lib/jquery.raty.css">
 <style type="text/css">
@@ -51,6 +52,8 @@
   }
   .product-gallery img {
       display: none;
+      width: 200%;
+      height: 200%;
   }
   .product-gallery img.active {
       display: block;
@@ -100,6 +103,7 @@
   .subjectline{margin-top: 16px;}
   .yourrating{margin-left: 16px;}
   .rating_label{float: left;margin-top: 2px;}
+  .recommenddiv{margin-top: 16px; margin-left: 134px;}
   #form_rating{float: left;margin-left: 14px;}
   .msgtextbox{margin-left: 28px;margin-top: 16px;}
   .btn_wrapper{float: right;margin-right: 50px;}
@@ -119,7 +123,7 @@
     #testi hr{width: 86%;}
     .firstname,.email,.subjectline,.yourrating{margin: 0 auto;}
     .faq_heading{margin-top: 0;}
-    .msgtextbox{margin-left: 0;}
+    .msgtextbox,.recommenddiv{margin-left: 0;}
     div.form-group input{margin-left: 0;}
     div.form-group textarea.form-control{margin-left: 0; width: 290px;}
     .quantity{margin-left: 20px;}
@@ -128,26 +132,28 @@
   }
 
   @media screen and (max-width:767px){
-    .xslipsphoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
+    .xslipsphoto{text-align: center;margin-top: 30px;margin-bottom: 30px;margin-left: 14%;}
     .swatch-holder{margin-top: 10px;}
     .navbar-toggle{margin-right: 40px;}
     .undereyephoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
     .guarantee_wrd{margin-left: 100px;}
     .product_notes{padding-left: 28px;padding-right: 28px;}
     #review_form{width: 300px;margin:auto;}
+    .product-gallery img {width: 180%; height: 180%;}
   }
 
   @media screen and (max-width:549px){
     .col-xxs-12{width: 100%;}
     .xscolordiv{margin-left: 20%;}
+    .xsswatch-wrapper{margin-left: 10%;}
     .hidden-xxs {display: none !important;}
     .guarantee_wrd{margin: 0 auto;}
+    .xslipsphoto{margin-left: 16%;}
   }
   @media screen and (max-width:479px){
     .word_wrapper{margin-left: 12.5%; margin-bottom: 5%;}
     .guarantee_wrd{font-size: 14px;}
     .guarantee_logo{margin-top: 6%;}
-    .xslipsphoto{margin-left: -8%;}
     .xscolordiv{margin-left: 14%;}
   }
   @media screen and (max-width:400px){
@@ -160,6 +166,7 @@
     div.form-group input.form-control{width: 244px;}
     div.form-group textarea.form-control{width: 244px;}
     .btn_wrapper{margin: 0;}
+    .xslipsphoto{margin-left: 14%;}
   }
 
 </style>
@@ -322,7 +329,7 @@
             </div>
             <div class="col-xs-12 visible-xs xscolordiv">
               <div class="row">
-                <div class="col-xs-4 col-xxs-12">
+                <div class="col-xs-4 col-xxs-12 xsswatch-wrapper">
                   <div class="main-swatch" style="display:inline-table" id="subnav">
                     <img src="img/citylips/swatch-tokyokiss.png" id="tokyokiss">
                     <img src="img/citylips/swatch-plumsprings.png" id="plumsprings">
@@ -535,7 +542,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <div class="product_img cream_box centered_flex">
-            <img src="../img/cream.png" alt="cream">
+            <img src="img/citylips/swatch-clear.png" alt="clear swatch">
           </div>
         </div>
         <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12 col-xs-offset-1 product_notes">

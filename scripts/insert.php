@@ -12,8 +12,16 @@
       $rating = intval($_POST['rating']);
       $message = mysqli_real_escape_string($link, $_POST['message']);
 
+      if ($_POST['recradio'] == 'yes') {//check radio button for recommendation
+        $recommend = 1;
+      }
+      else {
+        $recommend = 0;
+      }
+      $date = date('Y-m-d'); //get the current date of the review post
+
       // attempt insert query execution
-      $sql = "INSERT INTO $tablename (fname, email,subject,message,rate) VALUES ('$first_name', '$email_address','$subject','$message',$rating)";
+      $sql = "INSERT INTO $tablename (fname, email,subject,message,rate,recommend,postdate) VALUES ('$first_name', '$email_address','$subject','$message',$rating,$recommend,'$date')";
       if(mysqli_query($link, $sql)){
         echo "Data successfully Saved.";
         $redirectTo = 'Location:' . $_SESSION[$page] . '.php';
