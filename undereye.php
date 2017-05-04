@@ -199,10 +199,10 @@
           <div class="row">
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-7">
               <h3>Under Eye Recovery</h3>
+              <div class="linebreak12"></div>
             </div>
-            <div class="linebreak2"></div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
-              <div class="ratingwrapper"><img src="../img/ratingstars.png" alt="144 ratings stars"></div>
+              <img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(3)</span>
             </div>
             <div class="hidden-lg hidden-md hidden-sm visible-xs col-xs-12 undereyephoto">
               <img src="../img/undereye_str_sm.png" alt="undereye small">
@@ -227,7 +227,7 @@
               <div class="linebreak2"></div>
             </div>
             <div class="visible-xs col-xs-12">
-              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(144 Reviews)</span></p>
+              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(3 Reviews)</span></p>
               <div class="linebreak2"></div>
               <div class="row">
                 <div class="col-xs-3">
@@ -319,7 +319,7 @@
             <img src="../img/cream.png" alt="cream">
           </div>
         </div>
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12 col-xs-offset-1 product_notes">
+        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-sm-offset-2 col-xs-12 col-xs-offset-1 product_notes">
           <h4>Product Notes</h4>
           <div class="linebreak2"></div>
           <div class="row">
