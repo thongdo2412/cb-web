@@ -108,7 +108,7 @@
   .msgtextbox{margin-left: 28px;margin-top: 16px;}
   .btn_wrapper{float: right;margin-right: 50px;}
   /* handling out of stock */
-  #outofstockbtn{background-color: rgb(160,160,160);display: none;font-size: 32px;}
+  .outofstockbtn{background-color: rgb(160,160,160);display: none;font-size: 32px;}
   .out-of-stock-line {
     width: 58px;
     height: 58px;
@@ -148,7 +148,7 @@
   }
 
   @media screen and (max-width:767px){
-    .xslipsphoto{text-align: center;margin-top: 30px;margin-bottom: 30px;margin-left: 14%;}
+    .xslipsphoto{text-align: center;margin-top: 50px;margin-bottom: 30px;margin-left: 14%;}
     .swatch-holder{margin-top: 10px;}
     .navbar-toggle{margin-right: 40px;}
     .undereyephoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
@@ -171,18 +171,19 @@
     .guarantee_wrd{font-size: 14px;}
     .guarantee_logo{margin-top: 6%;}
     .xscolordiv{margin-left: 14%;}
+    .button{width: 120px;}
   }
   @media screen and (max-width:400px){
     .guarantee_logo{margin-top: 9%;}
   }
   @media screen and (max-width:399px){
     .xscolordiv{margin-left: 5%;margin-right: 30px;}
-    .button_bg{width: 150px;margin-left: 20px;}
     #review_form{padding-left: 28px; padding-right: 28px;}
     div.form-group input.form-control{width: 244px;}
     div.form-group textarea.form-control{width: 244px;}
     .btn_wrapper{margin: 0;}
     .xslipsphoto{margin-left: 14%;}
+    .button{width: 110px;}
   }
 
 </style>
@@ -233,7 +234,7 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
                 <div class="linebreak12"></div>
-              <img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(19)</span>
+              <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"></span>
             </div>
             <div class="visible-xs col-xs-1 col-xs-pull-5 xslipsphoto">
               <div class="col product-gallery">
@@ -333,8 +334,7 @@
                   </tbody>
                 </table>
               </div>
-              <div class="linebreak3"></div>
-              <div class="outofstocktxt">Currently Out of Stock</div>
+              <div class="linebreak2"></div>
               <div class="shadeinfo">
                 <span><b>Shade Description:</b> <span class="shadeDes">clear</span></span>
               </div>
@@ -443,8 +443,7 @@
                   </div>
                 </div>
               </div>
-              <div class="linebreak3"></div>
-              <div class="outofstocktxt">Currently Out of Stock</div>
+              <div class="linebreak2"></div>
               <div class="shadeinfo">
                 <span><b>Shade Description:</b> <span class="shadeDes">clear</span></span>
               </div>
@@ -458,13 +457,14 @@
           <hr>
           <div class="row">
             <div class="col-lg-12 hidden-xs">
-              <div class="row">
+              <div class="row quantity-wrapper">
                 <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
                 <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity" id="qty" name="quantityselect"></select></div>
               </div>
+              <div class="outofstocktxt">Currently Out of Stock</div>
               <div class="linebreak2"></div>
-              <div class="button button_blue pull-left" id="instockbtn"><a name="addToCart" href="#">ADD TO CART</a></div>
-              <div class="button button_blue pull-left" id="outofstockbtn">&odash;</div>
+              <div class="button button_blue pull-left instockbtn"><a name="addToCart" href="#">ADD TO CART</a></div>
+              <div class="button button_blue pull-left outofstockbtn">&odash;</div>
               <div class="clearfix"></div>
               <div class="linebreak2"></div>
             </div>
@@ -472,11 +472,13 @@
               <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(19 Reviews)</span></p>
               <div class="linebreak2"></div>
               <div class="row">
-                <div class="col-xs-3">
-                  <select class="xsquantity" id="xsqty" name="quantityselect"></select>
+                <div class="col-xs-6">
+                  <select class="quantity-wrapper xsquantity" id="xsqty" name="quantityselect"></select>
+                  <div class="outofstocktxt">Currently Out of Stock</div>
                 </div>
-                <div class="col-xs-4">
-                  <div class="button_bg button_blue" name="addToCartButton"><a name="addToCart" href="#">ADD TO CART</a></div>
+                <div class="col-xs-5">
+                  <div class="button button_blue instockbtn"><a name="addToCart" href="#">ADD TO CART</a></div>
+                  <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                 </div>
               </div>
               <div class="linebreak2"></div>
@@ -859,9 +861,10 @@
       var activeID = $(".product-gallery .active").attr("id");
       var outofstock = $(".shade-table-cell #" + activeID + " > div > div" ).find("div").attr("class");
       if (outofstock == 'out-of-stock-line'){
+        $(".quantity-wrapper").css("display","none");
         $(".outofstocktxt").css("display","block");
-        $("#instockbtn").css("display","none");
-        $("#outofstockbtn").css("display","block");
+        $(".instockbtn").css("display","none");
+        $(".outofstockbtn").css("display","block");
       }
 
       $(".swatch-unit").hover(
@@ -871,14 +874,17 @@
               $(".product-gallery img.active").hide();
               $(".main-swatch #" + id).show();
               $(".product-gallery #" + id).show();
+              //handle out of stock for hover in
               $(".outofstocktxt").css("display","none");
-              $("#outofstockbtn").css("display","none");
-              $("#instockbtn").css("display","flex");
+              $(".quantity-wrapper").css("display","block");
+              $(".outofstockbtn").css("display","none");
+              $(".instockbtn").css("display","flex");
               outofstock = $(".shade-table-cell #" + id + " > div > div" ).find("div").attr("class");
               if (outofstock == 'out-of-stock-line'){
+                $(".quantity-wrapper").css("display","none");
                 $(".outofstocktxt").css("display","block");
-                $("#instockbtn").css("display","none");
-                $("#outofstockbtn").css("display","block");
+                $(".instockbtn").css("display","none");
+                $(".outofstockbtn").css("display","block");
               }
               $(".shadeDes").text(id);
               if(id!="clear"){
@@ -892,14 +898,17 @@
                $(".main-swatch img.active").show();
                $(".product-gallery img.active").show();
                activeColor = $(".swatch-container.active").closest('a').attr('id');
+                 //handle out of stock for hover out
+               $(".quantity-wrapper").css("display","block");
                $(".outofstocktxt").css("display","none");
-               $("#outofstockbtn").css("display","none");
-               $("#instockbtn").css("display","flex");
+               $(".outofstockbtn").css("display","none");
+               $(".instockbtn").css("display","flex");
                outofstock = $(".shade-table-cell #" + activeColor + " > div > div" ).find("div").attr("class");
                if (outofstock == 'out-of-stock-line'){
+                 $(".quantity-wrapper").css("display","none");
                  $(".outofstocktxt").css("display","block");
-                 $("#instockbtn").css("display","none");
-                 $("#outofstockbtn").css("display","block");
+                 $(".instockbtn").css("display","none");
+                 $(".outofstockbtn").css("display","block");
                }
                $(".shadeDes").text(activeColor);
               if(activeColor!="clear"){
@@ -919,14 +928,17 @@
           id2 = $(this).closest('a').attr('id');
           $(".main-swatch #" + id2).addClass("active");
           $(".product-gallery #" + id2).addClass("active");
+            //handle out of stock for click event
+          $(".quantity-wrapper").css("display","block");
           $(".outofstocktxt").css("display","none");
-          $("#outofstockbtn").css("display","none");
-          $("#instockbtn").css("display","flex");
+          $(".outofstockbtn").css("display","none");
+          $(".instockbtn").css("display","flex");
           outofstock = $(".shade-table-cell #" + id2 + " > div > div" ).find("div").attr("class");
           if (outofstock == 'out-of-stock-line'){
+            $(".quantity-wrapper").css("display","none");
             $(".outofstocktxt").css("display","block");
-            $("#instockbtn").css("display","none");
-            $("#outofstockbtn").css("display","block");
+            $(".instockbtn").css("display","none");
+            $(".outofstockbtn").css("display","block");
           }
           $(".shadeDes").text(id2);
           if(id2!="clear"){
@@ -996,7 +1008,17 @@
           }
         })
 
+      //get the count of reviews for the product
+      var counts  = document.getElementById('counts').value;
+      if ( $(window).width() > 768 ) { //handle different screen sizes
+        $(".rating_wrd").text("(" + counts +")");
+      }
+      else {
+        $(".rating_wrd").text("(" + counts +" Reviews)");
+      }
+
     });
   </script>
+
 </body>
 </html>

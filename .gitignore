@@ -21,4 +21,5 @@ venv
 node_modules
 components
 db_connect.php
+counts.php
 .sass-cache

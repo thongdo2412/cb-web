@@ -93,7 +93,7 @@
           <div class="scorecallback" data-score="<?php echo $rating; ?>"></div>
           <p><h5><?php echo $subject;?></h5></p>
           <div class="linebreak2"></div>
-          <?php echo limit_text($message, 19)?>
+          <?php echo limit_text($message, 19); ?>
         </div>
         <div id="testi<?php echo $rateid;?>" class="collapse">
           <img src="../img/stars_rating.png"></img>
@@ -124,10 +124,21 @@
 <hr>
 <!--ends display-->
 <?php
+    }
+	  $stmt->free_result();
+		$stmt->close();
   }
-			$stmt->free_result();
-			$stmt->close();
-		}
+  if($stmt = $link->prepare("SELECT COUNT(`rateid`) as total FROM `cc_$pid`")){
+    $stmt->execute();
+    $row = $stmt->fetch_array(MYSQLI_NUM);
+    $count = $row[0];
+    ?>
+  <input type="hidden" id="counts" name="action" value="<?php echo $count;?>"> <!--line to return the counts of reviews-->
+<?php
+    $stmt->free_result();
+    $stmt->close();
+  }
+    ;
 		$link->close();
 	}
 
@@ -139,5 +150,6 @@
       }
       return $text;
     }
+
 ?>
 </div>
