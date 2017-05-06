@@ -849,7 +849,7 @@
 
       // default image in lip holder and lip sample
       setDisplayColor('nudeyork');
-
+      // updateOutofStock('clear');
       $(".swatch-unit").hover(
           function(){ //show hover in
               id = $(this).closest('a').attr('id');

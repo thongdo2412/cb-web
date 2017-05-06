@@ -1,5 +1,5 @@
 $(function(){ //handles quantity up to 100
-  var $select = $(".quantity,.xsquantity");
+  var $select = $(".xsquantity");
   for (i=1;i<=100;i++){
     $select.append($('<option></option>').val(i).html(i))
   }
@@ -73,4 +73,5 @@ $(function() {
     $(".collapse_heading").find('b').contents().unwrap();
     $(".rating_wrd").text("(" + counts +" Reviews)");
   }
+  
 });
