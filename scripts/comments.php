@@ -128,10 +128,10 @@
 	  $stmt->free_result();
 		$stmt->close();
   }
-  if($stmt = $link->prepare("SELECT COUNT(`rateid`) as total FROM `cc_$pid`")){
+  if($stmt = $link->prepare("SELECT `rateid` FROM `cc_$pid`")){
     $stmt->execute();
-    $row = $stmt->fetch_array(MYSQLI_NUM);
-    $count = $row[0];
+    $stmt->store_result();
+    $count = $stmt->num_rows;
     ?>
   <input type="hidden" id="counts" name="action" value="<?php echo $count;?>"> <!--line to return the counts of reviews-->
 <?php

@@ -4,6 +4,7 @@ $(function(){ //handles quantity up to 100
     $select.append($('<option></option>').val(i).html(i))
   }
 });
+
 $('.plusminus').click(function(){ //handle click for regular + and - collapse
   $(this).text(function(i,old){
     sign=old;
@@ -57,8 +58,12 @@ $(function(){ //handle with jQuery raty plugin
 });
 
 $(function() {
+  //get the count of reviews for the product
+  var counts  = document.getElementById('counts').value;
+
   if($(window).width() > 768 ) {//handle collapse with desktop and mobile widths
     $("*[name='collapse_plus']").css('display','none');
+    $(".rating_wrd").text("(" + counts +")");
   }
   else {
     $("*[name='collapse_plus']").css('display','block');
@@ -66,5 +71,6 @@ $(function() {
     $("*[name='collapse_content']").removeClass('collapse in');
     $("*[name='collapse_content']").addClass('collapse');
     $(".collapse_heading").find('b').contents().unwrap();
+    $(".rating_wrd").text("(" + counts +" Reviews)");
   }
 });

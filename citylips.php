@@ -50,29 +50,14 @@
   .product-gallery {
     margin-left: -220px;
   }
+  .main-swatch{display: inline;}
   .product-gallery img {
-      display: none;
       width: 200%;
       height: 200%;
-  }
-  .product-gallery img.active {
-      display: block;
-  }
-  div.main-swatch img {
-      display: none;
-  }
-  div.main-swatch img.active {
-      display: inline-block;
   }
 
   /* css for quantity select/option box */
   .quantityword{margin-top: 4px;}
-  .quantity{margin-left: 10px;background: url("../img/quantityarrw.png") no-repeat 25px 4px #ffffff;}
-  select.quantity{font-family: "Playfair Display", serif; font-size: 23px; font-style: italic;
-    border: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
   .xsquantity{font-family: "Playfair Display", serif;font-size: 20.45px;}
   select.xsquantity{width: 75px;
     height: 32px;
@@ -91,6 +76,7 @@
   }
   /* css for review setion */
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
+  a.rating_wrd:hover{color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
   div.form-group input.form-control{border-radius: 0;width: 290px;height: 32px;}
   div.form-group input{margin-left: 18px;}
@@ -120,7 +106,7 @@
     position: absolute;
     /* top: -20px; */
   }
-  .outofstocktxt{color:red;display: none;}
+  .outofstocktxt{color:red;display: none;height: 32px;}
   /*end of handling out of stock*/
 
   h3{font-family: "Playfair Display",serif;font-size: 38px; display: inline;}
@@ -200,29 +186,11 @@
         <div class="col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-2 col-sm-1 col-sm-offset-1 hidden-xs">
           <div class="row">
             <div class="col product-gallery">
-              <img src="img/citylips/product_city_advanced_clear.jpg" id="clear" class="active">
-              <img src="img/citylips/product_city_los_angelips.jpg" id="losangelips">
-              <img src="img/citylips/product_city_nude_york.jpg" id="nudeyork">
-              <img src="img/citylips/product_city_orchid.jpg" id="orchid">
-              <img src="img/citylips/product_city_sangria.jpg" id="sangria">
-              <img src="img/citylips/product_city_sun_diego.jpg" id="sundiego">
-              <img src="img/citylips/product_city_tinsel_town.jpg" id="tinseltown">
-              <img src="img/citylips/product_city_holly.jpg" id="holly">
-              <img src="img/citylips/product_city_tokyo_kiss.jpg" id="tokyokiss">
-              <img src="img/citylips/product_city_plum_springs.jpg" id="plumsprings">
+              <img src="img/citylips/citylips_clear.jpg" class="lip-holder-photo">
             </div>
             <div class="col lipsphoto">
-              <div class="main-swatch" style="display:inline-table" id="subnav">
-                <img src="img/citylips/swatch-tokyokiss.png" id="tokyokiss">
-                <img src="img/citylips/swatch-plumsprings.png" id="plumsprings">
-                <img src="img/citylips/swatch-losangelips.png" id="losangelips">
-                <img src="img/citylips/swatch-nudeyork.png" id="nudeyork">
-                <img src="img/citylips/swatch-orchid.png" id="orchid">
-                <img src="img/citylips/swatch-sangria.png" id="sangria">
-                <img src="img/citylips/swatch-sundiego.png" id="sundiego">
-                <img src="img/citylips/swatch-tinseltown.png" id="tinseltown">
-                <img src="img/citylips/swatch-holly.png" id="holly">
-                <img src="img/citylips/swatch-clear.png" id="clear" class="active">
+              <div class="main-swatch" id="subnav">
+                <img src="img/citylips/swatch-clear.png" class="lip-sample-photo">
               </div>
             </div>
           </div>
@@ -234,20 +202,11 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
                 <div class="linebreak12"></div>
-              <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"></span>
+              <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
             </div>
             <div class="visible-xs col-xs-1 col-xs-pull-5 xslipsphoto">
               <div class="col product-gallery">
-                <img src="img/citylips/product_city_advanced_clear.jpg" id="clear" class="active">
-                <img src="img/citylips/product_city_los_angelips.jpg" id="losangelips">
-                <img src="img/citylips/product_city_nude_york.jpg" id="nudeyork">
-                <img src="img/citylips/product_city_orchid.jpg" id="orchid">
-                <img src="img/citylips/product_city_sangria.jpg" id="sangria">
-                <img src="img/citylips/product_city_sun_diego.jpg" id="sundiego">
-                <img src="img/citylips/product_city_tinsel_town.jpg" id="tinseltown">
-                <img src="img/citylips/product_city_holly.jpg" id="holly">
-                <img src="img/citylips/product_city_tokyo_kiss.jpg" id="tokyokiss">
-                <img src="img/citylips/product_city_plum_springs.jpg" id="plumsprings">
+                <img src="img/citylips/citylips_clear.jpg" class="lip-holder-photo">
               </div>
             </div>
           </div>
@@ -259,35 +218,35 @@
                   <tbody class="tbody-swatches">
                     <tr>
                       <td class="shade-table-cell active">
-                        <a href="#!b0" class="swatch-box" id="clear">
+                        <a href="#" class="swatch-box" id="clear">
                           <div class="swatch-container active" id="text_content">
                             <div class="swatch-unit" style="background-color: #ccc;"><div class="out-of-stock-line"></div></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="nudeyork">
+                        <a href="#" class="swatch-box" id="nudeyork">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #e07c56;"></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="orchid">
+                        <a href="#" class="swatch-box" id="orchid">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #c892b9;"></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="sangria">
+                        <a href="#" class="swatch-box" id="sangria">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #4f101e;"></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="tokyokiss">
+                        <a href="#" class="swatch-box" id="tokyokiss">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #d4a286;"></div>
                           </div>
@@ -296,35 +255,35 @@
                     </tr>
                     <tr>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="sundiego">
+                        <a href="#" class="swatch-box" id="sundiego">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #ff8a80;"></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="tinseltown">
+                        <a href="#" class="swatch-box" id="tinseltown">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #dbb4ac;"></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="holly">
+                        <a href="#" class="swatch-box" id="holly">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #701101;"></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="losangelips">
+                        <a href="#" class="swatch-box" id="losangelips">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #ee9091;"></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
-                        <a href="#!b1" class="swatch-box" id="plumsprings">
+                        <a href="#" class="swatch-box" id="plumsprings">
                           <div class="swatch-container" id="text_content">
                             <div class="swatch-unit" style="background-color: #9b6169;"></div>
                           </div>
@@ -348,16 +307,7 @@
               <div class="row">
                 <div class="col-xs-4 col-xxs-12 xsswatch-wrapper">
                   <div class="main-swatch" style="display:inline-table" id="subnav">
-                    <img src="img/citylips/swatch-tokyokiss.png" id="tokyokiss">
-                    <img src="img/citylips/swatch-plumsprings.png" id="plumsprings">
-                    <img src="img/citylips/swatch-losangelips.png" id="losangelips">
-                    <img src="img/citylips/swatch-nudeyork.png" id="nudeyork">
-                    <img src="img/citylips/swatch-orchid.png" id="orchid">
-                    <img src="img/citylips/swatch-sangria.png" id="sangria">
-                    <img src="img/citylips/swatch-sundiego.png" id="sundiego">
-                    <img src="img/citylips/swatch-tinseltown.png" id="tinseltown">
-                    <img src="img/citylips/swatch-holly.png" id="holly">
-                    <img src="img/citylips/swatch-clear.png" id="clear" class="active">
+                    <img src="img/citylips/swatch-clear.png" class="lip-sample-photo">
                   </div>
                 </div>
                 <div class="col-xs-7 col-xxs-12">
@@ -459,17 +409,17 @@
             <div class="col-lg-12 hidden-xs">
               <div class="row quantity-wrapper">
                 <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
-                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity" id="qty" name="quantityselect"></select></div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty" name="quantityselect"></select></div>
               </div>
               <div class="outofstocktxt">Currently Out of Stock</div>
               <div class="linebreak2"></div>
               <div class="button button_blue pull-left instockbtn"><a name="addToCart" href="#">ADD TO CART</a></div>
               <div class="button button_blue pull-left outofstockbtn">&odash;</div>
               <div class="clearfix"></div>
-              <div class="linebreak2"></div>
+              <div class="linebreak1"></div>
             </div>
             <div class="visible-xs col-xs-12">
-              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(19 Reviews)</span></p>
+              <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
               <div class="linebreak2"></div>
               <div class="row">
                 <div class="col-xs-6">
@@ -857,35 +807,54 @@
   <script src="scripts/citybeauty.js"></script>
   <script type="text/javascript">
     $(function (){//handle color picker
-      //find active color and check if it's out of stock
-      var activeID = $(".product-gallery .active").attr("id");
-      var outofstock = $(".shade-table-cell #" + activeID + " > div > div" ).find("div").attr("class");
-      if (outofstock == 'out-of-stock-line'){
-        $(".quantity-wrapper").css("display","none");
-        $(".outofstocktxt").css("display","block");
-        $(".instockbtn").css("display","none");
-        $(".outofstockbtn").css("display","block");
+
+      function getActiveColor () {//get active color
+        activeColor = $(".swatch-container.active").closest('a').attr('id');
+        return activeColor;
       }
+
+      function updateOutofStock(color) {//find active color and check if it's out of stock
+        $(".outofstocktxt").css("display","none");
+        $(".quantity-wrapper").css("display","block");
+        $(".outofstockbtn").css("display","none");
+        $(".instockbtn").css("display","flex");
+        var outofstock = $(".shade-table-cell #" + color + " > div > div" ).find("div").attr("class");
+        if (outofstock == 'out-of-stock-line'){ //check if the color is out of stock and activate out of stock functions
+          $(".quantity-wrapper").css("display","none");
+          $(".outofstocktxt").css("display","block");
+          $(".instockbtn").css("display","none");
+          $(".outofstockbtn").css("display","block");
+        }
+      }
+
+      function updateImgPath(color) {//update image path for lip holder and lip sample
+        const imgPath = `img/citylips/citylips_${color}.jpg`;
+        const lipimgPath = `img/citylips/swatch-${color}.png`;
+        $(".lip-holder-photo").attr('src',imgPath);
+        $(".lip-sample-photo").attr('src',lipimgPath);
+      }
+
+      function setDisplayColor(color){
+        $(".swatch-box .active").removeClass('active').width(39).height(39);
+        $(`a#${color}`).children().addClass('active').width(35).height(35);
+        updateImgPath(color);
+        //display the lip name and price
+        $(".shadeDes").text(color);
+        if(color!="clear"){
+            $(".price span").text("$40.00");
+        } else {
+            $(".price span").text("$35.00");
+        }
+      }
+
+      // default image in lip holder and lip sample
+      setDisplayColor('nudeyork');
 
       $(".swatch-unit").hover(
           function(){ //show hover in
               id = $(this).closest('a').attr('id');
-              $(".main-swatch img.active").hide();
-              $(".product-gallery img.active").hide();
-              $(".main-swatch #" + id).show();
-              $(".product-gallery #" + id).show();
-              //handle out of stock for hover in
-              $(".outofstocktxt").css("display","none");
-              $(".quantity-wrapper").css("display","block");
-              $(".outofstockbtn").css("display","none");
-              $(".instockbtn").css("display","flex");
-              outofstock = $(".shade-table-cell #" + id + " > div > div" ).find("div").attr("class");
-              if (outofstock == 'out-of-stock-line'){
-                $(".quantity-wrapper").css("display","none");
-                $(".outofstocktxt").css("display","block");
-                $(".instockbtn").css("display","none");
-                $(".outofstockbtn").css("display","block");
-              }
+              updateImgPath(id);
+              updateOutofStock(id);
               $(".shadeDes").text(id);
               if(id!="clear"){
                   $(".price span").text("$40.00");
@@ -893,59 +862,23 @@
                   $(".price span").text("$35.00");
               }
           }, function(){ //return to active when hover out
-               $(".main-swatch #" + id).hide();
-               $(".product-gallery #" + id).hide();
-               $(".main-swatch img.active").show();
-               $(".product-gallery img.active").show();
-               activeColor = $(".swatch-container.active").closest('a').attr('id');
-                 //handle out of stock for hover out
-               $(".quantity-wrapper").css("display","block");
-               $(".outofstocktxt").css("display","none");
-               $(".outofstockbtn").css("display","none");
-               $(".instockbtn").css("display","flex");
-               outofstock = $(".shade-table-cell #" + activeColor + " > div > div" ).find("div").attr("class");
-               if (outofstock == 'out-of-stock-line'){
-                 $(".quantity-wrapper").css("display","none");
-                 $(".outofstocktxt").css("display","block");
-                 $(".instockbtn").css("display","none");
-                 $(".outofstockbtn").css("display","block");
-               }
-               $(".shadeDes").text(activeColor);
-              if(activeColor!="clear"){
+               activeID = getActiveColor()
+               updateImgPath(activeID);
+               updateOutofStock(activeID);
+               $(".shadeDes").text(activeID);
+              if(activeID!="clear"){
                 $(".price span").text("$40.00");
               } else {
                 $(".price span").text("$35.00");
               }
           }
       );
-      id2 = "clear";
+
       $(".swatch-unit").on("click", function(event){ //handle click event
           event.preventDefault();
-          $(".swatch-box .active").removeClass('active').width(39).height(39);
-          $(this).parent().addClass('active').width(35).height(35);
-          $(".main-swatch .active").removeClass("active");
-          $(".product-gallery .active").removeClass("active");
           id2 = $(this).closest('a').attr('id');
-          $(".main-swatch #" + id2).addClass("active");
-          $(".product-gallery #" + id2).addClass("active");
-            //handle out of stock for click event
-          $(".quantity-wrapper").css("display","block");
-          $(".outofstocktxt").css("display","none");
-          $(".outofstockbtn").css("display","none");
-          $(".instockbtn").css("display","flex");
-          outofstock = $(".shade-table-cell #" + id2 + " > div > div" ).find("div").attr("class");
-          if (outofstock == 'out-of-stock-line'){
-            $(".quantity-wrapper").css("display","none");
-            $(".outofstocktxt").css("display","block");
-            $(".instockbtn").css("display","none");
-            $(".outofstockbtn").css("display","block");
-          }
-          $(".shadeDes").text(id2);
-          if(id2!="clear"){
-              $(".price span").text("$40.00");
-          } else {
-              $(".price span").text("$35.00");
-          }
+          setDisplayColor(id2);
+          updateOutofStock(id2);
       });
       //handle ios single tap as single click
       $(".swatch-unit").on('touchstart', function(event) {
@@ -953,21 +886,9 @@
         $(this).trigger('click');
       });
       //handle each color to add to cart
-        var quantity;
-        var selectId;
-        var link;
+        var quantity = 1;
 
-        //handle regular quantity selection or mobile selection
-        if ( $(window).width() > 768  ) {
-          quantity = document.getElementById("qty").value;
-          selectId = 'select#qty';
-        }
-        else {
-          quantity = document.getElementById("xsqty").value;
-          selectId = 'select#xsqty';
-        }
-
-        $(selectId).change(function() {//handle change of quantity
+        $(".xsquantity").change(function() {//handle change of quantity
           quantity = $(this).find('option:selected').text();
         })
 
@@ -1007,15 +928,6 @@
                } break;
           }
         })
-
-      //get the count of reviews for the product
-      var counts  = document.getElementById('counts').value;
-      if ( $(window).width() > 768 ) { //handle different screen sizes
-        $(".rating_wrd").text("(" + counts +")");
-      }
-      else {
-        $(".rating_wrd").text("(" + counts +" Reviews)");
-      }
 
     });
   </script>

@@ -39,7 +39,7 @@
   .line-on-sides{overflow: hidden;}
   b{font-weight: 400;}
   .sup1{vertical-align: super;}
-  .button{width: 150px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
+  .button{width: 171px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
   .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
@@ -72,12 +72,6 @@
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
   .quantityword{margin-top: 4px;}
-  .quantity{margin-left: 10px;background: url("../img/quantityarrw.png") no-repeat 25px 4px #ffffff;}
-  select.quantity{font-family: "Playfair Display", serif; font-size: 23px; font-style: italic;
-    border: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
   .xsquantity{font-family: "Playfair Display", serif;font-size: 20.45px;}
   select.xsquantity{width: 75px;
     height: 32px;
@@ -95,6 +89,7 @@
       background: url("../img/quantityarrw.png") no-repeat 28px 8px #ffffff;}
   }
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
+  a.rating_wrd:hover{color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
   div.form-group input.form-control{border-radius: 0;width: 290px;height: 32px;}
   div.form-group input{margin-left: 18px;}
@@ -202,7 +197,7 @@
               <div class="linebreak12"></div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
-              <img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(3)</span>
+              <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
             </div>
             <div class="hidden-lg hidden-md hidden-sm visible-xs col-xs-12 undereyephoto">
               <img src="../img/undereye_str_sm.png" alt="undereye small">
@@ -211,7 +206,7 @@
           <hr>
           <div class="row">
             <div class="col-lg-12">
-              <h6>$39.00</h6>
+              <h6>$97.00</h6>
             </div>
           </div>
           <hr>
@@ -219,7 +214,7 @@
             <div class="col-lg-12 hidden-xs">
               <div class="row">
                 <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
-                <div class="col-lg-1 col-md-1 col-sm-1"><select class="quantity" id="qty"></select></div>
+                <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
               </div>
               <div class="linebreak2"></div>
               <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
@@ -227,7 +222,7 @@
               <div class="linebreak2"></div>
             </div>
             <div class="visible-xs col-xs-12">
-              <p><img src="../img/stars_rating.png" alt="5 stars rating"> <span class="rating_wrd">(3 Reviews)</span></p>
+              <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
               <div class="linebreak2"></div>
               <div class="row">
                 <div class="col-xs-3">
@@ -291,8 +286,8 @@
                 <div data-toggle="collapse" data-target="#ingredients" class="plusminus">+</div>
               </div>
             </div>
-            <div class="linebreak2"></div>
             <div id="ingredients" class="collapse">
+            <div class="linebreak2"></div>
             Water, Glycerin, Caprylic/Capric Triglyceride, Nylon-12 Fluorescent Brightener 230 Salt, Isopentyldiol, Polymethylsilsesquioxane, Pentylene Glycol, Caffeine, Cetearyl Alcohol, Glyceryl Stearate, Potassium Olivoyl Hydrolized Oat Protein, Cyclopentasiloxane, Dimethicone, Jojoba Esters, Olea Europaea (Olive) Fruit Unsaponifiables, Cocos Nucifera (Coconut) Oil, Albizia Julibrissin Bark Extract, Coffea Arabica (Coffee) Seed Extract, Passiflora Incarnata Flower Extract, Phenoxyethanol, Glyceryl Oleate, Strelitzia Nicolai Seed Aril Extract, Polyvinylalcohol Crosspolymer, Sodium Hyaluronate, Caprylyl Glycol, Lecithin, Chlorphenesin, Algae Extract, Xanthan Gum, Cyamopsis Tetragonoloba (Guar) Gum, Steareth-20, Tetrasodium Glutamate Diacetate, Hexylene Glycol, Palmitoyl Oligopeptide, Darutoside, Caprooyl Tetrapeptide-3, Dextran, Palmitoyl Tetrapeptide-7, Hydroxyacetophenone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Fragrance.
             </div>
             <hr>
@@ -527,26 +522,18 @@
 
     <script type="text/javascript">
     $(function(){ //handles add to cart with quantity selected above
-      var quantity;
-      var selectId;
-      //handle regular or mobile screen selection
-      if ($(window).width() > 768 ) {
-        quantity = document.getElementById("qty").value;
-        selectId = 'select#qty';
-      }
-      else {
-        quantity = document.getElementById("xsqty").value;
-        selectId = 'select#xsqty';
-      }
+      var quantity = 1;
 
-      $(selectId).change(function() {//handle change of quantity
+      $(".xsquantity").change(function() {//handle change of quantity
         quantity = $(this).find('option:selected').text();
       })
 
       $("*[name='addToCart']").click(function(event){//handle click event of Add to Cart button
         event.preventDefault();
-        window.location = "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&qty=" + quantity.toString();
+        console.log(qty);
+        window.location = "http://citybeauty.com/cmd.php?pid=8ded8940d8eb47c2b299df947f616d20&qty=" + quantity.toString();
       })
+
     });
     </script>
   </body>
