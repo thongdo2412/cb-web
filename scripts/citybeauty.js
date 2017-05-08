@@ -73,5 +73,4 @@ $(function() {
     $(".collapse_heading").find('b').contents().unwrap();
     $(".rating_wrd").text("(" + counts +" Reviews)");
   }
-  
 });

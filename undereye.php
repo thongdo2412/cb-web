@@ -519,7 +519,6 @@
 
     <script src="../components/raty-master/lib/jquery.raty.js"></script>
     <script src="scripts/citybeauty.js"></script>
-
     <script type="text/javascript">
     $(function(){ //handles add to cart with quantity selected above
       var quantity = 1;
