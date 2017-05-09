@@ -1,3 +1,9 @@
+<!-- include PHP header and other prerequisite files-->
+<?php
+  $page_title = 'City Beauty';
+  include("scripts/conn_init.php");
+ ?>
+
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -6,7 +12,7 @@
 	<![endif]-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>City Beauty</title>
+	<title><?php echo $page_title;?></title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
@@ -24,6 +30,7 @@ footer a,a:hover{text-decoration: none; color: #ffffff}
 .centered_flex{display: flex;justify-content:center;align-items: center; }
 .centered_nav{display: flex;justify-content: center;align-items: center;}
 .nav{font-size: 14px;font-family: "Montserrat", sans-serif; font-weight: 300;}
+.sup1{vertical-align: super;}
 nav2 {display: inline-block;padding: 0 15px;position: relative;}
 nav2:hover:before,nav2:hover:after {background: #000;content: "";display: block;height: 1px;position: absolute;top: 50%;width: 12px;}
 nav2:hover:before {right: 95%;}
@@ -44,30 +51,34 @@ toBold{font-weight: 600;}
 .jumbotron_wht{background: rgb(255,255,255);}
 .jumbotron_w_bg{height: 528px;background-image: url("../img/gift_bg.png");border: 1px solid rgb(235, 235, 235);background-size:100% cover;background-position:center;}
 .b3textbox{width:382px;background-color:rgb(255,255,255); text-align:center;}
+.movedown8{margin-top: 8px;}
 .movedown16{margin-top: 16px;}
 .movedown20{margin-top: 20px;}
+.movedown30{margin-top: 30px;}
 .movedown2p{padding-top: 2%;}
 .movedown5p{padding-top: 5%;}
 .movedown10p{padding-top: 10%;}
 .movedown14p{padding-top: 14%;}
-/*.b2margin{margin-left: 17%;}*/
 .word_wrapper{text-align: left; margin-top: 22%;}
 .b2word_wrapper{text-align: left; margin-top: 28%;}
 .bfaft_wrapper{margin-top: 10%;}
 .updateform{text-align: left;}
 .form-control{border-radius: 0; width: 190px;height: 30px;}
 .cream_wrapper{margin-top: 10%;}
-.productwrapper{}
+.priceholder{font-size: 14px; color: #b7b7b7;}
+.button_spaceholder{margin-top: 30px;}
+.rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
 .carousel-control.left,.carousel-control.right{background-image: none;}
 .carousel-control {position: absolute;top: 50%; /* pushes the icon in the middle of the height */z-index: 5;display: inline-block;}
-div.productwrapper .button_wht{display: none;}
-div.productwrapper:hover .button_wht {display: flex;}
+div.productwrapper .button_wht{visibility: hidden;}
+div.productwrapper:hover .button_wht {visibility: visible;}
 .button_wht:hover {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 .button_wht:hover a {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 div.form-group input{margin-left: 18px;margin-right: 40px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 30px;font-weight: 300;}
 h4{font-size: 20px;line-height: 24px;font-weight: 300;}
-h3,h4 {display: inline;}
+h5{font-size: 16px; font-weight: 400;}
+h3,h4,h5 {display: inline;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300;line-height: 24px;}
 
@@ -148,7 +159,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
           <p></p>
           <h4>BY CITY BEAUTY</h4>
           <div class="movedown20"></div>
-        <div class="button button_blue pull-left"><a href="undereye.php">DISCOVER</a></div>
+        <a href="undereye.php"><div class="button button_blue pull-left">DISCOVER</div></a>
         <div class="clearfix"></div>
       </div>
     </div>
@@ -172,11 +183,11 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
    <div class="row b2margin">
      <div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-0 col-sm-7 col-sm-offset-0 col-xs-7 col-xxs-11">
        <div class="b2word_wrapper">
-         <h3>City Lips</h3>
+         <h3>City Lips&reg;</h3>
          <p></p>
          <h3><i>Plump, Hydrate &amp; Repair</i></h3>
          <div class="movedown20"></div>
-         <div class="button button_blue pull-left"><a href="citylips.php">SHOP NOW</a></div>
+         <a href="citylips.php"><div class="button button_blue pull-left">SHOP NOW</div></a>
        </div>
      </div>
      <div class="col-lg-2 col-md-2 col-md-pull-0 col-sm-1 col-sm-pull-1 hidden-xs">
@@ -200,60 +211,116 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
     <div class="movedown20"></div>
     <h4>NO CODE NEEDED.</h4>
     <div class="movedown20"></div>
-    <div class="button button_blue">SHOP NOW</div>
+    <a href="#productsection"><div class="button button_blue">SHOP NOW</div></a>
   </div>
 </div>
 <!-- 4th section -->
 <div class="jumbotron jumbotron_wht">
- <div class="container">
-   <h3>Top Sellers</h3>
+ <div class="container" id="productsection">
+   <h3>Products</h3>
    <div class="row movedown5p">
      <div class="hidden-xs col-sm-3 col-md-3 productwrapper">
-       <img src="../img/rated_citylip.png" alt="rated_lips">
-       <div class="movedown5p"></div>
-       <div class="button button_wht"><a href="citylips.php">SHOP NOW</a></div>
+       <img src="../img/citylips_product.png" alt="city lips">
+       <div class="movedown30"></div>
+       <div><h5>&nbsp;</h5></div>
+       <div><h5>CITY LIPS&reg;</h5></div>
+       <div class="priceholder">$35 - $40</div>
+       <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('citylips',$link,$connErr) . ')';?></span>
+       <div class="movedown8"></div>
+       <a href="citylips.php" class="button button_wht">SEE DETAILS</a>
      </div>
      <div class="hidden-xs col-sm-3 col-md-3 productwrapper">
-       <img src="../img/rated_dkspot.png" alt="rated dark spot">
-       <div class="movedown5p"></div>
-       <div class="button button_wht">SHOP NOW</div>
+       <img src="../img/cityviews_product.png" alt="dark spot">
+       <div class="movedown30"></div>
+       <div><h5>&nbsp;</h5></div>
+       <div><h5>CITY VIEWS</h5></div>
+       <div class="priceholder">$67</div>
+       <img src="../img/stars_rating.png" alt="5 stars rating">
+       <div class="movedown8"></div>
+       <a href="#" class="button button_wht">SEE DETAILS</a>
      </div>
      <div class="hidden-xs col-sm-3 col-md-3 productwrapper">
-       <img src="../img/rated_citylash.png" alt="rated city lash">
-       <div class="movedown5p"></div>
-       <div class="button button_wht">SHOP NOW</div>
+       <img src="../img/citylash_product.png" alt="city lash">
+       <div class="movedown30"></div>
+       <div><h5>&nbsp;</h5></div>
+       <div><h5>CITY LASH&reg;</h5></div>
+       <div class="priceholder">$49</div>
+       <img src="../img/stars_rating.png" alt="5 stars rating">
+       <div class="movedown8"></div>
+       <a href="#" class="button button_wht">SEE DETAILS</a>
      </div>
      <div class="hidden-xs col-sm-3 col-md-3 productwrapper">
-       <img src="../img/rated_undereye.png" alt="rated under eye">
-       <div class="movedown5p"></div>
-       <div class="button button_wht"><a href="undereye.php">SHOP NOW</a></div>
+       <img src="../img/undereye_product.png" alt="under eye">
+       <div class="movedown30"></div>
+       <div><h5>UNDER EYE</h5></div>
+       <div><h5>RECOVERY</h5></div>
+       <div class="priceholder">$97</div>
+       <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('undereye',$link,$connErr) . ')';?></span>
+       <div class="movedown8"></div>
+       <a href="undereye.php" class="button button_wht">SEE DETAILS</a>
      </div>
      <div class="visible-xs productwrapper">
        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
          <!-- Wrapper for slides -->
          <div class="carousel-inner" role="listbox">
            <div class="item active">
-             <img src="../img/rated_citylip.png" alt="rated_lips">
-             <div class="movedown5p"></div>
-             <div class="button button_wht"><a href="citylips.php">SHOP NOW</a></div>
+             <img src="../img/citylips_product.png" alt="city lips">
+             <div class="movedown30"></div>
+             <div><h5>&nbsp;</h5></div>
+             <div><h5>CITY LIPS<span class="sup1">&reg;</span></h5></div>
+             <div class="priceholder">$35</div>
+             <div class="row">
+               <div class="col">
+                 <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('citylips',$link,$connErr) . ')';?></span>
+               </div>
+             </div>
+             <div class="movedown8"></div>
+             <a href="citylips.php" class="button button_wht">SEE DETAILS</a>
            </div>
 
            <div class="item">
-             <img src="../img/rated_dkspot.png" alt="rated dark spot">
-             <div class="movedown5p"></div>
-             <div class="button button_wht">SHOP NOW</div>
+             <img src="../img/cityviews_product.png" alt="dark spot">
+             <div class="movedown30"></div>
+             <div><h5>&nbsp;</h5></div>
+             <div><h5>CITY VIEWS</h5></div>
+             <div class="priceholder">$67</div>
+             <div class="row">
+               <div class="col">
+                 <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"></span>
+               </div>
+             </div>
+             <div class="movedown8"></div>
+             <a href="http://citycosmetics.com/p/skin/city-views.php" class="button button_wht">SEE DETAILS</a>
            </div>
 
            <div class="item">
-             <img src="../img/rated_citylash.png" alt="rated city lash">
-             <div class="movedown5p"></div>
-             <div class="button button_wht">SHOP NOW</div>
+             <img src="../img/citylash_product.png" alt="city lash">
+             <div class="movedown30"></div>
+             <div><h5>&nbsp;</h5></div>
+             <div><h5>CITY LASH<span class="sup1">&reg;</span></h5></div>
+             <div class="priceholder">$100</div>
+             <div class="row">
+               <div class="col">
+                 <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd">
+               </div>
+             </div>
+             <div class="movedown8"></div>
+             <a href="#" class="button button_wht">SEE DETAILS</a>
            </div>
 
            <div class="item">
-             <img src="../img/rated_undereye.png" alt="rated under eye">
-             <div class="movedown5p"></div>
-             <div class="button button_wht"><a href="undereye.php">SHOP NOW</a></div>
+             <img src="../img/undereye_product.png" alt="under eye">
+             <div class="movedown30"></div>
+             <div><h5>UNDER EYE</h5></div>
+             <div><h5>RECOVERY</h5></div>
+             <div class="priceholder">$97</div>
+             <div class="row">
+               <div class="col">
+                 <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('undereye',$link,$connErr) . ')';?></span>
+               </div>
+             </div>
+             <div class="movedown8"></div>
+             <a href="undereye.php" class="button button_wht">SEE DETAILS</a>
            </div>
          </div>
 
@@ -301,6 +368,23 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   </div>
   </div>
 </div>
+
+<?php
+  function getProductCounts($pagename,$linkSQL,$connErrSQL){
+      $count = 0;
+      if (!$connErrSQL){
+        //prepare query
+        if($stmt = $linkSQL->prepare("SELECT `rateid` FROM `cc_$pagename`")){
+          $stmt->execute();
+          $stmt->store_result();
+          $count = $stmt->num_rows;
+          $stmt->free_result();
+          $stmt->close();
+        }
+      }
+    return $count;
+    }
+  ?>
 
 <!--include PHP footer template -->
 <?php include ("footer.php"); ?>

@@ -106,7 +106,7 @@
           <p><?php echo $message;?></p>
           <div class="linebreak2"></div>
           <?php if ($recommend == '1') {
-            echo '<div><img src="img/checked.png" alt="checked box"> I would recommend this to a friend!</div>';
+            echo '<div><img src="img/checked.png" alt="checked box"> I would recommend ' .$page_title. ' to a friend!</div>';
           }
             ?>
           <div class="linebreak2"></div>
@@ -133,12 +133,11 @@
     $stmt->store_result();
     $count = $stmt->num_rows;
     ?>
-  <input type="hidden" id="counts" name="action" value="<?php echo $count;?>"> <!--line to return the counts of reviews-->
+  <input type="hidden" id="counts" value="<?php echo $count;?>"> <!--line to return the counts of reviews-->
 <?php
     $stmt->free_result();
     $stmt->close();
   }
-    ;
 		$link->close();
 	}
 

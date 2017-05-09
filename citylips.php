@@ -892,10 +892,11 @@
           quantity = $(this).find('option:selected').text();
         })
 
+        currentID = getActiveColor();
         $("*[name='addToCart']").click(function(event){ //handle click event of Add to Cart button
           event.preventDefault();
           //select active color
-          switch (id2) {
+          switch (currentID) {
                case "plumsprings": {
                  window.location = "http://citycosmetics.com/cmd.php?pid=4de3527dd0384b6798a10806709ab72b&qty=" + quantity.toString();
                } break;
