@@ -89,6 +89,11 @@
     .quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
       background: url("../img/quantityarrw.png") no-repeat 28px 8px #ffffff;}
   }
+
+  /* css for out of stock handling */
+  .outofstocktxt{color:red;height: 32px;}
+  .outofstockbtn{background-color: rgb(160,160,160);font-size: 32px;}
+
   .rating_wrd{font-size: 13px;color: rgb(235, 204, 43);}
   a.rating_wrd:hover{color: rgb(235, 204, 43);}
   .features li,.details li{margin-top: 10px;margin-left: -1.4em;}
@@ -219,24 +224,42 @@
           <hr>
           <div class="row">
             <div class="col-lg-12 hidden-xs">
-              <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
-                <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
+              <input type="hidden" id="outstockcheck" value="n"> <!--place holder for out of stock-->
+              <div class="instock">
+                <div class="row">
+                  <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
+                  <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
+                </div>
+                <div class="linebreak2"></div>
+                <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
+                <div class="clearfix"></div>
+                <div class="linebreak2"></div>
               </div>
-              <div class="linebreak2"></div>
-              <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
-              <div class="clearfix"></div>
-              <div class="linebreak2"></div>
+              <div class="outstock">
+                <div class="outofstocktxt">Currently Out of Stock</div>
+                <div class="linebreak2"></div>
+                <div class="button button_blue pull-left outofstockbtn">&odash;</div>
+                <div class="clearfix"></div>
+                <div class="linebreak2"></div>
+              </div>
             </div>
             <div class="visible-xs col-xs-12">
               <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
               <div class="linebreak2"></div>
-              <div class="row">
+              <div class="row instock">
                 <div class="col-xs-3">
                   <select class="xsquantity" id="xsqty"></select>
                 </div>
                 <div class="col-xs-4">
                   <div class="button_bg button_blue"><a name="addToCart" href="#">ADD TO CART</a></div>
+                </div>
+              </div>
+              <div class="row outstock">
+                <div class="col-xs-6">
+                  <div class="outofstocktxt">Currently Out of Stock</div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                 </div>
               </div>
             <div class="linebreak2"></div>

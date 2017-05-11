@@ -412,6 +412,7 @@
           <hr>
           <div class="row">
             <div class="col-lg-12 hidden-xs">
+              <input type="hidden" id="outstockcheck" value="n"> <!--place holder for out of stock-->
               <div class="row quantity-wrapper">
                 <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
                 <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty" name="quantityselect"></select></div>

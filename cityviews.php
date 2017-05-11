@@ -16,7 +16,6 @@
   footer p{font-size: 11px; word-wrap:break-word;}
   .container{width: 960px;}
   .sup1{vertical-align: super;}
-  .lipsphoto{margin-left: 30px;margin-top: 150px;}
   .product_info{text-align: left;}
   .product_notes{text-align: left;margin-top: 4px;}
   .productnotes_head{width: 148px;margin-top: 16px;}
@@ -35,27 +34,9 @@
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
 
-  /* css for product gallery and changing color*/
-  .swatch-container{width: 39px; height: 39px;margin: 5px}
-  .swatch-holder{display:inline-table;text-align: center;}
-  .swatch-unit{width: 39px; height: 39px;}
-  div.swatch-container {
-    /* margin: 0 0 3px; */
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-  }
-  div.swatch-container.active {
-    border: 2px solid black;
-  }
-  .product-gallery {
-    margin-left: -220px;
-  }
-  .main-swatch{display: inline;}
-  .product-gallery img {
-      width: 200%;
-      height: 200%;
-  }
+  /* css for out of stock handling */
+  .outofstocktxt{color:red;height: 32px;}
+  .outofstockbtn{background-color: rgb(160,160,160);font-size: 32px;}
 
   /* css for quantity select/option box */
   .quantityword{margin-top: 4px;}
@@ -94,21 +75,6 @@
   #form_rating{float: left;margin-left: 14px;}
   .msgtextbox{margin-left: 28px;margin-top: 16px;}
   .btn_wrapper{float: right;margin-right: 50px;}
-  /* handling out of stock */
-  .outofstockbtn{background-color: rgb(160,160,160);display: none;font-size: 32px;}
-  .out-of-stock-line {
-    width: 58px;
-    height: 58px;
-    border-bottom: 3px solid red;
-    -webkit-transform:
-        translateY(-30px)
-        translateX(8px)
-        rotate(45deg);
-    position: absolute;
-    /* top: -20px; */
-  }
-  .outofstocktxt{color:red;display: none;height: 32px;}
-  /*end of handling out of stock*/
 
   h3{font-family: "Playfair Display",serif;font-size: 38px; display: inline;}
   h4{font-family: "Playfair Display",serif;font-size: 33px;}
@@ -137,14 +103,12 @@
   @media screen and (max-width:906px){
     .product_pic{margin-right: 30px;}
   }
-  
+
   @media screen and (max-width:849px){
     .xsquantity{margin-left: 22px;}
   }
 
   @media screen and (max-width:767px){
-    .xslipsphoto{text-align: center;margin-top: 50px;margin-bottom: 30px;margin-left: 14%;}
-    .swatch-holder{margin-top: 10px;}
     .navbar-toggle{margin-right: 40px;}
     .undereyephoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
     .guarantee_wrd{margin-left: 100px;}
@@ -156,29 +120,22 @@
 
   @media screen and (max-width:549px){
     .col-xxs-12{width: 100%;}
-    .xscolordiv{margin-left: 20%;}
-    .xsswatch-wrapper{margin-left: 10%;}
     .hidden-xxs {display: none !important;}
     .guarantee_wrd{margin: 0 auto;}
-    .xslipsphoto{margin-left: 16%;}
   }
   @media screen and (max-width:479px){
     .word_wrapper{margin-left: 12.5%; margin-bottom: 5%;}
     .guarantee_wrd{font-size: 14px;}
     .guarantee_logo{margin-top: 6%;}
-    .xscolordiv{margin-left: 14%;}
-    .button{width: 120px;}
   }
   @media screen and (max-width:400px){
     .guarantee_logo{margin-top: 9%;}
   }
   @media screen and (max-width:399px){
-    .xscolordiv{margin-left: 5%;margin-right: 30px;}
     #review_form{padding-left: 28px; padding-right: 28px;}
     div.form-group input.form-control{width: 244px;}
     div.form-group textarea.form-control{width: 244px;}
     .btn_wrapper{margin: 0;}
-    .xslipsphoto{margin-left: 14%;}
     .button_bg{width: 150px;margin-left: 20px;}
   }
 
@@ -218,24 +175,42 @@
             <hr>
             <div class="row">
               <div class="col-lg-12 hidden-xs">
-                <div class="row">
-                  <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
-                  <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
+                <input type="hidden" id="outstockcheck" value="n"> <!--place holder for out of stock-->
+                <div class="instock">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
+                  </div>
+                  <div class="linebreak2"></div>
+                  <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
+                  <div class="clearfix"></div>
+                  <div class="linebreak2"></div>
                 </div>
-                <div class="linebreak2"></div>
-                <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
-                <div class="clearfix"></div>
-                <div class="linebreak2"></div>
+                <div class="outstock">
+                  <div class="outofstocktxt">Currently Out of Stock</div>
+                  <div class="linebreak2"></div>
+                  <div class="button button_blue pull-left outofstockbtn">&odash;</div>
+                  <div class="clearfix"></div>
+                  <div class="linebreak2"></div>
+                </div>
               </div>
               <div class="visible-xs col-xs-12">
                 <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
                 <div class="linebreak2"></div>
-                <div class="row">
+                <div class="row instock">
                   <div class="col-xs-3">
                     <select class="xsquantity" id="xsqty"></select>
                   </div>
                   <div class="col-xs-4">
                     <div class="button_bg button_blue"><a name="addToCart" href="#">ADD TO CART</a></div>
+                  </div>
+                </div>
+                <div class="row outstock">
+                  <div class="col-xs-6">
+                    <div class="outofstocktxt">Currently Out of Stock</div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                   </div>
                 </div>
               <div class="linebreak2"></div>

@@ -35,27 +35,9 @@
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
 
-  /* css for product gallery and changing color*/
-  .swatch-container{width: 39px; height: 39px;margin: 5px}
-  .swatch-holder{display:inline-table;text-align: center;}
-  .swatch-unit{width: 39px; height: 39px;}
-  div.swatch-container {
-    /* margin: 0 0 3px; */
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-  }
-  div.swatch-container.active {
-    border: 2px solid black;
-  }
-  .product-gallery {
-    margin-left: -220px;
-  }
-  .main-swatch{display: inline;}
-  .product-gallery img {
-      width: 200%;
-      height: 200%;
-  }
+  /* css for out of stock handling */
+  .outofstocktxt{color:red;height: 32px;}
+  .outofstockbtn{background-color: rgb(160,160,160);font-size: 32px;}
 
   /* css for quantity select/option box */
   .quantityword{margin-top: 4px;}
@@ -94,21 +76,7 @@
   #form_rating{float: left;margin-left: 14px;}
   .msgtextbox{margin-left: 28px;margin-top: 16px;}
   .btn_wrapper{float: right;margin-right: 50px;}
-  /* handling out of stock */
-  .outofstockbtn{background-color: rgb(160,160,160);display: none;font-size: 32px;}
-  .out-of-stock-line {
-    width: 58px;
-    height: 58px;
-    border-bottom: 3px solid red;
-    -webkit-transform:
-        translateY(-30px)
-        translateX(8px)
-        rotate(45deg);
-    position: absolute;
-    /* top: -20px; */
-  }
-  .outofstocktxt{color:red;display: none;height: 32px;}
-  /*end of handling out of stock*/
+
 
   h3{font-family: "Playfair Display",serif;font-size: 38px; display: inline;}
   h4{font-family: "Playfair Display",serif;font-size: 33px;}
@@ -143,8 +111,6 @@
   }
 
   @media screen and (max-width:767px){
-    .xslipsphoto{text-align: center;margin-top: 50px;margin-bottom: 30px;margin-left: 14%;}
-    .swatch-holder{margin-top: 10px;}
     .navbar-toggle{margin-right: 40px;}
     .undereyephoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
     .guarantee_wrd{margin-left: 100px;}
@@ -156,29 +122,22 @@
 
   @media screen and (max-width:549px){
     .col-xxs-12{width: 100%;}
-    .xscolordiv{margin-left: 20%;}
-    .xsswatch-wrapper{margin-left: 10%;}
     .hidden-xxs {display: none !important;}
     .guarantee_wrd{margin: 0 auto;}
-    .xslipsphoto{margin-left: 16%;}
   }
   @media screen and (max-width:479px){
     .word_wrapper{margin-left: 12.5%; margin-bottom: 5%;}
     .guarantee_wrd{font-size: 14px;}
     .guarantee_logo{margin-top: 6%;}
-    .xscolordiv{margin-left: 14%;}
-    .button{width: 120px;}
   }
   @media screen and (max-width:400px){
     .guarantee_logo{margin-top: 9%;}
   }
   @media screen and (max-width:399px){
-    .xscolordiv{margin-left: 5%;margin-right: 30px;}
     #review_form{padding-left: 28px; padding-right: 28px;}
     div.form-group input.form-control{width: 244px;}
     div.form-group textarea.form-control{width: 244px;}
     .btn_wrapper{margin: 0;}
-    .xslipsphoto{margin-left: 14%;}
     .button_bg{width: 150px;margin-left: 20px;}
   }
 
@@ -218,24 +177,42 @@
             <hr>
             <div class="row">
               <div class="col-lg-12 hidden-xs">
-                <div class="row">
-                  <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
-                  <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
+                <input type="hidden" id="outstockcheck" value="y"> <!--place holder for out of stock-->
+                <div class="instock">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
+                    <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
+                  </div>
+                  <div class="linebreak2"></div>
+                  <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
+                  <div class="clearfix"></div>
+                  <div class="linebreak2"></div>
                 </div>
-                <div class="linebreak2"></div>
-                <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
-                <div class="clearfix"></div>
-                <div class="linebreak2"></div>
+                <div class="outstock">
+                  <div class="outofstocktxt">Currently Out of Stock</div>
+                  <div class="linebreak2"></div>
+                  <div class="button button_blue pull-left outofstockbtn">&odash;</div>
+                  <div class="clearfix"></div>
+                  <div class="linebreak2"></div>
+                </div>
               </div>
               <div class="visible-xs col-xs-12">
                 <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
                 <div class="linebreak2"></div>
-                <div class="row">
+                <div class="row instock">
                   <div class="col-xs-3">
                     <select class="xsquantity" id="xsqty"></select>
                   </div>
                   <div class="col-xs-4">
                     <div class="button_bg button_blue"><a name="addToCart" href="#">ADD TO CART</a></div>
+                  </div>
+                </div>
+                <div class="row outstock">
+                  <div class="col-xs-6">
+                    <div class="outofstocktxt">Currently Out of Stock</div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                   </div>
                 </div>
               <div class="linebreak2"></div>
@@ -320,24 +297,24 @@
             <h4>Product Notes</h4>
             <div class="linebreak2"></div>
             <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">GOOD FOR</div>
-              <div class="col-lg-9 col-md-6 col-sm-6 col-xs-10 productnotes_words">Crows feet, lines, wrinkles, puffy eyes &amp; sagging skin</div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs productnotes_head"><br></div>
-              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words"><br></div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">SKIN TYPE</div>
-              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words">All</div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs productnotes_head"><br></div>
-              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words"><br></div>
-            </div>
-            <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">APPLICATION</div>
-              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words">Morning &amp; night: apply it all around your orbital bone and on the under-eye area until blended, being careful not to rub or tug on skin</div>
+              <div class="col-lg-9 col-md-6 col-sm-6 col-xs-10 productnotes_words">Apply twice daily on clean, dry skin at the base of your upper eyelashes and allow to dry for several minutes. Then you can apply your normal makeup.</div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs productnotes_head"><br></div>
+              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words"><br></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">CAUTION</div>
+              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words">Do not apply to your lower eyelashes or allow CityLash&reg; to contact other skin areas.</div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs productnotes_head"><br></div>
+              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words"><br></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">USAGE</div>
+              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words">Applying once daily is acceptable, but will delay the appearance of best results.</div>
             </div>
           </div>
         </div>
@@ -354,7 +331,7 @@
           <div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 faq_words">
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What IS City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What IS City Lash?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq1" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -362,11 +339,11 @@
             </div>
             <div id="faq1" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                City Views is an anti-aging eye cream suitable for all ages and skin types. This advanced blend of antioxidants, peptides and multivitamins helps restore the skin's youthful radiance by combating the visible signs of aging. It is a powerful nourishing formula that boosts collagen and elastin production while rehydrating the sensitive eye area to heal, strengthen and protect the skin.
+                City Lash is an eyelash growth enhancer that stimulates eyelash growth and extends the natural life cycle of the lash. This process allows for older lashes to remain in longer and new lashes to regrow at the same time, resulting in a much fuller lash bed for dramatic visible results.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What does City Views do?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What happens if I miss a day?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq2" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -374,27 +351,11 @@
             </div>
             <div id="faq2" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                <div>City Views addresses the five major signs of aging eyes, wrinkles, sagging, dryness, puffiness and discoloration. It works naturally with your body to encourage the renewal and repair of damaged cells, by providing hydration, nourishment and protection. With continued use City Views not only begins fighting against past problems, but begins protecting your skin against future damage as well!</div>
-                <div class="linebreak2"></div>
-                <div>Wrinkle depth was shown to have decreased in clinical studys.</div>
-                <div class="linebreak2"></div>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <b>Before</b>
-                    <div class="linebreak2"></div>
-                    <img src="img/cityviewsbefore1.jpg" alt="before cityviews">
-                  </div>
-                  <div class="visible-xs">&nbsp;</div>
-                  <div class="col-lg-6 col-md-5 col-sm-6 col-xs-12">
-                    <b>After</b>
-                  <div class="linebreak2"></div>
-                  <img src="img/cityviewsafter1.jpg" alt="after cityviews">
-                  </div>
-                </div>
+              There will be no dramatic impact from missing a day here and there, although it might slightly delay results.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Why do I need an eye cream? Can't I just use my moisturizer?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What makes City Lash effective?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq3" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -402,12 +363,11 @@
             </div>
             <div id="faq3" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                <p>The skin around your eyes is 4 to 10x thinner than the skin on the rest of your face. That means the area should be treated with extra care... And some face creams may be too thick, heavy, or harsh to really benefit this sensitive skin.</p>
-                The skin around your eyes also has very few oil glands, which means it is not receiving the hydration that it needs to stay healthy. City Views moisturizes, replenishes, and provides protection from external damage, while being gentle enough to benefit sensitive eye-area skin without irritation.
+                We’re glad you asked! We use Myristoyl Pentapeptide-17, which is the best ingredient available for growing thicker, sexier lashes. Additionally, we have perfected the concentrations necessary for maximum results, ensuring that City Lash gives you the fastest, most noticeable growth.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>How do I use City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What’s Myristoyl Pentapeptide-17? Is it safe?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq4" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -415,11 +375,11 @@
             </div>
             <div id="faq4" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                Apply City Views on a clean face both morning and night before going to bed. After cleaning your face, dab the excess moisture away with a towel. Pat small dots of the cream all around your orbital bone and on the under-eye area, being careful not to rub or tug on skin.
+                Myristoyl Pentapeptide-17 (MP-17 for short) is a peptide that has been shown to dramatically increase eyelash growth. It is completely safe, and will not cause negative side effects like skin discoloration or unwanted hair growth.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Is City Views suitable for all skin types?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What exactly does it do?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq5" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -427,11 +387,11 @@
             </div>
             <div id="faq5" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-              Yes! All skin types can benefit from City View's advanced blend of ingredients to achieve bright, youthful eyes.
+              City Lash stimulates keratin production at a cellular level. Keratin is an essential component of hair growth, so more keratin = longer, thicker lashes! And since the improvement occurs in your natural lashes, the effect lasts longer and looks better than traditional makeup.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What is the recommended age group for City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Do you test your products on animals?</b></div>
               <!--collapse content goe</b>s here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq6" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -439,16 +399,11 @@
             </div>
             <div id="faq6" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                <p>Absolutely anyone can use City Views! It is always important to moisturize, and City Views has the dual benefit of:</p>
-                  <ul>
-                    <li>Reducing the visible signs of aging</li>
-                    <li>Actively working to prevent any future skin damage as well!</li>
-                  </ul>
-                This means that women with more mature skin will begin to notice a visible difference in the appearance of fine lines and wrinkles, and younger women can benefit from strengthening and protecting their skin from future signs of aging.
+                Absolutely not! At City Lash, we believe in humane treatment of animals, and so we have never- and WILL never- tested our products on animals.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>I have sensitive skin; can I still use City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>How do I use City Lash?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq7" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -456,11 +411,11 @@
             </div>
             <div id="faq7" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                Yes. City Views is formulated only with ingredients that do not irritate skin. If you have exceptionally sensitive skin and tend to react to even the gentlest products, we recommend doing a patch test on the inside of your elbow 24 hours before proceeding with City Views as your everyday eye cream.
+                Simply apply City Lash to the base of your upper eyelashes. For the product to be effective, the skin needs to be clean and dry, and wait for City Lash to dry before applying normal makeup.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What does it feel like to use City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Will it smear, flake, or clump?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq8" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -468,11 +423,11 @@
             </div>
             <div id="faq8" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                City Views is a rich formula with a lightweight feel. Its creamy consistency glides over the skin effortlessly without leaving a residue. Immediately after application your skin will seem healthier and feel silky smooth. The hydration instantly begins improving your skin tone and clarity, and leaves you feeling relaxed and refreshed.
+                No. Because City Lash is an eyelash enhancer and not a cosmetic, it will be absorbed by the skin and used to promote thicker eyelash growth. Although it can be worn with a mascara, City Lash is not a mascara itself, and as a result does not suffer the same limitations of traditional eye makeup.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>I have tiny white bumps underneath my eyes. Will City Views help with that?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Can I use it on my eyebrows?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq9" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -480,11 +435,11 @@
             </div>
             <div id="faq9" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-              Yes. Those white bumps are called milia, and they are harmless cysts caused by dry, dead cells that get trapped under your skin. The best way to remove them (and prevent them from occurring again in the future) is by using an eye cream to return moisture to the area and prevent the buildup of dry cells.
+                Yes – City Lash has also been proven to be effective at supporting eyebrow growth and the same results apply. The growth cycle for your eyebrows averages 40 days for most women and results you experience for your eyebrows will be very similar to those you experience with your eyelashes requiring about the same time frame.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Does City Cosmetics test on animals?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>My lashes are really dry. Will City Lash help with that?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq10" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -492,7 +447,45 @@
             </div>
             <div id="faq10" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-              Never. We at City Cosmetics are committed to remaining cruelty-free and will never test our products on animals.
+                Yes, City Lash contains special moisturizing agents that help restore dry, brittle lashes. If you have dry lashes, you will definitely feel a difference with City Lash.
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>How long will a tube last?</b></div>
+              <!--collapse content goes here -->
+              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
+                <div data-toggle="collapse" data-target="#faq11" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
+              </div>
+            </div>
+            <div id="faq11" class="collapse in" name="collapse_content">
+              <div class="linebreak2"></div>
+                That depends on how much you use. If you follow our suggested twice-daily regimen, a single tube should last you about 2 ½ months.
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Can I apply City Lash with a mascara wand?</b></div>
+              <!--collapse content goes here -->
+              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
+                <div data-toggle="collapse" data-target="#faq12" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
+              </div>
+            </div>
+            <div id="faq12" class="collapse in" name="collapse_content">
+              <div class="linebreak2"></div>
+                No, we recommend only using the special applicator we’ve included. City Lash promotes growth of new, improved lashes at their base, and so applying it to existing lashes will have little effect.
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>How does City Lash compare to other more expensive treatments?</b></div>
+              <!--collapse content goes here -->
+              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
+                <div data-toggle="collapse" data-target="#faq13" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
+              </div>
+            </div>
+            <div id="faq13" class="collapse in" name="collapse_content">
+              <div class="linebreak2"></div>
+                <p>We’re confident that our product compares favorably to any other on the market, and that you’ll likely experience lash growth that is equal or better to that of all treatments on the market.</p>
+                <p>However, it’s important to remember that many other enhancers can cause unwanted side effects, like skin discoloration around the eyes. You won’t experience any of these things with City Lash, which continues to be one of the safest lash enhancers available.</p>
+                Additionally, City Lash offers you comparable results at a fraction of the price. We’re confident that our combination of proven results, superior safety, and unbeatable price will make City Lash the best product for you.
             </div>
             <hr>
           </div>

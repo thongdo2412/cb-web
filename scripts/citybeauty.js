@@ -93,6 +93,24 @@ $(function(){ //handles add to cart with quantity selected above
          case "cityviews": {
            window.location = "http://citybeauty.com/cmd.php?pid=c8296bdec9f242e196759b73322aea7f&qty=" + quantity.toString();
          } break;
+         case "citylash": {
+           window.location = "http://citybeauty.com/cmd.php?pid=e44f3331641b4bc6934d80d845bda9c1&qty=" + quantity.toString();
+         } break;
     }
   })
+});
+$(function(){ //handle out of stock for non-lip products
+  pagetitle = $(document).find("title").text();
+  if (pagetitle != 'City Lips'){
+    $('.instock').css("display","block");
+    $('.outstock').css("display","none");
+
+    outstock = document.getElementById('outstockcheck').value; //check if out of stock from the place holder
+    if (outstock =='y'){
+      $('.instock').css("display","none");
+      $('.outstock').css("display","block");
+      $('.outofstocktxt').css("display","block");
+      $('.outofstockbtn').css("display","block");
+    }
+  }
 });
