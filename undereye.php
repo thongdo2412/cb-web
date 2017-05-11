@@ -40,6 +40,7 @@
   b{font-weight: 400;}
   .sup1{vertical-align: super;}
   .button{width: 171px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
+  .button_sm{width: 80px;height: 30px;font-size: 14px; margin-left: 10px;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
   .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
@@ -59,7 +60,7 @@
   .faq_heading{text-align: left;width: 160px; margin-top: 22px;}
   .faq_words{text-align: left;margin-top: 18px;}
   .review_link{font-size: 14px; text-decoration: underline;}
-  .testi_usr{width: 170px;text-align: left;margin-top: 14px;}
+  .testi_usr{width: 170px;text-align: left;margin-top: 16px;}
   .plusminus{cursor: pointer; cursor: hand;}
   .review_link{cursor: pointer; cursor: hand;}
   .linebreak1{margin-top: 5px;}
@@ -139,7 +140,12 @@
     .quantity{margin-left: 20px;}
     .btn_wrapper{margin-right: 10px;}
     #review_form{width: 300px;margin-left: 35%;}
+
   }
+
+    @media screen and (max-width:935px){
+      .xsquantity{margin-left: 10px;}
+    }
 
   @media screen and (max-width:767px){
     footer .container{margin-left: 30px;margin-right: 30px;}
@@ -148,6 +154,7 @@
     .guarantee_wrd{margin-left: 100px;}
     .product_notes{padding-left: 28px;padding-right: 28px;}
     #review_form{width: 300px;margin:auto;}
+    .xsquantity{margin-left: 0px;}
   }
   @media screen and (max-width:549px){
     .col-xxs-12{width: 100%;}
@@ -514,26 +521,11 @@
     </div>
   </div>
 
+  <input type="hidden" id="page_title" value="<?php echo $pid;?>"> <!--place holder for the page title to copy to JS variable-->
   <!--include footer and javascript-->
   <?php include ("footer.php"); ?>
 
     <script src="../components/raty-master/lib/jquery.raty.js"></script>
     <script src="scripts/citybeauty.js"></script>
-    <script type="text/javascript">
-    $(function(){ //handles add to cart with quantity selected above
-      var quantity = 1;
-
-      $(".xsquantity").change(function() {//handle change of quantity
-        quantity = $(this).find('option:selected').text();
-      })
-
-      $("*[name='addToCart']").click(function(event){//handle click event of Add to Cart button
-        event.preventDefault();
-        console.log(qty);
-        window.location = "http://citybeauty.com/cmd.php?pid=8ded8940d8eb47c2b299df947f616d20&qty=" + quantity.toString();
-      })
-
-    });
-    </script>
   </body>
   </html>

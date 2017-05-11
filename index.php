@@ -235,9 +235,9 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
        <div><h5>&nbsp;</h5></div>
        <div><h5>CITY VIEWS</h5></div>
        <div class="priceholder">$67</div>
-       <img src="../img/stars_rating.png" alt="5 stars rating">
+       <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('cityviews',$link,$connErr) . ')';?></span>
        <div class="movedown8"></div>
-       <a href="#" class="button button_wht">SEE DETAILS</a>
+       <a href="cityviews.php" class="button button_wht">SEE DETAILS</a>
      </div>
      <div class="hidden-xs col-sm-3 col-md-3 productwrapper">
        <img src="../img/citylash_product.png" alt="city lash">
@@ -245,9 +245,9 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
        <div><h5>&nbsp;</h5></div>
        <div><h5>CITY LASH&reg;</h5></div>
        <div class="priceholder">$49</div>
-       <img src="../img/stars_rating.png" alt="5 stars rating">
+       <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('citylash',$link,$connErr) . ')';?></span>
        <div class="movedown8"></div>
-       <a href="#" class="button button_wht">SEE DETAILS</a>
+       <a href="citylash.php" class="button button_wht">SEE DETAILS</a>
      </div>
      <div class="hidden-xs col-sm-3 col-md-3 productwrapper">
        <img src="../img/undereye_product.png" alt="under eye">
@@ -286,11 +286,11 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
              <div class="priceholder">$67</div>
              <div class="row">
                <div class="col">
-                 <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"></span>
+                 <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('cityviews',$link,$connErr) . ')';?></span>
                </div>
              </div>
              <div class="movedown8"></div>
-             <a href="http://citycosmetics.com/p/skin/city-views.php" class="button button_wht">SEE DETAILS</a>
+             <a href="cityviews.php" class="button button_wht">SEE DETAILS</a>
            </div>
 
            <div class="item">
@@ -301,11 +301,11 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
              <div class="priceholder">$100</div>
              <div class="row">
                <div class="col">
-                 <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd">
+                 <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('citylash',$link,$connErr) . ')';?></span>
                </div>
              </div>
              <div class="movedown8"></div>
-             <a href="#" class="button button_wht">SEE DETAILS</a>
+             <a href="citylash.php" class="button button_wht">SEE DETAILS</a>
            </div>
 
            <div class="item">

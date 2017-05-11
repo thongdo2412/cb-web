@@ -26,6 +26,7 @@ components
 composer.json
 composer.lock
 composer.phar
+comments_bk.php
 db_connect.php
 db_connect_bk.php
 db_connect_bk1.php

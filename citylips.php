@@ -15,7 +15,6 @@
 <style type="text/css">
   footer p{font-size: 11px; word-wrap:break-word;}
   .container{width: 960px;}
-  .sup1{vertical-align: super;}
   .lipsphoto{margin-left: 30px;margin-top: 150px;}
   .product_info{text-align: left;}
   .product_notes{text-align: left;margin-top: 4px;}
@@ -26,7 +25,7 @@
   .faq_heading{text-align: left;width: 160px; margin-top: 6px;}
   .faq_words{text-align: left;}
   .review_link{font-size: 14px; text-decoration: underline;}
-  .testi_usr{width: 170px;text-align: left;margin-top: 14px;}
+  .testi_usr{width: 170px;text-align: left;margin-top: 16px;}
   .plusminus{cursor: pointer; cursor: hand;}
   .review_link{cursor: pointer; cursor: hand;}
   .ratingwrapper{margin-top: 16px;}
@@ -133,6 +132,10 @@
     #review_form{width: 300px;margin-left: 35%;}
   }
 
+  @media screen and (max-width:935px){
+    .xsquantity{margin-left: 10px;}
+  }
+
   @media screen and (max-width:767px){
     .xslipsphoto{text-align: center;margin-top: 50px;margin-bottom: 30px;margin-left: 14%;}
     .swatch-holder{margin-top: 10px;}
@@ -142,6 +145,7 @@
     .product_notes{padding-left: 28px;padding-right: 28px;}
     #review_form{width: 300px;margin:auto;}
     .product-gallery img {width: 180%; height: 180%;}
+    .xsquantity{margin-left: 0;}
   }
 
   @media screen and (max-width:549px){
@@ -170,6 +174,7 @@
     .btn_wrapper{margin: 0;}
     .xslipsphoto{margin-left: 14%;}
     .button{width: 110px;}
+    .button_bg{width: 150px;margin-left: 20px;}
   }
 
 </style>
@@ -198,7 +203,7 @@
         <div class="col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 col-xs-10 col-xs-offset-1 product_info">
           <div class="row">
             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-9">
-              <h3>City Lips&reg;</h3>
+              <h3>City Lips<span class="sup1">&reg;</span></h3>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
                 <div class="linebreak12"></div>
@@ -421,13 +426,19 @@
             <div class="visible-xs col-xs-12">
               <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
               <div class="linebreak2"></div>
-              <div class="row">
-                <div class="col-xs-6">
+              <div class="row" id="instock">
+                <div class="col-xs-3">
                   <select class="quantity-wrapper xsquantity" id="xsqty" name="quantityselect"></select>
+                </div>
+                <div class="col-xs-4">
+                  <div class="button_bg button_blue instockbtn"><a name="addToCart" href="#">ADD TO CART</a></div>
+                </div>
+              </div>
+              <div class="row" id="outofstock">
+                <div class="col-xs-6">
                   <div class="outofstocktxt">Currently Out of Stock</div>
                 </div>
-                <div class="col-xs-5">
-                  <div class="button button_blue instockbtn"><a name="addToCart" href="#">ADD TO CART</a></div>
+                <div class="col-xs-4">
                   <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                 </div>
               </div>
@@ -448,7 +459,7 @@
               <!--collapse content goes here -->
               <div id="description" class="collapse in" name="collapse_content">
                 <div class="linebreak2"></div>
-                <div>City Lips utilizes exclusive ingredients and natural lip enhancers that work painlessly and safely to pump up the volume. City Lips will stimulate lasting natural collagen production with continued use. Dramatically, the lips become smoother and fuller by within minutes of application.</div>
+                <div>City Lips<span class="sup1">&reg;</span> utilizes exclusive ingredients and natural lip enhancers that work painlessly and safely to pump up the volume. City Lips<span class="sup1">&reg;</span> will stimulate lasting natural collagen production with continued use. Dramatically, the lips become smoother and fuller by within minutes of application.</div>
                 <div class="linebreak2"></div>
                 <b>FEATURES</b>
                 <div class="linebreak2"></div>
@@ -800,6 +811,7 @@
     </div>
   </div>
 
+  <input type="hidden" id="page_title" value="<?php echo $pid;?>"> <!--place holder for the page title to copy to JS variable-->
   <!--include footer and javascript-->
   <?php include ("footer.php"); ?>
 
@@ -814,16 +826,29 @@
       }
 
       function updateOutofStock(color) {//find active color and check if it's out of stock
-        $(".outofstocktxt").css("display","none");
-        $(".quantity-wrapper").css("display","block");
-        $(".outofstockbtn").css("display","none");
-        $(".instockbtn").css("display","flex");
-        var outofstock = $(".shade-table-cell #" + color + " > div > div" ).find("div").attr("class");
-        if (outofstock == 'out-of-stock-line'){ //check if the color is out of stock and activate out of stock functions
-          $(".quantity-wrapper").css("display","none");
-          $(".outofstocktxt").css("display","block");
-          $(".instockbtn").css("display","none");
-          $(".outofstockbtn").css("display","block");
+        if($(window).width() > 767 ) { //handle bigger screen size
+          $(".outofstocktxt").css("display","none");
+          $(".quantity-wrapper").css("display","block");
+          $(".outofstockbtn").css("display","none");
+          $(".instockbtn").css("display","flex");
+          var outofstock = $(".shade-table-cell #" + color + " > div > div" ).find("div").attr("class");
+          if (outofstock == 'out-of-stock-line'){ //check if the color is out of stock and activate out of stock functions
+            $(".quantity-wrapper").css("display","none");
+            $(".outofstocktxt").css("display","block");
+            $(".instockbtn").css("display","none");
+            $(".outofstockbtn").css("display","block");
+          }
+        }
+        else{ //handle mobile screen size
+          $("#outofstock").css("display","none");
+          $("#instock").css("display","block");
+          var outofstock = $(".shade-table-cell #" + color + " > div > div" ).find("div").attr("class");
+          if (outofstock == 'out-of-stock-line'){ //check if the color is out of stock and activate out of stock functions
+            $("#outofstock").css("display","block");
+            $(".outofstocktxt").css("display","block");
+            $(".outofstockbtn").css("display","block");
+            $("#instock").css("display","none");
+          }
         }
       }
 
@@ -849,7 +874,9 @@
 
       // default image in lip holder and lip sample
       setDisplayColor('nudeyork');
-      // updateOutofStock('clear');
+    //  updateOutofStock('clear');
+      currentID = getActiveColor();
+
       $(".swatch-unit").hover(
           function(){ //show hover in
               id = $(this).closest('a').attr('id');
@@ -879,6 +906,7 @@
           id2 = $(this).closest('a').attr('id');
           setDisplayColor(id2);
           updateOutofStock(id2);
+          currentID = getActiveColor();
       });
       //handle ios single tap as single click
       $(".swatch-unit").on('touchstart', function(event) {
@@ -892,7 +920,6 @@
           quantity = $(this).find('option:selected').text();
         })
 
-        currentID = getActiveColor();
         $("*[name='addToCart']").click(function(event){ //handle click event of Add to Cart button
           event.preventDefault();
           //select active color

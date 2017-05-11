@@ -61,7 +61,7 @@ $(function() {
   //get the count of reviews for the product
   var counts  = document.getElementById('counts').value;
 
-  if($(window).width() > 768 ) {//handle collapse with desktop and mobile widths
+  if($(window).width() > 767 ) {//handle collapse with desktop and mobile widths
     $("*[name='collapse_plus']").css('display','none');
     $(".rating_wrd").text("(" + counts +")");
   }
@@ -73,4 +73,26 @@ $(function() {
     $(".collapse_heading").find('b').contents().unwrap();
     $(".rating_wrd").text("(" + counts +" Reviews)");
   }
+});
+
+$(function(){ //handles add to cart with quantity selected above
+  var quantity = 1;
+
+  $(".xsquantity").change(function() {//handle change of quantity
+    quantity = $(this).find('option:selected').text();
+  })
+
+  page_title = document.getElementById('page_title').value;
+
+  $("*[name='addToCart']").click(function(event){//handle click event of Add to Cart button
+    event.preventDefault();
+    switch (page_title) {
+         case "undereye": {
+           window.location = "http://citybeauty.com/cmd.php?pid=8ded8940d8eb47c2b299df947f616d20&qty=" + quantity.toString();
+         } break;
+         case "cityviews": {
+           window.location = "http://citybeauty.com/cmd.php?pid=c8296bdec9f242e196759b73322aea7f&qty=" + quantity.toString();
+         } break;
+    }
+  })
 });
