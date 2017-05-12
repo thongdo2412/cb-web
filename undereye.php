@@ -40,7 +40,7 @@
   b{font-weight: 400;}
   .sup1{vertical-align: super;}
   .button{width: 171px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
-  .button_sm{width: 80px;height: 30px;font-size: 14px; margin-left: 10px;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
+
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
   .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
@@ -89,6 +89,13 @@
     .quantity{border: 0; border-radius: 0;-webkit-appearance: none;-moz-appearance: none;
       background: url("../img/quantityarrw.png") no-repeat 28px 8px #ffffff;}
   }
+
+  /*helpful button css*/
+  .button_review{width: 80px;height: 32px;color: rgb(255, 255, 255);background-color: #49A3EA;border-width: 1px
+    ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;}
+  .helpful_wrd{float: left; width: 200px;}
+  .helpful_item{float: left;width: 80px; margin-left: 20px;}
+  .inbutton_text{float: left;margin: 4px;}
 
   /* css for out of stock handling */
   .outofstocktxt{color:red;height: 32px;}
@@ -539,7 +546,7 @@
       </div>
       <div class="linebreak2"></div>
       <div id="reviewsection">
-        <?php include('scripts/comments.php'); ?>
+        <?php include('scripts/comments_wip.php'); ?>
       </div>
     </div>
   </div>
