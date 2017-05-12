@@ -60,7 +60,7 @@ $(function(){ //handle with jQuery raty plugin
 $(function() {
   //get the count of reviews for the product
   var counts  = document.getElementById('counts').value;
-
+  
   if($(window).width() > 767 ) {//handle collapse with desktop and mobile widths
     $("*[name='collapse_plus']").css('display','none');
     $(".rating_wrd").text("(" + counts +")");
