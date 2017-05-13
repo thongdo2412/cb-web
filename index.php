@@ -83,7 +83,7 @@ body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300;line-height: 24px;}
 
 /*handle responsive for different screens*/
-@media screen and (min-width: 1199px){.socialicons{margin-left: 54px;}}
+@media screen and (min-width: 1199px){.socialicons{margin-left: 47px;}}
 @media screen and (max-width:1199px) {
   .b2margin{margin-left: 7%;}
   .socialicons{margin:0;}

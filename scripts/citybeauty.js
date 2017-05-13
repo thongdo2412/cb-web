@@ -60,7 +60,7 @@ $(function(){ //handle with jQuery raty plugin
 $(function() {
   //get the count of reviews for the product
   var counts  = document.getElementById('counts').value;
-  
+
   if($(window).width() > 767 ) {//handle collapse with desktop and mobile widths
     $("*[name='collapse_plus']").css('display','none');
     $(".rating_wrd").text("(" + counts +")");
@@ -101,7 +101,7 @@ $(function(){ //handles add to cart with quantity selected above
 });
 $(function(){ //handle out of stock for non-lip products
   pagetitle = $(document).find("title").text();
-  if (pagetitle != 'City Lips'){
+  if (pagetitle != 'City Lips'){ //handles non-lip products only
     $('.instock').css("display","block");
     $('.outstock').css("display","none");
 
