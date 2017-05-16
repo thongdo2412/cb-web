@@ -167,6 +167,7 @@
     .product_notes{padding-left: 28px;padding-right: 28px;}
     #review_form{width: 300px;margin:auto;}
     .xsquantity{margin-left: 0px;}
+    .helpful_wrd{width: 700px;}
     .helpful_item{margin-top: 10px;}
   }
   @media screen and (max-width:549px){
