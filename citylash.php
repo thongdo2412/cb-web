@@ -177,7 +177,7 @@
             <hr>
             <div class="row">
               <div class="col-lg-12 hidden-xs">
-                <input type="hidden" id="outstockcheck" value="y"> <!--place holder for out of stock-->
+                <input type="hidden" id="outstockcheck" value="n"> <!--place holder for out of stock-->
                 <div class="instock">
                   <div class="row">
                     <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>

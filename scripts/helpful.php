@@ -14,5 +14,4 @@ if (!$connErr){
     echo "cannot execute the query";
   }
 }
-fclose($file);
 ?>

@@ -59,9 +59,9 @@
   <?php
   if (!$connErr){
     //prepare query
-    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y') FROM `cc_$pid` ORDER BY postdate DESC LIMIT 0,5")){
+    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` WHERE rate >= 3 ORDER BY postdate DESC LIMIT 0,5")){
 			$stmt->execute();
-			$stmt->bind_result($rateid,$name,$emailaddr,$subject,$message,$rating,$recommend,$date);
+			$stmt->bind_result($rateid,$name,$emailaddr,$subject,$message,$rating,$recommend,$date,$helpful_y,$helpful_n);
 			$stmt->store_result();
       while ($stmt->fetch()){
     ?>
@@ -84,6 +84,15 @@
       ?>
     <div class="linebreak2"></div>
     <!--insert the helpful feature-->
+      <div class="helpful_wrd">Was this review helpful?</div>
+      <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',true)">
+        <img src="img/voteUp.png" alt="up" class="inbutton_text"><div class="inbutton_text"><?php echo $helpful_y;?></div>
+      </div>
+      <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',false)">
+        <img src="img/voteDown.png" alt="down" class="inbutton_text"><div class="inbutton_text"><?php echo $helpful_n;?></div>
+      </div>
+      <div class="clearfix"></div>
+    <div class="linebreak2"></div>
     <p>*Results may vary by individual.</p>
   </div>
   <div class="visible-xs col-xs-12">
@@ -110,6 +119,16 @@
           }
             ?>
           <div class="linebreak2"></div>
+          <!--insert the helpful feature-->
+            <div class="helpful_wrd">Was this review helpful?</div>
+            <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',true)">
+              <img src="img/voteUp.png" alt="up" class="inbutton_text"><div class="inbutton_text"><?php echo $helpful_y;?></div>
+            </div>
+            <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',false)">
+              <img src="img/voteDown.png" alt="down" class="inbutton_text"><div class="inbutton_text"><?php echo $helpful_n;?></div>
+            </div>
+          <div class="clearfix"></div>
+          <div class="linebreak2"></div>
           *Results may vary by individual.
         </div>
       </div>
@@ -124,22 +143,22 @@
 <hr>
 <!--ends display-->
 <?php
+      }
+	    $stmt->free_result();
+		  $stmt->close();
     }
-	  $stmt->free_result();
-		$stmt->close();
-  }
-  if($stmt = $link->prepare("SELECT `rateid` FROM `cc_$pid`")){
-    $stmt->execute();
-    $stmt->store_result();
-    $count = $stmt->num_rows;
+    if($stmt = $link->prepare("SELECT `rateid` FROM `cc_$pid`")){
+      $stmt->execute();
+      $stmt->store_result();
+      $count = $stmt->num_rows;
     ?>
-  <input type="hidden" id="counts" value="<?php echo $count;?>"> <!--line to return the counts of reviews-->
-<?php
-    $stmt->free_result();
-    $stmt->close();
-  }
+      <input type="hidden" id="counts" value="<?php echo $count;?>"> <!--line to return the counts of reviews-->
+    <?php
+      $stmt->free_result();
+      $stmt->close();
+    }
 		$link->close();
-	}
+	 }
 
   function limit_text($text, $limit) { //function to display the first amount of words of a text
       if (str_word_count($text, 0) > $limit) {
@@ -151,4 +170,22 @@
     }
 
 ?>
+<script type="text/javascript">
+  function helfpul(pageid,rateid,isHelpFul){
+    if (isHelpFul) {
+      dbfield = "helpful_y";
+    }
+    else {
+      dbfield = "helpful_n";
+    }
+    $.ajax({
+      type: 'GET',
+      url: 'scripts/helpful.php',
+      data: {tablename:pageid, rateid:rateid, fieldname:dbfield},
+      success: function() {
+        location.reload(); // reload the page.(3)
+      }
+    });
+  }
+</script>
 </div>

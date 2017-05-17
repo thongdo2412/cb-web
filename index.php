@@ -42,6 +42,7 @@ toBold{font-weight: 600;}
 .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;}
 .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
+a.button {text-decoration: none;}
 .button_blue a{color: #ffffff;}
 .button_wht a{color: rgb(6, 16, 42);}
 .biggerfont{font-family: "Playfair Display",serif;font-size: 38px;font-weight: 300;}
@@ -369,6 +370,9 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   </div>
 </div>
 
+<!--include PHP footer template -->
+<?php include ("footer.php"); ?>
+
 <?php
   function getProductCounts($pagename,$linkSQL,$connErrSQL){
       $count = 0;
@@ -385,8 +389,6 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
     return $count;
     }
   ?>
-
-<!--include PHP footer template -->
-<?php include ("footer.php"); ?>
+  
 </body>
 </html>

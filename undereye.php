@@ -92,7 +92,7 @@
 
   /*helpful button css*/
   .button_review{width: 80px;height: 32px;color: rgb(255, 255, 255);background-color: #49A3EA;border-width: 1px
-    ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;}
+    ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;cursor: pointer;}
   .helpful_wrd{float: left; width: 200px;}
   .helpful_item{float: left;width: 80px; margin-left: 20px;}
   .inbutton_text{float: left;margin: 4px;}
@@ -548,7 +548,7 @@
       </div>
       <div class="linebreak2"></div>
       <div id="reviewsection">
-        <?php include('scripts/comments_wip.php'); ?>
+        <?php include('scripts/comments.php'); ?>
       </div>
     </div>
   </div>

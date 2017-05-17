@@ -207,7 +207,7 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
                 <div class="linebreak12"></div>
-              <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
+              <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#testi" class="rating_wrd"><!--review count stores in here--></a>
             </div>
             <div class="visible-xs col-xs-1 col-xs-pull-5 xslipsphoto">
               <div class="col product-gallery">
@@ -225,7 +225,7 @@
                       <td class="shade-table-cell active">
                         <a href="#" class="swatch-box" id="clear">
                           <div class="swatch-container active" id="text_content">
-                            <div class="swatch-unit" style="background-color: #ccc;"><div class="out-of-stock-line"></div></div>
+                            <div class="swatch-unit" style="background-color: #ccc;"><!--<div class="out-of-stock-line"></div>--></div>
                           </div>
                         </a>
                       </td>
@@ -323,7 +323,7 @@
                           <td class="shade-table-cell active">
                             <a href="#!b0" class="swatch-box" id="clear">
                               <div class="swatch-container active" id="text_content">
-                                <div class="swatch-unit" style="background-color: #ccc;"><div class="out-of-stock-line"></div></div>
+                                <div class="swatch-unit" style="background-color: #ccc;"><!--<div class="out-of-stock-line"></div>--></div>
                               </div>
                             </a>
                           </td>
@@ -874,7 +874,7 @@
       }
 
       // default image in lip holder and lip sample
-      setDisplayColor('nudeyork');
+      setDisplayColor('clear');
     //  updateOutofStock('clear');
       currentID = getActiveColor();
 
