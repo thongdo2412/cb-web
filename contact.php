@@ -65,7 +65,7 @@ body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;font-weight: 300;line-height: 24px;}
 
 /*Responsive for different screen*/
-@media screen and (min-width: 1199px) {.socialicons{margin-left: 10px;} .mailus{margin-left: 60px;}}
+@media screen and (min-width: 1199px) {.socialicons{margin-left: 4px;} .mailus{margin-left: 60px;}}
 @media screen and (max-width: 1199px) {.socialicons{margin:0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;}}
 @media screen and (max-width: 991px){
   .linebreak3{margin-top: 16px;}

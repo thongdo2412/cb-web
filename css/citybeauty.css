@@ -59,14 +59,14 @@ body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-size: 16px; font-weight: 300;line-height: 24px;}
 
 /*helpful button css*/
-.button_review{width: 80px;height: 32px;color: rgb(255, 255, 255);background-color: #49A3EA;border-width: 1px
+.button_review{width: 80px;height: 32px;color: rgb(255, 255, 255);background-color: #0F5388;border-width: 1px
   ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;cursor: pointer;}
 .helpful_wrd{float: left; width: 200px;}
 .helpful_item{float: left;width: 80px; margin-left: 20px;}
 .inbutton_text{float: left;margin: 4px;}
 
 /*handle responsive for different screens*/
-@media screen and (min-width: 1199px){.socialicons{margin-left: 68px;}}
+@media screen and (min-width: 1199px){.socialicons{margin-left: 5px;}}
 @media screen and (max-width:1199px) {
  .b2margin{margin-left: 7%;}
  .socialicons{margin:0;}

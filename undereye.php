@@ -39,8 +39,7 @@
   .line-on-sides{overflow: hidden;}
   b{font-weight: 400;}
   .sup1{vertical-align: super;}
-  .button{width: 171px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
-
+  .button{width: 172px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
   .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
@@ -91,7 +90,7 @@
   }
 
   /*helpful button css*/
-  .button_review{width: 80px;height: 32px;color: rgb(255, 255, 255);background-color: #49A3EA;border-width: 1px
+  .button_review{width: 80px;height: 32px;color: rgb(255, 255, 255);background-color: #0F5388;border-width: 1px
     ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;cursor: pointer;}
   .helpful_wrd{float: left; width: 200px;}
   .helpful_item{float: left;width: 80px; margin-left: 20px;}
@@ -128,7 +127,7 @@
   body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300; line-height: 24px;}
 
   /*handle responsive*/
-  @media screen and (min-width: 1199px){.socialicons{margin-left: 10px;}}
+  @media screen and (min-width: 1199px){.socialicons{margin-left: 4px;}}
   @media screen and (max-width:1199px){.socialicons{margin: 0;}}
   @media screen and (max-width:991px){
     .centered_nav{display: block;}

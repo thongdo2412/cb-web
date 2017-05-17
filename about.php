@@ -5,6 +5,8 @@
 <style type="text/css">
   .maincontent{text-align: left;}
   body{font-family: "Raleway",sans-serif;}
+  /*Responsive for different screen*/
+  @media screen and (min-width: 1199px) {.socialicons{margin-left: 66px;}}
 </style>
 </head>
 <body>

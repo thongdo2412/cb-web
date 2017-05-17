@@ -99,6 +99,7 @@ $(function(){ //handles add to cart with quantity selected above
     }
   })
 });
+
 $(function(){ //handle out of stock for non-lip products
   pagetitle = $(document).find("title").text();
   if (pagetitle != 'City Lips'){ //handles non-lip products only

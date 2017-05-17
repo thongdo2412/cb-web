@@ -85,7 +85,7 @@
   body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300; line-height: 24px;}
 
   /*handle responsive*/
-  @media screen and (min-width: 1199px){.socialicons{margin-left: 10px;}}
+  
   @media screen and (max-width:1199px){.socialicons{margin: 0;}}
   @media screen and (max-width:991px){
     .product_notes{margin-top: 20px;}
