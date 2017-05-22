@@ -299,7 +299,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
              <div class="movedown30"></div>
              <div><h5>&nbsp;</h5></div>
              <div><h5>CITY LASH<span class="sup1">&reg;</span></h5></div>
-             <div class="priceholder">$100</div>
+             <div class="priceholder">$49</div>
              <div class="row">
                <div class="col">
                  <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('citylash',$link,$connErr) . ')';?></span>
@@ -389,6 +389,6 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
     return $count;
     }
   ?>
-  
+
 </body>
 </html>

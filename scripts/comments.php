@@ -57,9 +57,20 @@
 <div id="reviews_display">
   <!--begins display-->
   <?php
+  $res_per_page = 5; //set the limit of reviews per page
+  if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
+  $start_from = ($page - 1) * $res_per_page;
   if (!$connErr){
+    if($stmt = $link->prepare("SELECT `rateid` FROM `cc_$pid`")){ //query to get the total of reviews
+      $stmt->execute();
+      $stmt->store_result();
+      $count = $stmt->num_rows;
+      $stmt->free_result();
+      $stmt->close();
+    }
+
     //prepare query
-    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` WHERE rate >= 3 ORDER BY postdate DESC LIMIT 0,5")){
+    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` WHERE rate >= 3 ORDER BY postdate DESC LIMIT $start_from,$res_per_page")){
 			$stmt->execute();
 			$stmt->bind_result($rateid,$name,$emailaddr,$subject,$message,$rating,$recommend,$date,$helpful_y,$helpful_n);
 			$stmt->store_result();
@@ -147,18 +158,31 @@
 	    $stmt->free_result();
 		  $stmt->close();
     }
-    if($stmt = $link->prepare("SELECT `rateid` FROM `cc_$pid`")){
-      $stmt->execute();
-      $stmt->store_result();
-      $count = $stmt->num_rows;
+
     ?>
       <input type="hidden" id="counts" value="<?php echo $count;?>"> <!--line to return the counts of reviews-->
     <?php
-      $stmt->free_result();
-      $stmt->close();
-    }
-		$link->close();
+		  $link->close();
 	 }
+
+   $total_pages = ceil($count / $res_per_page); //calculate total pages to display
+   ?>
+   <div class="pagenumber">
+     <a href="#" name="pre-next" id="pre-page">Pre</a>
+   <?php
+
+   for ($i=1; $i<=$total_pages;$i++) { //display links to all pages
+       echo '<a href="'. $pid .'.php?page=' .$i. '#testi"';
+       if ($i == $page) echo 'class="curPage"';
+       echo '>' .$i. '</a> ';
+   }
+   if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
+   ?>
+   <input type="hidden" id="current-page" value="<?php echo $page; ?>">
+   <input type="hidden" id="total-pages" value="<?php echo $total_pages; ?>">
+   <a href="#" name="pre-next" id="next-page">Next</a>
+  </div>
+   <?php
 
   function limit_text($text, $limit) { //function to display the first amount of words of a text
       if (str_word_count($text, 0) > $limit) {
@@ -170,6 +194,7 @@
     }
 
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
   function helfpul(pageid,rateid,isHelpFul){
     if (isHelpFul) {
@@ -187,5 +212,31 @@
       }
     });
   }
+
+    $("a[name='pre-next']").click(function(event){
+      event.preventDefault();
+      pageLoc = parseInt(document.getElementById("current-page").value);
+      pageTotal = parseInt(document.getElementById("total-pages").value);
+      if ($(this).attr('id') == 'pre-page' ) {
+        if (pageLoc > 1) {
+          pageLoc--;
+        }
+        else{
+          pageLoc = 1;
+        }
+      }
+      if ($(this).attr('id') == 'next-page' ) {
+        if (pageLoc < pageTotal){
+          pageLoc++;
+        }
+        else{
+          pageLoc = pageTotal;
+        }
+      }
+
+      window.location ='citylips.php?page=' + String(pageLoc) + '#testi';
+
+  })
+
 </script>
 </div>

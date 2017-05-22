@@ -85,7 +85,7 @@
   body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300; line-height: 24px;}
 
   /*handle responsive*/
-  
+
   @media screen and (max-width:1199px){.socialicons{margin: 0;}}
   @media screen and (max-width:991px){
     .product_notes{margin-top: 20px;}
@@ -182,7 +182,7 @@
                     <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
                   </div>
                   <div class="linebreak2"></div>
-                  <div class="button button_blue pull-left"><a name="addToCart" href="#">ADD TO CART</a></div>
+                  <a name="addToCart" href="#"><div class="button button_blue pull-left">ADD TO CART</div></a>
                   <div class="clearfix"></div>
                   <div class="linebreak2"></div>
                 </div>
@@ -202,7 +202,7 @@
                     <select class="xsquantity" id="xsqty"></select>
                   </div>
                   <div class="col-xs-4">
-                    <div class="button_bg button_blue"><a name="addToCart" href="#">ADD TO CART</a></div>
+                    <a name="addToCart" href="#"><div class="button_bg button_blue">ADD TO CART</div></a>
                   </div>
                 </div>
                 <div class="row outstock">

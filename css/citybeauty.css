@@ -63,7 +63,10 @@ body{text-align: center;font-size: 16px; font-weight: 300;line-height: 24px;}
   ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;cursor: pointer;}
 .helpful_wrd{float: left; width: 200px;}
 .helpful_item{float: left;width: 80px; margin-left: 20px;}
-.inbutton_text{float: left;margin: 4px;}
+.inbutton_text{float: left;margin: 4px;font-weight: 400;}
+/*page display*/
+.curPage{font-size: 20px;text-decoration: underline;}
+.pagenumber a{color: rgb(9,30,55);text-decoration: none;}
 
 /*handle responsive for different screens*/
 @media screen and (min-width: 1199px){.socialicons{margin-left: 5px;}}
