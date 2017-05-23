@@ -66,7 +66,7 @@ body{text-align: center;font-size: 16px; font-weight: 300;line-height: 24px;}
 .inbutton_text{float: left;margin: 4px;font-weight: 400;}
 /*page display*/
 .curPage{font-size: 20px;text-decoration: underline;}
-.pagenumber a{color: rgb(9,30,55);text-decoration: none;}
+.pagenumber a{color: rgb(9,30,55);}
 
 /*handle responsive for different screens*/
 @media screen and (min-width: 1199px){.socialicons{margin-left: 5px;}}

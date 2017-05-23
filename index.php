@@ -269,7 +269,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
              <div class="movedown30"></div>
              <div><h5>&nbsp;</h5></div>
              <div><h5>CITY LIPS<span class="sup1">&reg;</span></h5></div>
-             <div class="priceholder">$35</div>
+             <div class="priceholder">$35 - $40</div>
              <div class="row">
                <div class="col">
                  <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('citylips',$link,$connErr) . ')';?></span>
