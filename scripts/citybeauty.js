@@ -115,3 +115,85 @@ $(function(){ //handle out of stock for non-lip products
     }
   }
 });
+function helfpul(pageid,rateid,isHelpFul){ // for helpful buttons
+  if (isHelpFul) {
+    dbfield = "helpful_y";
+  }
+  else {
+    dbfield = "helpful_n";
+  }
+  $.ajax({
+    type: 'GET',
+    url: 'scripts/helpful.php',
+    data: {tablename:pageid, rateid:rateid, fieldname:dbfield},
+    success: function() {
+      location.reload(); // reload the page.(3)
+    }
+  });
+}
+
+$(function (){ //for pagination
+  pageLoc = parseInt($("#current-page").val());
+  pageTotal = parseInt($("#total-pages").val());
+  pagename = $("#pageName").val();
+  limit = 5;//limited displays the page numbers
+
+  //handles Pre and Next button display when page #1 and page #total
+  if (pageLoc == 1) {
+    $("#pre-page").css("display","none");
+  }
+  if (pageLoc == pageTotal){
+    $("#next-page").css("display","none");
+  }
+
+  if (pageLoc <= limit) { // checks the current page is in the first limit pages, ie: limit = 5, current page is in the first 5 pages
+    if (pageTotal < limit){ //checks if total of pages is less than limit page display, then assign new limit to total page
+      limit = pageTotal;
+    }
+
+    for (i=1;i<=limit;i++){
+      navHtml = '<a href="' + pagename +'.php?page='+ i +'#testi"';
+      if (i == pageLoc){navHtml = navHtml + 'class="curPage"';}
+      navHtml = navHtml + '>' + i + '</a>';
+      $("#pagenumbers_nav").append(navHtml + ' ');
+    }
+  }
+  else if (pageLoc>pageTotal-limit) {// checks the current page in the last limit pages, ie: limit = 5, current page is in the last 5 pages
+    $("#pagenumbers_nav").empty();
+    navHtml = '<a href="' + pagename +'.php?page=1#testi">1</a>';
+    $("#pagenumbers_nav").append(navHtml + " ...");
+    for (i = limit-1;i>=0;i--){
+      navHtml = '<a href="' + pagename +'.php?page='+ (pageTotal-i) +'#testi"';
+      if ((pageTotal-i) == pageLoc){ navHtml = navHtml + 'class="curPage"'; }
+      navHtml = navHtml + '>' + (pageTotal-i) + '</a>';
+      $("#pagenumbers_nav").append(' '+ navHtml + ' ');
+    }
+  }
+  else { // last scenario, checks if the current page is between the first and last limit pages, ie: limit = 5, 6<=current page<=total page - 5
+    $("#pagenumbers_nav").empty();
+    navHtml = '<a href="' + pagename +'.php?page=1#testi">1</a>';
+    $("#pagenumbers_nav").append(navHtml + " ...");
+    for (i = pageLoc-2;i<=pageLoc+2;i++){
+      navHtml = '<a href="' + pagename +'.php?page='+ i +'#testi"';
+      if (i == pageLoc){
+        navHtml = navHtml + 'class="curPage"';
+      }
+      navHtml = navHtml + '>' + i + '</a>';
+      $("#pagenumbers_nav").append(' '+ navHtml + ' ');
+    }
+    navHtml = '<a href="' + pagename +'.php?page='+ pageTotal +'#testi">'+pageTotal+'</a>';
+    $("#pagenumbers_nav").append(" ... " + navHtml);
+  }
+
+  $("a[name='pre-next']").click(function(event){
+    event.preventDefault();
+    if ($(this).attr('id') == 'pre-page' ) {
+      pageLoc--;
+    }
+    if ($(this).attr('id') == 'next-page' ) {
+      pageLoc++;
+    }
+    window.location = pagename + '.php?page=' + String(pageLoc) + '#testi';
+  })
+
+});

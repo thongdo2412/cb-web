@@ -1,5 +1,5 @@
 <?php
-include ("conn_init.php");
+include("conn_init.php");
 if (!$connErr){
   $tablename = 'cc_' . $_GET['tablename'];
   $fieldname = $_GET['fieldname'];
@@ -11,7 +11,7 @@ if (!$connErr){
     echo "data saved successfully";
   }
   else {
-    echo "cannot execute the query";
+    echo "cannot execute $sql.";
   }
 }
 ?>

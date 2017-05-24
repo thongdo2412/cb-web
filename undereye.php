@@ -92,7 +92,7 @@
   /*helpful button css*/
   .button_review{width: 80px;height: 32px;color: rgb(255, 255, 255);background-color: #0F5388;border-width: 1px
     ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;cursor: pointer;}
-  .helpful_wrd{float: left; width: 200px;}
+  .helpful_wrd{float: left; width: 200px;margin-top: 4px;}
   .helpful_item{float: left;width: 80px; margin-left: 20px;}
   .inbutton_text{float: left;margin: 4px;}
 
