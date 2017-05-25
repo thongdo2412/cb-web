@@ -1,6 +1,6 @@
 <!-- include PHP template header file-->
 <?php include("head.php"); ?>
-<title>Terms &amp; Conditions</title>
+<title>City Beauty - Terms &amp; Conditions</title>
 
 <style type="text/css">
 

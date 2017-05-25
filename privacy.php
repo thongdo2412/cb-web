@@ -1,6 +1,6 @@
 <!-- include PHP template header file-->
 <?php include("head.php"); ?>
-<title>Privacy Policy</title>
+<title>City Beauty - Privacy Policy</title>
 
 <style type="text/css">
 

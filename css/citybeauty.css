@@ -1,6 +1,7 @@
 a {text-decoration: none;}
 *{margin:0 auto;}
 header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
+header img{width: 97px;}
 footer{color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff;}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
@@ -44,8 +45,8 @@ b{font-weight: 400;}
 .cream_wrapper{margin-top: 10%;}
 .carousel-control.left,.carousel-control.right{background-image: none;}
 .carousel-control {position: absolute;top: 50%; /* pushes the icon in the middle of the height */z-index: 5;display: inline-block;}
-div.productwrapper .button_wht{display: none;}
-div.productwrapper:hover .button_wht {display: flex;}
+div.productwrapper .button_wht{visibility: hidden;}
+div.productwrapper:hover .button_wht {visibility: visible;}
 .button_wht:hover {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 .button_wht:hover a {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 .main{text-align: left;}

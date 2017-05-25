@@ -23,6 +23,7 @@
  a {text-decoration: none;}
  *{margin:0 auto;}
 header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
+header img {width: 97px;}
 footer{color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
@@ -82,7 +83,6 @@ h5{font-size: 16px; font-weight: 400;}
 h3,h4,h5 {display: inline;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300;line-height: 24px;}
-
 /*handle responsive for different screens*/
 @media screen and (min-width: 1199px){.socialicons{margin-left: 47px;}}
 @media screen and (max-width:1199px) {

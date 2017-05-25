@@ -6,7 +6,7 @@
 	<![endif]-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact Us</title>
+	<title>Contact City Beauty</title>
   <!--include Bootstrap-->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -18,6 +18,7 @@
  a {text-decoration: none;}
  *{margin:0 auto;}
 header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
+header img{width: 97px;}
 footer{color: rgb(255,255,255);font-size: 11px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}

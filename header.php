@@ -1,6 +1,6 @@
 <header class="centered_flex">
   <div class="container">
-    <a href="/"><img src="../img/citylogo1.png" alt="citylogo"></a>
+    <a href="/"><img src="../img/city-beauty-logo.png" alt="citylogo"></a>
   </div>
 </header>
 
