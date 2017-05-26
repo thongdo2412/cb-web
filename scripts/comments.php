@@ -97,10 +97,10 @@
     <!--insert the helpful feature-->
       <div class="helpful_wrd">Was this review helpful?</div>
       <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',true)">
-        <img src="img/voteUp.png" alt="up" class="inbutton_text"><div class="inbutton_text"><?php echo $helpful_y;?></div>
+        <div class="inbutton_text">YES - <?php echo $helpful_y;?></div>
       </div>
       <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',false)">
-        <img src="img/voteDown.png" alt="down" class="inbutton_text"><div class="inbutton_text"><?php echo $helpful_n;?></div>
+        <div class="inbutton_text">NO - <?php echo $helpful_n;?></div>
       </div>
       <div class="clearfix"></div>
     <div class="linebreak2"></div>
@@ -115,8 +115,8 @@
           <div class="linebreak2"></div>
           <?php echo limit_text($message, 19); ?>
         </div>
-        <div id="testi<?php echo $rateid;?>" class="collapse">
-          <img src="../img/stars_rating.png"></img>
+        <div id="review<?php echo $rateid;?>" class="collapse">
+          <img src="../img/stars_rating.png">
           <div><?php echo $name;?> &nbsp</div>
           <div class="linebreak1"></div>
           <div><?php echo $date; ?></div>
@@ -132,12 +132,14 @@
           <div class="linebreak2"></div>
           <!--insert the helpful feature-->
             <div class="helpful_wrd">Was this review helpful?</div>
-            <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',true)">
-              <img src="img/voteUp.png" alt="up" class="inbutton_text"><div class="inbutton_text"><?php echo $helpful_y;?></div>
-            </div>
-            <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',false)">
-              <img src="img/voteDown.png" alt="down" class="inbutton_text"><div class="inbutton_text"><?php echo $helpful_n;?></div>
-            </div>
+
+              <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',true)">
+                <div class="inbutton_text">YES - <?php echo $helpful_y;?></div>
+              </div>
+              <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',false)">
+                <div class="inbutton_text">NO - <?php echo $helpful_n;?></div>
+              </div>
+
           <div class="clearfix"></div>
           <div class="linebreak2"></div>
           *Results may vary by individual.
@@ -145,7 +147,7 @@
       </div>
       <!--collapse content goes here -->
       <div class="col-xs-1 pull-right col-xs-pull-1">
-        <div data-toggle="collapse" data-target="#testi<?php echo $rateid;?>" class="plusminus_revw">+</div>
+        <div data-toggle="collapse" data-target="#review<?php echo $rateid;?>" class="plusminus_revw">+</div>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -164,15 +166,15 @@
 		  $link->close();
 	 }
    $total_pages = ceil($count / $res_per_page); //calculates total pages to display
+   /* <?php echo $total_pages; ?> */
    ?>
    <div class="pagenumber">
      <input type="hidden" id="current-page" value="<?php echo $page; ?>">
-     <input type="hidden" id="total-pages" value="23">
+     <input type="hidden" id="total-pages" value="<?php echo $total_pages; ?>">
      <input type="hidden" id="pageName" value="<?php echo $pid; ?>">
-     <a href="#" name="pre-next" id="pre-page">Pre</a>
-     <span id="pagenumbers_nav">
-     </span>
-     <a href="#" name="pre-next" id="next-page">Next</a>
+     <a href="#" name="pre-next" id="pre-page"><i class="fa fa-angle-left"></i></a>
+     <span id="pagenumbers_nav"></span>
+     <a href="#" name="pre-next" id="next-page"><i class="fa fa-angle-right"></i></a>
   </div>
    <?php
 

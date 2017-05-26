@@ -8,7 +8,7 @@
  <!--include head and other css templates-->
  <?php  include("head.php"); ?>
  <title><?php echo $page_title;?></title>
- 
+
   <link rel="stylesheet" href="../components/raty-master/lib/jquery.raty.css">
 <style type="text/css">
   a {text-decoration: none;}
@@ -80,15 +80,16 @@
   }
 
   /*helpful button css*/
-  .button_review{width: 80px;height: 32px;color: rgb(255, 255, 255);background-color: #0F5388;border-width: 1px
-    ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;cursor: pointer;}
+  .button_review{height: 32px;color: rgb(255, 255, 255);background-color: rgb(9,30,55);border-width: 1px
+    ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;align-items: center;cursor: pointer;}
   .helpful_wrd{float: left; width: 200px;margin-top: 4px;}
-  .helpful_item{float: left;width: 80px; margin-left: 20px;}
-  .inbutton_text{float: left;margin: 4px;}
-
+  .helpful_item{float: left;width: 90px; margin-left: 20px;}
+  .inbutton_text{font-weight: 200;margin-top: 2px;}
   /*page display*/
-  .curPage{font-size: 20px;text-decoration: underline;}
+  .curPage{border-bottom: 1px solid rgb(6, 16, 42);}
   .pagenumber a{color: rgb(9,30,55);}
+  #pagenumberitem{margin-left: 16px;}
+  #pagenumbers_nav{margin-left: 10px;margin-right: 10px;}
 
   /* css for out of stock handling */
   .outofstocktxt{color:red;height: 32px;}
@@ -136,7 +137,7 @@
     .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
     .collapse.in{display:block !important;}
     .product_notes{margin-top: 20px;}
-    #testi hr{width: 86%;}
+    #review hr{width: 86%;}
     .faq_heading{margin-top: 0;}
     .firstname,.email,.subjectline,.yourrating{margin: 0;}
     .msgtextbox,.recommenddiv{margin-left: 0;}
@@ -211,7 +212,7 @@
               <div class="linebreak12"></div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
-              <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
+              <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
             </div>
             <div class="hidden-lg hidden-md hidden-sm visible-xs col-xs-12 undereyephoto">
               <img src="../img/undereye_str_sm.png" alt="undereye small">
@@ -246,7 +247,7 @@
               </div>
             </div>
             <div class="visible-xs col-xs-12">
-              <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
+              <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
               <div class="linebreak2"></div>
               <div class="row instock">
                 <div class="col-xs-3">
@@ -532,7 +533,7 @@
     </div>
   </div>
   <hr>
-  <div class="jumbotron jumbotron_wht" id="testi">
+  <div class="jumbotron jumbotron_wht" id="review">
     <div class="container">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1">

@@ -135,8 +135,10 @@ function helfpul(pageid,rateid,isHelpFul){ // for helpful buttons
 $(function (){ //for pagination
   pageLoc = parseInt($("#current-page").val());
   pageTotal = parseInt($("#total-pages").val());
+  if (pageTotal <= 0) {pageTotal = 1;}
+
   pagename = $("#pageName").val();
-  limit = 5;//limited displays the page numbers
+  limit = 3;//limited displays the page numbers
 
   //handles Pre and Next button display when page #1 and page #total
   if (pageLoc == 1) {
@@ -146,44 +148,64 @@ $(function (){ //for pagination
     $("#next-page").css("display","none");
   }
 
-  if (pageLoc <= limit) { // checks the current page is in the first limit pages, ie: limit = 5, current page is in the first 5 pages
+  navHtml = '<a href="' + pagename +'.php?page=1#review"';
+  if (pageLoc == 1){navHtml = navHtml + 'class="curPage"';}
+  navHtml = navHtml + '>1</a>';
+  $("#pagenumbers_nav").append(navHtml);
+
+  if (pageLoc <= limit) { // checks the current page is in the first limit pages, ie: limit = 3, current page is in the first 3 pages
     if (pageTotal < limit){ //checks if total of pages is less than limit page display, then assign new limit to total page
       limit = pageTotal;
     }
 
-    for (i=1;i<=limit;i++){
-      navHtml = '<a href="' + pagename +'.php?page='+ i +'#testi"';
+    for (i=2;i<=limit;i++){
+      navHtml = '<a href="' + pagename +'.php?page='+ i +'#review" id="pagenumberitem"';
       if (i == pageLoc){navHtml = navHtml + 'class="curPage"';}
       navHtml = navHtml + '>' + i + '</a>';
-      $("#pagenumbers_nav").append(navHtml + ' ');
+      $("#pagenumbers_nav").append(navHtml);
     }
+    //display the last page number
+    if (pageTotal > (limit + 1)) { //handle total pages > 4 (since limit = 3) and display ... before the last page
+      navHtml = '<span id="pagenumberitem">...</span>' + '<a href="' + pagename +'.php?page='+ pageTotal +'#review" id="pagenumberitem">'+pageTotal+'</a>';
+    }
+    else if (pageTotal <= limit) { //handle total pages <= limit
+      navHtml = '';
+    }
+    else{ //handle total pages = 4 - don't display ... before 4
+      navHtml = '<a href="' + pagename +'.php?page='+ pageTotal +'#review" id="pagenumberitem">'+pageTotal+'</a>';
+    }
+    $("#pagenumbers_nav").append(navHtml);
   }
-  else if (pageLoc>pageTotal-limit) {// checks the current page in the last limit pages, ie: limit = 5, current page is in the last 5 pages
+  else if (pageLoc>pageTotal-limit) {// checks the current page in the last limit pages, ie: limit = 3, current page is in the last 3 pages
     $("#pagenumbers_nav").empty();
-    navHtml = '<a href="' + pagename +'.php?page=1#testi">1</a>';
-    $("#pagenumbers_nav").append(navHtml + " ...");
+    navHtml = '<a href="' + pagename +'.php?page=1#review">1</a>';
+    if (pageTotal > (limit + 1)) {
+      navHtml = navHtml + '<span id="pagenumberitem">...</span>';
+    }
+    $("#pagenumbers_nav").append(navHtml);
     for (i = limit-1;i>=0;i--){
-      navHtml = '<a href="' + pagename +'.php?page='+ (pageTotal-i) +'#testi"';
+      navHtml = '<a href="' + pagename +'.php?page='+ (pageTotal-i) +'#review" id="pagenumberitem"';
       if ((pageTotal-i) == pageLoc){ navHtml = navHtml + 'class="curPage"'; }
       navHtml = navHtml + '>' + (pageTotal-i) + '</a>';
-      $("#pagenumbers_nav").append(' '+ navHtml + ' ');
+      $("#pagenumbers_nav").append(navHtml);
     }
   }
-  else { // last scenario, checks if the current page is between the first and last limit pages, ie: limit = 5, 6<=current page<=total page - 5
+  else { // last scenario, checks if the current page is between the first and last limit pages, ie: limit = 3, 4 <= current page <= total page - 3
     $("#pagenumbers_nav").empty();
-    navHtml = '<a href="' + pagename +'.php?page=1#testi">1</a>';
-    $("#pagenumbers_nav").append(navHtml + " ...");
-    for (i = pageLoc-2;i<=pageLoc+2;i++){
-      navHtml = '<a href="' + pagename +'.php?page='+ i +'#testi"';
+    navHtml = '<a href="' + pagename +'.php?page=1#review">1</a>';
+    $("#pagenumbers_nav").append(navHtml + '<span id="pagenumberitem">...</span>');
+    for (i = pageLoc-1;i<=pageLoc+1;i++){
+      navHtml = '<a href="' + pagename +'.php?page='+ i +'#review" id="pagenumberitem"';
       if (i == pageLoc){
         navHtml = navHtml + 'class="curPage"';
       }
       navHtml = navHtml + '>' + i + '</a>';
-      $("#pagenumbers_nav").append(' '+ navHtml + ' ');
+      $("#pagenumbers_nav").append(navHtml);
     }
-    navHtml = '<a href="' + pagename +'.php?page='+ pageTotal +'#testi">'+pageTotal+'</a>';
-    $("#pagenumbers_nav").append(" ... " + navHtml);
+    navHtml = '<a href="' + pagename +'.php?page='+ pageTotal +'#review" id="pagenumberitem">'+pageTotal+'</a>';
+    $("#pagenumbers_nav").append('<span id="pagenumberitem">...</span>' + navHtml);
   }
+
 
   $("a[name='pre-next']").click(function(event){
     event.preventDefault();
@@ -193,7 +215,7 @@ $(function (){ //for pagination
     if ($(this).attr('id') == 'next-page' ) {
       pageLoc++;
     }
-    window.location = pagename + '.php?page=' + String(pageLoc) + '#testi';
+    window.location = pagename + '.php?page=' + String(pageLoc) + '#review';
   })
 
 });

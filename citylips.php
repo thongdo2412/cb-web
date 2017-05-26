@@ -119,7 +119,7 @@
   /*handle responsive*/
   @media screen and (max-width:991px){
     .product_notes{margin-top: 20px;}
-    #testi hr{width: 86%;}
+    #review hr{width: 86%;}
     .firstname,.email,.subjectline,.yourrating{margin: 0 auto;}
     .faq_heading{margin-top: 0;}
     .msgtextbox,.recommenddiv{margin-left: 0;}
@@ -205,7 +205,7 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
                 <div class="linebreak12"></div>
-              <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#testi" class="rating_wrd"><!--review count stores in here--></a>
+              <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#review" class="rating_wrd"><!--review count stores in here--></a>
             </div>
             <div class="visible-xs col-xs-1 col-xs-pull-5 xslipsphoto">
               <div class="col product-gallery">
@@ -423,7 +423,7 @@
               <div class="linebreak1"></div>
             </div>
             <div class="visible-xs col-xs-12">
-              <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#testi" class="rating_wrd"><!--store count of reviews here--></a>
+              <img src="../img/stars_rating.png" alt="5 stars rating"><a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
               <div class="linebreak2"></div>
               <div class="row" id="instock">
                 <div class="col-xs-3">
@@ -796,7 +796,7 @@
     </div>
   </div>
   <hr>
-  <div class="jumbotron jumbotron_wht" id="testi">
+  <div class="jumbotron jumbotron_wht" id="review">
     <div class="container">
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1">
