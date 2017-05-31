@@ -28,6 +28,7 @@ composer.lock
 composer.phar
 comments_bk.php
 comments_wip*.php
+securecheckout*
 db_connect.php
 db_connect_bk.php
 db_connect_bk1.php

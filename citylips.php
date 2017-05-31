@@ -869,6 +869,8 @@
         } else {
             $(".price span").text("$35.00");
         }
+        currentID = getActiveColor(); //get new active color
+        updateOutofStock(currentID); //check and set the in stock text for the active color
       }
 
       // default image in lip holder and lip sample
@@ -876,8 +878,7 @@
       updateOutofStock('nudeyork');
       updateOutofStock('sundiego');
       setDisplayColor('orchid');
-      currentID = getActiveColor();
-      updateOutofStock(currentID);
+      currentID = getActiveColor(); // get active color for add to cart
 
       $(".swatch-unit").hover(
           function(){ //show hover in
