@@ -92,6 +92,7 @@
   #form_rating{float: left;margin-left: 14px;}
   .msgtextbox{margin-left: 28px;margin-top: 16px;}
   .btn_wrapper{float: right;margin-right: 50px;}
+
   /* handling out of stock */
   .outofstockbtn{background-color: rgb(160,160,160);display: none;font-size: 32px;}
   .out-of-stock-line {
