@@ -5,9 +5,9 @@
 require '../test/vendor/autoload.php';
 // If you are not using Composer
 // require("path/to/sendgrid-php/sendgrid-php.php");
-$from = new SendGrid\Email("Customer Support", "customersupport@citycosmetics.com");
+$from = new SendGrid\Email("Customer Support", "customersupport@citybeauty.com");
 $subject = "New Contact Form Submission";
-$to = new SendGrid\Email("Customer Support", "customersupport@citycosmetics.com");
+$to = new SendGrid\Email("Customer Support", "customersupport@citybeauty.com");
 $key = json_decode(file_get_contents('../test/citykey'));
 $apiKey = $key->{'SENDGRID_API_KEY'};
 $sg = new \SendGrid($apiKey);
@@ -32,9 +32,17 @@ $sg = new \SendGrid($apiKey);
 $response = $sg->client->mail()->send()->post($mail);
 $statusOK = strval($response->statusCode());
 if ($statusOK == '202'){
-  echo "Your message has been submitted successfully.";
+  echo '<script type="text/javascript">';
+  echo 'alert("Your message has been submitted successfully.");';
+  echo 'window.location.href="https://citybeauty.com/contact.php";';
+  echo '</script>';
+  exit;
 }
 else {
-  echo "Something is not working properly. We're working on it.";
+  echo '<script type="text/javascript">';
+  echo 'alert("Something is not working properly. We are working on it.")';
+  echo 'window.location.href="https://citybeauty.com/contact.php"';
+  echo '</script>';
+  exit;
 }
   ?>

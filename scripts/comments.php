@@ -97,10 +97,10 @@
     <!--insert the helpful feature-->
       <div class="helpful_wrd">Was this review helpful?</div>
       <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',true)">
-        <div class="inbutton_text">YES - <?php echo $helpful_y;?></div>
+        <div class="inbutton_text" id ="yes-<?php echo $rateid;?>">YES - <?php echo $helpful_y;?></div>
       </div>
       <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',false)">
-        <div class="inbutton_text">NO - <?php echo $helpful_n;?></div>
+        <div class="inbutton_text" id ="no-<?php echo $rateid;?>" >NO - <?php echo $helpful_n;?></div>
       </div>
       <div class="clearfix"></div>
     <div class="linebreak2"></div>
