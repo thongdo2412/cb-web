@@ -2,7 +2,7 @@
 <footer class="centered_flex">
  <div class="container">
    <div class="row">
-    <div class="col-lg-8 col-md-12 col-sm-12  col-xs-12">
+    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
       <p>&copy; City Beauty LLC <script type="text/javascript">
       now = new Date
       theYear=now.getFullYear()
@@ -14,11 +14,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1">
-      <div class="socialicons"><img src="../img/social_icon.png" alt="social icons"></div>
+    <div class="col-lg-1">
+      <img class="socialicons" src="../img/social_icon.png" alt="social icons">
     </div>
+    <div class="col-lg-1 col-lg-offset-9 col-md-offset-0">
+      <img class="cruel-free" src="../img/cruelty-free.png" alt="cruel-free">
+    </div>
+    <div class="clearfix"></div> 
   </div>
-   <div class="clearfix"></div>
  </div>
 </footer>
 

@@ -13,14 +13,28 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,600i,700,900|Playfair+Display:300,300i,400,400i|Raleway:300,400,400i,700">
+
+<!-- Hotjar Tracking Code for citybeauty.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:530466,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
 <!--main css-->
 <style type="text/css">
  a {text-decoration: none;}
  *{margin:0 auto;}
-header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
+header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 120px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 header img{width: 97px;}
 footer{color: rgb(255,255,255);font-size: 11px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
+.cruel-free {width: 120px;height: 32px;margin-left: -20px;}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .container{width: 960px;text-align:center;margin-left: auto;margin-right: auto;margin: 0 auto;padding: 0;}
 .centered_flex{display: flex;justify-content: center;align-items: center;}
@@ -67,7 +81,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;fon
 
 /*Responsive for different screen*/
 @media screen and (min-width: 1199px) {.socialicons{margin-left: 4px;} .mailus{margin-left: 60px;}}
-@media screen and (max-width: 1199px) {.socialicons{margin:0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;}}
+@media screen and (max-width: 1199px) {.socialicons{margin:0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;} .cruel-free{margin-left: 0;margin-top: 5px;}}
 @media screen and (max-width: 991px){
   .linebreak3{margin-top: 16px;}
   .emailus{margin-left: 14px;}

@@ -3,7 +3,7 @@
 <title>City Beauty - Privacy Policy</title>
 
 <style type="text/css">
-
+.cruel-free{margin-left: -16px;}
 body{font-family: "Raleway",sans-serif;}
 h5{display: inline;}
 /*handle responsive for different screens*/

@@ -170,7 +170,7 @@
    ?>
    <div class="pagenumber">
      <input type="hidden" id="current-page" value="<?php echo $page; ?>">
-     <input type="hidden" id="total-pages" value="12">
+     <input type="hidden" id="total-pages" value="<?php echo $total_pages; ?>">
      <input type="hidden" id="pageName" value="<?php echo $pid; ?>">
      <a href="#" name="pre-next" id="pre-page"><i class="fa fa-angle-left"></i></a>
      <span id="pagenumbers_nav"></span>

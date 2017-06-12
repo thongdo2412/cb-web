@@ -19,10 +19,23 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i|Playfair+Display:300,300i,400,400i">
 
+  <!-- Hotjar Tracking Code for citybeauty.com -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:530466,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- main css-->
 <style type="text/css">
  a {text-decoration: none;}
  *{margin:0 auto;}
-header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
+header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 120px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 header img {width: 97px;}
 footer{color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
@@ -32,6 +45,7 @@ footer a,a:hover{text-decoration: none; color: #ffffff}
 .centered_nav{display: flex;justify-content: center;align-items: center;}
 .nav{font-size: 14px;font-family: "Montserrat", sans-serif; font-weight: 300;}
 .sup1{vertical-align: super;}
+.cruel-free {width: 120px;height: 32px;margin-left: -10px;}
 nav2 {display: inline-block;padding: 0 15px;position: relative;}
 nav2:hover:before,nav2:hover:after {background: #000;content: "";display: block;height: 1px;position: absolute;top: 50%;width: 12px;}
 nav2:hover:before {right: 95%;}
@@ -89,6 +103,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   .b2margin{margin-left: 7%;}
   .socialicons{margin:0;}
   .cream_wrapper{margin-top: 12%;margin-left: 4%;}
+  .cruel-free{margin-left: 0;margin-top: 5px;}
 }
 @media screen and (max-width:991px) {
   .cream_wrapper{margin-left: 0;margin-top: 16%;}
