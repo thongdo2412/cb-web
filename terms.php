@@ -3,7 +3,7 @@
 <title>City Beauty - Terms &amp; Conditions</title>
 
 <style type="text/css">
-.cruel-free{margin-left: -16px;}
+.cruel-free{margin-left: -10px;}
 body{font-family: "Raleway",sans-serif;}
 h5{display: inline;}
 /*handle responsive for different screens*/

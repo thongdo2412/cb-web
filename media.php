@@ -8,7 +8,7 @@
 header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 120px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 footer{font-family: "Montserrat", sans-serif;color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
-.cruel-free{margin-left: -10px;}
+.cruel-free {margin-left: -4px;}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .container{margin: 0 auto;padding: 0;text-align:center;margin-left: auto;margin-right: auto;}
 .centered_flex{display: flex;justify-content: center;align-items: center;}

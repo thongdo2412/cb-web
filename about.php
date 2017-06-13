@@ -5,7 +5,7 @@
 <style type="text/css">
   .maincontent{text-align: left;}
   body{font-family: "Raleway",sans-serif;}
-  .cruel-free{margin-left: -16px;}
+  .cruel-free{margin-left: -10px;}
   /*Responsive for different screen*/
   @media screen and (min-width: 1199px) {.socialicons{margin-left: 66px;}}
 </style>

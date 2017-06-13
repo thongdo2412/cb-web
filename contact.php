@@ -34,7 +34,7 @@ header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 120px;marg
 header img{width: 97px;}
 footer{color: rgb(255,255,255);font-size: 11px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
-.cruel-free {width: 120px;height: 32px;margin-left: -20px;}
+.cruel-free {width: 118px;height: 32px;margin-left: -12px;}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .container{width: 960px;text-align:center;margin-left: auto;margin-right: auto;margin: 0 auto;padding: 0;}
 .centered_flex{display: flex;justify-content: center;align-items: center;}

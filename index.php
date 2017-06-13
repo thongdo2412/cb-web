@@ -45,7 +45,7 @@ footer a,a:hover{text-decoration: none; color: #ffffff}
 .centered_nav{display: flex;justify-content: center;align-items: center;}
 .nav{font-size: 14px;font-family: "Montserrat", sans-serif; font-weight: 300;}
 .sup1{vertical-align: super;}
-.cruel-free {width: 120px;height: 32px;margin-left: -10px;}
+.cruel-free {width: 118px;height: 32px;margin-left: -4px;}
 nav2 {display: inline-block;padding: 0 15px;position: relative;}
 nav2:hover:before,nav2:hover:after {background: #000;content: "";display: block;height: 1px;position: absolute;top: 50%;width: 12px;}
 nav2:hover:before {right: 95%;}
@@ -180,10 +180,10 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
       </div>
     </div>
       <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs">
-        <div class="undereye"><img src="../img/undereye.png" alt="undereye cream"></div>
+        <img class="undereye" src="../img/undereye.png" alt="undereye cream">
     </div>
     <div class="visible-xs col-xs-2 hidden-xxs">
-      <div class="undereye"><img src="../img/undereye_sm.png" alt="undereye cream small"></div>
+      <img class="undereye" src="../img/undereye_sm.png" alt="undereye cream small">
     </div>
       <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs cream_wrapper">
         <img src="../img/cream.png" alt="cream">
