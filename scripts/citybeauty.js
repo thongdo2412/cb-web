@@ -116,26 +116,28 @@ $(function(){ //handle out of stock for non-lip products
   }
 });
 function helfpul(pageid,rateid,isHelpFul){ // for helpful buttons
-  if (isHelpFul) {
-    dbfield = "helpful_y";
-    idToChange ="yes-";
-    htmlword = "YES - ";
-  }
-  else {
-    dbfield = "helpful_n";
-    idToChange ="no-";
-    htmlword = "NO - ";
-  }
-  $.ajax({
-    type: 'GET',
-    url: 'scripts/helpful.php',
-    data: {tablename:pageid, rateid:rateid, fieldname:dbfield},
-    success: function(response) {
-      //location.reload(); // reload the page.(3)
-      newID = "#" + idToChange + rateid;
-      $(newID).html(htmlword + String(response));
-    }
-  });
+
+      if (isHelpFul) {
+        dbfield = "helpful_y";
+        idToChange ="yes-";
+        htmlword = "YES - ";
+      }
+      else {
+        dbfield = "helpful_n";
+        idToChange ="no-";
+        htmlword = "NO - ";
+      }
+      $.ajax({
+        type: 'GET',
+        url: 'scripts/helpful.php',
+        data: {tablename:pageid, rateid:rateid, fieldname:dbfield},
+        success: function(response) {
+        //location.reload(); // reload the page.(3)
+        newID = "#" + idToChange + rateid;
+        $(newID).html(htmlword + String(response));
+      }
+      });
+
 }
 
 $(function (){ //for pagination

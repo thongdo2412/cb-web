@@ -70,7 +70,7 @@
     }
 
     //prepare query
-    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` WHERE rate >= 3 ORDER BY postdate DESC LIMIT $start_from,$res_per_page")){
+    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` ORDER BY rate DESC,postdate DESC LIMIT $start_from,$res_per_page")){
 			$stmt->execute();
 			$stmt->bind_result($rateid,$name,$emailaddr,$subject,$message,$rating,$recommend,$date,$helpful_y,$helpful_n);
 			$stmt->store_result();
