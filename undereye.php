@@ -105,9 +105,9 @@
   #reviewpanel{margin: 0 auto;}
   #review_form{text-align: left;margin-left: 32px;}
   .firstname{margin-left: 14px;}
-  .email{margin-left: 114px;}
+  .email{margin-left: 74px;}
   .subjectline{margin-top: 16px;}
-  .yourrating{margin-left: 54px;}
+  .yourrating{margin-left: 14px;}
   .rating_label{float: left;margin-top: 2px;}
   .recommenddiv{margin-top: 16px; margin-left: 134px;}
   #form_rating{float: left;margin-left: 14px;}

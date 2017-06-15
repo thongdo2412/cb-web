@@ -41,7 +41,7 @@
             <div class="form-group recommenddiv">
               <div>I would recommend this to a friend*</div>
               <div>
-                <label class="radio-inline"><input type="radio" name="recradio" value="yes">Yes</label>
+                <label class="radio-inline"><input type="radio" name="recradio" value="yes" checked="checked">Yes</label>
                 <label class="radio-inline"><input type="radio" name="recradio" value="no">No</label>
               </div>
             </div>
@@ -70,8 +70,8 @@
     }
 
     //prepare query
-    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` ORDER BY rate DESC,postdate DESC LIMIT $start_from,$res_per_page")){
-			$stmt->execute();
+    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` WHERE approved = 1 OR uid = '$id' ORDER BY rate DESC,postdate DESC LIMIT $start_from,$res_per_page")){
+      $stmt->execute();
 			$stmt->bind_result($rateid,$name,$emailaddr,$subject,$message,$rating,$recommend,$date,$helpful_y,$helpful_n);
 			$stmt->store_result();
       while ($stmt->fetch()){
@@ -132,14 +132,12 @@
           <div class="linebreak2"></div>
           <!--insert the helpful feature-->
             <div class="helpful_wrd">Was this review helpful?</div>
-
               <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',true)">
                 <div class="inbutton_text">YES - <?php echo $helpful_y;?></div>
               </div>
               <div class="button_review helpful_item" onclick="helfpul('<?php echo $pid; ?>','<?php echo $rateid;?>',false)">
                 <div class="inbutton_text">NO - <?php echo $helpful_n;?></div>
               </div>
-
           <div class="clearfix"></div>
           <div class="linebreak2"></div>
           *Results may vary by individual.

@@ -41,6 +41,7 @@ $(function(){ //handle with jQuery raty plugin
   $.fn.raty.defaults.path = '../components/raty-master/lib/images';
   //include Jquery raty rating stars plugin
   $('#form_rating').raty({
+    score: 5,
     halfShow:false,
     hints: ['1','2','3','4','5'],
     targetKeep:true,

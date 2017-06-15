@@ -22,22 +22,25 @@
       $date = date('Y-m-d'); //get the current date of the review post
 
       //allow one review per session(cookie)
-      if (isset($_SESSION['last_submit']) && time()-$_SESSION['last_submit'] < 2592000)
-          die('Post limit exceeded. Please try later!');
-      else
+      if (isset($_SESSION['last_submit']) && time()-$_SESSION['last_submit'] < 2592000 && $_SESSION['page'] == $pid)
+          die('Post limit exceeded. Please again try later!');
+      else{
           $_SESSION['last_submit'] = time();
+          $_SESSION['page'] = $pid;
+      }
 
       // attempt insert query execution
       $sql = "INSERT INTO $tablename (fname, email,subject,message,rate,recommend,postdate,uid) VALUES ('$first_name', '$email_address','$subject','$message',$rating,$recommend,'$date','$uid')";
       if(mysqli_query($link, $sql)){
-        echo "Data successfully Saved.";
+        // close connection
+        mysqli_close($link);
         $redirectTo = 'Location:' . $_SESSION[$page] . '.php';
         header($redirectTo);
       } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        // close connection
+        mysqli_close($link);
       }
-      // close connection
-      mysqli_close($link);
     }
   }
 ?>
