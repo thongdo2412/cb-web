@@ -34,7 +34,7 @@ header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 120px;marg
 header img{width: 97px;}
 footer{color: rgb(255,255,255);font-size: 11px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
-.cruel-free {width: 118px;height: 32px;margin-left: -12px;}
+.cruel-free {width: 118px;height: 32px;margin-left: -14px;}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .container{width: 960px;text-align:center;margin-left: auto;margin-right: auto;margin: 0 auto;padding: 0;}
 .centered_flex{display: flex;justify-content: center;align-items: center;}
@@ -173,11 +173,13 @@ div.form-group input.form-control{width: 200px;} div.form-group select.form-cont
                   <div class="form-group subject">
                     <p>SUBJECT*
                       <select class="form-control" id="form_subject" type="text" name="subject" required="required" data-error="Subject is required.">
-                        <option selected disabled class="hideoption">choose subject</option>
-                        <option value="City Lips">City Lips</option>
-                        <option value="City Views">City Views</option>
-                        <option value="City Lash">City Lash</option>
-                        <option value="Under Eye Recovery">Under Eye Recovery</option>
+                        <option selected disabled class="hideoption">---</option>
+                        <option value="City Lips">1. Place An Order</option>
+                        <option value="City Views">2. Product Question(s)</option>
+                        <option value="City Lash">3. Order Status</option>
+                        <option value="Under Eye Recovery">4. Billing Question</option>
+                        <option value="Under Eye Recovery">5. Membership Inquiry</option>
+                        <option value="Under Eye Recovery">6. Other</option>
                       </select>
                     </p>
                     <div class="help-block with-errors"></div>

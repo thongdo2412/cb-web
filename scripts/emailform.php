@@ -6,9 +6,9 @@
 require '../test/vendor/autoload.php';
 // If you are not using Composer
 // require("path/to/sendgrid-php/sendgrid-php.php");
-$from = new SendGrid\Email("Customer Support", "customersupport@citybeauty.com");
+$from = new SendGrid\Email("Customer Support", "support@citybeauty.com");
 $subject = "New Email Submission";
-$to = new SendGrid\Email("Customer Support", "customersupport@citybeauty.com");
+$to = new SendGrid\Email("Customer Support", "support@citybeauty.com");
 $key = json_decode(file_get_contents('../test/citykey'));
 $apiKey = $key->{'SENDGRID_API_KEY'};
 $sg = new \SendGrid($apiKey);
