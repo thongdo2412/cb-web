@@ -14,13 +14,18 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-1">
-      <img class="socialicons" src="../img/social_icon.png" alt="social icons">
+    <div class="col-lg-1 col-md-12">
+      <div class="social-wrap">
+        <a href="https://www.facebook.com/City-Cosmetics-1431625556919604/"><img class="social-item" src="../img/icon_facebook.png" alt="facebook"></a>
+        <a href="https://www.instagram.com/citycosmetics/"><img class="social-item" src="../img/icon_instagram.png" alt="instagram"></a>
+        <a href="https://twitter.com/CityBeautyLLC"><img class="social-item" src="../img/icon_twitter.png" alt="twitter"></a>
+        <a href="https://www.pinterest.com/citybeautyllc/"><img class="social-item" src="../img/icon_pinterest.png" alt="pinterest"></a>
+      </div>
     </div>
-    <div class="col-lg-1 col-lg-offset-9 col-md-offset-0">
+    <div class="col-lg-1 col-lg-offset-9 col-md-12 col-md-offset-0">
       <img class="cruel-free" src="../img/cruelty-free.png" alt="cruel-free">
     </div>
-    <div class="clearfix"></div> 
+    <div class="clearfix"></div>
   </div>
  </div>
 </footer>

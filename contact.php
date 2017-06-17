@@ -79,9 +79,13 @@ h4{font-size: 20px;font-weight: 300;display: inline;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;font-weight: 300;line-height: 24px;}
 
+/*social network icon */
+.social-wrap{list-style: none;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-flow: row nowrap;justify-content:space-between;margin-top: 6px;}
+.social-item{width: 20px;height: 20px;margin-left: 6px;}
+
 /*Responsive for different screen*/
-@media screen and (min-width: 1199px) {.socialicons{margin-left: 4px;} .mailus{margin-left: 60px;}}
-@media screen and (max-width: 1199px) {.socialicons{margin:0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;} .cruel-free{margin-left: 0;margin-top: 5px;}}
+@media screen and (min-width: 1199px) {.mailus{margin-left: 60px;}}
+@media screen and (max-width: 1199px) {.social-wrap{display: block;margin-top: 0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;} .cruel-free{margin-left: 0;margin-top: 5px;}}
 @media screen and (max-width: 991px){
   .linebreak3{margin-top: 16px;}
   .emailus{margin-left: 14px;}

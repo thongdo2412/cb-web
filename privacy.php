@@ -7,7 +7,7 @@
 body{font-family: "Raleway",sans-serif;}
 h5{display: inline;}
 /*handle responsive for different screens*/
-@media screen and (min-width: 1199px){.socialicons{margin-left: 66px;}}
+@media screen and (min-width: 1199px){.social-wrap{margin-left: 62px;}}
 </style>
 </head>
 <body>

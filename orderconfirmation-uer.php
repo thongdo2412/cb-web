@@ -16,8 +16,9 @@
       background-color: #d67604;}
     .btn1{width: 418px;height: 36px;}
     .linebreak05{margin-top: 5px;}
+    .cruel-free {margin-left: -5px;}
       /*handle responsive*/
-      @media screen and (min-width: 1199px){.socialicons{margin-left: 46px;}}
+      @media screen and (min-width: 1199px){.social-wrap{margin-left: 40px;}}
       @media screen and (max-width: 594px){
         .container{margin-left: 28px;margin-right: 28px;}
         .innerbox,.innertext{width: 80%;}
