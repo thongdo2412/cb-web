@@ -30,7 +30,7 @@
 <style type="text/css">
  a {text-decoration: none;}
  *{margin:0 auto;}
-header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 120px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
+header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 header img{width: 97px;}
 footer{color: rgb(255,255,255);font-size: 11px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
@@ -85,7 +85,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;fon
 
 /*Responsive for different screen*/
 @media screen and (min-width: 1199px) {.mailus{margin-left: 60px;}}
-@media screen and (max-width: 1199px) {.social-wrap{display: block;margin-top: 0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;} .cruel-free{margin-left: 0;margin-top: 5px;}}
+@media screen and (max-width: 1199px) {.social-wrap{display: block;margin-top: 0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;} .cruel-free{margin-left: 0;margin-top: 5px;} footer {height: 130px;}}
 @media screen and (max-width: 991px){
   .linebreak3{margin-top: 16px;}
   .emailus{margin-left: 14px;}

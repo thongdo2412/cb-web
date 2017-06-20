@@ -3,16 +3,7 @@
 <title>City Beauty - Media</title>
 <!--main css-->
 <style type="text/css">
- a {text-decoration: none;}
- *{margin:0 auto;}
-header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 120px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
-footer{font-family: "Montserrat", sans-serif;color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
-footer a,a:hover{text-decoration: none; color: #ffffff}
-.cruel-free {margin-left: -4px;}
-.container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
-.container{margin: 0 auto;padding: 0;text-align:center;margin-left: auto;margin-right: auto;}
-.centered_flex{display: flex;justify-content: center;align-items: center;}
-.centered_nav{display: flex;justify-content: center;align-items: center;}
+.cruel-free {margin-left: -10px;}
 .flexcontainer{padding: 0;margin: 0 auto;list-style: none;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-flow: row nowrap;justify-content: space-around;}
 .flexitem{padding-left: 5px;}
 .nav{font-size: 14px;font-family: "Montserrat", sans-serif;}
@@ -43,7 +34,7 @@ h4{font-size: 20px;}
 h5{font-size: 13px;font-weight: 300;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Raleway",sans-serif;font-size: 16px; font-weight: 300; line-height: 24px;}
-@media screen and (min-width: 1199px){.social-wrap{margin-left: 40px;}}
+@media screen and (min-width: 1199px){.social-wrap{margin-left: 60px;}}
 @media screen and (max-width:1199px){
   .social-wrap{margin-left: 0;}
   .ghk_quotes{margin-left: 20%;}

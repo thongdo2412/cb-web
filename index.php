@@ -35,7 +35,7 @@
 <style type="text/css">
  a {text-decoration: none;}
  *{margin:0 auto;}
-header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 120px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
+header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 header img {width: 97px;}
 footer{color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
 footer a,a:hover{text-decoration: none; color: #ffffff}
@@ -109,6 +109,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   .social-wrap{margin:0;display: block;}
   .cream_wrapper{margin-top: 12%;margin-left: 4%;}
   .cruel-free{margin-left: 0;margin-top: 5px;}
+  footer{height: 130px;}
 }
 @media screen and (max-width:991px) {
   .cream_wrapper{margin-left: 0;margin-top: 16%;}
@@ -155,6 +156,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   .hidden-xxs{display: none!important}
   .col-xxs-11{width: 91.66666667%;}
   .word_wrapper,.b2word_wrapper{margin-top: 0;}
+  footer{height: 130px;}
 }
 @media screen and (min-width:330px) and (max-width:628px){.lip_wrapper{margin-right: 12%;}}
 </style>
