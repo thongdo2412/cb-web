@@ -19,7 +19,7 @@
 <body>
   <!--head and navigation content-->
 <?php include ("header.php"); ?>
-<div class="jumbotron jumbotron_wht">
+<div class="jumbotron jumbotron_wht" id ="content">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-lg-offset-2 col-md-7 col-md-offset-1 col-sm-11 col-sm-offset-0 text">
@@ -36,5 +36,23 @@
 
   <!--include PHP footer template -->
   <?php include ("footer.php"); ?>
+  <script type="text/javascript">
+    // function to set the height on fly
+    function autoHeight() {
+      $('#content').css('min-height', 0);
+      $('#content').css('min-height', (
+        $(document).height() - $('header').height() - 50 - $('nav').height() - $('footer').height()));
+    }
+
+    // onDocumentReady function bind
+    $(document).ready(function() {
+      autoHeight();
+    });
+
+    // onResize bind of the function
+    $(window).resize(function() {
+      autoHeight();
+    });
+  </script>
   </body>
   </html>
