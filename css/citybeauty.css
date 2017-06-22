@@ -57,7 +57,7 @@ h3{font-size: 38px;line-height: 38px;font-weight: 400;}
 h4{font-size: 33px;}
 h5{font-size: 20px;}
 h6{font-size: 18px;display: inline;}
-body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
+body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden; height: 100%;}
 body{text-align: center;font-size: 16px; font-weight: 300;line-height: 24px;}
 
 /*social network icon */
