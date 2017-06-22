@@ -34,6 +34,7 @@
   .yousave{margin-left: -52px;}
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
+  .product_pic{margin-top: 6px;}
 
   /* css for out of stock handling */
   .outofstocktxt{color:red;height: 32px;}
@@ -110,7 +111,7 @@
 
   @media screen and (max-width:767px){
     .navbar-toggle{margin-right: 40px;}
-    .undereyephoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
+    .lashphoto{text-align: center;margin-top: 30px;margin-bottom: 30px;}
     .guarantee_wrd{margin-left: 100px;}
     .product_notes{padding-left: 28px;padding-right: 28px;}
     #review_form{width: 300px;margin:auto;}
@@ -151,7 +152,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-2 col-sm-1 col-sm-offset-1 hidden-xs product_pic">
-            <img src="../img/citylash.png" alt="city lash">
+            <img src="../img/citylash_sm.png" alt="city lash">
           </div>
           <div class="col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-1 col-xs-10 col-xs-offset-1 product_info">
             <div class="row">
@@ -162,7 +163,7 @@
               <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
                 <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
               </div>
-              <div class="visible-xs col-xs-12 undereyephoto">
+              <div class="visible-xs col-xs-12 lashphoto">
                 <img src="../img/citylash_sm.png" alt="city views">
               </div>
             </div>

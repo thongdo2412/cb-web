@@ -15,7 +15,7 @@
 <style type="text/css">
   footer p{font-size: 11px; word-wrap:break-word;}
   .container{width: 960px;}
-  .lipsphoto{margin-left: 30px;margin-top: 150px;}
+  .lipsphoto{margin-left: 50px;margin-top: 60px;}
   .product_info{text-align: left;}
   .product_notes{text-align: left;margin-top: 4px;}
   .productnotes_head{width: 148px;margin-top: 16px;}
@@ -33,6 +33,7 @@
   .guarantee_wrd{margin-left: 70px;}
   .col-xs-8 {width: 68.66666667%;}
 
+
   /* css for product gallery and changing color*/
   .swatch-container{width: 39px; height: 39px;margin: 5px}
   .swatch-holder{display:inline-table;text-align: center;}
@@ -47,12 +48,12 @@
     border: 2px solid black;
   }
   .product-gallery {
-    margin-left: -220px;
+    margin-left: -100px;
+    margin-top: -6px;
   }
   .main-swatch{display: inline;}
   .product-gallery img {
-      width: 200%;
-      height: 200%;
+      height: 400px;
   }
 
   /* css for quantity select/option box */

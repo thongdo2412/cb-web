@@ -90,6 +90,8 @@ div.productwrapper .button_wht{visibility: hidden;}
 div.productwrapper:hover .button_wht {visibility: visible;}
 .button_wht:hover {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 .button_wht:hover a {background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
+.undereye {margin-left: -40px;}
+img.undereye {height: 500px;}
 div.form-group input{margin-left: 18px;margin-right: 40px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 30px;font-weight: 300;}
 h4{font-size: 20px;line-height: 24px;font-weight: 300;}
@@ -139,6 +141,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   div.form-group input{margin: 0;}
   .submitbtn{float: right;}
   footer .container{margin-left: 30px;margin-right: 30px;}
+  img.undereye {height: auto;}
 }
 @media screen and (max-width:572px){
   .word_wrapper{margin-top:6%;}

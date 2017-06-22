@@ -26,7 +26,7 @@
               <div class="form-group yourrating">
                 <div class="rating_label">YOUR RATING*</div>
                 <div id="form_rating" required="required" data-error="Rating is required."></div>
-                <input type="hidden" id="form-rating-score" type="text" name="rating" value="" />
+                <input type="hidden" id="form-rating-score" type="text" name="rating" value="5" />
                 <div class="help-block with-errors"></div>
                 <div class="clearfix"></div>
               </div>

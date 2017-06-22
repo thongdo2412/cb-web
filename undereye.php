@@ -39,7 +39,8 @@
   .jumbotron p{font-size: 16px;font-weight: 300;}
   .jumbotron_wht{background: rgb(255,255,255);}
   .jumbotron_w_bg{background: rgb(248,249,249);background-size: cover;border: 1px solid rgb(235, 235, 235);margin: 0 auto;}
-  .creamphoto{margin-right: 96px;margin-top: 150px;}
+  .creamphoto{margin-right: 106px;margin-top: 40px;}
+  .product_pic img {height: 400px;}
   .product_info{text-align: left;}
   .product_notes{text-align: left; margin-top: 10px;}
   .productnotes_head{width: 148px;margin-top: 16px;}
@@ -196,9 +197,9 @@
   <div class="section1">
     <div class="container">
       <div class="row">
-        <div class="col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-2 col-sm-1 col-sm-offset-1 hidden-xs product_pic">
+        <div class="col-lg-1 col-lg-offset-2 col-md-1 col-md-offset-2 col-sm-1 col-sm-offset-1 hidden-xs">
           <div class="row">
-            <div class="col">
+            <div class="col product_pic">
               <img src="../img/undereye_str.png" alt="under eye">
             </div>
             <div class="col creamphoto">
