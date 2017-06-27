@@ -930,34 +930,34 @@
           //select active color
           switch (currentID) {
                case "plumsprings": {
-                 window.location = "http://citycosmetics.com/cmd.php?pid=4de3527dd0384b6798a10806709ab72b&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=4de3527dd0384b6798a10806709ab72b&qty=" + quantity.toString();
                } break;
                case "tokyokiss": {
-                 window.location = "http://citycosmetics.com/cmd.php?pid=88053a3fe25c4aee983306a9fcbaf6a0&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=88053a3fe25c4aee983306a9fcbaf6a0&qty=" + quantity.toString();
                } break;
                case "losangelips": {
-                 window.location = "http://citycosmetics.com/cmd.php?pid=ae2d751c814848c99e79ebf1bfbf98a3&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=ae2d751c814848c99e79ebf1bfbf98a3&qty=" + quantity.toString();
                } break;
                case "nudeyork": {
-                 window.location = "http://citycosmetics.com/cmd.php?pid=7888e4d5e5164a5f8d8cd07a02799566&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=7888e4d5e5164a5f8d8cd07a02799566&qty=" + quantity.toString();
                } break;
                case "orchid": {
-                 window.location = "http://citylips.com/cmd.php?pid=d4035529578c4638beabe2f1da1ff6d7&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=d4035529578c4638beabe2f1da1ff6d7&qty=" + quantity.toString();
                } break;
                case "sangria": {
-                 window.location = "http://citycosmetics.com/cmd.php?pid=7799892e241242e4bd2b9e7b6b398a48&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=7799892e241242e4bd2b9e7b6b398a48&qty=" + quantity.toString();
                } break;
                case "sundiego": {
-                 window.location = "http://citycosmetics.com/cmd.php?pid=da80e759f0c642c9a349b30dbc6790fd&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=da80e759f0c642c9a349b30dbc6790fd&qty=" + quantity.toString();
                } break;
                case "tinseltown": {
-                 window.location = "http://citylips.com/cmd.php?pid=46a249a3f7df436f852577e221e19e06&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=46a249a3f7df436f852577e221e19e06&qty=" + quantity.toString();
                } break;
                case "holly": {
-                 window.location = "http://citylips.com/cmd.php?pid=1df7b026b9e74e96a09e018ce9a7b50a&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=1df7b026b9e74e96a09e018ce9a7b50a&qty=" + quantity.toString();
                } break;
               case "clear": {
-                 window.location = "http://citylips.com/cmd.php?pid=3ea53eb3ed29409ab947a3ba05e0459f&qty=" + quantity.toString();
+                 window.location = "http://citybeauty.com/cmd.php?pid=3ea53eb3ed29409ab947a3ba05e0459f&qty=" + quantity.toString();
                } break;
           }
         })
