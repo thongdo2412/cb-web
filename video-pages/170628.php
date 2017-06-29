@@ -166,7 +166,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
     function autoHeight() {
       $('#maincontent').css('min-height', 0);
       $('#maincontent').css('min-height', (
-        $(document).height() - $('header').height() - $('footer').height()));
+        $(document).height() - $('header').height() - 50 - $('footer').height()));
     }
 
     // onDocumentReady function bind

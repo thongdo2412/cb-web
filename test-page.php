@@ -46,81 +46,39 @@
   .linebreak30{margin-top: 30px;}
   .linebreak40{margin-top: 40px;}
 
-  /* THE SPEECH BUBBLE
-------------------------------------------------------------------------------------------------------------------------------- */
-
-.triangle-isosceles {
-  position:relative;
-  padding:5px;
-  border:solid rgb(235, 235, 235);
-  border-width: 0px 0px 1px 0px;
+.speech-bubble {
+   position: relative;
+   text-align: center;
+   padding: 4px;
+   background: #ffffff;
+   border: #d4d4d4 solid;
+   border-width: 0 0 1px 0;
+}
+.speech-bubble:before {
+   content: '';
+   position: absolute;
+   border-style: solid;
+   border-width: 15px 15px 0;
+   border-color: #d4d4d4 transparent;
+   display: block;
+   width: 0;
+   z-index: 0;
+   bottom: -16px;
+   left:50%;
 }
 
-/* THE TRIANGLE
-------------------------------------------------------------------------------------------------------------------------------- */
-
-/* creates triangle */
-.triangle-isosceles:after {
-  content:"";
-  position:absolute;
-  bottom:-15px; /* value = - border-top-width - border-bottom-width */
-  left:50%; /* controls horizontal position */
-  border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
-  border-style:solid;
-  border-color:rgb(235, 235, 235) transparent;
-  /* reduce the damage in FF3.0 */
-  display:block;
-  width:0;
+.speech-bubble:after {
+   content: '';
+   position: absolute;
+   border-style: solid;
+   border-width: 15px 15px 0;
+   border-color: #ffffff transparent;
+   display: block;
+   width: 0;
+   z-index: 1;
+   bottom: -15px;
+   left: 50%;
 }
-
-/* ============================================================================================================================
-== BUBBLE WITH A BORDER AND TRIANGLE
-** ============================================================================================================================ */
-
-/* THE SPEECH BUBBLE
-------------------------------------------------------------------------------------------------------------------------------- */
-
-.triangle-border {
-  position:relative;
-  padding:5px;
-  border:solid rgb(235, 235, 235);
-  border-width: 0px 0px 1px 0px;
-  color:#333;
-  background:#fff;
-}
-
-/* THE TRIANGLE
-------------------------------------------------------------------------------------------------------------------------------- */
-
-.triangle-border:before {
-  content:"";
-  position:absolute;
-  bottom:-20px; /* value = - border-top-width - border-bottom-width */
-  left:50%; /* controls horizontal position */
-  border-width:20px 21px 0;
-  border-style:solid;
-  border-color:rgb(235, 235, 235) transparent;
-  /* reduce the damage in FF3.0 */
-  display:block;
-  width:0;
-}
-
-/* creates the smaller  triangle */
-.triangle-border:after {
-  content:"";
-  position:absolute;
-  bottom:-15px; /* value = - border-top-width - border-bottom-width */
-  left:560px; /* value = (:before left) + (:before border-left) - (:after border-left) */
-  border-width:15px 17px 0;
-  border-style:solid;
-  border-color:#fff transparent;
-  /* reduce the damage in FF3.0 */
-  display:block;
-  width:0;
-}
-
-
-
 
   h3{font-size: 38px;line-height: 38px;font-weight: 400;}
   h4{font-size: 33px;}
@@ -133,7 +91,8 @@
   </head>
   <body>
     <div class="container">
-      <p class="triangle-border">Please take our 10 second customer survey</p>
+      <div class="speech-bubble">Please take our 10 second customer survey</div>
+
     </div>
   </body>
   </html>
