@@ -3,14 +3,14 @@
 <title>404 - Page Not Found</title>
 <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 <style type="text/css">
-  body{font-family: "Montserrat", sans-serif;}
+  body{font-family: "Montserrat", sans-serif;font-weight: 200;}
   .cruel-free{margin-left: -4px;}
-  .text{font-family: 'Poiret One', cursive;font-size: 20px;margin-top: 40px;}
+  .text{font-size: 20px;margin-top: 40px;}
   .linebreak5{margin-top: 30px;}
   .cream-swatch img{width: 300px;}
   a{color: #e1c37b; }
   a:hover {color: #e1c37b;}
-  h2{font-size: 40px;}
+  h2{font-size: 38px;font-weight: 200;}
   /*Responsive for different screen*/
   @media screen and (min-width: 1199px) {.social-wrap{margin-left: 42px;}}
   @media screen and (max-width: 767px){.text{margin-top: 0; margin-left: 20px;margin-right: 20px;}}
