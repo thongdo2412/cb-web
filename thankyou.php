@@ -60,15 +60,15 @@
 
     //Add me to a thank you page using an html snippet
     //You must change the landing_page_url  variable to your landing page URL for this script to work.
-    var Response = getParameterByName('inf_custom_SurveyResponse');
+    var Response = getParameterByName('inf_option_Surveyresponse');
     var content = document.getElementById('res');
-    if (parseInt(Response) >= 9) {
+    if (parseInt(Response) == 277 || parseInt(Response) == 297) {
       content.innerHTML = "Your response is 9 or 10";
     }
-    else if (parseInt(Response) >= 7 && parseInt(Response) < 9){
+    else if (parseInt(Response) == 279 || parseInt(Response) == 281){
       content.innerHTML = "Your response is 7 or 8";
     }
-    else if (parseInt(Response) > 0 && parseInt(Response) < 7){
+    else {
       content.innerHTML = "Your response is among 0 to 6";
     }
 
