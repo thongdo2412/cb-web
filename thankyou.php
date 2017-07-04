@@ -62,10 +62,10 @@
     //You must change the landing_page_url  variable to your landing page URL for this script to work.
     var Response = getParameterByName('inf_option_Surveyresponse');
     var content = document.getElementById('res');
-    if (parseInt(Response) == 277 || parseInt(Response) == 297) {
+    if (parseInt(Response) >= 291) {
       content.innerHTML = "Your response is 9 or 10";
     }
-    else if (parseInt(Response) == 279 || parseInt(Response) == 281){
+    else if (parseInt(Response) >= 287){
       content.innerHTML = "Your response is 7 or 8";
     }
     else {
