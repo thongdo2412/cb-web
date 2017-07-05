@@ -6,6 +6,7 @@
   	<![endif]-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Lips</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,700|Playfair+Display:300,400,700">
     <style>
      /* general css*/
