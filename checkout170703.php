@@ -33,7 +33,7 @@
 
       a {text-decoration: none;}
       header, footer {font-size: 13px;color: #ffffff;background: rgb(9,30,55) center no-repeat fixed;background-size: cover;}
-      header {height: 108px;}
+      header {height: 100px;}
       header img {width: 110px;}
       footer {height: 58px;}
       footer a,a:hover{text-decoration: none; color: #ffffff}
@@ -67,14 +67,15 @@
 
       /* css for section 1*/
       #section1 {margin-top: 30px;}
-      .section1-txt {text-align: left;float: left;width: 480px;margin-left: 130px;font-size: 19px;}
-      .section1-pic {float: right;width: 172px;margin-right: 150px;}
+      .section1-txt {text-align: left;float: left;width: 480px;margin-left: 130px;margin-top: 50px;font-size: 19px;}
+      .section1-pic {float: right;width: 172px;margin-right: 160px;}
+      .section1-pic img {width: 220px;}
       .section1-pic-innertxt {width: 150px;font-size: 11px;line-height: 14px;text-align: left;padding-left: 12px;}
       #choosepkgs{margin-top: 30px;}
       .package{padding: 10px 40px 40px 40px;}
       .greybox{width: 260px;height: 300px;background: #eaeaea center no-repeat fixed;border: 2px solid #ababab;}
       .goldbox{width: 260px;height: 360px;background: #f0e3c7 center no-repeat fixed;border: 2px solid #dfbf78;}
-      .blue-btn {width: 216px;height: 36px;border: 1px solid #000000;color: #ffffff;font-size: 21px;font-weight: 400;
+    /*  .blue-btn {width: 216px;height: 36px;border: 1px solid #000000;color: #ffffff;font-size: 21px;font-weight: 400;
          background-color: #004684; background-image: -webkit-gradient(linear, left top, left bottom, from(#004684), to(#00315C));
          background-image: -webkit-linear-gradient(top, #004684, #00315C);
          background-image: -moz-linear-gradient(top, #004684, #00315C);
@@ -90,12 +91,16 @@
          background-image: -o-linear-gradient(top, #1478D0, #0f5fa6);
          background-image: linear-gradient(to bottom, #1478D0, #0f5fa6);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#1478D0, endColorstr=#0f5fa6);
          cursor: pointer;
-      }
+      } */
       .mostpopArrow{position: relative;top: 16px;}
+
+      /*css for dr turk section*/
+      .drturk-pic {float: left;}
+      .drturk-txt {float: right; width: 68%;margin-top: -5px;}
 
       /* css for section 2*/
       .sectiondiv {padding: 40px 0px;}
-      .heading {width: 240px;font-size: 30px;font-family: 'Playfair Display',serif;font-weight: 700;float: left;text-align: left;}
+      .heading {width: 240px;font-size: 30px;font-family: 'Playfair Display',serif;font-weight: 700;float: left;text-align: left; line-height: 36px;}
       .content {width: 596px;text-align: left;float: right;}
       .video_box {width: 100%;height: 336px;}
       .research_wrd{font-weight: 400;margin-left: 36px;}
@@ -109,7 +114,7 @@
       .section4-txt {width: 590px;text-align: left;float: right;margin-top: 140px;}
       .h1a {font-family: 'Playfair Display',serif; font-size: 38px;font-weight: 700;}
       .guarantee_pic{position: relative; top: -180px; left: 36px;}
-      .gold-btn {width: 300px; height: 40px;font-size: 24px; font-weight: 400;color: #000000;
+      .gold-btn {
         background-color: #DFBF78; background-image: -webkit-gradient(linear, left top, left bottom, from(#DFBF78), to(#C6A96A));
         background-image: -webkit-linear-gradient(top, #DFBF78, #C6A96A);
         background-image: -moz-linear-gradient(top, #DFBF78, #C6A96A);
@@ -125,7 +130,10 @@
         background-image: -o-linear-gradient(top, #F8D58A, #c7ab6e);
         background-image: linear-gradient(to bottom, #F8D58A, #c7ab6e);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#F8D58A, endColorstr=#c7ab6e);
         cursor: pointer;
+        color: #ffffff;
       }
+      .big-btn {width: 300px; height: 40px; font-size: 24px; color: #000000; font-weight: 400;}
+      .reg-btn {width: 216px; height: 36px; font-size: 21px; color: #000000; font-weight: 400;}
 
       /* css for section 5*/
       .goldborder-box{height: 394px;width: 100%;border: 2px solid #dfbf78;}
@@ -134,11 +142,10 @@
       .goldborder-box-right {width: 430px; padding-right: 40px;float: right;padding-top: 50px;}
       .section5-head{font-size: 24px;font-family: 'Playfair Display',serif; font-weight: 700;
         width: 124px;height: 30px;background-color: #ffffff;position: relative;top:18px;}
-      .section5-icons {margin-left: 40px; margin-top: 50px;}
+      .section5-icons {margin-left: 40px; margin-top: 54px;}
 
       /* css for section 6*/
       .section6-heading {width: 240px; line-height: 36px;}
-
 
     </style>
 
@@ -158,14 +165,11 @@
         <div class="linebreak30"></div>
         <div class="section1-txt">
           <div class="semibold">YOU’RE ABOUT TO JOIN THOUSANDS OF WOMEN WHO ENJOY PLUMP, YOUNGER-LOOKING LIPS.</div>
-          <div class="linebreak10"></div>
+          <div class="linebreak20"></div>
           And to make it even easier, we're offering additional savings on multi-tube packages. This allows us to save on the cost of processing each other individually, savings that we pass on to you.
         </div>
         <div class="section1-pic">
-          <img src="../img/drturk-sm.png" alt="dr turk pic" />
-          <div class="section1-pic-innertxt">
-            Dr. Turk is Double Board Certified by the American Board of Facial Plastic and Reconstructive Surgery and the American Board of Otolaryngology - Head and Neck Surgery.
-          </div>
+          <img src="../img/bf_aft.png" alt="before n after lip" />
         </div>
         <div class="clearfix"></div>
         <div id="choosepkgs">
@@ -178,7 +182,7 @@
           <div class="greybox centered_flex">
             <div>
               <h2>Basic</h2>
-              <div class="linebreak10"></div>
+              <div class="linebreak20"></div>
               <h6>1 TUBE OF CITY LIPS&reg;</h6>
               Retail:  &nbsp;<span class="linethru">$45</span>
               <div class="linebreak20"></div>
@@ -187,8 +191,8 @@
               YOU SAVE $10
               <div class="linebreak20"></div>
               + $4.95 Shipping
-              <div class="linebreak5"></div>
-              <a href="#"><div class="blue-btn centered_flex">GET STARTED</div></a>
+              <div class="linebreak10"></div>
+              <a href="https://citybeauty.com/cmd.php?pid=9fa8539faceb4050bbc0ddff0d905b65&bn=1&clear=1&coup=1"><div class="gold-btn reg-btn centered_flex">GET STARTED</div></a>
             </div>
           </div>
           <div class="goldbox centered_flex">
@@ -198,32 +202,46 @@
               <h6>3 TUBES OF CITY LIPS&reg;</h6>
               Retail:  &nbsp;<span class="linethru">$135</span>
               <div class="linebreak30"></div>
-              <h3>Now: $70</h3>
+              <h3>Now: $87</h3>
               <div class="linebreak5"></div>
-              Only $25 Each!
+              Only $29 Each!
               <div class="linebreak30"></div>
               + Free Shipping
-              <div class="linebreak5"></div>
-              <a href="#"><div class="blue-btn centered_flex">GET STARTED</div></a>
+              <div class="linebreak10"></div>
+              <a href="https://citybeauty.com/cmd.php?pid=deb80b84100a4f079caafb80769a083c&bn=1&clear=1&coup=1"><div class="gold-btn reg-btn centered_flex">GET STARTED</div></a>
             </div>
           </div>
           <div class="greybox centered_flex">
             <div>
               <h2>Combo</h2>
-              <div class="linebreak10"></div>
+              <div class="linebreak20"></div>
               <h6>2 TUBES OF CITY LIPS&reg;</h6>
               Retail:  &nbsp;<span class="linethru">$90</span>
               <div class="linebreak20"></div>
-              <h3>Now: $60</h3>
+              <h3>Now: $66</h3>
               <div class="linebreak5"></div>
-              Only $30 Each!
+              Only $33 Each!
               <div class="linebreak20"></div>
               + Free Shipping
-              <div class="linebreak5"></div>
-              <a href="#"><div class="blue-btn centered_flex">GET STARTED</div></a>
+              <div class="linebreak10"></div>
+              <a href="https://citybeauty.com/cmd.php?pid=8021f125fc424998865e0f4ea777347f&bn=1&clear=1&coup=1"><div class="gold-btn reg-btn centered_flex">GET STARTED</div></a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <hr>
+    <div class="sectiondiv">
+      <div class="container">
+        <div class="heading">About <br/>Dr. Jon Turk</div>
+        <div class="content">
+          <img class="drturk-pic" src="../img/drturk-sm.png" alt="dr turk" />
+          <div class="drturk-txt">
+            <span class="semibold">DR. TURK</span> is Double Board Certified by the American Board of Facial Plastic and Reconstructive Surgery and the American Board of Otolaryngology - Head and Neck Surgery.
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
       </div>
     </div>
     <hr>
@@ -277,7 +295,7 @@
     <hr>
     <div class="sectiondiv">
       <div class="container">
-        <div class="heading"><div class="section3-heading">Real Stories from Recent Customers</div></div>
+        <div class="heading section3-heading">Real Stories from Recent Customers</div>
         <div class="content">
           <div class="cus_reviews">
             <img src="../img/stars_rating2.png"></img>
@@ -329,7 +347,7 @@
           <div class="linebreak20"></div>
           <h6>60 DAY MONEY BACK GUARANTEE</h6>
           <div class="linebreak30"></div>
-          <a href="#choosepkgs"><div class="gold-btn centered_flex">ORDER NOW</div></a>
+          <a href="#choosepkgs"><div class="gold-btn big-btn centered_flex">ORDER NOW</div></a>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -384,7 +402,7 @@
         <div class="heading"><div class="section6-heading">Frequently Asked Questions</div></div>
         <div class="content">
           <div class="faq">
-            <h5>WHICH ORDER OPTIONS IS RIGHT FOR ME?</h5>
+            <h5>WHICH ORDER OPTION IS RIGHT FOR ME?</h5>
             <div class="linebreak10"></div>
             Many of our returning customers appreciate the 3-pack because it offers the best value. And we're happy to do it because it saves us the cost of processing individual units. If you just want to try 1 tube, we've already reduced the price far below original retail. So you can't go wrong with any of the options. And I just know that you'll fall in love with your new lips either way.
             <div class="linebreak30"></div>
@@ -420,7 +438,7 @@
           <div class="linebreak20"></div>
           <h6>60 DAY MONEY BACK GUARANTEE</h6>
           <div class="linebreak30"></div>
-          <a href="#choosepkgs"><div class="gold-btn centered_flex">ORDER NOW</div></a>
+          <a href="#choosepkgs"><div class="gold-btn big-btn centered_flex">ORDER NOW</div></a>
         </div>
         <div class="clearfix"></div>
       </div>
