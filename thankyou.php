@@ -72,11 +72,6 @@
       content.innerHTML = "Your response is among 0 to 6";
     }
 
-    var landing_page_url = 'https://citybeauty.com'
-    var seconds_to_wait = 4
-    //Don't change this
-    setTimeout("window.location.href = landing_page_url", seconds_to_wait * 1000);
-
   </script>
   </body>
   </html>

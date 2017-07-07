@@ -20,8 +20,6 @@
   footer{color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
   footer a,a:hover{text-decoration: none; color: #ffffff;}
   .cruel-free {width: 118px;height: 32px;margin-left: -14px;}
-  .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
-  .container{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
   .centered_flex{display: flex;justify-content:center;align-items: center; }
   .centered_nav{display: flex;justify-content: center;align-items: center;}
   b{font-weight: 400;}
@@ -84,15 +82,56 @@
   h4{font-size: 33px;}
   h5{font-size: 20px;}
   h6{font-size: 18px;display: inline;}
-  body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden; height: 100%;}
-  body{font-family: "Montserrat", sans-serif;text-align: center;font-size: 16px; font-weight: 300;line-height: 24px;}
+
+  .topline {background-color: #e6e6e6; font-size: 14px;}
+  .list-left {float: left; padding-left: 60px;line-height: 30px;}
+  .list-right {float: right; padding-right: 120px;line-height: 30px;}
+  .heading .subheading{font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;}
+
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    background-size: 100% auto;
+    min-width: 20%;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
+  }
+  body{
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
+  }
 
   </style>
   </head>
   <body>
-    <div class="container">
-      <div class="speech-bubble">Please take our 10 second customer survey</div>
+    <header class="centered_flex">
+      <img src="../img/city-beauty-logo.png" alt="citylogo" />
+    </header>
+  <div class="topline">1-800-347-1558 • M-F: 5am-7pm PT • S-S: 6am-4:30pm PT</div>
 
+    <div id="section1">
+      <div class="container">
+        <p>test test test</p>
+        <img src="../img/face-lowerpart.png" />
     </div>
+  </div>
+    <hr>
   </body>
   </html>
