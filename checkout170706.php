@@ -62,9 +62,10 @@
       h4 {font-size: 27px;font-weight: 300;}
       h5 {font-size: 20px;font-weight: 300;}
       h6 {font-size: 18px;font-weight: 300;}
-      .container {max-width: 960px;margin:0 auto; text-align: center;margin-left: auto;margin-right: auto;background-size: 100% auto;min-width: 20%;background-size: cover;}
+      .container {width: 960px;margin:0 auto; text-align: center;margin-left: auto;margin-right: auto;background-size: 100% auto;min-width: 20%;background-size: cover;}
       body,html {box-sizing: border-box; margin: 0;overflow-x: hidden;padding:0; width: 100%;height: 100%;}
-      body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;}
+      body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;position: relative;}
+      #maincontent {position: absolute;height: 100%;width: 100%;}
       /* css for section 1*/
       #section1 {margin-top: 30px;}
       .section1-txt {text-align: left;float: left;width: 650px;margin-left: 60px;margin-top: 15px;font-size: 19px;}
@@ -110,8 +111,8 @@
       .section3-heading{width: 170px;line-height: 36px;}
 
       /* css for section 4*/
-      .section4-pic {width: 370px; float: left;}
-      .section4-txt {width: 590px;text-align: left;float: right;margin-top: 140px;}
+      .section4-pic {width: 370px;float: left;}
+      .section4-txt {width: 590px;text-align: left;margin-top: 140px;float: right;}
       .h1a {font-family: 'Playfair Display',serif; font-size: 38px;font-weight: 700;}
       .guarantee_pic{position: relative; top: -180px; left: 36px;}
       .gold-btn {
@@ -152,9 +153,9 @@
       .list-right {float: right; padding-right: 120px;line-height: 30px;}
       .heading .subheading{font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;}
 
-      @media screen and (max-width:991px) {
+    /*  @media screen and (max-width:991px) {
         .heading,.content,.section1-txt,.section1-pic,.section4-txt,.section4-pic {clear: both;}
-      }
+      }*/
 
     </style>
 
@@ -164,7 +165,7 @@
       <img src="../img/city-beauty-logo.png" alt="citylogo" />
     </header>
   <div class="topline">1-800-347-1558 • M-F: 5am-7pm PT • S-S: 6am-4:30pm PT</div>
-
+  <div id="maincontent">
     <div id="section1">
       <div class="container">
         <h1>Special Internet Only Offer on City Lips<span class="sup1">&reg;</span></h1>
@@ -472,7 +473,7 @@
        <div class="clearfix"></div>
      </div>
    </footer>
-
+</div>
 
   </body>
 </html>
