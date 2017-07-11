@@ -178,12 +178,12 @@ div.form-group input.form-control{width: 200px;} div.form-group select.form-cont
                     <p>SUBJECT*
                       <select class="form-control" id="form_subject" type="text" name="subject" required="required" data-error="Subject is required.">
                         <option selected disabled class="hideoption">---</option>
-                        <option value="City Lips">1. Place An Order</option>
-                        <option value="City Views">2. Product Question(s)</option>
-                        <option value="City Lash">3. Order Status</option>
-                        <option value="Under Eye Recovery">4. Billing Question</option>
-                        <option value="Under Eye Recovery">5. Membership Inquiry</option>
-                        <option value="Under Eye Recovery">6. Other</option>
+                        <option value="Place An Order">1. Place An Order</option>
+                        <option value="Product Question(s)">2. Product Question(s)</option>
+                        <option value="Order Status">3. Order Status</option>
+                        <option value="Billing Question">4. Billing Question</option>
+                        <option value="Membership Inquiry">5. Membership Inquiry</option>
+                        <option value="Other">6. Other</option>
                       </select>
                     </p>
                     <div class="help-block with-errors"></div>

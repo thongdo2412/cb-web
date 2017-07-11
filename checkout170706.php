@@ -62,14 +62,15 @@
       h4 {font-size: 27px;font-weight: 300;}
       h5 {font-size: 20px;font-weight: 300;}
       h6 {font-size: 18px;font-weight: 300;}
-      .container {width: 960px;margin:0 auto; text-align: center;margin-left: auto;margin-right: auto;background-size: 100% auto;min-width: 20%;background-size: cover;}
+      .container {max-width: 960px;margin:0 auto; text-align: center;margin-left: auto;margin-right: auto;background-size: 100% auto;}
       body,html {box-sizing: border-box; margin: 0;overflow-x: hidden;padding:0; width: 100%;height: 100%;}
       body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;position: relative;}
       #maincontent {position: absolute;height: 100%;width: 100%;}
       /* css for section 1*/
-      #section1 {margin-top: 30px;}
-      .section1-txt {text-align: left;float: left;width: 650px;margin-left: 60px;margin-top: 15px;font-size: 19px;}
-      .section1-pic {float: right;}
+      #section1 {margin-top: 30px;max-width: 100%;height: auto;width: auto\9;}
+
+      .section1-txt {text-align: left;width: 70%;margin-top: 15px;font-size: 19px;}
+      .section1-pic {width: 32%;}
       .section1-pic img {width: 220px;}
       .section1-pic-innertxt {width: 150px;font-size: 11px;line-height: 14px;text-align: left;padding-left: 12px;}
       #choosepkgs{padding-top: 15px;}
@@ -158,8 +159,8 @@
       }*/
 
     </style>
-
   </head>
+
   <body>
     <header class="centered_flex">
       <img src="../img/city-beauty-logo.png" alt="citylogo" />
@@ -170,27 +171,26 @@
       <div class="container">
         <h1>Special Internet Only Offer on City Lips<span class="sup1">&reg;</span></h1>
         <div class="linebreak30"></div>
-        <div class="section1-txt">
-          <div>Last Week Alone - Over 1,805 Women Chose City Lips<sup>&reg;</sup> for...</div>
-          <div class="linebreak20"></div>
-          <ul class="list-left">
-          	<li>Fuller Looking Lips</li>
-          	<li>All-day Hydration</li>
-          </ul>
-          <ul class="list-right">
-          	<li>Collagen Support</li>
-          	<li>Soft, Kissable Lips</li>
-          </ul>
-          <div class="clearfix"></div>
-          <div class="linebreak20"></div>
-          And to make it even easier for you, we're offering multi-tube packages so you get additional savings.
-          <div class="linebreak20"></div>
-          <i style="font-size: 17px;">All orders are one-time purchases. We never auto-bill without your permission.</i>
+        <div class="section1-top">
+          <div class="section1-txt">
+            <div>Last Week Alone - Over 1,805 Women Chose City Lips<sup>&reg;</sup> for...</div>
+            <div class="linebreak20"></div>
+            <ul class="list-left">
+            	<li>Fuller Looking Lips</li>
+            	<li>All-day Hydration</li>
+            </ul>
+            <ul class="list-right">
+            	<li>Collagen Support</li>
+            	<li>Soft, Kissable Lips</li>
+            </ul>
+            <div class="clearfix"></div>
+            <div class="linebreak20"></div>
+            And to make it even easier for you, we're offering multi-tube packages so you get additional savings.
+            <div class="linebreak20"></div>
+            <i style="font-size: 17px;">All orders are one-time purchases. We never auto-bill without your permission.</i>
+          </div>
+          <div class="section1-pic"><img src="../img/bf_aft.png" alt="before n after lip" /></div>
         </div>
-        <div class="section1-pic">
-          <img src="../img/bf_aft.png" alt="before n after lip" />
-        </div>
-        <div class="clearfix"></div>
         <div id="choosepkgs">
           <h4>CHOOSE YOUR PACKAGE</h4>
           <div class="linebreak10"></div>

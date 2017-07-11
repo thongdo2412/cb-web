@@ -13,90 +13,73 @@
     <!-- main css-->
   <style type="text/css">
 
-  a {text-decoration: none;}
-  *{margin:0 auto;}
-  header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
-  header img{width: 97px;}
-  footer{color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
-  footer a,a:hover{text-decoration: none; color: #ffffff;}
-  .cruel-free {width: 118px;height: 32px;margin-left: -14px;}
-  .centered_flex{display: flex;justify-content:center;align-items: center; }
-  .centered_nav{display: flex;justify-content: center;align-items: center;}
-  b{font-weight: 400;}
-  .button{width: 171px;height: 30px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
-  .button_sm{width: 80px;height: 30px;font-size: 14px; margin-left: 10px;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
-  .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
-  .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;}
-  .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
-  .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
-  .button_blue a{color: #ffffff;}
-  .button_wht a{color: rgb(6, 16, 42);}
-  .sup1{vertical-align: super;}
-  .jumbotron p{font-size: 16px;font-weight: 300; line-height: 24px;}
-  .jumbotron_wht{background: rgb(255,255,255);}
-  .jumbotron_w_bg{background: rgb(248,249,249);background-size: cover;border: 1px solid rgb(235, 235, 235);margin: 0 auto;}
-  .jumbotron_w_imgbg{height: 528px;background-image: url("../img/gift_bg.png");border: 1px solid rgb(235, 235, 235);background-size:100% cover;background-position:center;}
-  .b3textbox{width:382px;background-color:rgb(255,255,255); text-align:center;}
-  .linebreak10{margin-top: 10px;}
-  .linebreak12{margin-top: 12px;}
-  .linebreak20{margin-top: 20px;}
-  .linebreak24{margin-top: 24px;}
-  .linebreak30{margin-top: 30px;}
-  .linebreak40{margin-top: 40px;}
+  /* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
 
-.speech-bubble {
-   position: relative;
-   text-align: center;
-   padding: 4px;
-   background: #ffffff;
-   border: #d4d4d4 solid;
-   border-width: 0 0 1px 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
 }
-.speech-bubble:before {
-   content: '';
-   position: absolute;
-   border-style: solid;
-   border-width: 15px 15px 0;
-   border-color: #d4d4d4 transparent;
-   display: block;
-   width: 0;
-   z-index: 0;
-   bottom: -16px;
-   left:50%;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
 }
 
-.speech-bubble:after {
-   content: '';
-   position: absolute;
-   border-style: solid;
-   border-width: 15px 15px 0;
-   border-color: #ffffff transparent;
-   display: block;
-   width: 0;
-   z-index: 1;
-   bottom: -15px;
-   left: 50%;
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
 }
 
-  h3{font-size: 38px;line-height: 38px;font-weight: 400;}
-  h4{font-size: 33px;}
-  h5{font-size: 20px;}
-  h6{font-size: 18px;display: inline;}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
 
-  .topline {background-color: #e6e6e6; font-size: 14px;}
-  .list-left {float: left; padding-left: 60px;line-height: 30px;}
-  .list-right {float: right; padding-right: 120px;line-height: 30px;}
-  .heading .subheading{font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;}
+*{
+  margin:0 auto;
+}
 
-  .container {
-    width: 960px;
-    margin: 0 auto;
-    background-size: 100% auto;
-    min-width: 20%;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.container {
+  width: 960px;
+  margin: 0 auto;
+  background-size: 100% auto;
+  min-width: 20%;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   html {
     box-sizing: border-box;
@@ -121,17 +104,29 @@
   </style>
   </head>
   <body>
-    <header class="centered_flex">
-      <img src="../img/city-beauty-logo.png" alt="citylogo" />
-    </header>
+    
   <div class="topline">1-800-347-1558 • M-F: 5am-7pm PT • S-S: 6am-4:30pm PT</div>
-
-    <div id="section1">
-      <div class="container">
-        <p>test test test</p>
-        <img src="../img/face-lowerpart.png" />
+<div id="mainContent">
+  <div class="topsection">
+    <div class="container" style="width:854px;height:385px;padding-top:30px;">
+          <div style="width:556px">
+            <div style="font-size:28px;line-height: 38px;">Last Week Alone - Over 1,405 Women Choose City Lips<span class="sup1" style="font-size:15px">&reg;</span>
+            </div>
+            <div>&nbsp</div>
+            <div>
+                <p>You're about to join thousands of women who are already experiencing fuller, younger-looking lips.</p>
+                <div>&nbsp</div>
+                <p style="font-weight:300">And to make it even easier, we're offering additional savings on multi-tube packages.
+                  This allows us to save on the cost of processing each other individually, savings that we pass on to you.</p>
+                <div>&nbsp</div>
+                  <p style="font-style: italic;">Note: This is a one-time purchase. We do not auto-bill your credit card.</p>
+              </div>
+          </div>
+          <div style="padding-left:600px;position:relative; bottom:315px"><img src="../img/bf_aft.png"></img></div>
+      </div>
+      <div class="clearfloat"></div>
     </div>
-  </div>
     <hr>
+  </div>
   </body>
   </html>

@@ -22,18 +22,18 @@ header{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 au
 header img {width: 97px;}
 footer {background-color: #e6e6e6;height: 54px;font-size: 14px;font-weight: 300;}
 footer a{color: #000; text-decoration: none;}
-.container{width: 960px;margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
+.footercontainer {width: 960px;padding: 0 20px;}
+.container{max-width: 960px;margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .centered_flex{display: flex;justify-content:center;align-items: center; }
-.centered_nav{display: flex;justify-content: center;align-items: center;}
-.nav{font-size: 14px;font-family: "Montserrat", sans-serif; font-weight: 300;}
+#maincontent{padding: 0 20px;margin: 0 auto;list-style: none;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-flow: row nowrap;justify-content: space-between;}
 .sup1{vertical-align: super;}
 .floatL{float: left;}
 .floatR{float: right;}
 hr{border-top: 1px solid #d5d5d5; margin: 0;}
 .linebreak20{margin-top: 20px;}
 .linebreak50{margin-top: 50px;}
-.left-info {width: 240px;float: left;text-align: left;}
-.right-info{float: right;text-align: left;width: 680px;margin-left: 10px;}
+.left-info {width: 25%;text-align: left;}
+.right-info{text-align: left;width: 70%; margin-left: 12px;}
 .clear{clear: both;}
 .blue-title-div {background-color:rgb(9,30,55);text-align: center;padding: 15px 0;}
 .blue-title-div p{color: #fff; font-weight: bold; margin: 0; font-size: 19px;}
@@ -43,14 +43,23 @@ hr{border-top: 1px solid #d5d5d5; margin: 0;}
  .dr-info{width:100%;}
  .info-p{margin-top: 5px;font-size: 14px;}
  /* ooyala */
- .video{height: 396px;margin-bottom: -10px;}
+ .video{max-height: 396px;width: 100%;}
  .oo-control-bar{visibility: hidden;pointer-events: none;}
  .oo-animate-pause { opacity: 1 !important}
  .oo-spinner-wrapper { width: 20px;}
  .oo-icon-system-replay {font-size: 20px;}
+ #limelightWrapper {margin:0 auto; width:auto; height:auto; /*padding-bottom:56.2%;*/ margin-bottom:20px;border: 1px solid #000;}
+ .LimelightEmbeddedPlayer {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   display: block;
+ }
  /* CTA css */
  #CTALink{display:none;}
- .CTA{height:49px; /*z-index: 11;*/ position: relative;width:310px; margin:auto; padding: 10px;}
+ .CTA{height:49px; /*z-index: 11;*/ position: relative;width:310px; margin:auto;}
  .button{
    background: -webkit-linear-gradient(#00CC00, #006600); /* For Safari 5.1 to 6.0 */
      background: -o-linear-gradient(#00CC00, #006600); /* For Opera 11.1 to 12.0 */
@@ -59,7 +68,7 @@ hr{border-top: 1px solid #d5d5d5; margin: 0;}
    border: 1px solid #006600; border-radius:8px; width: 300px; height: 39px; text-align: center;}
  .button:hover{box-shadow:2px 2px 10px 2px #aaa;}
  .button a{text-decoration: none; color: #fff; font-weight: bold; font-size: 22px; line-height: 37px;}
-
+h1 {line-height: 30px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 30px;font-weight: 300;}
 h4{font-size: 20px;line-height: 24px;font-weight: 300;}
 h5{font-size: 16px; font-weight: 400;}
@@ -72,18 +81,16 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
 </head>
 <body>
   <header class="centered_flex">
-    <div class="container">
-      <a href="/"><img src="../img/city-beauty-logo.png" alt="citylogo"></a>
-    </div>
+    <a href="/"><img src="../img/city-beauty-logo.png" alt="citylogo"></a>
   </header>
   <div class="linebreak50"></div>
-  <div id="maincontent">
-    <div class="container">
+  <div class="container">
+    <div  id="maincontent">
       <div class="left-info">
         <div class="blue-title-div">
           <p>FEATURED TOPICS</p>
         </div>
-        <p class="info-p">John Turk, MD - featured in <i>New York Magazine's</i> edition of "America's Best Doctors"</p>
+        <p class="info-p">Jon B. Turk, MD - recently recognized as one of America’s Best Doctors by <i>New York Magazine</i></p>
         <img class="dr-info" src="../img/dr-turk.jpg" alt="dr turk"/>
         <div class="caption">Dr. Jon B. Turk is Double Board Certified by the American Board of Facial Plastic and Reconstructive Surgery and the American Board of Otolaryngology</div>
         <p class="info-p">How to get fuller lips, without the risk of lip injections</p>
@@ -99,9 +106,10 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
         <p id="small-title">
           <b>Category:<span class="blue"> Health</span></b> - JUL 7, 2017
         </p>
-        <div class="linebreak50"></div>
+        <div class="linebreak20"></div>
         <div class="video">
-            <div id="LimelightEmbeddedPlayerFlash" style="width:100%;height:396px; margin:auto;"></div>
+
+            <div id="LimelightEmbeddedPlayerFlash" style="margin:auto;"></div>
                 <!-- start OOYALA ADD -->
                 <script>
                   var playerParam = {
@@ -114,9 +122,10 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
                  };
                  OO.ready(function() {
                    // change the second parameter (embed code) to change the video
-                 window.pp = OO.Player.create('LimelightEmbeddedPlayerFlash', 'E2bzduYjE6ZqkMqJUKUxT105dSSG3ww_', playerParam);
+                 window.pp = OO.Player.create('LimelightEmbeddedPlayerFlash', 'lpYjh2YjE6RKynwcG_bMI5IFS2LJrUIW', playerParam);
                  });
                 </script>
+
                 <!-- end OOYALA ADD -->
         </div>
         <div class="linebreak20"></div>
@@ -124,17 +133,13 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
             <div class="button" id="CTALink" ><a href="/citylips/checkout170706.php" target="_BLANK"><div>Discover City Lips</div></a></div>
             <noscript><div class="button" id="CTALink"><a href="/citylips/checkout170706.php" target="_BLANK"><div>Discover City Lips</div></a></div></noscript>
         </div>
-
-
       </div>
-      <div class="clear"></div>
-
     </div>
   </div>
 
 
   <footer class="centered_flex">
-    <div class="container">
+    <div class="footercontainer">
       <div class="floatL"><script type="text/javascript">
       now = new Date
       theYear=now.getFullYear()
