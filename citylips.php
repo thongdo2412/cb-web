@@ -232,7 +232,7 @@
                       <td class="shade-table-cell active">
                         <a href="#" class="swatch-box" id="nudeyork">
                           <div class="swatch-container" id="text_content">
-                            <div class="swatch-unit" style="background-color: #e07c56;"><div class="out-of-stock-line"></div></div>
+                            <div class="swatch-unit" style="background-color: #e07c56;"></div>
                           </div>
                         </a>
                       </td>
@@ -253,7 +253,7 @@
                       <td class="shade-table-cell active">
                         <a href="#" class="swatch-box" id="tokyokiss">
                           <div class="swatch-container" id="text_content">
-                            <div class="swatch-unit" style="background-color: #d4a286;"></div>
+                            <div class="swatch-unit" style="background-color: #d4a286;"><div class="out-of-stock-line"></div></div>
                           </div>
                         </a>
                       </td>
@@ -262,7 +262,7 @@
                       <td class="shade-table-cell active">
                         <a href="#" class="swatch-box" id="sundiego">
                           <div class="swatch-container" id="text_content">
-                            <div class="swatch-unit" style="background-color: #ff8a80;"><div class="out-of-stock-line"></div></div>
+                            <div class="swatch-unit" style="background-color: #ff8a80;"></div>
                           </div>
                         </a>
                       </td>
@@ -330,7 +330,7 @@
                           <td class="shade-table-cell active">
                             <a href="#!b1" class="swatch-box" id="nudeyork">
                               <div class="swatch-container" id="text_content">
-                                <div class="swatch-unit" style="background-color: #e07c56;"><div class="out-of-stock-line"></div></div>
+                                <div class="swatch-unit" style="background-color: #e07c56;"></div>
                               </div>
                             </a>
                           </td>
@@ -351,7 +351,7 @@
                           <td class="shade-table-cell active">
                             <a href="#!b1" class="swatch-box" id="tokyokiss">
                               <div class="swatch-container" id="text_content">
-                                <div class="swatch-unit" style="background-color: #d4a286;"></div>
+                                <div class="swatch-unit" style="background-color: #d4a286;"><div class="out-of-stock-line"></div></div>
                               </div>
                             </a>
                           </td>
@@ -360,7 +360,7 @@
                           <td class="shade-table-cell active">
                             <a href="#!b1" class="swatch-box" id="sundiego">
                               <div class="swatch-container" id="text_content">
-                                <div class="swatch-unit" style="background-color: #ff8a80;"><div class="out-of-stock-line"></div></div>
+                                <div class="swatch-unit" style="background-color: #ff8a80;"></div>
                               </div>
                             </a>
                           </td>
@@ -877,8 +877,7 @@
 
       // default image in lip holder and lip sample
       //updateOutofStock('clear');
-      updateOutofStock('nudeyork');
-      updateOutofStock('sundiego');
+      updateOutofStock('tokyokiss');
       setDisplayColor('clear');
       currentID = getActiveColor(); // get active color for add to cart
 
