@@ -6,7 +6,6 @@
   	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   	<![endif]-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<title>Test Page</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i|Playfair+Display:300,300i,400,400i">
 
@@ -104,7 +103,7 @@ a {
   </style>
   </head>
   <body>
-    
+
   <div class="topline">1-800-347-1558 • M-F: 5am-7pm PT • S-S: 6am-4:30pm PT</div>
 <div id="mainContent">
   <div class="topsection">

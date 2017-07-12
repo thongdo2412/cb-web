@@ -6,7 +6,6 @@
 	<![endif]-->
   <meta charset="UTF-8">
   <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The Truth About Thinning Lips...</title>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i|Playfair+Display:300,300i,400,400i">
   <script src="//player.ooyala.com/static/v4/stable/latest/core.min.js"></script>

@@ -5,6 +5,7 @@
   	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   	<![endif]-->
     <meta charset="UTF-8">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Lips</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,700|Playfair+Display:300,400,700">
@@ -15,7 +16,7 @@
      a, abbr, acronym, address, big, cite, code,
      del, dfn, em, img, ins, kbd, q, s, samp,
      small, strike, strong, sub, sup, tt, var,
-     b, u, i, center,
+     b, u, center,
      dl, dt, dd, ol, ul, li,
      fieldset, form, label, legend,
      table, caption, tbody, tfoot, thead, tr, th, td,
@@ -33,11 +34,10 @@
 
       a {text-decoration: none;}
       header, footer {font-size: 13px;color: #ffffff;background: rgb(9,30,55) center no-repeat fixed;background-size: cover;}
-      header {height: 100px;}
+      header {height: 84px;}
       header img {width: 110px;}
       footer {height: 58px;}
       footer a,a:hover{text-decoration: none; color: #ffffff}
-      .container {width: 960px;width: 960px;margin:0 auto; text-align: center;}
       .centered_flex{display: flex; justify-content:center; align-items: center;}
       .flexcontainer{padding: 0;margin: 0 auto;list-style: none;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-flow: row nowrap;justify-content: space-around;}
       .floatL {float: left;}
@@ -62,16 +62,18 @@
       h4 {font-size: 27px;font-weight: 300;}
       h5 {font-size: 20px;font-weight: 300;}
       h6 {font-size: 18px;font-weight: 300;}
-      body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
-      body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;}
-
+      .container {max-width: 960px;margin:0 auto; text-align: center;margin-left: auto;margin-right: auto;background-size: 100% auto;}
+      body,html {box-sizing: border-box; margin: 0;overflow-x: hidden;padding:0; width: 100%;height: 100%;}
+      body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;position: relative;}
+      #maincontent {position: absolute;height: 100%;width: 100%;}
       /* css for section 1*/
-      #section1 {margin-top: 30px;}
-      .section1-txt {text-align: left;float: left;width: 480px;margin-left: 130px;margin-top: 50px;font-size: 19px;}
-      .section1-pic {float: right;width: 172px;margin-right: 160px;}
+      #section1 {margin-top: 30px;max-width: 100%;height: auto;width: auto\9;}
+
+      .section1-txt {text-align: left;width: 70%;margin-top: 15px;font-size: 19px;}
+      .section1-pic {width: 32%;}
       .section1-pic img {width: 220px;}
       .section1-pic-innertxt {width: 150px;font-size: 11px;line-height: 14px;text-align: left;padding-left: 12px;}
-      #choosepkgs{margin-top: 30px;}
+      #choosepkgs{padding-top: 15px;}
       .package{padding: 10px 40px 40px 40px;}
       .greybox{width: 260px;height: 300px;background: #eaeaea center no-repeat fixed;border: 2px solid #ababab;}
       .goldbox{width: 260px;height: 360px;background: #f0e3c7 center no-repeat fixed;border: 2px solid #dfbf78;}
@@ -100,7 +102,7 @@
 
       /* css for section 2*/
       .sectiondiv {padding: 40px 0px;}
-      .heading {width: 240px;font-size: 30px;font-family: 'Playfair Display',serif;font-weight: 700;float: left;text-align: left; line-height: 36px;}
+      .heading {width: 340px;font-size: 30px;font-family: 'Playfair Display',serif;font-weight: 700;float: left;text-align: left; line-height: 36px;}
       .content {width: 596px;text-align: left;float: right;}
       .video_box {width: 100%;height: 336px;}
       .research_wrd{font-weight: 400;margin-left: 36px;}
@@ -110,8 +112,8 @@
       .section3-heading{width: 170px;line-height: 36px;}
 
       /* css for section 4*/
-      .section4-pic {width: 370px; float: left;}
-      .section4-txt {width: 590px;text-align: left;float: right;margin-top: 140px;}
+      .section4-pic {width: 370px;float: left;}
+      .section4-txt {width: 590px;text-align: left;margin-top: 140px;float: right;}
       .h1a {font-family: 'Playfair Display',serif; font-size: 38px;font-weight: 700;}
       .guarantee_pic{position: relative; top: -180px; left: 36px;}
       .gold-btn {
@@ -147,35 +149,51 @@
       /* css for section 6*/
       .section6-heading {width: 240px; line-height: 36px;}
 
-    </style>
+      .topline {background-color: #e6e6e6; font-size: 14px;}
+      .list-left {float: left; padding-left: 60px;line-height: 30px;}
+      .list-right {float: right; padding-right: 120px;line-height: 30px;}
+      .heading .subheading{font-family: "Montserrat",sans-serif;font-size: 18px; font-weight: 200;line-height: 24px;}
 
+    /*  @media screen and (max-width:991px) {
+        .heading,.content,.section1-txt,.section1-pic,.section4-txt,.section4-pic {clear: both;}
+      }*/
+
+    </style>
   </head>
+
   <body>
     <header class="centered_flex">
-      <div class="container">
-        <img src="../img/city-beauty-logo.png" alt="citylogo" />
-        <div class="linebreak1"></div>
-        1-800-347-1558 • M-F: 5am-7pm PT • S-S: 6am-4:30pm PT
-      </div>
+      <img src="../img/city-beauty-logo.png" alt="citylogo" />
     </header>
-
-    <div class="container">
-      <div id="section1">
+  <div class="topline">1-800-347-1558 • M-F: 5am-7pm PT • S-S: 6am-4:30pm PT</div>
+  <div id="maincontent">
+    <div id="section1">
+      <div class="container">
         <h1>Special Internet Only Offer on City Lips<span class="sup1">&reg;</span></h1>
         <div class="linebreak30"></div>
-        <div class="section1-txt">
-          <div class="semibold">YOU’RE ABOUT TO JOIN THOUSANDS OF WOMEN WHO ENJOY PLUMP, YOUNGER-LOOKING LIPS.</div>
-          <div class="linebreak20"></div>
-          And to make it even easier, we're offering additional savings on multi-tube packages. This allows us to save on the cost of processing each other individually, savings that we pass on to you.
+        <div class="section1-top">
+          <div class="section1-txt">
+            <div>Last Week Alone - Over 1,805 Women Chose City Lips<sup>&reg;</sup> for...</div>
+            <div class="linebreak20"></div>
+            <ul class="list-left">
+            	<li>Fuller Looking Lips</li>
+            	<li>All-day Hydration</li>
+            </ul>
+            <ul class="list-right">
+            	<li>Collagen Support</li>
+            	<li>Soft, Kissable Lips</li>
+            </ul>
+            <div class="clearfix"></div>
+            <div class="linebreak20"></div>
+            And to make it even easier for you, we're offering multi-tube packages so you get additional savings.
+            <div class="linebreak20"></div>
+            <i style="font-size: 17px;">All orders are one-time purchases. We never auto-bill without your permission.</i>
+          </div>
+          <div class="section1-pic"><img src="../img/bf_aft.png" alt="before n after lip" /></div>
         </div>
-        <div class="section1-pic">
-          <img src="../img/bf_aft.png" alt="before n after lip" />
-        </div>
-        <div class="clearfix"></div>
         <div id="choosepkgs">
           <h4>CHOOSE YOUR PACKAGE</h4>
           <div class="linebreak10"></div>
-          All orders are one-time purchases. We do not auto-bill your credit card.
         </div>
         <div class="mostpopArrow"><img src="../img/mostPop2.png" alt="most popular arrow" /></div>
         <div class="flexcontainer centered_flex package">
@@ -184,7 +202,7 @@
               <h2>Basic</h2>
               <div class="linebreak20"></div>
               <h6>1 TUBE OF CITY LIPS&reg;</h6>
-              Retail:  &nbsp;<span class="linethru">$45</span>
+              Was:  &nbsp;<span class="linethru">$45</span>
               <div class="linebreak20"></div>
               <h3>Now: $35</h3>
               <div class="linebreak5"></div>
@@ -200,11 +218,11 @@
               <h2>Value</h2>
               <div class="linebreak30"></div>
               <h6>3 TUBES OF CITY LIPS&reg;</h6>
-              Retail:  &nbsp;<span class="linethru">$135</span>
+              Was:  &nbsp;<span class="linethru">$135</span>
               <div class="linebreak30"></div>
               <h3>Now: $87</h3>
               <div class="linebreak5"></div>
-              Only $29 Each!
+              Only $29 Each
               <div class="linebreak30"></div>
               + Free Shipping
               <div class="linebreak10"></div>
@@ -216,11 +234,11 @@
               <h2>Combo</h2>
               <div class="linebreak20"></div>
               <h6>2 TUBES OF CITY LIPS&reg;</h6>
-              Retail:  &nbsp;<span class="linethru">$90</span>
+              Was:  &nbsp;<span class="linethru">$90</span>
               <div class="linebreak20"></div>
-              <h3>Now: $66</h3>
+              <h3>Now:$66</h3>
               <div class="linebreak5"></div>
-              Only $33 Each!
+              Only $33 Each
               <div class="linebreak20"></div>
               + Free Shipping
               <div class="linebreak10"></div>
@@ -233,11 +251,11 @@
     <hr>
     <div class="sectiondiv">
       <div class="container">
-        <div class="heading">About <br/>Dr. Jon Turk</div>
+        <div class="heading">About <br/>Jon Turk, MD<div class="subheading">the science behind CityLips<sup>&reg;</sup></div></div>
         <div class="content">
           <img class="drturk-pic" src="../img/drturk-sm.png" alt="dr turk" />
           <div class="drturk-txt">
-            <span class="semibold">DR. TURK</span> is Double Board Certified by the American Board of Facial Plastic and Reconstructive Surgery and the American Board of Otolaryngology - Head and Neck Surgery.
+            <span class="semibold">DR. JON B. TURK</span> is Double Board Certified by the American Board of Facial Plastic and Reconstructive Surgery and the American Board of Otolaryngology - Head and Neck Surgery.  He specializes in facial plastic surgery and practices at his offices in Manhattan and Long Island, NY.
           </div>
           <div class="clearfix"></div>
         </div>
@@ -455,7 +473,7 @@
        <div class="clearfix"></div>
      </div>
    </footer>
-
+</div>
 
   </body>
 </html>
