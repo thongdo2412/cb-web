@@ -88,71 +88,17 @@
          #popularStories a {color: inherit; text-decoration: none; cursor: pointer;}
          .newsSpace p{color: white; margin-top: 3px; margin-bottom: 30px;}
          .widthFix10{line-height: 22px; font-family: 'Open Sans', arial, sans-serif; font-size: 14px;}
-         #buttons {
-             border-radius: 5px;
-             padding: 14px 7px 14px 0px;
-             background: white;
-             /*width: 660px;*/
-             overflow: hidden;
-             /*margin: 150px auto 0;*/
-         }
+         #buttons {border-radius: 5px;padding: 14px 7px 14px 0px;background: white;overflow: hidden;}
          .facebook.button{margin-left: 0px;}
-
-         .button {
-             background: #DCE0E0;
-             position: relative;
-             display: block;
-             float: left;
-             height: 40px;
-             margin: 0 7px;
-             overflow: hidden;
-             width: 150px;
-             border-radius: 3px;
-             -o-border-radius: 3px;
-             -ms-border-radius: 3px;
-             -moz-border-radius: 3px;
-             -webkit-border-radius: 3px;
-         }
-
-         .icon {
-             display: block;
-             float: left;
-             position: relative;
-             z-index: 3;
-             height: 100%;
-             vertical-align: top;
-             width: 38px;
-             -moz-border-radius-topleft: 3px;
-             -moz-border-radius-topright: 0px;
-             -moz-border-radius-bottomright: 0px;
-             -moz-border-radius-bottomleft: 3px;
-             -webkit-border-radius: 3px 0px 0px 3px;
-             border-radius: 3px 0px 0px 3px;
-             text-align: center;
-         }
-
-         .icon i {
-             color: #fff;
-             line-height: 42px;
-         }
-
-         .slide {
-             z-index: 2;
-             display: block;
-             margin: 0;
-             height: 100%;
-             left: 38px;
-             position: absolute;
-             width: 112px;
-             -moz-border-radius-topleft: 0px;
-             -moz-border-radius-topright: 3px;
-             -moz-border-radius-bottomright: 3px;
-             -moz-border-radius-bottomleft: 0px;
-             -webkit-border-radius: 0px 3px 3px 0px;
-             border-radius: 0px 3px 3px 0px;
-         }
+         .button {background: #DCE0E0;position: relative;display: block;float: left;height: 40px;margin: 0 7px;
+          overflow: hidden;width: 150px;border-radius: 3px;-o-border-radius: 3px;-ms-border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;}
+         .icon {display: block;float: left;position: relative;z-index: 3;height: 100%;vertical-align: top;width: 38px;
+          -moz-border-radius-topleft: 3px;-moz-border-radius-topright: 0px;-moz-border-radius-bottomright: 0px;-moz-border-radius-bottomleft: 3px;-webkit-border-radius: 3px 0px 0px 3px;border-radius: 3px 0px 0px 3px;text-align: center;}
+         .icon i {color: #fff;line-height: 42px;}
+         .slide {z-index: 2;display: block;margin: 0;height: 100%;left: 38px;position: absolute;width: 112px;
+             -moz-border-radius-topleft: 0px;-moz-border-radius-topright: 3px;-moz-border-radius-bottomright: 3px;
+             -moz-border-radius-bottomleft: 0px;-webkit-border-radius: 0px 3px 3px 0px;border-radius: 0px 3px 3px 0px;}
          .google.button{width: initial;}
-
          .slide p {
              font-family: Open Sans;
              font-weight: 400;

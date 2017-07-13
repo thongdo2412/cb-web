@@ -1,7 +1,7 @@
 <!-- include PHP header and other prerequisite files-->
 <?php
-  $pid = 'cityviews';
-  $page_title = 'City Views';
+  $pid = 'youthcleanser';
+  $page_title = 'Youth Regenerating Cleanser';
   include("scripts/conn_init.php");
   include("scripts/insert.php");
  ?>
@@ -16,6 +16,7 @@
   footer p{font-size: 11px; word-wrap:break-word;}
   .container{width: 960px;}
   .sup1{vertical-align: super;}
+  .product_pic img {width: 112px;margin-left: 50px;}
   .product_info{text-align: left;}
   .product_notes{text-align: left;margin-top: 4px;}
   .productnotes_head{width: 148px;margin-top: 16px;}
@@ -114,6 +115,7 @@
     #review_form{width: 300px;margin:auto;}
     .product-gallery img {width: 180%; height: 180%;}
     .xsquantity{margin-left: 0;}
+    .undereyephoto img {width: 112px;}
   }
 
   @media screen and (max-width:549px){
@@ -149,25 +151,25 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 hidden-xs product_pic">
-            <img src="../img/cityviews.png" alt="city views">
+            <img src="../img/youthregeneratingcleanser.png" alt="youth cleanser">
           </div>
           <div class="col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-1 col-xs-10 col-xs-offset-1 product_info">
             <div class="row">
               <div class="col-lg-7 col-md-7 col-sm-7 col-xs-9">
-                <h3>City Views</h3>
+                <h3>Youth Regenerating Cleanser</h3>
                 <div class="linebreak12"></div>
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
                 <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
               </div>
               <div class="visible-xs col-xs-12 undereyephoto">
-                <img src="../img/cityviews.png" alt="city views">
+                <img src="../img/youthregeneratingcleanser.png" alt="youth cleanser">
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-lg-12">
-                <h6>$67.00</h6>
+                <h6>$38.00</h6>
               </div>
             </div>
             <hr>
@@ -227,14 +229,15 @@
                 </div>
                 <div id="description" class="collapse in" class="collapse in" name="collapse_content">
                   <div class="linebreak2"></div>
-                  <p>City Views is a rapid repair eye cream that absorbs at a fast pace to visibly repair the signs of under eye aging. Rich but lightweight, City Views hydrates, nourishes and protects the sensitive eye area and restores the skin’s youthful radiance. With exclusive anti-aging technology, City Views is clinically proven to give you younger looking eyes. City Views is suitable for all skin types.</p>
+                  <p>Youth Regenerating Cleanser is a gentle, fast-acting exfoliating cleanser formulated with natural, safe ingredients to provide your skin with an intensive deep clean. Our clinically-proven ingredients work together to remove dead skin cells, hydrate skin, and even tone for softer, healthier, more radiant skin.</p>
                   <div class="linebreak2"></div>
                   <b>FEATURES</b>
                   <div class="linebreak2"></div>
                   <ul class="features">
-                    <li>Specifically designed to target the key problems of the eye area</li>
-                    <li>Its powerful nourishing formula comes in a rich cream that helps to combat the visible signs of aging</li>
-                    <li>Use it during the day to protect your eyes from environmental damage, and at night to hydrate, replenish and refresh</li>
+                    <li><b>Bromelain</b> promotes enhanced hydration and softer skin by gently brushing away dead skin cells for fresh, renewed skin</li>
+                    <li><b>Caffeine Cosmospheres</b> help give skin a tighter look and reduce puffiness, while protecting the skin from free radical damage</li>
+                    <li><b>Hyaluronic Acid</b>, an anti-aging superstar ingredient, helps the skin retain moisture, promotes hydration, and prevents the skin from drying out</li>
+                    <li><b>Dragon’s Blood</b> reduces redness and swelling while repairing damaged collagen via high levels of proanthocyanidins</li>
                   </ul>
                 </div>
                 <hr>
@@ -248,7 +251,7 @@
                 <div id="details_drop" class="collapse in" name="collapse_content">
                   <div class="linebreak2"></div>
                   <ul class="details">
-                    <li>0.5 FL OZ / 15 ML</li>
+                    <li>1 FL OZ / 30 ML</li>
                     <li>CRUELTY-FREE</li>
                     <li>MANUFACTURED IN THE USA</li>
                   </ul>
@@ -265,7 +268,7 @@
               </div>
               <div id="ingredients" class="collapse">
               <div class="linebreak2"></div>
-              Water, Aloe Barbadensis Leaf Extract, Hydrogenated Vegetable Oil (Plant Derived), Isononyl Isononanoate, Glycerin, Butylene Glycol, Darutoside (Holy Herb), Albizia Julibrissin (Persian Silk Tree) Bark Extract, Sodium Acrylates Copolymer, Lecithin (Phospholipids), Chrysin, N-Hydroxysuccinimide, Palmitoyl Oligopeptide, Steareth-20, Palmitoyl Oligopeptide, Steareth-20, Palmitoyl Tetrapeptide-7, Polymethylsilsesquioxane, Asparagopsis Armata (Red Algae) Extract, Ascophyllum Nodostrum (Knotted Wrack) Extract, Sorbitol, Diamond Powder, Avena Sativa (Oat) Extract, Allantoin, Aloe Vera, Butyrospermum Parkii (Sea) Butter, Chamomilla Recutita (Matricaria) Flower Extract, Ethylhexylglyverin, Everlasting (Helichrysum Arenarium) Extract, Fragrance (Parfum), Phenosyethanol, Symphytum Officinale Extract, Tetrasodium Glutamate Diacetate, Tocopherol (Vitamin E), Urtica Dioica (Nettle) Extract, Acetyl Hexapeptide-3
+              Water, Sodium Methyl Oleoyl Taurate, Cocamidopropyl Betaine, Sodium Cocoyl Isethionate, Sodium Lauroyl Methyl Isethionate, Acrylates/Palmeth-25 Acrylate Copolymer, Caffeine, Polyquaternium-7, Iron Oxides, Microcrystalline Cellulose, Mannitol, Aminomethyl Propanol, Bromelian, Sodium Hyaluronate, Citric Acid, Croton Lechleri Resin Extract, Fragrance, Methylchloroisothiazolinone, Methylisothiazolinone, Tetrasodium Glutamate Diacetate, Red 33/CI 17200, Red 4/CI 14700
               </div>
               <hr>
               <div class="row">
@@ -291,7 +294,7 @@
             <div class="linebreak2"></div>
             <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">GOOD FOR</div>
-              <div class="col-lg-9 col-md-6 col-sm-6 col-xs-10 productnotes_words">Crows feet, lines, wrinkles, puffy eyes &amp; sagging skin</div>
+              <div class="col-lg-9 col-md-6 col-sm-6 col-xs-10 productnotes_words">Lines, wrinkles, puffy &amp; sagging skin</div>
             </div>
             <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs productnotes_head"><br></div>
@@ -307,7 +310,7 @@
             </div>
             <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">APPLICATION</div>
-              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words">Morning &amp; night: apply it all around your orbital bone and on the under-eye area until blended, being careful not to rub or tug on skin</div>
+              <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words">For daily cleansing, gently massage one to two pumps of Youth Regenerating Cleanser onto damp skin, then rinse with warm water. Pat skin dry and follow-up with moisturizer.</div>
             </div>
           </div>
         </div>
@@ -324,7 +327,7 @@
           <div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 faq_words">
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What IS City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What is Youth Regenerating Cleanser?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq1" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -332,11 +335,11 @@
             </div>
             <div id="faq1" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                City Views is an anti-aging eye cream suitable for all ages and skin types. This advanced blend of antioxidants, peptides and multivitamins helps restore the skin's youthful radiance by combating the visible signs of aging. It is a powerful nourishing formula that boosts collagen and elastin production while rehydrating the sensitive eye area to heal, strengthen and protect the skin.
+                Youth Regenerating Cleanser is a non-abrasive, natural exfoliant, intended to help even tone, rejuvenate skin, minimize the appearance of blemishes, and reduce the breakdown of collagen to diminish the appearance of signs of aging such as fine lines and wrinkles.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What does City Views do?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What makes Youth Regenerating Cleanser different than other exfoliating cleansers?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq2" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -344,27 +347,11 @@
             </div>
             <div id="faq2" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                <div>City Views addresses the five major signs of aging eyes, wrinkles, sagging, dryness, puffiness and discoloration. It works naturally with your body to encourage the renewal and repair of damaged cells, by providing hydration, nourishment and protection. With continued use City Views not only begins fighting against past problems, but begins protecting your skin against future damage as well!</div>
-                <div class="linebreak2"></div>
-                <div>Wrinkle depth was shown to have decreased in clinical studys.</div>
-                <div class="linebreak2"></div>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <b>Before</b>
-                    <div class="linebreak2"></div>
-                    <img src="img/cityviewsbefore1.jpg" alt="before cityviews">
-                  </div>
-                  <div class="visible-xs">&nbsp;</div>
-                  <div class="col-lg-6 col-md-5 col-sm-6 col-xs-12">
-                    <b>After</b>
-                  <div class="linebreak2"></div>
-                  <img src="img/cityviewsafter1.jpg" alt="after cityviews">
-                  </div>
-                </div>
+              Most exfoliating cleansers use abrasive scrubs to achieve a deep clean. Washing your sensitive skin with these harsh scrubs can do more harm than good by irritating and stressing your skin. Youth Regenerating Cleanser is gentle, but it still achieves an incredible exfoliating effect. Our Amazonian Superfruit Complex is able to penetrate the skin deeply without irritation to help get rid of dead cells, heal blemishes, and rejuvenate skin.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Why do I need an eye cream? Can't I just use my moisturizer?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>How do I use Youth Regenerating Cleanser?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq3" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -372,12 +359,11 @@
             </div>
             <div id="faq3" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                <p>The skin around your eyes is 4 to 10x thinner than the skin on the rest of your face. That means the area should be treated with extra care... And some face creams may be too thick, heavy, or harsh to really benefit this sensitive skin.</p>
-                The skin around your eyes also has very few oil glands, which means it is not receiving the hydration that it needs to stay healthy. City Views moisturizes, replenishes, and provides protection from external damage, while being gentle enough to benefit sensitive eye-area skin without irritation.
+                For best results, remove your makeup and dampen your face. Use one to two pumps and cleanse your face in gentle, circular motions. Rinse your skin with warm water and apply your desired daytime or nighttime moisturizer. (At night, we recommend using <a href="http://cityBeauty.com/p/skin/intensive-night-repair.php">Intensive Night Repair Serum</a>  after cleansing to further delay signs of aging and hydrate skin).
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>How do I use City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>How many times a day should I use Youth Regenerating Cleanser for best results? Is this just a daytime cleanser?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq4" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -385,11 +371,11 @@
             </div>
             <div id="faq4" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                Apply City Views on a clean face both morning and night before going to bed. After cleaning your face, dab the excess moisture away with a towel. Pat small dots of the cream all around your orbital bone and on the under-eye area, being careful not to rub or tug on skin.
+                For best results, we recommend cleansing your face and neck with Youth Regenerating Cleanser twice a day, both morning and night, but it is completely safe to use Youth Regenerating Cleanser as often as desired.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Is City Views suitable for all skin types?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>If I have oily, sensitive, or dry skin… can I use Youth Regenerating Cleanser?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq5" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -397,11 +383,11 @@
             </div>
             <div id="faq5" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-              Yes! All skin types can benefit from City View's advanced blend of ingredients to achieve bright, youthful eyes.
+              Yes! Youth Regenerating Cleanser’s was specially formulated with all skin types in mind. Whether you’re struggling with blemishes, fine lines and wrinkles, dry skin, oily skin, or sensitive skin, Youth Regenerating Cleanser can help revive and moisturize your complexion.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What is the recommended age group for City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What is the recommended age group for Youth Regenerating Cleanser?</b></div>
               <!--collapse content goe</b>s here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq6" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -409,16 +395,11 @@
             </div>
             <div id="faq6" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                <p>Absolutely anyone can use City Views! It is always important to moisturize, and City Views has the dual benefit of:</p>
-                  <ul>
-                    <li>Reducing the visible signs of aging</li>
-                    <li>Actively working to prevent any future skin damage as well!</li>
-                  </ul>
-                This means that women with more mature skin will begin to notice a visible difference in the appearance of fine lines and wrinkles, and younger women can benefit from strengthening and protecting their skin from future signs of aging.
+                Youth Regenerating Cleanser is safe and effective for all ages. It can help repair your skin by cleansing away dead cells and healing blemishes, and it can also help prevent future blemishes from occurring. It is suitable (and recommended) for all ages.
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>I have sensitive skin; can I still use City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Why does Youth Regenerating Cleanser work so well? What’s it made of?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq7" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -426,11 +407,16 @@
             </div>
             <div id="faq7" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                Yes. City Views is formulated only with ingredients that do not irritate skin. If you have exceptionally sensitive skin and tend to react to even the gentlest products, we recommend doing a patch test on the inside of your elbow 24 hours before proceeding with City Views as your everyday eye cream.
+                <ul>
+                  <li><b>Pineapple stem extract (Bromelain)</b> helps promote enhanced hydration and softer skin by gently brushing away dead skin cells for fresh, renewed skin</li>
+                  <li><b>Caffeine Cosmospheres</b> tighten the feel of skin and reduce the appearance of puffiness, while protecting skin from free radical damage (UV exposure, pollution, etc.)</li>
+                  <li><b>Hyaluronic Acid</b> is an anti-aging ingredient that helps the skin retain moisture, promotes hydration, and prevents skin from drying out</li>
+                  <li><b>Amazonian Superfruit Extract</b> has restorative properties. It helps to reduce redness and swelling while repairing damaged collagen</li>
+                </ul>
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>What does it feel like to use City Views?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Is Youth Generating Cleanser tested on animals?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq8" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -438,11 +424,11 @@
             </div>
             <div id="faq8" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-                City Views is a rich formula with a lightweight feel. Its creamy consistency glides over the skin effortlessly without leaving a residue. Immediately after application your skin will seem healthier and feel silky smooth. The hydration instantly begins improving your skin tone and clarity, and leaves you feeling relaxed and refreshed.
+                Here at City Beauty we are proud to say that we never test on animals! Our love and respect for animals is parallel to our love for creating safe, natural, clinically-proven cosmetics that work for YOU!
             </div>
             <hr>
             <div class="row">
-              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>I have tiny white bumps underneath my eyes. Will City Views help with that?</b></div>
+              <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>How do I order Youth Regenerating Cleanser?</b></div>
               <!--collapse content goes here -->
               <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
                 <div data-toggle="collapse" data-target="#faq9" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -450,7 +436,7 @@
             </div>
             <div id="faq9" class="collapse in" name="collapse_content">
               <div class="linebreak2"></div>
-              Yes. Those white bumps are called milia, and they are harmless cysts caused by dry, dead cells that get trapped under your skin. The best way to remove them (and prevent them from occurring again in the future) is by using an eye cream to return moisture to the area and prevent the buildup of dry cells.
+              Youth Regenerating Cleanser is available exclusively online. Your purchase is 100% guaranteed to help you achieve a more even skin tone and a brighten, more rejuvenated complexion, or your money back.
             </div>
             <hr>
             <div class="row">

@@ -11,6 +11,7 @@
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
   <meta charset="UTF-8">
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php echo $page_title;?></title>
   <!-- Latest compiled and minified CSS -->

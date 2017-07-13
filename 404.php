@@ -9,7 +9,6 @@
   .linebreak5{margin-top: 30px;}
   .cream-swatch img{width: 300px;}
   a{color: #e1c37b; }
-  a:hover {color: #e1c37b;}
   h2{font-size: 38px;font-weight: 200;}
   /*Responsive for different screen*/
   @media screen and (min-width: 1199px) {.social-wrap{margin-left: 42px;}}

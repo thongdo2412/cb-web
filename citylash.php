@@ -164,7 +164,7 @@
                 <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
               </div>
               <div class="visible-xs col-xs-12 lashphoto">
-                <img src="../img/citylash_sm.png" alt="city views">
+                <img src="../img/citylash_sm.png" alt="city lash">
               </div>
             </div>
             <hr>
@@ -237,7 +237,7 @@
                   <ul class="features">
                     <li>City Lash's unique exclusive formula stimulates eyelash growth and extends the natural life cycle of the lash. This process allows for older lashes to remain in longer, and new lashes to regrow at the same time, resulting in a much fuller lash bed and dramatic visible results.</li>
                     <li>Unlike other lash-enhancing products, City Lash is safe, even for the most sensitive skin and eyes.</li>
-                    <li>City Lash is natural and fragrance free. Like all CITY Cosmetics, City Lash is not tested on animals!</li>
+                    <li>City Lash is natural and fragrance free. Like all CITY Beauty products, City Lash is not tested on animals!</li>
                     <li>City Lash does not contain paraben or prostaglandin like other products. Prostaglandin may cause color changes in your skin, as well as irritation and redness.</li>
                     <li>Clinical testing has shown that City Lash can increase overall eyelash thickness and length.</li>
                     <li>Can be safely used on eyebrows to increase thickness.</li>

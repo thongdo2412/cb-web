@@ -780,7 +780,7 @@
           </div>
           <hr>
           <div class="row">
-            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Does City Cosmetics test on animals?</b></div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 collapse_heading"><b>Does City Beauty test on animals?</b></div>
           <!-- collapse button -->
             <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 pull-right">
               <div data-toggle="collapse" data-target="#faq17" class="plusminus" aria-expanded="true" name="collapse_plus">+</div>
@@ -789,7 +789,7 @@
           <!--collapse content goes here -->
           <div id="faq17" class="collapse in" name="collapse_content">
             <div class="linebreak2"></div>
-              Never. We at City Cosmetics are committed to remaining cruelty-free and will never test our products on animals.
+              Never. We at City Beauty are committed to remaining cruelty-free and will never test our products on animals.
           </div>
           <hr>
         </div>
