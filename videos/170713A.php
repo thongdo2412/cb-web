@@ -45,7 +45,7 @@ if (strpos(strtolower($_SERVER['HTTP_USER_AGENT']),'opera mini') > 0) {
 
 if ($mobile_browser > 0) {
    // do something for mobile devices
-   header('Location: http://youngerlips.com/presentation/m170609.php'. $_SERVER['QUERY_STRING']);
+   header('Location: '. $_SERVER['QUERY_STRING']);
 }
 
  ?>
@@ -132,6 +132,18 @@ if ($mobile_browser > 0) {
     .content-txt {width: 64%;text-align: left;padding: 15px 0px;}
     .greybox {background: #f4f3f4 repeat;background-size: cover;padding: 30px 40px;text-align: center;}
 	</style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NW725SC');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW725SC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </head>
 <body>
   <div class="container">
@@ -166,8 +178,8 @@ if ($mobile_browser > 0) {
 				          <!-- end OOYALA ADD -->
 		      </div>
 		      <div class="CTA">
-			        <div class="gold-btn button" id="CTALink" ><a href="/citylips/checkout170503.php" target="_BLANK"><div>Next Step</div></a></div>
-			        <noscript><div class="gold-btn button" id="CTALink"><a href="/citylips/checkout170503.php" target="_BLANK"><div>Next Step</div></a></div></noscript>
+			        <div class="gold-btn button" id="CTALink" ><a href="../order/securecheckout170530.php" target="_BLANK"><div>Next Step</div></a></div>
+			        <noscript><div class="gold-btn button" id="CTALink"><a href="../order/securecheckout170530.php" target="_BLANK"><div>Next Step</div></a></div></noscript>
 		      </div>
         </div>
       </div>

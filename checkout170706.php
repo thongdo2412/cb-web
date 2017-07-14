@@ -156,9 +156,7 @@
   </head>
   <body>
     <header class="centered_flex">
-      <div class="container">
         <img src="../img/city-beauty-logo.png" alt="citylogo" />
-      </div>
     </header>
   <div class="topline">1-800-347-1558 • M-F: 5am-7pm PT • S-S: 6am-4:30pm PT</div>
 

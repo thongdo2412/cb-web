@@ -20,11 +20,11 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav line-on-sides">
-      <li><a href="citylips.php" class="navi-bar"><nav2>CITY LIPS</nav2></a></li>
-      <li><a href="undereye.php" class="navi-bar"><nav2>EYE CREAM</nav2></a></li>
-      <li><a href="media.php" class="navi-bar"><nav2>MEDIA</nav2></a></li>
-      <li><a href="contact.php" class="navi-bar"><nav2>CONTACT</nav2></a></li>
-      <li><a href="about.php" class="navi-bar"><nav2>ABOUT US</nav2></a></li>
+      <li><a href="../citylips.php" class="navi-bar"><nav2>CITY LIPS</nav2></a></li>
+      <li><a href="../undereye.php" class="navi-bar"><nav2>EYE CREAM</nav2></a></li>
+      <li><a href="../media.php" class="navi-bar"><nav2>MEDIA</nav2></a></li>
+      <li><a href="../contact.php" class="navi-bar"><nav2>CONTACT</nav2></a></li>
+      <li><a href="../about.php" class="navi-bar"><nav2>ABOUT US</nav2></a></li>
       <li><a href="http://www.mcssl.com/SecureCart/ViewCart.aspx?mid=A7C6B92F-95CE-4A42-BB6E-36312CB57E75" class="navi-bar"><nav2>VIEW CART</nav2></a></li>
     </ul>
   </div><!-- /.navbar-collapse -->

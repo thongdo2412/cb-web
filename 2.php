@@ -362,9 +362,8 @@
                     #buttons {display: none;}
                     #socialicons {display: block;margin-bottom: 8px;}
                     .newsSpace img {width: 100%;}
-                    .container {margin-left: 20px;margin-right: 15px;}
+                    .container {margin-left: 15px;margin-right: 15px;}
                   }
-
                   @media screen and (max-width: 385px){
                     header h1{font-size: 32px;}
                   }
@@ -446,7 +445,7 @@
       <div id="articleWrap">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-12">
               <h1>New Breakthrough Allows Women to Get Fuller Lips at Home</h1>
               <p class="author">By <b><a href="#" onclick="return false;">Brittany Artwohl</b></a> - October 15, 2016</p>
               <div id="buttons">
@@ -567,10 +566,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
-              <a href="http://youngerlips.com/presentation/170620B.php">
+            <div class="col-lg-4 col-md-12">
+              <div class="flexwrapper">
+                <a href="http://youngerlips.com/presentation/170620B.php">
                   <img src="images/lipmask-300x250.jpg">
               </a>
+            </div>
               <div class="recentPosts">
                   <p>Recent Posts</p>
                   <ul class="recentPostsList">
