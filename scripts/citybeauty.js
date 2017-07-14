@@ -83,19 +83,22 @@ $(function(){ //handles add to cart with quantity selected above
     quantity = $(this).find('option:selected').text();
   })
 
-  page_title = document.getElementById('page_title').value;
+  page_title = $(document).find("title").text();
 
   $("*[name='addToCart']").click(function(event){//handle click event of Add to Cart button
     event.preventDefault();
     switch (page_title) {
-         case "undereye": {
+         case "Under Eye Recovery": {
            window.location = "http://citybeauty.com/cmd.php?pid=8ded8940d8eb47c2b299df947f616d20&qty=" + quantity.toString();
          } break;
-         case "cityviews": {
+         case "City Views": {
            window.location = "http://citybeauty.com/cmd.php?pid=c8296bdec9f242e196759b73322aea7f&qty=" + quantity.toString();
          } break;
-         case "citylash": {
+         case "City Lash": {
            window.location = "http://citybeauty.com/cmd.php?pid=e44f3331641b4bc6934d80d845bda9c1&qty=" + quantity.toString();
+         } break;
+         case "Youth Regenerating Cleanser": {
+           window.location = "https://citybeauty.com/cmd.php?pid=8972edaad90a42f896b75ac008055a31&qty=" + quantity.toString();
          } break;
     }
   })
@@ -147,6 +150,9 @@ $(function (){ //for pagination
   if (pageTotal <= 0) {pageTotal = 1;}
 
   pagename = $("#pageName").val();
+  if (pagename == 'youthcleanser') {
+    pagename = 'youth-regenerating-cleanser';
+  }
   limit = 3;//limited displays the page numbers
 
   //handles Pre and Next button display when page #1 and page #total

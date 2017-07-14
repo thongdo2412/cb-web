@@ -812,7 +812,6 @@
     </div>
   </div>
 
-  <input type="hidden" id="page_title" value="<?php echo $pid;?>"> <!--place holder for the page title to copy to JS variable-->
   <!--include footer and javascript-->
   <?php include ("footer.php"); ?>
 
