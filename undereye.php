@@ -32,7 +32,7 @@
   .button{width: 172px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
-  .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
+  .button_blue{background-color: #061E37;color: rgb(255, 255, 255);width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
   .button_blue a {color: #ffffff;}
   .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
   .nav{font-size: 14px;font-family: "Montserrat", sans-serif;}
@@ -55,6 +55,7 @@
   .review_link{cursor: pointer; cursor: hand;}
   .linebreak1{margin-top: 5px;}
   .linebreak2{margin-top: 18px;}
+  .linebreak24{margin-top: 24px;}
   .linebreak12{margin-top: 12px;}
   .linebreak3{margin-top: 30px;}
   .linebreak4{margin-top: 40px;}
@@ -114,10 +115,23 @@
   #form_rating{float: left;margin-left: 14px;}
   .msgtextbox{margin-left: 28px;margin-top: 16px;}
   .btn_wrapper{float: right;margin-right: 50px;}
+
+  /* newsletter popup css */
+  #popupcontainer {display: none;background-color:#ffffff;width: 314px; height: 400px;
+    border: 1px solid #000000;box-shadow: 0 0 10px #c6c6c6;position: fixed; bottom: 0; right:80px;}
+  .popup-header {background: rgb(9,30,55);height: 41px; padding: 9px 18px;color: #ffffff;}
+  .popupbody {padding: 12px 20px;}
+  .popup-btn {float: right;}
+  .infusion-field-input-container {display: block; width: 270px; height: 32px;}
+  .infusion-field label {font-weight: 300;}
+  #popupClose:hover {cursor: pointer;}
+
+  /* main body css */
   h3{font-family: "Playfair Display",serif;font-size: 38px; display: inline;}
   h4{font-family: "Playfair Display",serif;font-size: 33px;}
   h5{font-family: "Playfair Display",serif;font-size: 22px;font-weight: 400;font-style: italic;}
   h6{font-size: 20px;display: inline;font-weight: 400;}
+  h2 {font-family: "Playfair Display",serif;font-size: 26px;}
   i{font-style: italic;}
   body,html {margin:0px;padding:0px;overflow-x: hidden;}
   body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300; line-height: 24px;}
@@ -341,7 +355,7 @@
     </div>
   </div>
 
-  <div class="jumbotron jumbotron_w_bg">
+  <div class="jumbotron jumbotron_w_bg" id="productnotes">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -549,10 +563,57 @@
     </div>
   </div>
 
+  <!-- newsletter popup-->
+  <div id="popupcontainer">
+    <form accept-charset="UTF-8" action="https://wn373.infusionsoft.com/app/form/process/64e0ecb771cef770552e44e2dea3cdb7" class="infusion-form" id="inf_form_64e0ecb771cef770552e44e2dea3cdb7" method="POST">
+        <input name="inf_form_xid" type="hidden" value="64e0ecb771cef770552e44e2dea3cdb7" />
+        <input name="inf_form_name" type="hidden" value="UER" />
+        <input name="infusionsoft_version" type="hidden" value="1.67.0.58" />
+        <div class="popup-header">
+          <div class="pull-left">JOIN FOR EXCLUSIVE SALES</div>
+          <div class="pull-right" id="popupClose">&mdash;</div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="popupbody">
+          <h2>First Time Customer?</h2>
+          <p>Enter your email to receive a special introductory offer</p>
+          <div class="linebreak24"></div>
+          <div class="text-left">
+            <div class="infusion-field">
+                <label for="inf_field_FirstName">FIRST NAME *</label>
+                <input class="infusion-field-input-container" id="inf_field_FirstName" name="inf_field_FirstName" type="text" />
+            </div>
+            <div class="linebreak2"></div>
+            <div class="infusion-field">
+                <label for="inf_field_Email">EMAIL *</label>
+                <input class="infusion-field-input-container" id="inf_field_Email" name="inf_field_Email" type="text" />
+            </div>
+          </div>
+          <div class="linebreak2"></div>
+          <div class="infusion-submit">
+              <input type="submit" class="popup-btn submitbtn button_blue" value="SUBMIT">
+              <div class="clearfix"></div>
+          </div>
+          <script type="text/javascript" src="https://wn373.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+          <div class="clearfix"></div>
+        </div>
+    </form>
+    <div class="clearfix"></div>
+  </div>
+
   <!--include footer and javascript-->
   <?php include ("footer.php"); ?>
-
     <script src="../components/raty-master/lib/jquery.raty.js"></script>
     <script src="scripts/citybeauty.js"></script>
+    <script type="text/javascript">
+      setTimeout(function () {
+        $("#popupcontainer").fadeIn()
+      }, 10000);
+
+      $("#popupClose").on('click', function (evt) {
+        $("#popupcontainer").fadeOut();
+      });
+
+    </script>
   </body>
   </html>

@@ -101,32 +101,34 @@ a {
     overflow-x: hidden;
   }
 
+  .bottomMenu {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #000;
+    background: red;
+    z-index: 1;
+}
+body {height: 1600px;}
   </style>
   </head>
   <body>
 
-  <div class="topline">1-800-347-1558 • M-F: 5am-7pm PT • S-S: 6am-4:30pm PT</div>
-<div id="mainContent">
-  <div class="topsection">
-    <div class="container" style="width:854px;height:385px;padding-top:30px;">
-          <div style="width:556px">
-            <div style="font-size:28px;line-height: 38px;">Last Week Alone - Over 1,405 Women Choose City Lips<span class="sup1" style="font-size:15px">&reg;</span>
-            </div>
-            <div>&nbsp</div>
-            <div>
-                <p>You're about to join thousands of women who are already experiencing fuller, younger-looking lips.</p>
-                <div>&nbsp</div>
-                <p style="font-weight:300">And to make it even easier, we're offering additional savings on multi-tube packages.
-                  This allows us to save on the cost of processing each other individually, savings that we pass on to you.</p>
-                <div>&nbsp</div>
-                  <p style="font-style: italic;">Note: This is a one-time purchase. We do not auto-bill your credit card.</p>
-              </div>
-          </div>
-          <div style="padding-left:600px;position:relative; bottom:315px"><img src="../img/bf_aft.png"></img></div>
-      </div>
-      <div class="clearfloat"></div>
-    </div>
-    <hr>
-  </div>
+
+
+  <div class="bottomMenu"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      $(document).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y > 200) {
+            $('.bottomMenu').fadeIn();
+        } else {
+            $('.bottomMenu').fadeOut();
+        }
+      });
+  </script>
   </body>
   </html>

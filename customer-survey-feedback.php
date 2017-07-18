@@ -8,6 +8,7 @@
   .cream-swatch img{width: 300px;}
   #content {padding: 30px 20px;}
   #maintext {text-align: left;}
+  #res {text-align: center;}
   #response6{display: none;}
   #response8{display: none;}
   #response10{display: none;}
@@ -30,9 +31,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-11 col-lg-offset-1 col-md-11 col-sm-11" id="maintext">
-        <p>Thanks for filling that out!</p>
-        <p>We really appreciate you giving us a moment of your time today. </p>
-        <div id="res"></div>
+        <div id="res">
+          <p>Thanks for filling that out!</p>
+          <p>We really appreciate you giving us a moment of your time today. </p>
+          <hr style="width:25%;">
+        </div>
+        <input id="form_contactid" type="hidden" name="contactid" value="">
         <div id="response10">
           <br>
           <p>Share Your Experience For A Chance to Win</p>
@@ -62,15 +66,14 @@
             </div>
             <div class="form-group">
               <label>Please enter your name:</label>
-              <input id="form_fname" type="text" name="name" class="form-control" required="required" data-error="First name is required." placeholder="Your name">
+              <input id="form_fname8" type="text" name="name" class="form-control" required="required" data-error="First name is required." placeholder="Your name">
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
               <label>Please enter your email:</label>
-              <input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required." placeholder="Your email">
+              <input id="form_email8" type="email" name="email" class="form-control" required="required" data-error="Valid email is required." placeholder="Your email">
               <div class="help-block with-errors"></div>
             </div>
-            <input id="form_contactid" type="hidden" name="contactid" value="">
             <input id="form_subject" type="hidden" name="subject" value="Customer Survey Feedback">
             <p>Your answer will go a long way to help us better serve you.</p>
             <button type="submit" class="submitbtn button_blue">SUBMIT</button>
@@ -85,12 +88,12 @@
           <form id="survey-res6" method="post" action="scripts/contactform_mail.php" role="form">
             <div class="form-group">
               <label>Please enter your name:</label>
-              <input id="form_fname" type="text" name="name" class="form-control" required="required" data-error="First name is required." placeholder="Your name">
+              <input id="form_fname6" type="text" name="name" class="form-control" required="required" data-error="First name is required." placeholder="Your name" value="">
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
               <label>Please enter your email:</label>
-              <input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required." placeholder="Your email">
+              <input id="form_email6" type="email" name="email" class="form-control" required="required" data-error="Valid email is required." placeholder="Your email" value="">
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
@@ -98,7 +101,6 @@
               <input id="form_phone" type="phone" name="phone" class="form-control" required="required" data-error="Phone number is required." placeholder="Your phone number">
               <div class="help-block with-errors"></div>
             </div>
-            <input id="form_contactid" type="hidden" name="contactid" value="">
             <input id="form_subject" type="hidden" name="subject" value="Customer Survey Support">
             <div class="form-group">
               <label>Would you rather be contacted by phone or email?</label>
@@ -155,8 +157,9 @@
     //You must change the landing_page_url  variable to your landing page URL for this script to work.
     var Response = getParameterByName('inf_option_Surveyresponse');
     var contact_id = String(getParameterByName('contactId'));
-    //Response = '331';
-
+    var cusName = String(getParameterByName('inf_field_FirstName'));
+    var cusEmail = String(getParameterByName('inf_field_Email'));
+    var Response = '331';
     if (parseInt(Response) >= 335) {
       $("#response10").css("display","block");
     }
@@ -167,11 +170,15 @@
       else if (parseInt(Response) == 333) {
         $("#feedback-rating").html("8");
       }
+      $("#form_fname8").val(cusName);
+      $("#form_email8").val(cusEmail);
       $("#response8").css("display","block");
       $("#form_contactid").val(contact_id);
     }
     else {
       $("#response6").css("display","block");
+      $("#form_fname6").val(cusName);
+      $("#form_email6").val(cusEmail);
       $("#form_contactid").val(contact_id);
     }
 

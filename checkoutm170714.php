@@ -319,7 +319,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', end
 					$("#product .total .innerRight b").html("99.00");
 					$("#product .total .innerRight .shipping").html("+ Free Shipping");
 					$("#product .save .innerRight .save").html("<span class='green'>$192 Off Retail</span>");
-					$("#productLink").attr("href", "http://citybeauty.com/cmd.php?pid=95df93197d2c4db4a67e07148c6ed802&bn=1&clear=1&coup=1");
+					$("#productLink").attr("href", "http://citybeauty.com/cmd.php?pid=95df93197d2c4db4a67e07148c6ed802&bn=1&clear=1&coup=1&mob=1");
 					$(".shrink.savings").html("&nbsp;");
 				}
 				else if($("#quantity option:selected").val() == "2"){
@@ -327,7 +327,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', end
 					$("#product .total .innerRight b").html("74.00");
 					$("#product .total .innerRight .shipping").html("+ Free Shipping");
 					$("#product .save .innerRight .save").html("<span class='green'>$120 Off Retail</span>");
-					$("#productLink").attr("href", "http://citybeauty.com/cmd.php?pid=477ca77936fc434d9258f2439c1fbe7a&bn=1&clear=1&coup=1");
+					$("#productLink").attr("href", "http://citybeauty.com/cmd.php?pid=477ca77936fc434d9258f2439c1fbe7a&bn=1&clear=1&coup=1&mob=1");
 					$(".shrink.savings").html("*change QTY for extra savings");
 				}
 				else if($("#quantity option:selected").val() == "1"){
@@ -335,7 +335,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', end
 					$("#product .total .innerRight b").html("39.00");
 					$("#product .total .innerRight .shipping").html("+4.95 Shipping");
 					$("#product .save .innerRight .save").html("<span class='green'>$58 Off Retail</span>");
-					$("#productLink").attr("href", "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&bn=1&clear=1&coup=1");
+					$("#productLink").attr("href", "http://citybeauty.com/cmd.php?pid=57f8a41e147d4e3ba51634dc18ae06f6&bn=1&clear=1&coup=1&mob=1");
 					$(".shrink.savings").html("*change QTY for extra savings");
 				}
 			});
