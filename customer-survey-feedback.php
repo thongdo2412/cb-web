@@ -1,5 +1,6 @@
 <!-- include PHP template header file-->
 <?php include("head.php"); ?>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 <title>Thank You For Your Response</title>
 <style type="text/css">
   body{font-family: "Montserrat", sans-serif;font-weight: 300;}
@@ -12,10 +13,10 @@
   #response6{display: none;}
   #response8{display: none;}
   #response10{display: none;}
-  .form-control{width: 220px;height: 34px;}
   #response8 .form-control{width: 100%;}
-  div.form-group textarea.form-control{border-radius: 0;width: 100%;}
-  div.form-group input{margin: 0;}
+  #inf_form label {font-weight: 300;}
+  #inf_form textarea{border-radius: 0;width: 100%;}
+  #inf_custom_PreferredContactMethod_phone {margin-left: 10px;}
   a{color: #e1c37b; }
   a:hover {color: #e1c37b;}
   h2{font-size: 40px;}
@@ -30,13 +31,12 @@
 <div id ="content">
   <div class="container">
     <div class="row">
-      <div class="col-lg-11 col-lg-offset-1 col-md-11 col-sm-11" id="maintext">
+      <div class="col-lg-9 col-lg-offset-2 col-md-9 col-md-offset-1 col-sm-9 col-sm-offset-1" id="maintext">
         <div id="res">
           <p>Thanks for filling that out!</p>
-          <p>We really appreciate you giving us a moment of your time today. </p>
+          <p>We really appreciate you giving us a moment of your time today.</p>
           <hr style="width:25%;">
         </div>
-        <input id="form_contactid" type="hidden" name="contactid" value="">
         <div id="response10">
           <br>
           <p>Share Your Experience For A Chance to Win</p>
@@ -53,71 +53,48 @@
           <p>Thank you so much for taking the time to respond.</p>
           <p>We are always striving to meet the needs of honest people like yourself.</p>
           <p>So I have to ask...</p>
-          <form id="survey-res8" method="post" action="scripts/contactform_mail.php" role="form">
-            <div class="form-group">
-              <label>What was the most important reason for the <span id="feedback-rating"></span> rating?</label>
-              <input id="form_reason" type="text" name="reason" class="form-control" required="required" data-error="First name is required.">
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-              <label>And if there was one thing I could do to earn a 10 in the future, what would that be?</label>
-              <input id="form_suggest" type="text" name="suggestion" class="form-control" required="required" data-error="Valid email is required.">
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-              <label>Please enter your name:</label>
-              <input id="form_fname8" type="text" name="name" class="form-control" required="required" data-error="First name is required." placeholder="Your name">
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-              <label>Please enter your email:</label>
-              <input id="form_email8" type="email" name="email" class="form-control" required="required" data-error="Valid email is required." placeholder="Your email">
-              <div class="help-block with-errors"></div>
-            </div>
-            <input id="form_subject" type="hidden" name="subject" value="Customer Survey Feedback">
-            <p>Your answer will go a long way to help us better serve you.</p>
-            <button type="submit" class="submitbtn button_blue">SUBMIT</button>
-            <div class="clearfix"></div>
-          </form>
+          <div class="linebreak2"></div>
         </div>
         <div id="response6">
           <br>
           <p>I'm sorry we didn't meet your expectations.</p>
-          <p>Please fill out this form so we can contact you and try to make things right.</p>
-          <br>
-          <form id="survey-res6" method="post" action="scripts/contactform_mail.php" role="form">
-            <div class="form-group">
-              <label>Please enter your name:</label>
-              <input id="form_fname6" type="text" name="name" class="form-control" required="required" data-error="First name is required." placeholder="Your name" value="">
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-              <label>Please enter your email:</label>
-              <input id="form_email6" type="email" name="email" class="form-control" required="required" data-error="Valid email is required." placeholder="Your email" value="">
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-              <label>Please enter your phone number:</label>
-              <input id="form_phone" type="phone" name="phone" class="form-control" required="required" data-error="Phone number is required." placeholder="Your phone number">
-              <div class="help-block with-errors"></div>
-            </div>
-            <input id="form_subject" type="hidden" name="subject" value="Customer Survey Support">
-            <div class="form-group">
-              <label>Would you rather be contacted by phone or email?</label>
-              <div>
-                <label class="radio-inline"><input type="radio" name="contactby" value="phone">Phone</label>
-                <label class="radio-inline"><input type="radio" name="contactby" value="email">Email</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="form_message">Enter anything you'd like us to know before we contact you:</label>
-              <textarea id="form_message" name="message" rows="6" class="form-control" required="required" data-error="Please,leave us a message." placeholder="Enter your message"></textarea>
-              <div class="help-block with-errors"></div>
-            </div>
-            <button type="submit" class="submitbtn button_blue">SUBMIT</button>
-            <div class="clearfix"></div>
-          </form>
+          <p>Please fill out this form so a customer service expert can contact you and help improve your experience.</p>
+          <div class="linebreak2"></div>
         </div>
+        <div id ="inf_form">
+          <form accept-charset="UTF-8" action="https://wn373.infusionsoft.com/app/form/process/be38e3815a518f31a6d9e799e0ca782a" class="infusion-form" id="inf_form_be38e3815a518f31a6d9e799e0ca782a" method="POST">
+              <input name="inf_form_xid" type="hidden" value="be38e3815a518f31a6d9e799e0ca782a" />
+              <input name="inf_form_name" type="hidden" value="Survey&#a; Web Form" />
+              <input name="infusionsoft_version" type="hidden" value="1.67.0.58" />
+              <input name="inf_field_FirstName" type="hidden" value="null" />
+              <input name="inf_field_Email" type="hidden" value="null" />
+              <div class="infusion-field" id="form-radio">
+                  <label for="inf_custom_PreferredContactMethod">Would you rather be contacted by phone or email?</label>
+                  <div class="infusion-radio">
+                      <span class="infusion-option">
+                          <input id="inf_custom_PreferredContactMethod_email" name="inf_custom_PreferredContactMethod" type="radio" value="email" />
+                          <label for="inf_custom_PreferredContactMethod_email">email</label>
+                      </span>
+                      <span class="infusion-option">
+                          <input id="inf_custom_PreferredContactMethod_phone" name="inf_custom_PreferredContactMethod" type="radio" value="phone" />
+                          <label for="inf_custom_PreferredContactMethod_phone">phone</label>
+                      </span>
+                  </div>
+                  <div class="linebreak2"></div>
+              </div>
+              <div class="infusion-field">
+                  <label for="inf_custom_SurveySupportMessage" id="survey-support-label"></label>
+                  <textarea id="inf_custom_SurveySupportMessage" name="inf_custom_SurveySupportMessage" rows="5">
+              </textarea></div>
+              <div class="linebreak2"></div>
+              <div class="infusion-submit">
+                  <button class="submitbtn button_blue pull-left" type="submit">SUBMIT</button>
+                  <div class="clearfix"></div>
+              </div>
+          </form>
+          <script type="text/javascript" src="https://wn373.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+        </div>
+
       </div>
     </div>
   </div>
@@ -156,30 +133,35 @@
     //Add me to a thank you page using an html snippet
     //You must change the landing_page_url  variable to your landing page URL for this script to work.
     var Response = getParameterByName('inf_option_Surveyresponse');
-    var contact_id = String(getParameterByName('contactId'));
     var cusName = String(getParameterByName('inf_field_FirstName'));
     var cusEmail = String(getParameterByName('inf_field_Email'));
-    var Response = '331';
-    if (parseInt(Response) >= 335) {
+    var cusMessage = String(getParameterByName('inf_custom_SurveyComments'));
+    var Response = '329';
+    var cusRating = '';
+    if (parseInt(Response) >= 335) { // customer response >=9
       $("#response10").css("display","block");
+      $("#inf_form").css('display','none');
     }
-    else if (parseInt(Response) >= 331){
-      if (parseInt(Response) == 331) {
-        $("#feedback-rating").html("7");
-      }
-      else if (parseInt(Response) == 333) {
-        $("#feedback-rating").html("8");
-      }
-      $("#form_fname8").val(cusName);
-      $("#form_email8").val(cusEmail);
+    else if (parseInt(Response) >= 331){ // customer response >= 7
+      $("#form-radio").css("display","none");
       $("#response8").css("display","block");
-      $("#form_contactid").val(contact_id);
+      $("input[name='inf_field_FirstName']").val(cusName);
+      $("input[name='inf_field_Email']").val(cusEmail);
+      if (parseInt(Response) == 331) {
+        cusRating = '7';
+      }
+      else if (parseInt(Response) == 333)  {
+        cusRating = '8';
+      }
+      $("#survey-support-label").html('What was the most important reason for the ' + cusRating + ' rating? And if there was one thing I could do to earn a 10 in the future, what would that be?');
+      $("#inf_custom_SurveySupportMessage").val(cusMessage);
     }
-    else {
+    else { // customer response >= 6
       $("#response6").css("display","block");
-      $("#form_fname6").val(cusName);
-      $("#form_email6").val(cusEmail);
-      $("#form_contactid").val(contact_id);
+      $("input[name='inf_field_FirstName']").val(cusName);
+      $("input[name='inf_field_Email']").val(cusEmail);
+      $("#survey-support-label").html("Enter anything you'd like us to know before we contact you:");
+      $("#inf_custom_SurveySupportMessage").val(cusMessage);
     }
 
   </script>

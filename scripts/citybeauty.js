@@ -234,3 +234,13 @@ $(function (){ //for pagination
   })
 
 });
+
+$( document ).ready(function() { //handle newsletter popup
+    setTimeout(function () {
+      $("#popupcontainer").fadeIn()
+    }, 10000);
+
+    $("#popupClose").on('click', function (evt) {
+      $("#popupcontainer").fadeOut();
+    });
+});

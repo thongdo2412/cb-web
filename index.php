@@ -11,7 +11,6 @@
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
   <meta charset="UTF-8">
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php echo $page_title;?></title>
   <!-- Latest compiled and minified CSS -->
@@ -68,6 +67,7 @@ a.button {text-decoration: none;}
 .jumbotron_wht{background: rgb(255,255,255);}
 .jumbotron_w_bg{height: 528px;background-image: url("../img/gift_bg.png");border: 1px solid rgb(235, 235, 235);background-size:100% cover;background-position:center;}
 .b3textbox{width:382px;background-color:rgb(255,255,255); text-align:center;}
+.linebreak2 {margin-top: 20px;}
 .movedown8{margin-top: 8px;}
 .movedown16{margin-top: 16px;}
 .movedown20{margin-top: 20px;}
@@ -94,12 +94,26 @@ div.productwrapper:hover .button_wht {visibility: visible;}
 .undereye {margin-left: -40px;}
 img.undereye {height: 500px;}
 div.form-group input{margin-left: 18px;margin-right: 40px;}
+h2 {font-family: "Playfair Display",serif;font-size: 26px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 30px;font-weight: 300;}
 h4{font-size: 20px;line-height: 24px;font-weight: 300;}
 h5{font-size: 16px; font-weight: 400;}
 h3,h4,h5 {display: inline;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300;line-height: 24px;}
+#home-uptodate .infusion-field-input-container{display: inline-block;}
+/* newsletter popup css */
+#popupcontainer {display: none;background-color:#ffffff;width: 360px; height: 480px; z-index: 1000;
+  border: 1px solid #000000;box-shadow: 0 0 10px #c6c6c6;position: fixed; bottom: 0; right:5%;}
+.popup-header {background: rgb(9,30,55);height: 41px; padding: 9px 18px;color: #ffffff;}
+.popupbody {padding: 6px 20px;}
+.popup-btn {float: right;}
+.infusion-field-input-container {display: block; width: 100%; height: 32px;}
+.infusion-field label {font-weight: 300;}
+#popupClose:hover {cursor: pointer;}
+select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
+  border-radius: 0px;-webkit-appearance: none; -webkit-border-radius: 0px;padding: 0px 6px;
+  background: url("../img/selectarrows.png") no-repeat right 10px center #f8f9f9;}
 
 /*social network icon */
 .social-wrap{list-style: none;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-flow: row nowrap;justify-content:space-between;margin-top: 6px;}
@@ -161,6 +175,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
   .col-xxs-11{width: 91.66666667%;}
   .word_wrapper,.b2word_wrapper{margin-top: 0;}
   footer{height: 130px;}
+  #popupcontainer {width: 314px;}
 }
 @media screen and (min-width:330px) and (max-width:628px){.lip_wrapper{margin-right: 12%;}}
 </style>
@@ -364,37 +379,6 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
    </div>
  </div>
 </div>
-<hr>
-<!-- 5th section -->
-<div class="jumbotron jumbotron_wht">
- <div class="container">
-   <div class="updateform">
-   <div class="row">
-     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-lg-offset-2 col-md-offset-1 col-sm-offset-0">
-       <h3>Stay Up to Date</h3>
-       <div class="movedown16"></div>
-       <h4>WE HAVE SOME EXCITING THINGS PLANNED FOR 2017 - </h4>
-       <p>including a highly anticipated tweak
-         to your favorite product and new additions.</p>
-         <p>It's starting this Spring, so don't miss out.</p>
-        <div class="movedown20"></div>
-       <p><b>Sign up below for instant notifications and get a sneak peak at what's ahead.</b></p>
-       <div class="movedown20"></div>
-       <form class="form-inline" id="email_form" method="post" action="../scripts/emailform.php" role="form">
-         <div class="form-group">
-           <p>FIRST NAME*<input type="text" class="form-control" name="fname" id="fname"></p>
-         </div>
-         <div class="form-group">
-           <p class="emailinput">EMAIL*<input type="email" name="email" class="form-control" id="email"></p>
-         </div>
-         <button type="submit" class="submitbtn button_blue">SUBMIT</button>
-       </form>
-       <div class="clearfix"></div>
-     </div>
-   </div>
-  </div>
-  </div>
-</div>
 
 <!--include PHP footer template -->
 <?php include ("footer.php"); ?>
@@ -415,6 +399,16 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
     return $count;
     }
   ?>
+  <script type="text/javascript">
+    $( document ).ready(function() {
+        setTimeout(function () {
+          $("#popupcontainer").fadeIn()
+        }, 10000);
 
+        $("#popupClose").on('click', function (evt) {
+          $("#popupcontainer").fadeOut();
+        });
+    });
+  </script>
 </body>
 </html>
