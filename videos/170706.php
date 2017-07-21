@@ -17,7 +17,7 @@
 <style type="text/css">
  a {text-decoration: none;}
  *{margin:0 auto;}
-header{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
+header{background: rgb(9,30,55) center;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 header img {width: 97px;}
 footer {background-color: #e6e6e6;height: 54px;font-size: 14px;font-weight: 300;}
 footer a{color: #000; text-decoration: none;}
@@ -80,7 +80,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
 </head>
 <body>
   <header class="centered_flex">
-    <a href="/"><img src="../img/city-beauty-logo.png" alt="citylogo"></a>
+      <a href="/"><img src="../img/city-beauty-logo.png" alt="citylogo"></a>
   </header>
   <div class="linebreak50"></div>
   <div class="container">
@@ -106,7 +106,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
           <b>Category:<span class="blue"> Health</span></b> - JUL 7, 2017
         </p>
         <div class="linebreak20"></div>
-        <div class="video">
+        <div class="video" id="limelightWrapper">
 
             <div id="LimelightEmbeddedPlayerFlash" style="margin:auto;"></div>
                 <!-- start OOYALA ADD -->

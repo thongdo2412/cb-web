@@ -13,9 +13,10 @@
   #response6{display: none;}
   #response8{display: none;}
   #response10{display: none;}
+  #inf_form {display: none;}
   #response8 .form-control{width: 100%;}
   #inf_form label {font-weight: 300;}
-  #inf_form textarea{border-radius: 0;width: 100%;}
+  #inf_form textarea{border-radius: 0;width: 100%;margin-top: 8px;}
   #inf_custom_PreferredContactMethod_phone {margin-left: 10px;}
   a{color: #e1c37b; }
   a:hover {color: #e1c37b;}
@@ -132,32 +133,36 @@
 
     //Add me to a thank you page using an html snippet
     //You must change the landing_page_url  variable to your landing page URL for this script to work.
-    var Response = getParameterByName('inf_option_Surveyresponse');
+    var response = parseInt(getParameterByName('inf_option_Surveyresponse'));
     var cusName = String(getParameterByName('inf_field_FirstName'));
     var cusEmail = String(getParameterByName('inf_field_Email'));
     var cusMessage = String(getParameterByName('inf_custom_SurveyComments'));
-    var Response = '329';
+    //var response = '335';
     var cusRating = '';
-    if (parseInt(Response) >= 335) { // customer response >=9
+
+    if (response >= 335) { // customer response >=9
       $("#response10").css("display","block");
-      $("#inf_form").css('display','none');
     }
-    else if (parseInt(Response) >= 331){ // customer response >= 7
-      $("#form-radio").css("display","none");
+    else if (response >= 331){ // customer response >= 7
       $("#response8").css("display","block");
+      $("#inf_form").css("display","block");
+      $("#form-radio").css("display","none");
       $("input[name='inf_field_FirstName']").val(cusName);
       $("input[name='inf_field_Email']").val(cusEmail);
-      if (parseInt(Response) == 331) {
+
+      if (response == 331) {
         cusRating = '7';
       }
-      else if (parseInt(Response) == 333)  {
+      else if (response == 333) {
         cusRating = '8';
       }
+
       $("#survey-support-label").html('What was the most important reason for the ' + cusRating + ' rating? And if there was one thing I could do to earn a 10 in the future, what would that be?');
       $("#inf_custom_SurveySupportMessage").val(cusMessage);
     }
     else { // customer response >= 6
       $("#response6").css("display","block");
+      $("#inf_form").css("display","block");
       $("input[name='inf_field_FirstName']").val(cusName);
       $("input[name='inf_field_Email']").val(cusEmail);
       $("#survey-support-label").html("Enter anything you'd like us to know before we contact you:");

@@ -79,8 +79,9 @@
          #authorSection p{line-height: 19px;}
          .authorName{margin: 0px;}
          .authorName a{color: #d83945;}
-         footer{height: 46px;padding: 12px;background-color: #8d8e8d; color: white; font-size: 12px; font-family: 'Open Sans', arial, sans-serif;}
-         .footerNavList{color: white; list-style-type: none;}
+         footer{height: 50px;background-color: #8d8e8d; color: white; font-size: 12px; font-family: 'Open Sans', arial, sans-serif;}
+         .centered_flex {display: flex;align-items: center;justify-content: center;text-align: center;}
+         .footerNavList{color: white; list-style-type: none; text-align: right;}
          .footerNavList a{color: inherit; display: inline-block;text-decoration: none; cursor: pointer;}
          .footerNavList li{display: inline-block; margin-right: 20px;}
          #popularStories{background-color: #003366; padding-top: 50px; padding-bottom: 70px;}
@@ -363,6 +364,7 @@
                     #socialicons {display: block;margin-bottom: 8px;}
                     .newsSpace img {width: 100%;}
                     .container {margin-left: 15px;margin-right: 15px;}
+                    .footerNavList {text-align: center;}
                   }
                   @media screen and (max-width: 385px){
                     header h1{font-size: 32px;}
@@ -653,12 +655,13 @@
           </div>
         </div>
 
-        <footer>
-            <div class="container">
-               <div class="lFloat">
-                    <p>&#169; VitalUpdates.com 2017</p>
+        <footer class="centered_flex">
+          <div class="container">
+              <div class="row">
+               <div class="col-lg-3 col-md-12">
+                    &#169; VitalUpdates.com 2017
                </div>
-               <div class="rFloat">
+               <div class="col-lg-4 col-lg-offset-5 col-md-12 col-md-offset-0">
                     <ul class="footerNavList">
                         <li><a href="http://vitalupdates.com/advertising/">Advertising</a></li>
                         <li><a href="http://vitalupdates.com/contact/">Contact Us</a></li>
@@ -666,6 +669,7 @@
                </div>
                <div class="clearfix"></div>
             </div>
+          </div>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>

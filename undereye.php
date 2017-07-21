@@ -32,7 +32,7 @@
   .button{width: 172px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .button_bg{width: 240px;height: 32px;font-size: 14px; border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
   .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
-  .button_blue{background-color: #061E37;color: rgb(255, 255, 255);width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;border-radius: 0;}
+  .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
   .button_blue a {color: #ffffff;}
   .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
   .nav{font-size: 14px;font-family: "Montserrat", sans-serif;}
@@ -244,13 +244,14 @@
                 <div class="clearfix"></div>
                 <div class="linebreak2"></div>
               </div>
+              <!--
               <div class="outstock">
                 <div class="outofstocktxt">Currently Out of Stock</div>
                 <div class="linebreak2"></div>
                 <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                 <div class="clearfix"></div>
                 <div class="linebreak2"></div>
-              </div>
+              </div> -->
             </div>
             <div class="visible-xs col-xs-12">
               <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
@@ -263,6 +264,7 @@
                   <a name="addToCart" href="#"><div class="button_bg button_blue">ADD TO CART</div></a>
                 </div>
               </div>
+              <!--
               <div class="row outstock">
                 <div class="col-xs-6">
                   <div class="outofstocktxt">Currently Out of Stock</div>
@@ -270,7 +272,7 @@
                 <div class="col-xs-4">
                   <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                 </div>
-              </div>
+              </div> -->
             <div class="linebreak2"></div>
             <div class="clearfix"></div>
             </div>

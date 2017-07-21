@@ -399,16 +399,6 @@ select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
     return $count;
     }
   ?>
-  <script type="text/javascript">
-    $( document ).ready(function() {
-        setTimeout(function () {
-          $("#popupcontainer").fadeIn()
-        }, 10000);
-
-        $("#popupClose").on('click', function (evt) {
-          $("#popupcontainer").fadeOut();
-        });
-    });
   </script>
 </body>
 </html>

@@ -187,13 +187,14 @@
                   <div class="clearfix"></div>
                   <div class="linebreak2"></div>
                 </div>
+                <!--
                 <div class="outstock">
                   <div class="outofstocktxt">Currently Out of Stock</div>
                   <div class="linebreak2"></div>
                   <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                   <div class="clearfix"></div>
                   <div class="linebreak2"></div>
-                </div>
+                </div> -->
               </div>
               <div class="visible-xs col-xs-12">
                 <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
@@ -206,6 +207,7 @@
                     <a name="addToCart" href="#"><div class="button_bg button_blue">ADD TO CART</div></a>
                   </div>
                 </div>
+                <!--
                 <div class="row outstock">
                   <div class="col-xs-6">
                     <div class="outofstocktxt">Currently Out of Stock</div>
@@ -213,7 +215,7 @@
                   <div class="col-xs-4">
                     <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                   </div>
-                </div>
+                </div> -->
               <div class="linebreak2"></div>
               <div class="clearfix"></div>
               </div>
