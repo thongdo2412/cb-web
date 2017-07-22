@@ -221,7 +221,6 @@ $(function (){ //for pagination
     $("#pagenumbers_nav").append('<span id="pagenumberitem">...</span>' + navHtml);
   }
 
-
   $("a[name='pre-next']").click(function(event){
     event.preventDefault();
     if ($(this).attr('id') == 'pre-page' ) {
@@ -232,15 +231,4 @@ $(function (){ //for pagination
     }
     window.location = pagename + '.php?page=' + String(pageLoc) + '#review';
   })
-
-});
-
-$( document ).ready(function() { //handle newsletter popup
-    setTimeout(function () {
-      $("#popupcontainer").fadeIn()
-    }, 10000);
-
-    $("#popupClose").on('click', function (evt) {
-      $("#popupcontainer").fadeOut();
-    });
 });

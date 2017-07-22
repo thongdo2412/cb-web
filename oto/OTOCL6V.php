@@ -8,13 +8,17 @@
     <style>
       body{color: #333; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; margin: 0; padding: 0;}
       .content{width: 900px; margin: auto;}
+      .container {width: 960px;}
       .centered_flex {display: flex;justify-content: center;align-items: center;}
       h1{font-size: 35px;}
       h2{font-size: 27px;}
       h3{font-size: 20px;}
       b{font-weight: 700;}
 
-      header {background: #000000 repeat;color: #fff;height: 84px;margin: 0 auto;}
+      header,footer {background: #000000 repeat;color: #fff;margin: 0 auto;}
+      footer {height: 50px;font-size: 14px;}
+      header {height: 84px;}
+      footer a{text-decoration: none; color: #fff;}
       .sup {vertical-align: top;position: relative; top: -4px;}
       .office_hours{font-size: 12px;font-family: "Montserrat", sans-serif;color: rgb(0, 0, 0);font-weight: 300;text-align: center;
       border-bottom: 1px solid rgb(235, 235, 235);padding: 10px;}
@@ -40,6 +44,7 @@
       .priceProp{text-align: left;padding-top: 60px; font-size: 27px; margin-left: -25px;}
       .ftn36{font-size: 36px;}
       .fnt27{font-size: 27px;}
+      .infusion-form button{background: #fff;border: none;}
     </style>
   </head>
   <body>
@@ -95,8 +100,21 @@
       <p>If you don't love the colors, or change your mind for any reason, give us a call and we'll issue a full refund. No questions asked.</p>
       <p align="center"><b>Click below this special to your order.</b> You'll be glad you did.</p>
 
-      <p align="center"><br /> [1sc:ButtonYes src="https://www.mcssl.com/content/assets/38/388151/yes.jpg" /]</p>
-      <p align="center">Or...<br /> <br /> [1sc:ButtonNo src="https://www.mcssl.com/content/assets/38/388151/no.jpg" /]</p>
+      <div align="center"><br />
+        <form accept-charset="UTF-8" action="https://wn373.infusionsoft.com/app/form/process/d5e35acfd049fdb13efd8a39f706687b" class="infusion-form" id="inf_form_d5e35acfd049fdb13efd8a39f706687b" method="POST">
+            <input name="inf_form_xid" type="hidden" value="d5e35acfd049fdb13efd8a39f706687b" />
+            <input name="inf_form_name" type="hidden" value="6 Colors" />
+            <input name="infusionsoft_version" type="hidden" value="1.67.0.60" />
+            <input name="inf_field_Email" type="hidden" value="null" />
+            <div class="infusion-submit">
+                <button type="submit"><img src="img/yes.jpg" alt=""></button>
+            </div>
+        </form>
+        <script type="text/javascript" src="https://wn373.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+      </div>
+      <p align="center">Or...<br /> <br />
+        <a href="https://citybeauty.com/orderconfirmation.php"><img src="img/no.jpg" alt=""></a>
+      </p>
       <p>&nbsp;</p>
     </div>
 
@@ -108,5 +126,12 @@
         <p>If you have any questions of concerns about your order, just give us a call at 1-800-347-1558.</p>
       </div>
       <p>&nbsp;</p>
+      <footer class="centered_flex">
+          <div class="container">
+            <div class="floatL">2017 &copy City Beauty LLC. City Lips® is a registered trademark of City Beauty LLC. All rights reserved.</div>
+            <div class="floatR"><a href="http://citycosmetics.com/privacy.php" target="_BLANK" onclick="return !window.open(this.href, 'Terms', 'scrollbars=1,width=500,height=500')">Privacy Policy</a> | <a href="http://citycosmetics.com/terms.php" target="_BLANK" onclick="return !window.open(this.href, 'Terms', 'scrollbars=1,width=500,height=500')">Terms & Conditions</a></div>
+            <div class="clear"></div>
+          </div>
+      </footer>
     </body>
   </html>

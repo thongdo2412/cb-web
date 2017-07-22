@@ -6,9 +6,10 @@
       <meta name="description" content="">
       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700">
       <style>
-
+        html,body {overflow-x: hidden;}
         body{color: #333; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; margin: 0; padding: 0;}
         .content{width: 900px; margin: auto;}
+        .container {width: 960px;}
         .centered_flex {display: flex;justify-content: center;align-items: center;}
 
         h1{font-size: 35px;}
@@ -16,7 +17,10 @@
         h3{font-size: 20px;}
         b{font-weight: 700;}
 
-        header {background: #000000 repeat;color: #fff;height: 84px;margin: 0 auto;}
+        header,footer {background: #000000 repeat;color: #fff;margin: 0 auto;}
+        footer {height: 50px;font-size: 14px;}
+        header {height: 84px;}
+        footer a{text-decoration: none; color: #fff;}
         .sup {vertical-align: top;position: relative; top: -4px;}
         .office_hours{font-size: 12px;font-family: "Montserrat", sans-serif;color: rgb(0, 0, 0);font-weight: 300;text-align: center;
         border-bottom: 1px solid rgb(235, 235, 235);padding: 10px;}
@@ -38,6 +42,7 @@
         .floatR {float: right;}
         .floatL {float: left;}
         .clear {clear: both;}
+        .infusion-form button{background: #fff;border: none;}
       </style>
     </head>
     <body>
@@ -56,7 +61,7 @@
       </div>
       <div class="step123 centered_flex"><img src="../img/step123-banner.png" alt=""/></div>
     <div class="wait"><span style="font-size:27px;">You've Been Randomly Selected</span> <br>for the Following Special Offer...</div>
-    <div class="topOffer center">Add 6 Tubes of City Lips<span class="reg">&reg</span> To Your Order<br>and <b>Save $60</b> Off Regular Price</div>
+    <div class="topOffer center">Add 3 Tubes of City Lips<span class="reg">&reg</span> To Your Order<br>and <b>Save $30</b> Off Regular Price</div>
 
     <div class="heroOffer center">
       <img src="https://www.mcssl.com/content/202584/00-US/polygon.png" alt="" height="20px">
@@ -84,10 +89,23 @@
       <p>When stored in normal conditions, you know...a cool, dry place like your cabinet or make up drawer, City Lips<span class="reg">&reg</span> will keep for a minimum of 2 years. Plenty of time to enjoy the formula before there’s even a chance of it going bad.</p>
       <p>While trends might come and go...<u>sexy, plump lips are always in style</u>.</p>
       <p>And since City Lips<span class="reg">&reg</span> is actually good for you in the long-run, you can now use it as much as you like, without worrying about running out anytime soon.</p>
-      <p>Click below to add 6 tubes to your order for only $150 + Free Shipping</p>
+      <p>Click below to add 3 tubes to your order for only $75 + Free Shipping</p>
 
-      <p align="center"><br /> [1sc:ButtonYes src="https://www.mcssl.com/content/assets/38/388151/yes.jpg" /]</p>
-      <p align="center">Or...<br /> <br /> [1sc:ButtonNo src="https://www.mcssl.com/content/assets/38/388151/no.jpg" /]</p>
+      <div align="center"><br />
+        <form accept-charset="UTF-8" action="https://wn373.infusionsoft.com/app/form/process/ed8e8841ead4c701ed44ef4bd38cae99" class="infusion-form" id="inf_form_ed8e8841ead4c701ed44ef4bd38cae99" method="POST">
+            <input name="inf_form_xid" type="hidden" value="ed8e8841ead4c701ed44ef4bd38cae99" />
+            <input name="inf_form_name" type="hidden" value="3US" />
+            <input name="infusionsoft_version" type="hidden" value="1.67.0.60" />
+            <input name="inf_field_Email" type="hidden" value="null" />
+            <div class="infusion-submit">
+                <button type="submit"><img src="img/yes.jpg" alt=""></button>
+            </div>
+        </form>
+        <script type="text/javascript" src="https://wn373.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+      </div>
+      <p align="center">Or...<br /> <br />
+        <a href="OTOCL1D.php"><img src="img/no.jpg" alt=""></a>
+      </p>
       <p>&nbsp;</p>
     </div>
 
@@ -100,24 +118,13 @@
       </div>
       <p>&nbsp;</p>
 
-    <img src="https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=10026284"/>
+    <footer class="centered_flex">
+        <div class="container">
+          <div class="floatL">2017 &copy City Beauty LLC. City Lips® is a registered trademark of City Beauty LLC. All rights reserved.</div>
+          <div class="floatR"><a href="http://citycosmetics.com/privacy.php" target="_BLANK" onclick="return !window.open(this.href, 'Terms', 'scrollbars=1,width=500,height=500')">Privacy Policy</a> | <a href="http://citycosmetics.com/terms.php" target="_BLANK" onclick="return !window.open(this.href, 'Terms', 'scrollbars=1,width=500,height=500')">Terms & Conditions</a></div>
+          <div class="clear"></div>
+        </div>
+    </footer>
 
-    <script data-obct type="text/javascript">
-        /** DO NOT MODIFY THIS CODE**/
-        !function(_window, _document) {
-        var OB_ADV_ID='005e34849b6242d16f4cdfb0d475de872f';
-        if (_window.obApi) { return; }
-        var api = _window.obApi = function() {api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);};api.version = '1.0';api.loaded = true;api.marketerId = OB_ADV_ID;api.queue = [];
-        var tag = _document.createElement('script');tag.async = true;tag.src = '//amplify.outbrain.com/cp/obtp.js';tag.type = 'text/javascript';var script = _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
-        obApi('track', 'PAGE_VIEW');
-    </script>
-
-    <script type="text/javascript">
-        window._tfa = window._tfa || [];
-        _tfa.push({ notify: 'action',name: 'sale' });
-    </script>
-    <script src="//cdn.taboola.com/libtrc/citybeauty-sc/tfa.js"></script>
-    <img src='http://api.content.ad/Lib/TrackConversion.aspx?aid=082b8ae3-a2ee-4e0e-a982-b1a33254de7b' width='1' height='1' />
-    <img src="http://trends.revcontent.com/conv.php?t=Gh%2FnHrkOzj4gmEW5PO7lRrHr851SwfX%2FpsUba9lQJ7HgJuq0H44f3umg2Y0PhVUk" />
   </body>
 </html>

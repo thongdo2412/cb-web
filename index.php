@@ -399,6 +399,6 @@ select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
     return $count;
     }
   ?>
-  </script>
+
 </body>
 </html>

@@ -8,14 +8,18 @@
       <style>
         body{color: #333; font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; margin: 0; padding: 0;}
         .content{width: 900px; margin: auto;}
+        .container {width: 960px;}
         .centered_flex {display: flex;justify-content: center;align-items: center;}
         h1{font-size: 35px;}
         h2{font-size: 27px;}
         h3{font-size: 20px;}
         b{font-weight: 700;}
 
-        header {background: #091e37 repeat;color: #fff;height: 84px;margin: 0 auto;}
-        header img {width: 97px;}
+        header,footer {background: #000000 repeat;color: #fff;margin: 0 auto;}
+        footer {height: 50px;font-size: 14px;}
+        header {height: 84px;}
+        footer a{text-decoration: none; color: #fff;}
+        .sup {vertical-align: top;position: relative; top: -4px;}
         .blackHeader {background-color: #091e37; width: 100%; height: 84px;}
         .office_hours{font-size: 12px;font-family: "Montserrat", sans-serif;color: rgb(0, 0, 0);font-weight: 300;text-align: center;
         border-bottom: 1px solid rgb(235, 235, 235);padding: 10px;}
@@ -35,14 +39,16 @@
         .floatR {float: right;}
         .floatL {float: left;}
         .clear {clear: both;}
+        .infusion-form button{background: #fff;border: none;}
       </style>
     </head>
     <body>
+
       <!--<div class="blackHeader center"><img src="https://www.mcssl.com/content/202584/citygoldlogo.png" alt="" style="margin: 22px;"></div>
-      <div class="center"><img src="https://www.mcssl.com/content/202584/00-US/city-below-logo.png" alt="" class="src"></div>-->
+      <div class="center"><img src="https://www.mcssl.com/content/202584/00-US/city-below-logo.png" alt="" class="src"></div> -->
       <header class="centered_flex">
           <div class="content center">
-            <img src="../img/city-beauty-logo.png" alt=""/>
+            <img src="../img/logo.png" alt=""/> <span class="sup">&reg;</span>
           </div>
         </header>
 
@@ -53,13 +59,13 @@
         </div>
         <div class="step123 centered_flex"><img src="../img/step123-banner.png" alt=""/></div>
       <div class="wait"><span style="font-size:27px;">Last Chance To Get City Lips</span> <br>For An Unbeatable Price</div>
-      <div class="topOffer center">Add Just 1 Tube of City Lips <br>To <b>Save $10 Off</b> Regular Price</div>
+      <div class="topOffer center">Get 3 Tubes of City Lips <br> Added To Your Order For Just $25 Each</div>
       <div class="center"><img src="https://www.mcssl.com/content/202584/00-US/polygon.png" alt="" height="20px"></div>
         <div class="heroContent center">
           <div class="offer-breakdown">
-          <h3>Get 1 Tube of City Lips <br> Added To Your Order For Just $25</h3>
+          <h3>Add Just 3 Tubes of City Lips <br>And <b>Save $30 Off</b> Regular Price</h3>
             <p class="fnt24">Was: <s>$35 per tube</s><br>Now: $25 per tube </p>
-            <p class="fnt24">You Save: $10*</p>
+            <p class="fnt24">You Save: $30*</p>
             <p>&nbsp;</p>
             <p>*This is a one-time opportunity and <br>only available as an add-on to your current order</p>
           </div>
@@ -69,16 +75,29 @@
 
       <div class="content">
         <h3>Why Are We Doing This?</h3>
-        <p>I understand that adding 2 tubes might feel like a lot. Especially if this is your first time experiencing this amazing formula.</p>
+        <p>I understand that adding 6 tubes might feel like a lot. Especially if this is your first time experiencing this amazing formula.</p>
         <p>But I don't want you to miss out on this opportunity. Never will you find City Lips for only $25 per tube.</p>
-        <p>That's why I'm giving you this chance. So you can add just 1 bottle to your order and still get the best price on City Lips.</p>
+        <p>That's why I'm giving you this chance. So you can add just 3 tubes to your order and still get the best price on City Lips.</p>
 
         <h3>Don't Decide Today</h3>
         <p>As always...your order is backed by our 60-day money back guarantee. If you're not completely satisfied - for whatever reason - just send it back for an immediate refund.</p>
-        <p>Click below to add this special to your order for only $25.</p>
+        <p>Click below to add this special to your order for only $25 per tube.</p>
 
-        <p align="center"><br /> [1sc:ButtonYes src="https://www.mcssl.com/content/assets/38/388151/yes.jpg" /]</p>
-        <p align="center">Or...<br /> <br /> [1sc:ButtonNo src="https://www.mcssl.com/content/assets/38/388151/no.jpg" /]</p>
+        <div align="center"><br />
+          <form accept-charset="UTF-8" action="https://wn373.infusionsoft.com/app/form/process/30604d7a75c85d7fe2fce623816d8254" class="infusion-form" id="inf_form_30604d7a75c85d7fe2fce623816d8254" method="POST">
+              <input name="inf_form_xid" type="hidden" value="30604d7a75c85d7fe2fce623816d8254" />
+              <input name="inf_form_name" type="hidden" value="3DS" />
+              <input name="infusionsoft_version" type="hidden" value="1.67.0.60" />
+              <input name="inf_field_Email" type="hidden" value="null" />
+              <div class="infusion-submit">
+                  <button type="submit"><img src="img/yes.jpg" alt=""></button>
+              </div>
+          </form>
+          <script type="text/javascript" src="https://wn373.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+        </div>
+        <p align="center">Or...<br /> <br />
+          <a href="OTOCL6V.php"><img src="img/no.jpg" alt=""></a>
+        </p>
         <p>&nbsp;</p>
       </div>
 
@@ -90,5 +109,12 @@
           <p>If you have any questions of concerns about your order, just give us a call at 1-800-347-1558.</p>
         </div>
         <p>&nbsp;</p>
-      </body>
-    </html>
+        <footer class="centered_flex">
+            <div class="container">
+              <div class="floatL">2017 &copy City Beauty LLC. City Lips® is a registered trademark of City Beauty LLC. All rights reserved.</div>
+              <div class="floatR"><a href="http://citycosmetics.com/privacy.php" target="_BLANK" onclick="return !window.open(this.href, 'Terms', 'scrollbars=1,width=500,height=500')">Privacy Policy</a> | <a href="http://citycosmetics.com/terms.php" target="_BLANK" onclick="return !window.open(this.href, 'Terms', 'scrollbars=1,width=500,height=500')">Terms & Conditions</a></div>
+              <div class="clear"></div>
+            </div>
+        </footer>
+    </body>
+</html>

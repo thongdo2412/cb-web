@@ -283,8 +283,7 @@ text-align: center;}
                   <p style="font-weight:400;font-size:16px">FREE SHIPPING</p>
                 </div>
             </div>
-
-            <div style="float:right;position: relative; bottom:75px;"><img src="../img/product.png"></img></div>
+            <div style="position: relative; bottom:75px;"><img src="../img/undereye_str_sm.png"></img></div>
           </div>
         <div class="clearfloat"></div>
         </div>
