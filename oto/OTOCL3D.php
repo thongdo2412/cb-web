@@ -116,5 +116,8 @@
               <div class="clear"></div>
             </div>
         </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../js/otoscript.js"></script>
     </body>
 </html>

@@ -99,7 +99,7 @@ h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 30px;font-
 h4{font-size: 20px;line-height: 24px;font-weight: 300;}
 h5{font-size: 16px; font-weight: 400;}
 h3,h4,h5 {display: inline;}
-body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
+body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;-webkit-overflow-scrolling: touch;}
 body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; font-weight: 300;line-height: 24px;}
 #home-uptodate .infusion-field-input-container{display: inline-block;}
 /* newsletter popup css */
@@ -112,7 +112,7 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
 .infusion-field label {font-weight: 300;}
 #popupClose:hover {cursor: pointer;}
 select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
-  border-radius: 0px;-webkit-appearance: none; -webkit-border-radius: 0px;padding: 0px 6px;
+  border-radius: 0px;-webkit-appearance: none;-moz-appearance:none; -webkit-border-radius: 0px;padding: 0px 6px;
   background: url("../img/selectarrows.png") no-repeat right 10px center #f8f9f9;}
 
 /*social network icon */

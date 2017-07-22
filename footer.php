@@ -58,7 +58,7 @@
           <div class="linebreak2"></div>
           <div class="infusion-field">
               <label for="inf_custom_Whichproductareyouinterestedin">Which Product Are You Interested In? *</label>
-              <select id="inf_custom_Whichproductareyouinterestedin" name="inf_custom_Whichproductareyouinterestedin"><option value="">Please select one</option><option value="City Lips">City Lips</option><option value="Under Eye Recovery">Under Eye Recovery</option><option value="City Views">City Views</option><option value="City Lash">City Lash</option></select>
+              <select id="inf_custom_Whichproductareyouinterestedin" name="inf_custom_Whichproductareyouinterestedin"><option value="">Please select one</option><option value="City Lips">City Lips</option><option value="Under Eye Recovery">Under Eye Recovery</option></select>
           </div>
         </div>
         <div class="linebreak2"></div>

@@ -73,7 +73,8 @@ div.form-group input.form-control{border-radius: 0;width: 292px;}
 div.form-group input{margin-left: 18px;}
 div.form-group label{font-weight: 300;}
 div.form-group textarea.form-control{border-radius: 0;margin-left: 18px;width: 744px;height: 102px;}
-div.form-group select.form-control{margin-left: 14px; width: 292px; border-radius: 0;-webkit-appearance: none; background: url("../img/selectarrows.png") no-repeat right 10px center #f8f9f9;}
+div.form-group select.form-control{margin-left: 14px; width: 292px; border-radius: 0;-webkit-appearance: none; -moz-appearance:none;
+  background: url("../img/selectarrows.png") no-repeat right 10px center #f8f9f9;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 1;}
 h4{font-size: 20px;font-weight: 300;display: inline;}
 body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden;}
