@@ -144,6 +144,7 @@
     .guarantee_wrd{margin-left: 100px;}
     .product_notes{padding-left: 28px;padding-right: 28px;}
     #review_form{width: 300px;margin:auto;}
+    .product-gallery {margin-top: 10px;}
     .product-gallery img {width: 180%; height: 180%;}
     .xsquantity{margin-left: 0;}
   }
@@ -203,7 +204,7 @@
         <div class="col-lg-7 col-lg-offset-2 col-md-7 col-md-offset-2 col-sm-7 col-sm-offset-2 col-xs-10 col-xs-offset-1 product_info">
           <div class="row">
             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-9">
-              <h3>City Lips<span class="sup1">&reg;</span></h3>
+              <h3 id="cityheading">City Lips<span class="sup1">&reg;</span></h3>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
                 <div class="linebreak12"></div>
