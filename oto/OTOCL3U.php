@@ -1,3 +1,22 @@
+<?php // redirect when the referrer url is not from inf
+  if (!isset($_GET['inf_field_Email'])) {
+    $url = "https://citybeauty.com/specialoffer/ftc-expired.php";
+    if(!headers_sent()) {
+        //If headers not sent yet... then do php redirect
+        header('Location: '.$url);
+        exit;
+    } else {
+        //If headers are sent... do javascript redirect... if javascript disabled, do html redirect.
+        echo '<script type="text/javascript">';
+        echo 'window.location.href="'.$url.'";';
+        echo '</script>';
+        echo '<noscript>';
+        echo '<meta http-equiv="refresh" content="0;url='.$url.'" />';
+        echo '</noscript>';
+        exit;
+    }
+  }
+ ?>
 <!Doctype html>
 <html>
     <head>
@@ -104,7 +123,7 @@
         <script type="text/javascript" src="https://wn373.infusionsoft.com/app/webTracking/getTrackingCode"></script>
       </div>
       <p align="center">Or...<br /> <br />
-        <a href="OTOCL1D.php"><img src="img/no.jpg" alt=""></a>
+        <a href="OTOCL1D.php" id="no-link"><img src="img/no.jpg" alt=""></a>
       </p>
       <p>&nbsp;</p>
     </div>

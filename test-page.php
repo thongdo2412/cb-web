@@ -116,19 +116,23 @@ body {height: 1600px;}
   </head>
   <body>
 
-
+    <p><?php echo $_GET['cid']; ?></p>
 
   <div class="bottomMenu"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
-      $(document).scroll(function () {
-        var y = $(this).scrollTop();
-        if (y > 200) {
-            $('.bottomMenu').fadeIn();
-        } else {
-            $('.bottomMenu').fadeOut();
-        }
-      });
+      function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      var cid = String(getParameterByName('cid'));
+      document.getElementById('ctl00_ctl00_mainContent_scPageContent_customFieldsControl_customFieldsRepeater_ctl00_customFieldTextBox').value = cid;
   </script>
   </body>
   </html>

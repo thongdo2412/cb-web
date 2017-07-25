@@ -10,3 +10,6 @@ function getParameterByName(name, url) {
 
 var cusEmail = String(getParameterByName('inf_field_Email'));
 $("input[name='inf_field_Email']").val(cusEmail);
+var _href = $("#no-link").attr("href");
+var inf_email = $("input[name='inf_field_Email']").val();
+$("#no-link").attr("href", _href + "?inf_field_Email=" + inf_email);
