@@ -95,7 +95,7 @@ $(function(){ //handles add to cart with quantity selected above
            window.location = "http://citybeauty.com/cmd.php?pid=c8296bdec9f242e196759b73322aea7f&qty=" + quantity.toString();
          } break;
          case "City Lash": {
-           window.location = "http://citybeauty.com/cmd.php?pid=e44f3331641b4bc6934d80d845bda9c1&qty=" + quantity.toString();
+           window.location = "http://citybeauty.com/cmd.php?pid=6fb36b9991f7445b95897318bb682231&qty=" + quantity.toString();
          } break;
          case "Youth Regenerating Cleanser": {
            window.location = "https://citybeauty.com/cmd.php?pid=8972edaad90a42f896b75ac008055a31&qty=" + quantity.toString();
@@ -231,4 +231,14 @@ $(function (){ //for pagination
     }
     window.location = pagename + '.php?page=' + String(pageLoc) + '#review';
   })
+});
+
+$( document ).ready(function() { //handle newsletter popup
+    setTimeout(function () {
+      $("#popupcontainer").fadeIn()
+    }, 5000);
+
+    $("#popupClose").on('click', function (evt) {
+      $("#popupcontainer").fadeOut();
+    })
 });

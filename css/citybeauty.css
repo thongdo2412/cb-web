@@ -3,7 +3,7 @@ a {text-decoration: none;color: #e1c37b;}
 header,footer{background: rgb(9,30,55) center no-repeat fixed;height: 94px;margin: 0 auto;background-size: 100% 100%; background-size: cover;}
 header img{width: 97px;}
 footer{color: rgb(255,255,255);font-size: 12px; font-weight: 300; line-height: 1;}
-footer a,a:hover{text-decoration: none; color: #ffffff;}
+footer a, footer a:hover{text-decoration: none; color: #ffffff;}
 .cruel-free {width: 118px;height: 32px;margin-left: -14px;}
 .container-fluid{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
 .container{margin:0 auto;text-align:center;margin-left: auto;margin-right: auto;padding: 0;}
@@ -67,7 +67,8 @@ a:hover {color: #e1c37b;text-decoration: underline;}
 
 /* newsletter popup css */
 #popupcontainer {display: none;background-color:#ffffff;width: 360px; height: 480px; z-index: 1000;
-  border: 1px solid #000000;box-shadow: 0 0 10px #c6c6c6;position: fixed; bottom: 0; right:5%;}
+  border: 1px solid #000000;box-shadow: 0 0 10px #c6c6c6;position: fixed; bottom: 0; right:5%;
+ font-family: "Montserrat", sans-serif;}
 .popup-header {background: rgb(9,30,55);height: 41px; padding: 9px 18px;color: #ffffff;}
 .popupbody {padding: 6px 20px;}
 .popup-btn {float: right;}

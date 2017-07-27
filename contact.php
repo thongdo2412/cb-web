@@ -84,6 +84,20 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px;fon
 .social-wrap{list-style: none;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-flex-flow: row nowrap;justify-content:space-between;margin-top: 6px;}
 .social-item{width: 20px;height: 20px;margin-left: 6px;}
 
+/* newsletter popup css */
+#popupcontainer {display: none;background-color:#ffffff;width: 360px; height: 480px; z-index: 1000;
+  border: 1px solid #000000;box-shadow: 0 0 10px #c6c6c6;position: fixed; bottom: 0; right:5%;
+  font-family: "Montserrat", sans-serif;}
+.popup-header {background: rgb(9,30,55);height: 41px; padding: 9px 18px;color: #ffffff;}
+.popupbody {padding: 6px 20px;}
+.popup-btn {float: right;}
+.infusion-field-input-container {display: block; width: 100%; height: 32px;}
+.infusion-field label {font-weight: 300;}
+#popupClose:hover {cursor: pointer;}
+select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
+  border-radius: 0px;-webkit-appearance: none;-moz-appearance:none /*for firefox*/; -webkit-border-radius: 0px;padding: 0px 6px;
+  background: url("../img/selectarrows.png") no-repeat right 10px center #f8f9f9;}
+
 /*Responsive for different screen*/
 @media screen and (min-width: 1199px) {.mailus{margin-left: 60px;}}
 @media screen and (max-width: 1199px) {.social-wrap{display: block;margin-top: 0;} .mailus{margin-left: 60px;} .emailbox{height: 450px;} .cruel-free{margin-left: 0;margin-top: 5px;} footer {height: 130px;}}

@@ -39,5 +39,6 @@ counts.php
 .htaccess*
 htaccess*
 temp.php
-test-page.php
+/scripts/test.php
+test-page*
 res.php

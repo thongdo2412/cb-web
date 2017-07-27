@@ -104,7 +104,8 @@ body{text-align: center;font-family: "Montserrat",sans-serif;font-size: 16px; fo
 #home-uptodate .infusion-field-input-container{display: inline-block;}
 /* newsletter popup css */
 #popupcontainer {display: none;background-color:#ffffff;width: 360px; height: 480px; z-index: 1000;
-  border: 1px solid #000000;box-shadow: 0 0 10px #c6c6c6;position: fixed; bottom: 0; right:5%;}
+  border: 1px solid #000000;box-shadow: 0 0 10px #c6c6c6;position: fixed; bottom: 0; right:5%;
+font-family: "Montserrat", sans-serif;}
 .popup-header {background: rgb(9,30,55);height: 41px; padding: 9px 18px;color: #ffffff;}
 .popupbody {padding: 6px 20px;}
 .popup-btn {float: right;}
@@ -286,7 +287,7 @@ select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
        <div class="movedown30"></div>
        <div><h5>&nbsp;</h5></div>
        <div><h5>CITY LASH&reg;</h5></div>
-       <div class="priceholder">$49</div>
+       <div class="priceholder">$79.99</div>
        <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('citylash',$link,$connErr) . ')';?></span>
        <div class="movedown8"></div>
        <a href="citylash.php" class="button button_wht">SEE DETAILS</a>
@@ -340,7 +341,7 @@ select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
              <div class="movedown30"></div>
              <div><h5>&nbsp;</h5></div>
              <div><h5>CITY LASH<span class="sup1">&reg;</span></h5></div>
-             <div class="priceholder">$49</div>
+             <div class="priceholder">$79.99</div>
              <div class="row">
                <div class="col">
                  <img src="../img/stars_rating.png" alt="5 stars rating"><span class="rating_wrd"><?php echo '('. getProductCounts('citylash',$link,$connErr) . ')';?></span>
@@ -399,6 +400,17 @@ select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
     return $count;
     }
   ?>
+  <script type="text/javascript">
+    $( document ).ready(function() { //handle newsletter popup
+        setTimeout(function () {
+          $("#popupcontainer").fadeIn()
+        }, 5000);
+
+        $("#popupClose").on('click', function (evt) {
+          $("#popupcontainer").fadeOut();
+        })
+    })
+  </script>
 
 </body>
 </html>

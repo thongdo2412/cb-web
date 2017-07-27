@@ -116,7 +116,10 @@ body {height: 1600px;}
   </head>
   <body>
 
-    <p><?php echo $_GET['cid']; ?></p>
+
+    <p><?php echo $_GET['cid'];?></p>
+
+    <a href="test-page2.php">Click here to go to second page</a>
 
   <div class="bottomMenu"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -132,7 +135,35 @@ body {height: 1600px;}
       }
 
       var cid = String(getParameterByName('cid'));
-      document.getElementById('ctl00_ctl00_mainContent_scPageContent_customFieldsControl_customFieldsRepeater_ctl00_customFieldTextBox').value = cid;
+    //  document.getElementById('ctl00_ctl00_mainContent_scPageContent_customFieldsControl_customFieldsRepeater_ctl00_customFieldTextBox').value = cid;
+
+      function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      if (cid != "" && cid != null) {
+           setCookie("cid", cid, 30);
+      }
+
+      function getCookie(cname) {
+          var name = cname + "=";
+          var decodedCookie = decodeURIComponent(document.cookie);
+          var ca = decodedCookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                  return c.substring(name.length, c.length);
+              }
+          }
+          return "";
+      }
+
   </script>
   </body>
   </html>
