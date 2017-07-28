@@ -433,15 +433,15 @@ select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;
     }
 
     $("#newsletter-btn").on('click', function (evt) {
-      var optin = getCookie("opt-ined");
+      var optin = getCookie("opted-in");
       if (optin == "") {
         cvalue = makeid();
-        setCookie("opt-ined", cvalue, 30);
+        setCookie("opted-in", cvalue, 30);
       }
     })
 
     $( document ).ready(function() { //handle newsletter popup
-      var ccookie = getCookie("opt-ined");
+      var ccookie = getCookie("opted-in");
       if (ccookie == "") {
         setTimeout(function () {
           $("#popupcontainer").fadeIn()
