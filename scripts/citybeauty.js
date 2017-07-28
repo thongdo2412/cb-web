@@ -267,15 +267,15 @@ function makeid() { //random generate a string for cookie value
 }
 
 $("#newsletter-btn").on('click', function (evt) { //handle click event in the opt in
-  var optin = getCookie("opt-ined");
+  var optin = getCookie("opted-in");
   if (optin == "") {
     cvalue = makeid();
-    setCookie("opt-ined", cvalue, 30);
+    setCookie("opted-in", cvalue, 365);
   }
 })
 
 $( document ).ready(function() { //handle newsletter popup
-  var ccookie = getCookie("opt-ined");
+  var ccookie = getCookie("opted-in");
   if (ccookie == "") {
     setTimeout(function () {
       $("#popupcontainer").fadeIn()
