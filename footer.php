@@ -38,7 +38,7 @@
     <input name="infusionsoft_version" type="hidden" value="1.67.0.58" />
       <div class="popup-header">
         <div class="pull-left">JOIN FOR EXCLUSIVE SALES</div>
-        <div class="pull-right" id="popupClose">&mdash;</div>
+        <div class="pull-right" id="popupClose">X</div>
         <div class="clearfix"></div>
       </div>
       <div class="popupbody">
@@ -63,7 +63,7 @@
         </div>
         <div class="linebreak2"></div>
         <div class="infusion-submit">
-            <input type="submit" class="popup-btn submitbtn button_blue" value="SUBMIT">
+            <input id="newsletter-btn" type="submit" class="popup-btn submitbtn button_blue" value="SUBMIT">
             <div class="clearfix"></div>
         </div>
         <script type="text/javascript" src="https://wn373.infusionsoft.com/app/webTracking/getTrackingCode"></script>

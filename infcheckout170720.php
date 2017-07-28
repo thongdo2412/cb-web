@@ -48,14 +48,6 @@ else if ($mobile_browser > 0) {
    // do something for mobile devices
    header('Location: http://youngerlips.com/citylips/checkoutm170503.php'. $_SERVER['QUERY_STRING']);
 }
-
-if(!isset($_COOKIE['fr'])) {
-  $gotcookie = 'n';
-}
-else {
-  $gotcookie = $_COOKIE['fr'];
-}
-
  ?>
  <!DOCTYPE html>
 <html>
@@ -773,15 +765,25 @@ body{
         </div>
     </footer>
 
-    <p><?php echo $gotcookie;?></p>
-
     <script type="text/javascript">
-      /*
-        if (getCookie("trackurl-v4") == "" || getCookie("trackurl-v4") == null ) {
-          document.getElementById("qty1").href = "http://citybeauty.com/cmd.php?pid=9fa8539faceb4050bbc0ddff0d905b65&bn=1&clear=1&coup=1";
-          document.getElementById("qty2").href = "http://citybeauty.com/cmd.php?pid=8021f125fc424998865e0f4ea777347f&bn=1&clear=1&coup=1";
-          document.getElementById("qty3").href = "http://citybeauty.com/cmd.php?pid=deb80b84100a4f079caafb80769a083c&bn=1&clear=1&coup=1";
-        }*/
+        function urlExists(url) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+              if (xhr.status >= 400) {
+                return false;
+              }
+            };
+            xhr.open('POST', url, true);
+            xhr.send();
+        }
+
+        checkurl = 'https://crossorigin.me/' + document.getElementById("qty1").href;
+        console.log(checkurl);
+        if (!urlExists(checkurl)) {
+          console.log("this is bad link and needs to be changed!");
+        }
+
+
 
     </script>
 

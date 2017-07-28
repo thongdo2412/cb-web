@@ -233,12 +233,55 @@ $(function (){ //for pagination
   })
 });
 
+//cookie related functions
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+      }
+  }
+  return "";
+}
+
+function makeid() { //random generate a string for cookie value
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 14; i++) // i < N where N is the number of characters in the string
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+$("#newsletter-btn").on('click', function (evt) { //handle click event in the opt in
+  var optin = getCookie("opt-ined");
+  if (optin == "") {
+    cvalue = makeid();
+    setCookie("opt-ined", cvalue, 30);
+  }
+})
+
 $( document ).ready(function() { //handle newsletter popup
+  var ccookie = getCookie("opt-ined");
+  if (ccookie == "") {
     setTimeout(function () {
       $("#popupcontainer").fadeIn()
     }, 5000);
-
-    $("#popupClose").on('click', function (evt) {
-      $("#popupcontainer").fadeOut();
-    })
+  }
+  $("#popupClose").on('click', function (evt) {
+    $("#popupcontainer").fadeOut();
+  })
 });

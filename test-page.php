@@ -117,7 +117,8 @@ body {height: 1600px;}
   <body>
 
 
-    <p><?php echo $_GET['cid'];?></p>
+    <p><?php print_r($_COOKIE);?></p>
+    <p><?php print_r($_SESSION);?></p>
 
     <a href="test-page2.php">Click here to go to second page</a>
 
@@ -163,6 +164,8 @@ body {height: 1600px;}
           }
           return "";
       }
+
+      alert(document.cookie);
 
   </script>
   </body>

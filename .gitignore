@@ -18,11 +18,14 @@ Thumbs.db
 
 # Application specific files
 venv
+citycos-home.php
+inc
 pip
 vendor
 dynamo
 node_modules
 components
+*test*
 composer.json
 composer.lock
 composer.phar
