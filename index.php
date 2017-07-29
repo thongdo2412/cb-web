@@ -54,7 +54,8 @@ nav2:hover:after {left: 95%;}
 .line-on-sides{overflow: hidden;}
 toBold{font-weight: 600;}
 .button{width: 150px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
-.submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;}
+.submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);
+  border-style: solid;text-align: center;border-radius: 0px;-webkit-border-radius: 0px;}
 .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
 a.button {text-decoration: none;}
@@ -109,7 +110,7 @@ font-family: "Montserrat", sans-serif;}
 .popup-header {background: rgb(9,30,55);height: 41px; padding: 9px 18px;color: #ffffff;}
 .popupbody {padding: 6px 20px;}
 .popup-btn {float: right;}
-.infusion-field-input-container {display: block; width: 100%; height: 32px;}
+.infusion-field-input-container {display: block; width: 100%; height: 32px;border-radius: 0px;-webkit-border-radius: 0px;}
 .infusion-field label {font-weight: 300;}
 #popupClose:hover {cursor: pointer;}
 select#inf_custom_Whichproductareyouinterestedin {width: 100%; height: 32px;

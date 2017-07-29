@@ -47,7 +47,8 @@ nav2:hover:after {left: 90%;}
 .navbar-default .navbar-nav > li > a {color: #333; padding-left: 32px;}
 .line-on-sides{overflow: hidden;}
 toBold{font-weight: 600;}
-.button{width: 110px;height: 30px;font-size: 14px;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;}
+.button{width: 110px;height: 30px;font-size: 14px;border-width: 1px;border-color: rgb(6, 16, 42);
+  border-style: solid;border-radius: 0px;-webkit-border-radius: 0px;}
 .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
 .button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
 .biggerfont{font-family: "Playfair Display",serif;font-size: 38px;}
