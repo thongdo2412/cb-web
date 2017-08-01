@@ -272,7 +272,7 @@
               <hr>
               <div class="row">
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 hidden-xxs guarantee_logo">
-                  <img src="../img/60daysicon2.png" alt="60 days icon #2">
+                  <img class="guaranteeicon" src="../img/60daysicon2new.png" alt="60 days icon #2">
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8.5 col-xxs-12 guarantee_wrd">
                   <p>You have 60 days to try our products and see the results for yourself. If you are not 100% satisfied, simply contact us and we will gladly refund your money. No questions asked.</p>

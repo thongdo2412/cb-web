@@ -766,7 +766,7 @@ body{
     </footer>
 
     <script type="text/javascript">
-        function urlExists(url) {
+      /*  function urlExists(url) {
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {
               if (xhr.status >= 400) {
@@ -781,10 +781,8 @@ body{
         console.log(checkurl);
         if (!urlExists(checkurl)) {
           console.log("this is bad link and needs to be changed!");
-        }
-
-
-
+        }*/
+        
     </script>
 
 </body>
