@@ -16,36 +16,6 @@
         exit;
     }
   }
-
-  $str1 = file_get_contents('../components/infusionsoft/infkey');
-  $key = json_decode($str1, true);
-  $accesstoken = $key['ACCESS_TOKEN'];
-  $orderid = $_GET['orderId'];
-  $cid = $_GET['cid'];
-  $url2 = 'https://api.infusionsoft.com/crm/rest/v1/orders/' . $orderid . '?access_token=' . $accesstoken;
-  $str2 = file_get_contents($url2);
-  $results = json_decode($str2, true);
-  $amount = $results['total'];
-
-  $url3 = 'https://vmhlw.voluumtrk2.com/postback';
-  $fields = array(
-    'cid'    => $cid,
-    'payout' => $amount,
-    'txid'   => $orderid
-  );
-  //open connection
-  $ch = curl_init();
-
-  //set the url, number of POST vars, POST data
-  curl_setopt($ch, CURLOPT_URL, $url3);
-  curl_setopt($ch, CURLOPT_POST, count($fields));
-  curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
-
-  //execute post
-  $result = curl_exec($ch);
-
-  //close connection
-  curl_close($ch);
  ?>
 <!Doctype html>
 <html>
