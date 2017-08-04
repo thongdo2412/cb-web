@@ -32,12 +32,12 @@ session_start();
     // Save the serialized token to the current session for subsequent requests
     $_SESSION['token'] = serialize($infusionsoft->getToken());
     echo '<p>Done4</p>';
-    $token = $_SESSION['token'];
-    $token1 = unserialize($token);
+    $token1 = unserialize($_SESSION['token']);
     $token2 = json_encode($token1);
     $token3 = json_decode($token2,true);
+    print_r($token3);
     $tk = $token3['accessToken'];
-    echo '<p>'.$tk .'</p>';
+    echo '<p>'. $tk .'</p>';
     // MAKE INFUSIONSOFT REQUEST
   } else {
     echo '<a href="' . $infusionsoft->getAuthorizationUrl() . '">Click here to authorize</a>';

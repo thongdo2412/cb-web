@@ -4,13 +4,10 @@
   $str1 = file_get_contents('../components/infusionsoft/infkey');
   $key = json_decode($str1, true);
   $accesstoken = $key['ACCESS_TOKEN'];
-  //$since = date("Y-m-d\TH:i:s.000\Z", time() - 30);
-  //$until = date("Y-m-d\TH:i:s.000\Z", time());
-  $since = '2017-08-02T19:15:28.000Z';
-  $until = '2017-08-02T19:15:28.000Z';
+  $orderId = $_GET['orderId'];
 
   //build the API url
-  $apiUrl = 'https://api.infusionsoft.com/crm/rest/v1/transactions?access_token=' . $accesstoken . '&since=' . $since . '&until=' . $until;
+  $apiUrl = 'https://api.infusionsoft.com/crm/rest/v1/orders/'. $orderId . '?access_token=' . $accesstoken;
 
   //open connection for API call to Inf
   $ch = curl_init();
@@ -26,33 +23,27 @@
   curl_close($ch);
 
   $cid = $_GET['cid'];
-  $transid = $results['transactions'][0]['id'];
-  $amount = $results['transactions'][0]['amount'];
+  $amount = $results['total'];
   $currentdate = gmdate("Y-m-d\TH:i:s.000\Z");
-  $sent = 0;
   //store into citybeauty db
   if (!$connErr){
     // attempt insert query execution
-    $sql = "INSERT INTO `postback`(clickid,transactionid,amount,timeatcopy,sent) VALUES ('$cid', '$transid','$amount','$currentdate','$sent')";
+    $sql = "INSERT INTO `postback` (orderid,clickid,amount,timeatcopy) VALUES ('$orderId', '$cid','$amount','$currentdate')";
     if(mysqli_query($link, $sql)){
       echo "<p>Done</p>";
     }
     else {
       echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
       // close connection
-      mysqli_close($link);
     }
+    mysqli_close($link);
   }
-
 ?>
 <!Doctype html>
 <html>
   <body>
-    <p><?php echo $since;?></p>
-    <p><?php echo $until;?></p>
     <p><?php echo $apiUrl;?></p>
-    <p><?php echo $results['transactions'][0]['id'];?></p>
-    <p><?php echo $results['transactions'][0]['amount'];?></p>
+    <p><?php echo $amount;?></p>
     <p><?php echo 'done';?></p>
   </body>
 </html>
