@@ -57,7 +57,7 @@
         <div>
           <h4>Our Story</h4>
           <div class="linebreak3"></div>
-          <p>City Beauty was born in 2002, when our founder, Victoria Renee, decided to finally do something about a problem that had been plaguing her for years: thin lips.
+          <p>City Beauty was born in 2002, when our founder decided to finally do something about a problem that had been plaguing her for years: thin lips.
             <br /><br />
             Not satisfied with other products that made bold promises but then failed to deliver, Victoria was committed to one thing: creating beauty solutions to the problems most women face, at a price they could afford.
             <br /><br />
