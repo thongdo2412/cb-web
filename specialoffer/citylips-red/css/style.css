@@ -1,0 +1,256 @@
+/* CSS Document */
+
+html, body {
+	margin:0;
+	background-color: #f6EEE4;
+	font-family:Raleway , Verdana, Geneva, sans-serif;
+	color:#FFF;
+	
+}
+
+.buttons-holder{
+  float: right;
+    margin: 10px 0 0;
+    text-align: center;
+    width: auto !important;
+}
+
+#row2	{
+   float: left;
+    margin-left: 40px;
+    width: 70%;
+}
+
+/* CHALLENGE */
+
+a {color:#E9CD44; text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+h1,h2,h3,p { font-weight:normal; margin:0; }
+
+.clear { clear:both; height:1px; line-height:1px; margin-bottom:-1px; overflow:hidden;}
+
+#wrapper {
+	width:878px;
+	margin:86px auto 10px auto;	
+	background-color:#222;
+}
+
+/* HEADER */
+#header {
+	width:100%;
+	min-width:878px;
+	height:130px;
+	line-height:130px;
+	background-color:#000;
+	color:#FFF;
+	text-align:center;
+	border-bottom:8px solid #E9CD44;
+}
+#header img { vertical-align:middle;}
+#banner {
+	background-image: url(http://citycosmetics.com/landing_citylights/images/CLi_header.jpg);
+	width: 100%;
+	background-repeat:no-repeat;
+background-attachment:fixed;
+background-position:center; 
+}
+
+
+
+/* INSTRUCTIONS/BREADCRUMBS */
+/*#instructions { width:800px; margin:39px auto 30px auto; text-align:center; color:#000; }
+#instructions h1 { font-size:34px; margin-bottom:6px; }
+#instructions h3 {font-size:16px; font-family:HelveticaNeueLTStdCn;}
+
+#breadcrumbs-wrapper {
+	margin:0 auto;
+	width:495px;
+	height:39px;
+	text-transform:uppercase;
+	font-size:16px;
+	background-image:url(../images/breadcrumbs.png);
+	font-family:HelveticaNeueLTStdCn;
+}
+#breadcrumbs-wrapper div { float:left; width:165px; text-align:center; line-height:45px; }
+#breadcrumbs-wrapper div.center { color: #000;}
+
+/* TOP SECTION */
+#top-section { padding:18px 42px 0 50px;}
+#top-section h2 { text-align:center; font-size:24px; text-transform:uppercase; }
+#top-section h2 b { font-weight:normal; color:#E9CD44; font-family:Raleway-ExtraBold; font-size:35px; }
+#top-section #city-lash { float:left; position:relative; left:0; top:30px; margin-bottom:30px; }
+#top-section #text-right { float:right; width:514px; margin-top:58px; }
+#top-section #text-right h3 { font-size:20px; font-family:Raleway-Bold; color:#E9CD44; margin-bottom:24px;}
+#top-section #text-right p { font-size:16px; line-height:21px; margin-bottom:21px;}
+#top-section #text-right ul { list-style-image:url(../images/li.png); margin:0; padding:10px 0 0 0; text-transform:uppercase; }
+#top-section #text-right ul li { 
+	font-size: 15px;
+	line-height: 17px;
+	font-family: Raleway-Bold;
+	margin-bottom: 12px;
+	list-style-position: outside;
+	width: 430px;
+	margin-left: 27px;
+	padding-left:10px;
+}
+
+
+
+/* GUARANTEE */
+#guarantee-section { padding:23px 19px 23px 47px; background-color:#000; }
+#guarantee-section #seal { position:absolute; display:inline-block; margin-top: -51px; }
+#guarantee-section-right { float:right; width:600px; }
+#guarantee-section-right h2 { color:#E9CD44; font-size:33px; margin-bottom:5px; font-family:Raleway-Bold; text-transform:uppercase; }
+#guarantee-section-right p { font-size:15px; }
+
+
+/* FAQs */
+#faqs-section { padding:35px 0 0 0; background-color:#000;}
+#faqs-section h1 { 
+	padding-bottom:31px; 
+	text-align:center; 
+	font-size:33px;
+	line-height:33px;
+	text-transform:uppercase; 
+	color:#E9CD44; 
+	font-family:Raleway-Bold;
+	border-bottom:1px solid #434343;
+}
+#faqs-section div.question {
+	padding:17px 53px 17px 19px;
+	background-color:#222;
+	font-size:19px;
+	line-height:19px;
+	font-family:Raleway-Bold;
+	background-image:url(../images/expand.png);
+	background-position:826px center;
+	background-repeat:no-repeat;
+	border-bottom:1px solid #434343;
+	cursor:pointer;
+}
+#faqs-section div.expanded {
+	background-image:url(../images/collapse.png);
+}
+#faqs-section div.answer {
+	padding:17px 80px 17px 19px;
+	background-color:#171717;
+	font-size:15px;
+	line-height:20px;
+	border-bottom:1px solid #434343;
+}
+
+
+
+
+
+
+
+.arrow {
+    display: inline-block;
+    position: relative;
+    text-indent: -9999px;
+    width: 292px;
+    height: 156px;
+ background: url("http://www.citylips.com/promo/graphics/sprite.png") no-repeat;
+}
+.arrow span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+ background: url("http://www.citylips.com/promo/graphics/sprite.png") no-repeat;
+    background-position: -50px 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+}
+.arrow:hover span {
+    opacity: 1;
+}
+.arrow2 {
+    display: inline-block;
+    position: relative;
+    text-indent: -9999px;
+    width: 36px;
+    height: 36px;
+    background: url(sprites.png) no-repeat;
+}
+.arrow2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(sprites.png) no-repeat;
+    background-position: -50px 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+}
+.arrow2:hover:after {
+    opacity: 1;
+}
+.arrow3 {
+    display: inline-block;
+    position: relative;
+    text-indent: -9999px;
+    width: 292px;
+    height: 156px;
+ background: url("http://www.citylips.com/promo/graphics/sprite.png") no-repeat;
+}
+.arrow3 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+ background: url("http://www.citylips.com/promo/graphics/sprite.png") no-repeat;
+    background-position: -292px 0;
+}
+
+
+
+#clinicals { background-color:#fff; padding:55px 0; width: 960px;}
+#clinicals #top { font-size:47px; font-weight:normal;}
+#clinicals .item {display:block left:40px; position:relative;}
+.item img {float: left; padding-right: 10px;}
+.item p { float:right; font-size:17px; width:577px; margin:0; line-height:24px;}
+.item2, .item3 {padding:20px 0;}
+.item2 p {margin-top:10px;}
+.item3 p {margin-top:12px;}
+
+#results { background-color:#353535; padding:30px 0 20px 0; border-top:1px solid #686868; border-bottom:1px solid #686868;}
+#results #top { font-size:27px; text-transform:uppercase; margin-bottom:5px; margin-left:40px; }
+#testimonials {background-color: #222222;padding-top: 40px;}
+#testimonials .col { width:278px; margin-left:20px; float:left; font-size:17px; line-height:22px; }
+#testimonials .left {margin-left:40px;}
+#testimonials .col img {margin-bottom:35px;}
+#testimonials .bottom {margin-top:20px; padding-bottom: 15px;}
+#testimonials .bottom img {margin-bottom:6px; display:block;}
+
+/* COMPARISON */
+
+#compare { padding:60px 0 0 0; background:#fff; color: #222; }
+#compare table {width:960px; margin:0; padding:0; font-family: HelveticaNeueLTStdCnBd; }
+#compare table th {font-size:16px; color:#222; vertical-align:top; padding:5px 0 20px 0; text-align:center; text-transform:uppercase; }
+#compare table th.cc {font-size:18px; color:#EA0B79;}
+#compare table td { font-size:19px; vertical-align:middle; text-align:center;}
+#compare table td.left { text-indent:10px; text-align:left;color: #FFFFFF;}
+#compare table tr.row-a { background-color:#dc6da4; height:56px; }
+#compare table tr.row-b { background-color:#db4791; height:56px;}
+#compare table td.product { vertical-align:bottom; text-align:center;}
+
+
+/*FAQ*/
+
+
+#showfaq1, #showfaq2, #showfaq3,#showfaq4,#showfaq5,#showfaq6,#showfaq7 {
+font-weight: bold;
+color: #da1d7b ;
+}
+

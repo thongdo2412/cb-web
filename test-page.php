@@ -161,7 +161,11 @@ body {height: 1600px;}
     ?>
     <p><?php echo $token2;?></p>
     <p><?php echo $tk;?></p>
-
+    <div id='collection-component-e4ce3fb62a9'></div>
+    <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
+    <script type="text/javascript">
+        
+    </script>
 
   </body>
   </html>

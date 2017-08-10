@@ -133,27 +133,27 @@
 
     //Add me to a thank you page using an html snippet
     //You must change the landing_page_url  variable to your landing page URL for this script to work.
-    var response = parseInt(getParameterByName('inf_option_Surveyresponse'));
+    var response = parseInt(getParameterByName('inf_custom_SurveyResponse'));
     var cusName = String(getParameterByName('inf_field_FirstName'));
     var cusEmail = String(getParameterByName('inf_field_Email'));
     var cusMessage = String(getParameterByName('inf_custom_SurveyComments'));
-    //var response = '335';
+
     var cusRating = '';
 
-    if (response >= 335) { // customer response >=9
+    if (response >= 9) { // customer response >=9
       $("#response10").css("display","block");
     }
-    else if (response >= 331){ // customer response >= 7
+    else if (response >= 7){ // customer response >= 7
       $("#response8").css("display","block");
       $("#inf_form").css("display","block");
       $("#form-radio").css("display","none");
       $("input[name='inf_field_FirstName']").val(cusName);
       $("input[name='inf_field_Email']").val(cusEmail);
 
-      if (response == 331) {
+      if (response == 7) {
         cusRating = '7';
       }
-      else if (response == 333) {
+      else if (response == 8) {
         cusRating = '8';
       }
 
