@@ -170,7 +170,7 @@
             <hr>
             <div class="row">
               <div class="col-lg-12">
-                <h6>$49.00</h6>
+                <h6>$79.99</h6>
               </div>
             </div>
             <hr>

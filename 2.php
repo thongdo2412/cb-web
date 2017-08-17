@@ -1,17 +1,9 @@
+<?php
+  $n = empty($_GET['n']) ? "" : $_GET['n'];
+?>
 <!Doctype html>
 <html>
     <head>
-    <!-- Hotjar Tracking Code for youngerlips.com -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:530466,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
         <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
         <meta charset="utf-8">
         <meta name="description" content="">
@@ -353,9 +345,14 @@
                   /* css for main body */
                   header {font-size: 15px;}
                   body {font-size: 17px;}
+                  a:hover {text-decoration: none;}
                   #socialicons {display: none;}
                   .flexwrapper{display: flex;justify-content: center;align-items: center;}
-
+                  .flexwrapper a {text-decoration: none;}
+                  .adstatement {color: #ffffff; font-size: 27px; text-align: center;}
+                  .rc-on {color: #ffffff; text-align: center;}
+                  .rc-on a {color: #ffffff;text-decoration: none; cursor: pointer;}
+                  .authorpic {margin-top: 4px;}
                   /*handle responsive for different screens*/
                   @media screen and (max-width: 1199px){
                     #dsktophdr {display: none;}
@@ -539,14 +536,14 @@
 
               <p>Hours after the press conference, the Renee released a video presentation to the public, explaining exactly how her new solution lip-plumping works — and how anyone can use it.</p>
 
-                <a href="http://youngerlips.com/presentation/170620B.php" class="watchTheVideoButton" style="color: black; font-size: 22px; font-weight: bold;">Watch the presentation here:</a>
+                <a href="http://youngerlips.com/presentation/170814.php" class="watchTheVideoButton" style="color: black; font-size: 22px; font-weight: bold;text-decoration:none;">Watch the presentation here:</a>
                 <div class="flexwrapper">
-                  <a href="http://youngerlips.com/presentation/170620B.php">
+                  <a href="http://youngerlips.com/presentation/170814.php">
                     <img src="images/lips-vid-thumb-672x420.png">
                   </a>
                 </div>
                 <div class="flexwrapper">
-                <a href="http://youngerlips.com/presentation/170620B.php">
+                <a href="http://youngerlips.com/presentation/170814.php">
                     <p>Watch The Video >></p>
                 </a>
                 </div>
@@ -557,11 +554,11 @@
 
               <div id="authorSection">
                 <div class="row">
-                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                      <img src="images/authorPic.jpg">
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 center">
+                      <img class="authorpic" src="images/authorPic.jpg">
                   </div>
                   <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                      <p class="authorName"><a href="#" onclick="return false;">Brittany Artwohl</a></p>
+                    <p class="authorName"><a href="#" onclick="return false;">Brittany Artwohl</a></p>
                       <p class="authorDesc">Brittany Artwohl has been professionally writing health, fitness and wellness-related copy since 2009. Her work has appeared in publications including NaturalNews.com, and MountainWeeklyNews.com. Brittany holds a bachelors degree in Advertising and English from Northern Arizona University and has been a certified fitness instructor since 1997.</p>
                   </div>
                   <div class="clearfix"></div>
@@ -570,7 +567,7 @@
             </div>
             <div class="col-lg-4 col-md-12">
               <div class="flexwrapper">
-                <a href="http://youngerlips.com/presentation/170620B.php">
+                <a href="http://youngerlips.com/presentation/170814.php">
                   <img src="images/lipmask-300x250.jpg">
               </a>
             </div>
@@ -596,7 +593,6 @@
               <div class="col-lg-4">
                 <p class="whiteColor bold">MISSION STATEMENT</p>
                 <p class="whiteColor missionState">Our mission at Vital Updates is to bring you the most up-to-date, most accurate health and medical information – without bias or slant. We strive to be your trusted health resource. We also believe in full-circle health and wellness to help you meet your goals. With that in mind, we share common ownership with businesses that distribute premium-quality supplements, skincare products, and vitamin drinks – all verified by independent third-party facilities. We're very proud to advertise these products on our site.</p>
-                <p class="whiteColor center widthFix10">THIS IS AN ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG, OR CONSUMER PROTECTION UPDATE.<br><a href="#" onclick="window.open('http://vitalupdates.com/gundry-md-billing-terms/', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=no');return false;" class="whiteColor">Click here for Gundry MD Billing Terms</a></p>
               </div>
               <div class="col-lg-8">
                 <p class="whiteColor bold">POPULAR STORIES</p>
@@ -651,6 +647,8 @@
                   </div>
                 </div>
               </div>
+              <p class="adstatement">THIS IS AN ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG, OR CONSUMER PROTECTION UPDATE.<br><a href="#" onclick="window.open('http://vitalupdates.com/gundry-md-billing-terms/', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=no');return false;" class="whiteColor">Click here for Gundry MD Billing Terms</a></p>
+              <?php if($n=='rc'){ ?><p class="rc-on" style="font-size:16px;">Representations regarding the efficacy and safety of City Lips<sup>&reg</sup> have not been evaluated by the Food and Drug Administration. The FDA only evaluates foods and drugs, not supplements like these products. These products are not intended to diagnose, prevent, treat, or cure any disease. Click <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3970829/" target="_BLANK">here</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3778226/" target="_BLANK">here</a> to find evidence of a test, analysis, research, or study describing the benefits, performance or efficacy of City Lips<sup>&reg</sup> based on the expertise of relevant professionals.</p><?php } ?>
             </div>
           </div>
         </div>

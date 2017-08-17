@@ -111,6 +111,25 @@ a {
     background: red;
     z-index: 1;
 }
+
+.white-wrapper {
+  padding: 0px 30px;
+}
+
+div.white-wrapper div.row:nth-child(1) {
+	background: #091E37;height:84px;
+  	display: flex;justify-content:center;align-items: center;
+    margin-left:-30px;
+    margin-right:-30px;
+}
+
+section.checkout-main div.row:nth-child(1) {
+	background: #091E37;height:84px;
+  	display: flex;justify-content:center;align-items: center;
+    margin-left:-30px;
+    margin-right:-30px;
+}
+
 body {height: 1600px;}
   </style>
   </head>
@@ -164,8 +183,103 @@ body {height: 1600px;}
     <div id='collection-component-e4ce3fb62a9'></div>
     <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
     <script type="text/javascript">
-        
-    </script>
+    var temp = document.getElementsByTagName("section")[2];
+temp.getElementsByTagName("div")[1].setAttribute("style", "background: #091E37;height: 84px;width:100%;margin: 0 auto; display: flex;justify-content:center;align-items: center;");
+
+
+    //carthook javascript getting cid from cookie
+    function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function setCookie(cname,cvalue,exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires=" + d.toGMTString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    var cid = String(getParameterByName('tid'));
+    if (cid != "" || cid != null) {
+      setCookie("cid", cid, 30);
+    }
+
+    //end of code for cookie cid
+    https://city-cosmetics.myshopify.com/a/secure/checkout/dTDN8OKasg1wXLIypAS5 //1
+    https://city-cosmetics.myshopify.com/a/secure/checkout/FrsaY1PsNZljFdrGv2ge //2
+    https://city-cosmetics.myshopify.com/a/secure/checkout/WtSG2gbiS0XoVOLHvi9k //3
+    <img src="http://secure.citybeauty.com/conversion.gif?cid=OPTIONAL&payout=OPTIONAL&txid=OPTIONAL" width="1" height="1"/>
+
+    //scripts from Carthook Thank you page
+      !function(_window, _document) {
+      var OB_ADV_ID='005e34849b6242d16f4cdfb0d475de872f';
+      if (_window.obApi) { return; }
+      var api = _window.obApi = function() {api.dispatch ? api.dispatch.apply(api, arguments) : api.queue.push(arguments);};api.version = '1.0';api.loaded = true;api.marketerId = OB_ADV_ID;api.queue = [];var tag = _document.createElement('script');tag.async = true;tag.src = '//amplify.outbrain.com/cp/obtp.js';tag.type = 'text/javascript';var script = _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
+      obApi('track', 'PAGE_VIEW');
+
+      function img_create(src, alt, title) {
+              var img = new Image();
+              img.src = src;
+              img.style.width = '0px';
+              img.style.height = '0px';
+              if ( alt != null ) img.alt = alt;
+              if ( title != null ) img.title = title;
+              document.body.appendChild(img);
+          }
+        img_create('https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=10026284','yh','');
+
+      function loadScript(url, callback){
+
+          var script = document.createElement("script")
+          script.type = "text/javascript";
+
+          if (script.readyState){  //IE
+              script.onreadystatechange = function(){
+                  if (script.readyState == "loaded" ||
+                          script.readyState == "complete"){
+                      script.onreadystatechange = null;
+                      callback();
+                  }
+              };
+          } else {  //Others
+              script.onload = function(){
+                  callback();
+              };
+          }
+
+          script.src = url;
+          document.getElementsByTagName("head")[0].appendChild(script);
+      }
+
+      loadScript("//cdn.taboola.com/libtrc/citybeauty-sc/tfa.js", function(){
+          //initialization code
+          console.log("OK");
+      });
+    //end of scripts from Carthook Thank you page
+
+</script>
 
   </body>
   </html>
