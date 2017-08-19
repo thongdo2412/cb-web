@@ -232,7 +232,7 @@
                       <td class="shade-table-cell active">
                         <a href="#" class="swatch-box" id="nudeyork">
                           <div class="swatch-container" id="text_content">
-                            <div class="swatch-unit" style="background-color: #e07c56;"></div>
+                            <div class="swatch-unit" style="background-color: #e07c56;"><div class="out-of-stock-line"></div></div>
                           </div>
                         </a>
                       </td>
@@ -330,7 +330,7 @@
                           <td class="shade-table-cell active">
                             <a href="#!b1" class="swatch-box" id="nudeyork">
                               <div class="swatch-container" id="text_content">
-                                <div class="swatch-unit" style="background-color: #e07c56;"></div>
+                                <div class="swatch-unit" style="background-color: #e07c56;"><div class="out-of-stock-line"></div></div>
                               </div>
                             </a>
                           </td>
