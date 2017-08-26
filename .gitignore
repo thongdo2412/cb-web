@@ -18,7 +18,11 @@ Thumbs.db
 
 # Application specific files
 venv
+wh*
+vol*
+*pb*
 videos
+latest*
 checkout*
 citycos-home.php
 inc
