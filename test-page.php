@@ -135,6 +135,16 @@ body {height: 1600px;}
   </head>
   <body>
 
+    <div class="{{ column_width }}">
+        <div style="color:white;text-align:right;">2017 &copy; City Beauty LLC. City Lips&reg; is a registered trademark of City Beauty LLC. All rights reserved.</div>
+
+        <div style="width:150px;float:right;"><img src="https://cdn.shopify.com/s/files/1/2134/3449/files/Screen_Shot_2017-08-24_at_1.49.48_PM.png?2940476521925990774"></div>
+        <div style="clear:both;"></div>
+      </div>
+
+      https://cdn.shopify.com/s/files/1/2134/3449/files/usa-flag.png?4415794588297470868
+      https://cdn.shopify.com/s/files/1/2134/3449/files/cruelty-free.png?1224525339923307536
+
 <script type="text/javascript">
     cvalue = 'w1KPBUBVP94VI4N7HRN9TS0I';
     payout = '00.01';
@@ -158,6 +168,64 @@ body {height: 1600px;}
     };
     xmlhttp.open("POST", goToUrl, true);
     xmlhttp.send();
+
+    function makeid() {
+      var text = "";
+      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      for (var i = 0; i < 20; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+      return text;
+    }
+
+        CH.event(function(EVENT, data) {
+
+        if (EVENT == 'PAYMENT_SUCCESSFUL') {
+            var transid = makeid();
+            var total_price = data.cart_data.total_price;
+            /***
+             * Google Tag Manager: Build data layer
+             ***/
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'transactionComplete',
+                'transactionId': transid,
+                'transactionTotal': parseFloat(total_price)
+            });
+    	}
+
+    }, function(EVENT, error) {
+        console.log('Uh oh! There was an error: ', error);
+    });
+
+    //upsell js
+    CH.event(function(EVENT, data) {
+
+    if (EVENT == 'ACCEPTED_OTO') {
+        var transid = data.order.encoded_order_id;
+        var total_price = data.order.total_price;
+        /***
+         * Google Tag Manager: Build data layer
+         ***/
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'transactionComplete',
+            'transactionId': transid,
+            'transactionTotal': parseFloat(total_price)
+        });
+  }
+
+}, function(EVENT, error) {
+    console.log('Uh oh! There was an error: ', error);
+});
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NW725SC');
+
 </script>
 
   </body>
