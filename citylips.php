@@ -262,14 +262,14 @@
                       <td class="shade-table-cell active">
                         <a href="#" class="swatch-box" id="sundiego">
                           <div class="swatch-container" id="text_content">
-                            <div class="swatch-unit" style="background-color: #ff8a80;"><div class="out-of-stock-line"></div></div>
+                            <div class="swatch-unit" style="background-color: #ff8a80;"></div>
                           </div>
                         </a>
                       </td>
                       <td class="shade-table-cell active">
                         <a href="#" class="swatch-box" id="tinseltown">
                           <div class="swatch-container" id="text_content">
-                            <div class="swatch-unit" style="background-color: #dbb4ac;"><div class="out-of-stock-line"></div></div>
+                            <div class="swatch-unit" style="background-color: #dbb4ac;"></div>
                           </div>
                         </a>
                       </td>
@@ -283,7 +283,7 @@
                       <td class="shade-table-cell active">
                         <a href="#" class="swatch-box" id="losangelips">
                           <div class="swatch-container" id="text_content">
-                            <div class="swatch-unit" style="background-color: #ee9091;"><div class="out-of-stock-line"></div></div>
+                            <div class="swatch-unit" style="background-color: #ee9091;"></div>
                           </div>
                         </a>
                       </td>
@@ -360,14 +360,14 @@
                           <td class="shade-table-cell active">
                             <a href="#!b1" class="swatch-box" id="sundiego">
                               <div class="swatch-container" id="text_content">
-                                <div class="swatch-unit" style="background-color: #ff8a80;"><div class="out-of-stock-line"></div></div>
+                                <div class="swatch-unit" style="background-color: #ff8a80;"></div>
                               </div>
                             </a>
                           </td>
                           <td class="shade-table-cell active">
                             <a href="#!b1" class="swatch-box" id="tinseltown">
                               <div class="swatch-container" id="text_content">
-                                <div class="swatch-unit" style="background-color: #dbb4ac;"><div class="out-of-stock-line"></div></div>
+                                <div class="swatch-unit" style="background-color: #dbb4ac;"></div>
                               </div>
                             </a>
                           </td>
@@ -381,7 +381,7 @@
                           <td class="shade-table-cell active">
                             <a href="#!b1" class="swatch-box" id="losangelips">
                               <div class="swatch-container" id="text_content">
-                                <div class="swatch-unit" style="background-color: #ee9091;"><div class="out-of-stock-line"></div></div>
+                                <div class="swatch-unit" style="background-color: #ee9091;"></div>
                               </div>
                             </a>
                           </td>
@@ -521,6 +521,18 @@
     </div>
   </div>
 
+
+  <div class="jumbotron jumbotron_wht">
+    <div class="container">
+      <div class="row">
+      <hr>
+      <h4>Real Users Share Their Stories</h4>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yogyPaieasI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      <p><i>*These results are not typical. Your results can and will vary.</i></p>
+      </div>
+    </div>
+  </div>
+
   <div class="jumbotron jumbotron_w_bg">
     <div class="container">
       <div class="row">
@@ -534,7 +546,7 @@
           <div class="linebreak2"></div>
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">APPLICATION</div>
-            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-10 productnotes_words">Apply an even coat and wait 10 minutes.</div>
+            <div class="col-lg-9 col-md-8 col-sm-6 col-xs-10 productnotes_words">Apply an even coat of City Lips<sup>&reg;</sup> and wait approximately 10 minutes.</div>
           </div>
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs productnotes_head"><br></div>
@@ -542,7 +554,7 @@
           </div>
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 productnotes_head">DAY TIME</div>
-            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-10 productnotes_words">Use it over any lipstick for a boost of shine &amp; fullness.</div>
+            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-10 productnotes_words">Apply by itself or over any lipstick for a boost of shine &amp; fullness.</div>
           </div>
           <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs productnotes_head"><br></div>
@@ -557,6 +569,22 @@
       <div class="clearfix"></div>
     </div>
   </div>
+
+  <div class="jumbotron jumbotron_wht" id="review">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <h4>Customer reviews</h4>
+        </div>
+      </div>
+      <div class="linebreak2"></div>
+      <div id="reviewsection">
+        <?php include('scripts/comments.php'); ?>
+      </div>
+    </div>
+  </div>
+
+  <hr>
 
   <div class="jumbotron jumbotron_wht">
     <div class="container">
@@ -796,20 +824,6 @@
         </div>
       </div>
       <div class="clearfix"></div>
-    </div>
-  </div>
-  <hr>
-  <div class="jumbotron jumbotron_wht" id="review">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-          <h4>Real stories from recent customers</h4>
-        </div>
-      </div>
-      <div class="linebreak2"></div>
-      <div id="reviewsection">
-        <?php include('scripts/comments.php'); ?>
-      </div>
     </div>
   </div>
 
