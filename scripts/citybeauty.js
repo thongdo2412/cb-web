@@ -266,22 +266,22 @@ function makeid() { //random generate a string for cookie value
   return text;
 }
 
-$("#newsletter-btn").on('click', function (evt) { //handle click event in the opt in
-  var optin = getCookie("opted-in");
-  if (optin == "") {
-    cvalue = makeid();
-    setCookie("opted-in", cvalue, 365);
-  }
-})
-
-$( document ).ready(function() { //handle newsletter popup
-  var ccookie = getCookie("opted-in");
-  if (ccookie == "") {
-    setTimeout(function () {
-      $("#popupcontainer").fadeIn()
-    }, 5000);
-  }
-  $("#popupClose").on('click', function (evt) {
-    $("#popupcontainer").fadeOut();
-  })
-});
+// $("#newsletter-btn").on('click', function (evt) { //handle click event in the opt in
+//   var optin = getCookie("opted-in");
+//   if (optin == "") {
+//     cvalue = makeid();
+//     setCookie("opted-in", cvalue, 365);
+//   }
+// })
+//
+// $( document ).ready(function() { //handle newsletter popup
+//   var ccookie = getCookie("opted-in");
+//   if (ccookie == "") {
+//     setTimeout(function () {
+//       $("#popupcontainer").fadeIn()
+//     }, 5000);
+//   }
+//   $("#popupClose").on('click', function (evt) {
+//     $("#popupcontainer").fadeOut();
+//   })
+// });

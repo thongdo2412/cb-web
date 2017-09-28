@@ -31,7 +31,7 @@
 </footer>
 
 <!-- newsletter popup-->
-<div class="container" id="popupcontainer">
+<!-- <div class="container" id="popupcontainer">
   <form accept-charset="UTF-8" action="https://wn373.infusionsoft.com/app/form/process/818b41b63d82bc14f5c290a23a81d724" class="infusion-form" id="inf_form_818b41b63d82bc14f5c290a23a81d724" method="POST">
     <input name="inf_form_xid" type="hidden" value="818b41b63d82bc14f5c290a23a81d724" />
     <input name="inf_form_name" type="hidden" value="Newsletter Contact Submitted" />
@@ -71,7 +71,7 @@
       </div>
   </form>
   <div class="clearfix"></div>
-</div>
+</div> -->
 
   <!-- link and script section-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
