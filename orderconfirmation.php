@@ -3,6 +3,7 @@
 
   <style type="text/css">
   body{text-align: center;font-family: "Montserrat",sans-serif;font-weight: 300;}
+    a {text-decoration: none;color: #000000;}
     b{font-weight: 600;}
     .jumbotron h1{font-family: "Playfair Display", serif; font-size: 38px;}
     .jumbotron h2{font-size: 23px;font-weight: 300;display: inline;}
@@ -55,6 +56,23 @@
 
 <!--include footer and javascript-->
 <?php include ("footer.php"); ?>
+<script type="text/javascript">
+  // function to set the height on fly
+  function autoHeight() {
+    $('#content').css('min-height', 0);
+    $('#content').css('min-height', (
+      $(document).height() - $('header').height() - 50 - $('nav').height() - $('footer').height()));
+  }
 
+  // onDocumentReady function bind
+  $(document).ready(function() {
+    autoHeight();
+  });
+
+  // onResize bind of the function
+  $(window).resize(function() {
+    autoHeight();
+  });
+</script>
 </body>
 </html>
