@@ -3,7 +3,8 @@
 
   <style type="text/css">
   body{text-align: center;font-family: "Montserrat",sans-serif;font-weight: 300;}
-    a {text-decoration: none;color: #000000;}
+    a {text-decoration: none;color: #ffffff;}
+    a:hover {text-decoration: none;color: #ffffff;}
     b{font-weight: 600;}
     .jumbotron h1{font-family: "Playfair Display", serif; font-size: 38px;}
     .jumbotron h2{font-size: 23px;font-weight: 300;display: inline;}
@@ -32,7 +33,7 @@
   <!-- include header and navigation content -->
   <?php include("header.php") ?>
   <!--main content-->
-    <div class="container">
+    <div class="container" id="content">
       <div class="row">
         <div class="col">
           <div class="jumbotron jumbotron_wht">
@@ -61,7 +62,7 @@
   function autoHeight() {
     $('#content').css('min-height', 0);
     $('#content').css('min-height', (
-      $(document).height() - $('header').height() - 50 - $('nav').height() - $('footer').height()));
+      $(document).height() - $('header').height() - 22 - $('nav').height() - $('footer').height()));
   }
 
   // onDocumentReady function bind
