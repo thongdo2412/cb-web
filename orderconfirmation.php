@@ -75,5 +75,6 @@
     autoHeight();
   });
 </script>
+<script src="scripts/postback.js"></script>
 </body>
 </html>
