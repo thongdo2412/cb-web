@@ -428,7 +428,7 @@
               <p><i>LipoLight® OAP/PVA</i> uses microscopic, fluorescent particles to emit and diffuse light, blurring imperfections instantly for a dramatically younger appearance.</p>
               <p><i>Haloxyl</i>: Uses peptides and flavonoids to lighten dark circles, giving the face a younger, more rested, "happier" appearance.</p>
               <p><i>Chronoline</i>: An amino acid sequence derived from natural growth factors that helps firm and tighten skin by increasing collagen production and strengthening skin's structure.</p>
-              <p><i>Hyalusphere</i>: Uses a direct delivery system to push plumping, hydrating hyaluronic acid deep into your skin, helping to reduce dryness, hollowness, and shadows.</p>
+              <p><i>Hyalusphere</i>: Uses a direct delivery system to push plumping, hydrating hyaluronic acid deep into your skin. This helps to reduce dryness, hollowness &amp; shadows.</p>
               <p><i>SYN-AKE</i>: Relaxes wrinkles on contact, with dramatic reduction in as little as two hours.</p>
               <p><i>BeauifEYE</i>: A sequence of peptides that work together to tighten the skin in your eyelids.</p>
               <i>RejuvenOX</i>: Infuses aging, suffocated tissues with revitalizing oxygen to improve blood flow, reduce fine lines and smooth out your skin's texture.

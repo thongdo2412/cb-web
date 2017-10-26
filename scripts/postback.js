@@ -9,7 +9,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 const checkoutID = getParameterByName('checkoutid');
-if ((checkoutID != null) || (checkoutID != "") || (typeof(checkoutID) != "undefined")) {
+if (checkoutID != "" && checkoutID != null && checkoutID != "null") {
   var formdata = {};
   formdata.checkoutID = checkoutID;
   $.ajax({
