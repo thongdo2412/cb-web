@@ -14,21 +14,17 @@ nav2:hover:before {right: 90%;}
 nav2:hover:after {left: 90%;}
 .line-on-sides{overflow: hidden;}
 toBold{font-weight: 600;}
-.button{width: 150px;height: 30px;font-size: 14px;border-width: 1px;border-color: rgb(6, 16, 42);border-style: solid;text-align: center;display: flex;justify-content: center;align-items: center;}
-.button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
-.button_wht{background-color: rgb(255, 255, 255);color: rgb(6, 16, 42);}
+#inthemedia {padding: 30px 0px;}
+#inthemediaVidWrap p {-webkit-margin-before: 0;-webkit-margin-after: 0;}
+#inthemediaVidWrap {width: 800px;}
+#inthemediaVidWrap iframe {width: 100%; height: 450px;}
+.mediaquotes {font-size: 14px;color: #a5a5a5;width: 90%;}
+#cbblogger {width: 800px;height: 450px;}
 .biggerfont{font-family: "Playfair Display",serif;font-size: 38px;}
 .smallerfont{font-size: 20px;}
 .jumbotron p{font-size: 16px;margin: 0 auto;font-weight: 300;}
 .jumbotron_wht{background: rgb(255,255,255);}
 .jumbotron_w_bg{background: rgb(248,249,249);background-size: cover;border: 1px solid rgb(235, 235, 235);margin: 0 auto;}
-.movedown2p{margin-top: 2%;}
-.movedown5p{margin-top: 5%;}
-.movedown10p{margin-top: 10%;}
-.lifestyle_content{margin-top: 60px;}
-.ghk_word{text-align: left;}
-.ghk_wording{margin-left: 20px;}
-.textbox{width: 748px;}
 h3{font-family: "Playfair Display",serif;font-size: 38px;line-height: 24px;}
 h4{font-size: 20px;}
 h5{font-size: 13px;font-weight: 300;}
@@ -37,14 +33,11 @@ body{text-align: center;font-family: "Raleway",sans-serif;font-size: 16px; font-
 @media screen and (min-width: 1199px){.social-wrap{margin-left: 60px;}}
 @media screen and (max-width:1199px){
   .social-wrap{margin-left: 0;}
-  .ghk_quotes{margin-left: 20%;}
   .img_wrapper{margin-left: 5%;}
+  footer {height: 150px;}
 }
 @media screen and (max-width:991px){
-  .lifestyle_logo{margin-left: 0;}
   .centered_nav{display: block;}
-  .jumbotron_w_bg .textbox{width: 100%;}
-  .ghk_quotes{margin-left: 0;} .img_wrapper{margin:0;}
   .navbar-header {float: none;}
   .navbar-left,.navbar-right {float: none !important;}
   .navbar-toggle {display: block; margin-right: 30px;}
@@ -56,21 +49,25 @@ body{text-align: center;font-family: "Raleway",sans-serif;font-size: 16px; font-
   .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
   .collapse.in{display:block !important;}
   .magazine_word{margin-left: 46px;}
+  #inthemediaVidWrap {width: 90%;}
+  #cbblogger {width: 90%; height: 405px;}
+  #inthemediaVidWrap iframe {height: 405px;}
 }
 @media screen and (max-width:767px){
-  .lifestyle_content{margin: 0;}
   div.img_wrapper img{max-width: 100%; height: auto; width: auto\9;}
   div.img_wrapper {padding-left: 30px; padding-right: 30px;}
-  .lifestyle_logo{margin-top: 5%;}
   .navbar-toggle {margin-right: 40px;}
   .img_wrapper{text-align: center;}
-  .ghk_word{margin-top: 10%; margin-left: 25%; margin-right: 30px;}
-  .textbox{width: 99%;} footer{padding-left: 30px; padding-right: 30px;}
+  footer{padding-left: 30px; padding-right: 30px;}
   .magazine_word{margin-bottom: 10px;margin-left: 70px;}
+  #cbblogger {height: 364px;}
+  #inthemediaVidWrap iframe {height: 364px;}
 }
-@media screen and (max-width:700px){.ghk_word{margin-left: 12.5%;}}
-@media screen and (max-width:640px){.ghk_word{margin-left: 30px;}}
-@media screen and (max-width:469px){div.magazine_wrapper img{width: 95%;} .magazine_wrapper,.lifestyle_logo{padding-left: 30px;padding-right: 30px;}}
+@media screen and (max-width:640px){
+  #cbblogger {height: auto;}
+  #inthemediaVidWrap iframe {height: auto;}
+}
+@media screen and (max-width:469px){div.magazine_wrapper img{width: 95%;} .magazine_wrapper{padding-left: 30px;padding-right: 30px;}}
 </style>
 </head>
 <body>
@@ -85,58 +82,25 @@ body{text-align: center;font-family: "Raleway",sans-serif;font-size: 16px; font-
     </div>
   </div>
 <hr>
-<div class="jumbotron jumbotron_wht">
+<div id="inthemedia">
   <div class="container">
-    <div class="textbox">
-      <div class="row">
-        <div class="col-lg-3 col-md-2 col-sm-2 col-xs-12">
-          <img src="../img/winslet.png" alt="winslet screenshot">
-        </div>
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
-          <div class="ghk_word">
-            <div><img src="../img/goodhousekeeping.png"></div>
-            <div class="movedown5p"></div>
-            <div class="row">
-              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><img src="../img/quotes.png" alt="quotes"></div>
-              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 ghk_wording"><p>Want lips this lush? Our testers did, so we asked them to try different treatments for a month, in hopes of releasing their inner Angelina Jolie. THE WINNERS: City Lips® clear gloss Lip Plumping Treatment created the fullest smoochers.</p>
-                <h5>- GOOD HOUSEKEEPING MAGAZINE, PAGE 45.</h5>
-              </div>
-            <div class="clearfix"></div>
-            </div>
-            <div class="movedown2p"></div>
-            <div class="row">
-              <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><img src="../img/quotes.png" alt="quotes"></div>
-              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 ghk_wording"><p>...The original winner. City Lips &copy; is still champion.</p>
-                <h5>- GOOD HOUSEKEEPING MAGAZINE.</h5>
-              </div>
-            <div class="clearfix"></div>
-          </div>
-          </div>
-        </div>
+    <div class="linebreak2"></div>
+    <iframe id="cbblogger" src="https://www.youtube.com/embed/d1U0hOTGCfs" frameborder="0" allowfullscreen></iframe>
+    <div class="linebreak3"></div>
+    <div id="inthemediaVidWrap">
+      <iframe src="https://www.youtube.com/embed/JK-0A1ILtNw" frameborder="0" allowfullscreen></iframe>
+      <div class="mediaquotes text-left">
+        <div class="linebreak1"></div>
+        <p>"These chemicals in the ingredients in City Lips seems to retain moisture and plumpness and softness and reduces chapping".</p>
+        <h5>- ABC News Channel</h5>
       </div>
-    </div>
-  </div>
-</div>
-<hr>
-<div class="jumbotron jumbotron_wht">
-  <div class="container">
-    <div class="textbox">
-      <div class="row">
-        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-          <div class="magazine_wrapper"><img src="../img/magfeature.png" alt="magazine features"></div>
-        </div>
-        <div class="col-lg-5 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12 col-xs-offset-0 lifestyle_content">
-          <img src="../img/lifestyle_media1.png" alt="ls mag">
-        </div>
+      <div class="linebreak2"></div>
+      <iframe src="https://www.youtube.com/embed/x89HqXshZvQ" frameborder="0" allowfullscreen></iframe>
+      <div class="mediaquotes text-left">
+        <div class="linebreak1"></div>
+        <p>"If you want fuller lips like your favorite stars, City Lips could be the answer!"</p>
+        <h5>- FOX 11 News Channel</h5>
       </div>
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</div>
-<div class="jumbotron jumbotron_w_bg">
-  <div class="container">
-    <div class="textbox">
-      <div class="img_wrapper"><img src="../img/medialogos.png" alt="media logos"></div>
     </div>
   </div>
 </div>
