@@ -80,7 +80,7 @@
   <div class="col-lg-1 col-lg-offset-0 col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-1 hidden-xs testi_usr">
     <div class="scorecallback" data-score=<?php echo $rating; ?>></div>
     <div class="linebreak1"></div>
-    <div><?php echo $name; ?> &nbsp</div>
+    <div><?php echo $name; ?> &nbsp;</div>
     <div class="linebreak1"></div>
     <div><?php echo $date; ?></div>
   </div>
@@ -117,7 +117,7 @@
         </div>
         <div id="review<?php echo $rateid;?>" class="collapse">
           <img src="../img/stars_rating.png">
-          <div><?php echo $name;?> &nbsp</div>
+          <div><?php echo $name;?> &nbsp;</div>
           <div class="linebreak1"></div>
           <div><?php echo $date; ?></div>
           <div class="linebreak1"></div>
