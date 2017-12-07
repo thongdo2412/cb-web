@@ -12,7 +12,7 @@ Thumbs.db
 
 # Compiled Python files
 *.pyc
-
+resthook*
 # Compiled C++ files
 *.out
 trycitybeauty
