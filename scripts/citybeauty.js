@@ -107,15 +107,20 @@ $(function(){ //handles add to cart with quantity selected above
 $(function(){ //handle out of stock for non-lip products
   pagetitle = $(document).find("title").text();
   if (pagetitle != 'City Lips'){ //handles non-lip products only
-    $('.instock').css("display","block");
-    $('.outstock').css("display","none");
-
     outstock = document.getElementById('outstockcheck').value; //check if out of stock from the place holder
-    if (outstock =='y'){
-      $('.instock').css("display","none");
-      $('.outstock').css("display","block");
-      $('.outofstocktxt').css("display","block");
-      $('.outofstockbtn').css("display","block");
+    if (outstock =='n'){
+      inStockTxt = `<a name="addToCart" href="#"><div class="button button_blue pull-left">ADD TO CART</div></a>`;
+      inStockTxtXS = `<a name="addToCart" href="#"><div class="button_bg button_blue">ADD TO CART</div></a>`;
+      $('.instock').append(inStockTxt);
+      $('.instock-xs').append(inStockTxtXS);
+    }
+    else {
+      $("#quantitySection").hide();
+      $("#xsqty").hide();
+      outStockTxt = `<div class="outofstocktxt">Currently Out of Stock</div><div class="linebreak2"></div><div class="button button_blue pull-left outofstockbtn">&odash;</div><div class="clearfix"></div><div class="linebreak2"></div>`;
+      outStockTxtXS = `<div class="col-xs-6"><div class="outofstocktxt">Currently Out of Stock</div></div><div class="col-xs-4"><div class="button button_blue pull-left outofstockbtn">&odash;</div></div>`;
+      $('.outstock').append(outStockTxt);
+      $('.outstock-xs').append(outStockTxtXS);
     }
   }
 });

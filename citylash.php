@@ -176,46 +176,46 @@
             <hr>
             <div class="row">
               <div class="col-lg-12 hidden-xs">
-                <input type="hidden" id="outstockcheck" value="n"> <!--place holder for out of stock-->
-                <div class="instock">
-                  <div class="row">
+                <input type="hidden" id="outstockcheck" value="y"> <!--place holder for out of stock-->
+                <div>
+                  <div class="row" id="quantitySection">
                     <div class="col-lg-2 col-md-2 col-sm-2 quantityword">QUANTITY</div>
                     <div class="col-lg-1 col-md-1 col-sm-1"><select class="xsquantity" id="qty"></select></div>
                   </div>
                   <div class="linebreak2"></div>
-                  <a name="addToCart" href="#"><div class="button button_blue pull-left">ADD TO CART</div></a>
+                  <div class="instock"><!-- <a name="addToCart" href="#"><div class="button button_blue pull-left">ADD TO CART</div></a> --></div>
                   <div class="clearfix"></div>
-                  <div class="linebreak2"></div>
+                  <div class="linebreak1"></div>
                 </div>
-                <!--
+
                 <div class="outstock">
-                  <div class="outofstocktxt">Currently Out of Stock</div>
+                  <!-- <div class="outofstocktxt">Currently Out of Stock</div>
                   <div class="linebreak2"></div>
                   <div class="button button_blue pull-left outofstockbtn">&odash;</div>
                   <div class="clearfix"></div>
-                  <div class="linebreak2"></div>
-                </div> -->
+                  <div class="linebreak2"></div> -->
+                </div>
               </div>
               <div class="visible-xs col-xs-12">
                 <img src="../img/stars_rating.png" alt="5 stars rating"> <a href="#review" class="rating_wrd"><!--store count of reviews here--></a>
                 <div class="linebreak2"></div>
-                <div class="row instock">
+                <div class="row">
                   <div class="col-xs-3">
                     <select class="xsquantity" id="xsqty"></select>
                   </div>
-                  <div class="col-xs-4">
-                    <a name="addToCart" href="#"><div class="button_bg button_blue">ADD TO CART</div></a>
+                  <div class="col-xs-4 instock-xs">
+                    <div class="instock-xs"><!-- <a name="addToCart" href="#"><div class="button_bg button_blue">ADD TO CART</div></a> --></div>
                   </div>
                 </div>
-                <!--
-                <div class="row outstock">
-                  <div class="col-xs-6">
+
+                <div class="row outstock-xs">
+                  <!-- <div class="col-xs-6">
                     <div class="outofstocktxt">Currently Out of Stock</div>
                   </div>
                   <div class="col-xs-4">
                     <div class="button button_blue pull-left outofstockbtn">&odash;</div>
-                  </div>
-                </div> -->
+                  </div> -->
+                </div>
               <div class="linebreak2"></div>
               <div class="clearfix"></div>
               </div>
