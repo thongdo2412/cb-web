@@ -108,13 +108,13 @@ $(function(){ //handle out of stock for non-lip products
   pagetitle = $(document).find("title").text();
   if (pagetitle != 'City Lips'){ //handles non-lip products only
     outstock = document.getElementById('outstockcheck').value; //check if out of stock from the place holder
-    if (outstock =='n'){
-      inStockTxt = `<a name="addToCart" href="#"><div class="button button_blue pull-left">ADD TO CART</div></a>`;
-      inStockTxtXS = `<a name="addToCart" href="#"><div class="button_bg button_blue">ADD TO CART</div></a>`;
-      $('.instock').append(inStockTxt);
-      $('.instock-xs').append(inStockTxtXS);
-    }
-    else {
+    // if (outstock =='n'){
+    //   // inStockTxt = `<a name="addToCart"><div class="button button_blue pull-left">ADD TO CART</div></a>`;
+    //   // inStockTxtXS = `<a name="addToCart"><div class="button_bg button_blue">ADD TO CART</div></a>`;
+    //   // $('.instock').append(inStockTxt);
+    //   // $('.instock-xs').append(inStockTxtXS);
+    // }
+    if(outstock == 'y') {
       $("#quantitySection").hide();
       $("#xsqty").hide();
       outStockTxt = `<div class="outofstocktxt">Currently Out of Stock</div><div class="linebreak2"></div><div class="button button_blue pull-left outofstockbtn">&odash;</div><div class="clearfix"></div><div class="linebreak2"></div>`;
