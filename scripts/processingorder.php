@@ -19,12 +19,18 @@
   <body>
     <?php
       if ($_POST['decision'] == 'ACCEPT') {
-        header('Location: https://checkout.citybeauty.com/src/fnl/'.$_POST['req_merchant_defined_data9'].'.html?pid='.$_POST['req_merchant_defined_data10'].'&checkoutid='.$_POST['req_merchant_defined_data5'].'&token='.$_POST['payment_token'].'&chtx='.$_POST['req_merchant_defined_data11']);
+        header('Location: https://checkout.citybeauty.com/src/fnl/'.$_POST['req_merchant_defined_data9'].'.html?pid='.$_POST['req_merchant_defined_data10'].'&checkoutid='.$_POST['req_merchant_defined_data5'].'&token='.$_POST['payment_token'].'&chtx='.$_POST['req_merchant_defined_data11'].'&gwp=cs');
       }
       else if ($_POST['decision'] == 'DECLINE') {
         $pagenumber = $_POST['req_merchant_defined_data10'] + 1;
         $checkout_link = 'https://checkout.citybeauty.com/src/cbl00'.$pagenumber.'.html?cid='.$_POST['req_merchant_defined_data6'];
         echo '<p>Your order has been declined. Please click to the button back and try again with different payment card.</p>';
+        echo '<a href="'.$checkout_link.'" class="button" >Back To Checkout Page</a>';
+      }
+      else {
+        $pagenumber = $_POST['req_merchant_defined_data10'] + 1;
+        $checkout_link = 'https://checkout.citybeauty.com/src/cbl00'.$pagenumber.'.html?cid='.$_POST['req_merchant_defined_data6'];
+        echo '<p>There is an error with your submitted info. Please click to the button back and try again with different payment card.</p>';
         echo '<a href="'.$checkout_link.'" class="button" >Back To Checkout Page</a>';
       }
     ?>
