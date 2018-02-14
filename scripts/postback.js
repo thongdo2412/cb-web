@@ -8,8 +8,15 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-const checkoutID = getParameterByName('checkoutid');
-if (checkoutID != "" && checkoutID != null && checkoutID != "null") {
+setTimeout(function() {
+  const checkoutID = getParameterByName('checkoutid');
+  if (checkoutID != "" && checkoutID != null && checkoutID != "null") {
+    sendPostback(checkoutID);
+  }
+}, 5000);
+
+function sendPostback(checkoutID) {
+  console.log(`begin postback with ${checkoutID}`);
   var formdata = {};
   formdata.checkoutID = checkoutID;
   $.ajax({
@@ -26,5 +33,5 @@ if (checkoutID != "" && checkoutID != null && checkoutID != "null") {
         console.log(status);
         return;
       }
-  })
+  });
 }

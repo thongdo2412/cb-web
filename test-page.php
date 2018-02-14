@@ -367,121 +367,12 @@ input[type=number]::-webkit-outer-spin-button {
   </style>
   </head>
   <body>
-    <div class="product" id="product-1"><a href="" class="product__buy">BUY NOW</a></div>
+    <div class="product" id="product-1"><a href="test-page3.php" class="product__buy">Go to test-page3</a></div>
 
 
   </div>
-  <!-- .cart end -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://sdks.shopifycdn.com/js-buy-sdk/v0/latest/shopify-buy.umd.polyfilled.min.js"></script>
     <script>
-    $(function() {
-        var client = ShopifyBuy.buildClient({
-          accessToken: '2591db7f855df25d7b786ef95645c825',
-          domain: 'city-cosmetics.myshopify.com',
-          appId: '6'
-        });
-
-        client.fetchProduct('10799612742').then(function(product) {
-          var Pvariant = product.variants[1];
-          var quantity = 1;
-          var checkoutURL =variant.checkoutUrl(1);
-          $('.product__buy').click(function(event){
-            event.preventDefault();
-            window.location = checkoutURL;
-          })
-
-        })
-      });
-
+      console.log(document.referrer);
     </script>
-<!--
-      https://cdn.shopify.com/s/files/1/2134/3449/files/usa-flag.png?4415794588297470868
-      https://cdn.shopify.com/s/files/1/2134/3449/files/cruelty-free.png?1224525339923307536
-
-<script type="text/javascript">
-    cvalue = 'w1KPBUBVP94VI4N7HRN9TS0I';
-    payout = '00.01';
-    transid = Math.floor(Math.random()*90000) + 10000;
-    console.log(transid);
-    var goToUrl = 'https://vmhlw.voluumtrk2.com/postback?cid=' + cvalue + '&payout=' + payout + '&txid=' + transid;
-    var xmlhttp = new XMLHttpRequest();
-
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
-            if (xmlhttp.status == 200) {
-                console.log("success!");
-            }
-            else if (xmlhttp.status == 400) {
-                console.log('There was an error 400');
-            }
-            else {
-                console.log('something else other than 200 was returned');
-            }
-        }
-    };
-    xmlhttp.open("POST", goToUrl, true);
-    xmlhttp.send();
-
-    function makeid() {
-      var text = "";
-      var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-      for (var i = 0; i < 20; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-      return text;
-    }
-
-        CH.event(function(EVENT, data) {
-
-        if (EVENT == 'PAYMENT_SUCCESSFUL') {
-            var transid = makeid();
-            var total_price = data.cart_data.total_price;
-            /***
-             * Google Tag Manager: Build data layer
-             ***/
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'transactionComplete',
-                'transactionId': transid,
-                'transactionTotal': parseFloat(total_price)
-            });
-    	}
-
-    }, function(EVENT, error) {
-        console.log('Uh oh! There was an error: ', error);
-    });
-
-    //upsell js
-    CH.event(function(EVENT, data) {
-
-    if (EVENT == 'ACCEPTED_OTO') {
-        var transid = data.order.encoded_order_id;
-        var total_price = data.order.total_price;
-        /***
-         * Google Tag Manager: Build data layer
-         ***/
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-            'event': 'transactionComplete',
-            'transactionId': transid,
-            'transactionTotal': parseFloat(total_price)
-        });
-  }
-
-}, function(EVENT, error) {
-    console.log('Uh oh! There was an error: ', error);
-});
-
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NW725SC');
-
-</script>
- -->
-
   </body>
   </html>
