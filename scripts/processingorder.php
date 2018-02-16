@@ -23,22 +23,27 @@
        margin: 0 auto;
      }
       a, a:hover {text-decoration: none; color:#ffffff;}
+      #message { padding: 80px 0; }
       body,html {box-sizing: border-box;margin:0px;padding:0px;overflow-x: hidden; height: 100%;-webkit-overflow-scrolling: touch;}
       body{margin: 0 auto;text-align: center;font-size: 16px; font-weight: 300;line-height: 24px;font-family: 'Montserrat', sans-serif;}
     </style>
   </head>
   <body>
-    <div class="row">
+    <div class="row" id="message">
       <div class="col-sm-12">
         <?php
           if ($_POST['decision'] == 'ACCEPT') {
             header('Location: https://checkout.citybeauty.com/src/fnl/'.$_POST['req_merchant_defined_data9'].'.html?pid='.$_POST['req_merchant_defined_data10'].'&checkoutid='.$_POST['req_merchant_defined_data5'].'&token='.$_POST['payment_token'].'&chtx='.$_POST['req_merchant_defined_data11'].'&gwp=cs');
           }
           else if ($_POST['decision'] == 'DECLINE') {
-            echo '<p>Your order has been declined. Please go back and try again with different payment card.</p>';
+            $checkout_link = 'https://checkout.citybeauty.com/src/'.$_POST['req_merchant_defined_data14'].'.html?cid='.$_POST['req_merchant_defined_data6'];
+            echo '<p>Your order has been declined. Please click the button below to go back and try again with different payment card.</p>';
+            echo '<a href="'.$checkout_link.'" class="button" >Back To Checkout Page</a>';
           }
           else {
-            echo '<p>There is an error due to the invalid: '.$_POST['invalid_fields'].'. Please go back and try again.</p>';
+            $checkout_link = 'https://checkout.citybeauty.com/src/'.$_POST['req_merchant_defined_data14'].'.html?cid='.$_POST['req_merchant_defined_data6'];
+            echo '<p>There is an error due to the invalid: <b>'.$_POST['invalid_fields'].'</b>. Please click the button below to go back and try again.</p>';
+            echo '<a href="'.$checkout_link.'" class="button" >Back To Checkout Page</a>';
           }
         ?>
       </div>
