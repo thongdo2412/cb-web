@@ -1,15 +1,15 @@
 const apiUrl = "https://dbh99ppw9f.execute-api.us-east-1.amazonaws.com/prod/api";
 function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-    results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+  results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+const checkoutID = getParameterByName('checkoutid');
 setTimeout(function() {
-  const checkoutID = getParameterByName('checkoutid');
   if (checkoutID != "" && checkoutID != null && checkoutID != "null") {
     sendPostback(checkoutID);
   }
@@ -34,4 +34,21 @@ function sendPostback(checkoutID) {
         return;
       }
   });
+}
+
+// handle back button click event
+function back() {
+  // pathEl.innerHTML = window.location.pathname;
+  window.location = `https://citybeauty.com/orderconfirmation.php?checkoutid=${checkoutID}`;
+}
+
+function push() {
+  const url = window.location.href + '&#' + Date.now();
+  history.pushState({}, null, url);
+}
+push();
+
+window.addEventListener('popstate',handleBackButton, false);
+function handleBackButton() {
+  window.location = `https://citybeauty.com/orderconfirmation.php?checkoutid=${checkoutID}`;
 }
