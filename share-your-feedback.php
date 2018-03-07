@@ -84,7 +84,7 @@
         <div>Please fill out this form so a customer service expert can contact you and help improve your experience.</div>
       </div>
       <div class="gray_bg">
-        <form method="post" action="scripts/feedbackform_mail.php" role="form">
+        <form id="feedbackform" method="post" action="scripts/feedbackform_mail.php" role="form">
           <div class="flex_container1" id="form_left_content">
             <div class="form_content text-left">
               <div class="input_content">
@@ -122,9 +122,9 @@
       <div class="container">
         <ul class="flex_container1">
           <li>
-            <div class="footerItem">HOME</div>
-            <div class="footerItem">ABOUT</div>
-            <div class="footerItem">SHOP</div>
+            <div class="footerItem"><a href="https://city-cosmetics.myshopify.com">HOME</a></div>
+            <div class="footerItem"><a href="https://city-cosmetics.myshopify.com/pages/about-us">ABOUT</a></div>
+            <div class="footerItem"><a href="https://city-cosmetics.myshopify.com/collections/all">SHOP</a></div>
           </li>
           <li>
             <div class="footerItem">
@@ -165,5 +165,36 @@
         </ul>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("#feedbackform").submit(function(){
+        let name = $("input[name='name']").val();
+        let email = $("input[name='email']").val();
+        let phone = $("input[name='phone']").val();
+        let contact_type = $("input[name='contact_type']:checked").val();
+        let message = $("textarea[name='message']").val();
+
+        if (!name) {
+          alert("Please enter your name!");
+          return false;
+        }
+        if (!phone) {
+          alert("Please enter your phone number!");
+          return false;
+        }
+        if (!email) {
+          alert("Please enter your email!");
+          return false;
+        }
+        if (!contact_type) {
+          alert("Please enter your preferred contact method!");
+          return false;
+        }
+        if (!message) {
+          alert("Please enter your message!");
+          return false;
+        }
+      });
+    </script>
   </body>
 </html>

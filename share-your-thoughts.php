@@ -72,19 +72,19 @@
       <img src="/img/city-beauty-logo.png" alt="city logo" />
     </header>
 
-    <div class="banner"><img src="/img/share-experience-banner.png" alt="banner" /></div>
+    <div class="banner"><img src="/img/share-experience-banner2.png" alt="banner" /></div>
     <div class="container">
       <div class="content_box">
         <h1>Share Your Thoughts</h1>
         <h2><i>For A Chance To Win</i></h2>
         <div class="linebreak30"></div>
-        <h4>We're thrilled you enjoy our products!</h4>
+        <h4>We’re thrilled you’re enjoying City Lips&reg;!</h4>
         <div class="linebreak30"></div>
-        <p>The only thing better than finding products you love...is getting those products for FREE.</p>
-        <p>That's why...if you take a moment to show us some love...you'll be automatically entered to:</p>
+        <p>Now we’d like to offer you a chance to get some free products from City Beauty&reg;.</p>
+        <p>If you’ll take just a moment to leave a review, you’ll be automatically entered to:</p>
         <div class="linebreak30"></div>
-        <h2 class="regular_font">WIN A $100 GIFT CARD</h2>
-        <h4 class="playfair_font"><i>you can use towards any City Beauty product</i></h4>
+        <h2 class="regular_font" style="font-weight:600">WIN A $100 GIFT CARD</h2>
+        <h4 class="playfair_font"><i>you can use toward any City Beauty order</i></h4>
       </div>
       <div class="gray_bg content_box">
         <div class="gray_bg_content">
@@ -100,12 +100,15 @@
               <div class="left_gap right_content">Leave a review with your name and email</div>
             </li>
           </ul>
-          <div class="button_wrap"><a href="#" class="long_btn button_blue">click here to get started</a></div>
+          <div class="button_wrap" style="letter-spacing:1px;"><a href="#" class="long_btn button_blue">click here to get started</a></div>
         </div>
       </div>
-      <div class="content_box">
-        <h4><b>A NEW WINNER IS CHOSEN EVERY MONTH</b></h4>
+      
+      <div style="margin-top:45px;">
+      <h4><b style="font-weight:600;">A NEW WINNER IS CHOSEN EVERY MONTH</b></h4>
         <div>Just be sure you use an active email address where we can reach you!</div>
+        </div>
+     <!-- <div class="content_box">
         <div class="linebreak60"></div>
         <ul class="flex_container1">
           <li class="winner_box" id="winner1">
@@ -161,16 +164,17 @@
             </div>
           </li>
         </ul>
-      </div>
+      </div> -->
+      <div class="linebreak60"></div>
     </div>
 
     <footer>
       <div class="container">
         <ul class="flex_container1">
           <li>
-            <div class="footerItem">HOME</div>
-            <div class="footerItem">ABOUT</div>
-            <div class="footerItem">SHOP</div>
+            <div class="footerItem"><a href="https://city-cosmetics.myshopify.com">HOME</a></div>
+            <div class="footerItem"><a href="https://city-cosmetics.myshopify.com/pages/about-us">ABOUT</a></div>
+            <div class="footerItem"><a href="https://city-cosmetics.myshopify.com/collections/all">SHOP</a></div>
           </li>
           <li>
             <div class="footerItem">

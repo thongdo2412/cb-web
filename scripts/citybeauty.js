@@ -124,6 +124,7 @@ $(function(){ //handle out of stock for non-lip products
     }
   }
 });
+
 function helfpul(pageid,rateid,isHelpFul){ // for helpful buttons
 
       if (isHelpFul) {
