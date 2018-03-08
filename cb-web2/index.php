@@ -1,13 +1,14 @@
+<?php include("scripts/conn_init.php");?>
 <!DOCTYPE html>
 <html lang="en">
   	<head>
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	
+
         <meta name="description" content="">
     	<meta name="author" content="">
-    	
+
         <title>Welcome to City Beauty</title>
 
 <?php  include("header.php"); ?>
@@ -24,7 +25,7 @@
 									<div class="info">
 										<h1>City Lips®</h1>
 										<h2>Plump, Hydrate & Repair</h2>
-										<p><b class="text-uppercase">An award-winning treatment</b> infused with revolutionary technology for instant and long-lasting results.</p>	
+										<p><b class="text-uppercase">An award-winning treatment</b> infused with revolutionary technology for instant and long-lasting results.</p>
 										<a href="city-lips.php" class="btn btn-bg-white">Learn More</a>
 									</div>
 								</div>
@@ -78,10 +79,10 @@
 								<a href="city-lips.php">City Lips</a>
 							</div>
 							<div class="item-rating">
-								<img src="images/img-rating-star.png" alt="" />
+                <a href="city-lips.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('citylips',$link,$connErr)." reviews";?></span></a>
 							</div>
 							<div class="item-info">
-								<p>This lip plumper instantly promotes a look of fullness & hydration while reducing the appeara...</p>	
+								<p>This lip plumper instantly promotes a look of fullness & hydration while reducing the appeara...</p>
 								<a href="city-lips.php">Learn More</a>
 							</div>
 						</div>
@@ -96,10 +97,10 @@
 								<a href="under-eye-recovery.php">Under Eye Recovery</a>
 							</div>
 							<div class="item-rating">
-								<img src="images/img-rating-star.png" alt="" />
+                <a href="under-eye-recovery.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('undereye',$link,$connErr)." reviews";?></span></a>
 							</div>
 							<div class="item-info">
-								<p>This eye treatment helps reduce the appearance of dark circles and puffiness for brighter, fresher...</p>	
+								<p>This eye treatment helps reduce the appearance of dark circles and puffiness for brighter, fresher...</p>
 								<a href="under-eye-recovery.php">Learn More</a>
 							</div>
 						</div>
@@ -114,10 +115,10 @@
 								<a href="multi-action-sculpting-cream.php">Multi-action Sculpting Cream</a>
 							</div>
 							<div class="item-rating">
-								<img src="images/img-rating-star.png" alt="" />
+                <a href="multi-action-sculpting-cream.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('multiactionsculptingcream',$link,$connErr)." reviews";?></span></a>
 							</div>
 							<div class="item-info">
-								<p>This sculpting cream targets loose or sagging skin by giving the appearance of tightened, lifted and...</p>	
+								<p>This sculpting cream targets loose or sagging skin by giving the appearance of tightened, lifted and...</p>
 								<a href="multi-action-sculpting-cream.php">Learn More</a>
 							</div>
 						</div>
@@ -166,11 +167,22 @@
 			</div>
 		</div>
 
-<?php include ("footer.php"); ?>
-		<script src="js/jquery-3.2.1.min.js"></script>
-    	<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.flexslider.js"></script>
-		<script src="js/owl.carousel.js"></script>
-        <script src="js/scripts.js"></script>
+    <?php
+      include ("footer.php");
+      function getProductCount($pagename,$linkSQL,$connErrSQL){
+          $count = 0;
+          if (!$connErrSQL){
+            //prepare query
+            if($stmt = $linkSQL->prepare("SELECT `rateid` FROM `cc_$pagename` WHERE `approved` = 1 AND `rate` >= 2")){
+              $stmt->execute();
+              $stmt->store_result();
+              $count = $stmt->num_rows;
+              $stmt->free_result();
+              $stmt->close();
+            }
+          }
+        return $count;
+      }
+    ?>
     </body>
 </html>

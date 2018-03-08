@@ -1,3 +1,10 @@
+<?php
+  $pid = 'illuminatingdarkspot';
+  $page_title = 'Illuminating Dark Spot Corrector';
+  include("scripts/conn_init.php");
+  include("scripts/insert.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   	<head>
@@ -8,7 +15,7 @@
         <meta name="description" content="">
     	<meta name="author" content="">
 
-        <title>Illuminating Dark Spot Corrector</title>
+        <title><?php echo $page_title;?></title>
 
 <?php  include("header.php"); ?>
 
@@ -48,7 +55,7 @@
 									<h1>Illuminating Dark Spot Corrector</h1>
 								</div>
 								<div class="product-rating">
-									<img src="images/img-rating-star.png" alt="">
+                  <a href="#" id="goToReview"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span id="reviewWord"></span></a>
 								</div>
 								<div class="product-info">
 									<p>This dark spot corrector helps reduce the appearance of dark spots, age spots, acne scars and more to achieve a more even, luminous-looking complexion</p>
@@ -96,6 +103,11 @@
 						<li class="nav-item">
 							<a class="nav-link" id="product-info-tab-three" data-toggle="tab" href="#info-tab-three" role="tab" aria-controls="info-tab-three" aria-selected="false">
 								FAQs
+							</a>
+						</li>
+            <li class="nav-item">
+							<a class="nav-link" id="product-info-tab-four" data-toggle="tab" href="#info-tab-four" role="tab" aria-controls="info-tab-four" aria-selected="false">
+								Reviews
 							</a>
 						</li>
 					</ul>
@@ -187,15 +199,23 @@
 								</div>
 							</div>
 						</div>
+            <div id="tabContent4" class="row collapseItemSM">
+              <div class="proDetailTitleSM col-11">Reviews</div>
+              <div class="plusminus col-1" data-toggle="collapse" data-target="#info-tab-four">+</div>
+            </div>
+						<div class="tab-pane fade" id="info-tab-four" role="tabpanel" aria-labelledby="product-info-tab-four">
+              <h2>Reviews</h2>
+							<div class="row">
+                <?php include('scripts/comments.php'); ?>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-<?php include ("footer.php"); ?>
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="js/jquery.flexslider.js"></script>
-		<script src="js/owl.carousel.js"></script>
-        <script src="js/scripts.js"></script>
+    <?php include ("footer.php"); ?>
+    <script src="js/products.js"></script>
+
     </body>
 </html>

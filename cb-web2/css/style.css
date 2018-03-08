@@ -1178,7 +1178,7 @@ a.rating_wrd:hover {color: rgb(235, 204, 43);}
 div.form-group input.form-control{border-radius: 0;width: 290px;height: 32px;}
 div.form-group input{margin-left: 18px;}
 div.form-group textarea.form-control{border-radius: 0;margin-left: 24px;}
-#review {padding-top: 20px;}
+#review {padding-top: 20px;width: 100%;}
 #reviewpanel{margin: 0 auto;padding: 20px 0; font-size: 16px; color: #333333;}
 #review_form{text-align: left;}
 .firstname{margin-left: 14px;}
@@ -1187,11 +1187,11 @@ div.form-group textarea.form-control{border-radius: 0;margin-left: 24px;}
 .yourrating{margin: -10px 0 0 20px;}
 .rating_label{margin-top: 2px;}
 .recommenddiv{margin-top: 16px; margin-left: 134px;}
-#form_rating{float: left;margin-left: 14px;}
+#form_rating{float: left;margin: -16px 0 0 14px;}
 .msgtextbox{margin-left: 28px;margin-top: 16px;}
 .msgtextbox label { font-weight: 400;}
 .btn_wrapper{float: right;}
-.review_link {cursor: pointer;}
+.review_link {cursor: pointer;margin-left: 15px;}
 .submitbtn{width: 110px;height: 30px;font-size: 14px; font-weight: 300;border-width: 1px;border-color: rgb(6, 16, 42);
   border-style: solid;text-align: center; display: flex;justify-content: center;align-items: center;border-radius: 0px;-webkit-border-radius: 0px;}
 .button_blue{background-color: rgb(6, 16, 42);color: rgb(255, 255, 255);}
@@ -1201,7 +1201,11 @@ div.form-group textarea.form-control{border-radius: 0;margin-left: 24px;}
 .linebreak10 {margin-top: 10px;}
 .linebreak20 {margin-top: 20px;}
 .visible-sm {display: none;}
-
+.plusminus_revw {cursor: pointer;}
+img.star_review_wrap {vertical-align: text-top;}
+#reviewWord,.review_word {margin-left: 10px; vertical-align: text-bottom;}
+.review_word {color:#e1c37b;}
+#info-tab-four .row {margin: 0;}
 /*========helpful button css==========*/
 .button_review{height: 32px;color: rgb(255, 255, 255);background-color: rgb(9,30,55);border-width: 1px
   ;border-color: rgb(6, 16, 42);border-style: solid;text-align: center; display: flex;justify-content: center;align-items: center;cursor: pointer;}
@@ -1215,6 +1219,8 @@ div.form-group textarea.form-control{border-radius: 0;margin-left: 24px;}
 #pagenumbers_nav{margin-left: 10px;margin-right: 10px;display: inline;}
 #pagenumbers_nav span {display: inline;}
 #pagenumberitem{margin-left: 16px;}
+
+
 /* #Layout for Large Devices
 ================================================== */
 @media only screen and (max-width: 1199.98px) {
@@ -1455,6 +1461,9 @@ div.form-group textarea.form-control{border-radius: 0;margin-left: 24px;}
 		margin: 15px 0 0 0;
 		text-align: center;
 	}
+	#review .col-sm-11,.col-sm-1 {
+		padding: 0;
+	}
 }
 
 /* #Layout for Extra Small Devices
@@ -1508,6 +1517,9 @@ div.form-group textarea.form-control{border-radius: 0;margin-left: 24px;}
 	div.form-group input.form-control{width: 100%;}
 	#form_message{width: 100%;}
 	#review .col-sm-11 {width: 1500%;}
+	#review .col-xs-11,.col-xs-1 {padding: 0;}
+	#form_rating {margin: 0;}
+	.helpful_wrd {width: 100%;}
 }
 
 @media only screen and (max-width: 360px) {

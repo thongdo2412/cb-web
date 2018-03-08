@@ -1,13 +1,14 @@
+<?php include("scripts/conn_init.php");?>
 <!DOCTYPE html>
 <html lang="en">
   	<head>
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	
+
         <meta name="description" content="">
     	<meta name="author" content="">
-    	
+
         <title>Shop City Beauty</title>
 
 <?php  include("header.php"); ?>
@@ -35,10 +36,10 @@
 											<a href="city-lips.php">City Lips</a>
 										</div>
 										<div class="item-rating">
-											<img src="images/img-rating-star.png" alt="" />
+                      <a href="city-lips.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('citylips',$link,$connErr)." reviews";?></span></a>
 										</div>
 										<div class="item-info">
-											<p>This lip plumper instantly promotes a look of fullness & hydration while...</p>	
+											<p>This lip plumper instantly promotes a look of fullness & hydration while...</p>
 											<p class="item-price">$35</p>
 										</div>
 									</div>
@@ -55,10 +56,10 @@
 											<a href="under-eye-recovery.php">Under Eye Recovery</a>
 										</div>
 										<div class="item-rating">
-											<img src="images/img-rating-star.png" alt="" />
+                      <a href="under-eye-recovery.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('undereye',$link,$connErr)." reviews";?></span></a>
 										</div>
 										<div class="item-info">
-											<p>This eye treatment helps reduce the appearance of dark circles and...</p>	
+											<p>This eye treatment helps reduce the appearance of dark circles and...</p>
 											<p class="item-price">$79</p>
 										</div>
 									</div>
@@ -75,10 +76,10 @@
 											<a href="multi-action-sculpting-cream.php">Multi-action Sculpting Cream</a>
 										</div>
 										<div class="item-rating">
-											<img src="images/img-rating-star.png" alt="" />
+                      <a href="multi-action-sculpting-cream.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('multiactionsculptingcream',$link,$connErr)." reviews";?></span></a>
 										</div>
 										<div class="item-info">
-											<p>This sculpting cream targets loose or sagging skin by giving the appeara...</p>	
+											<p>This sculpting cream targets loose or sagging skin by giving the appeara...</p>
 											<p class="item-price">$85</p>
 										</div>
 									</div>
@@ -98,7 +99,7 @@
 											<img src="images/img-rating-star.png" alt="" />
 										</div>
 										<div class="item-info">
-											<p>Lorem ipsum dolor sit amet, consetur adipiscing elit ed malesada dictum...</p>	
+											<p>Lorem ipsum dolor sit amet, consetur adipiscing elit ed malesada dictum...</p>
 											<p class="item-price">$35</p>
 										</div>
 									</div>
@@ -115,10 +116,10 @@
 											<a href="advanced-eye-cream.php">Advanced Eye Cream</a>
 										</div>
 										<div class="item-rating">
-											<img src="images/img-rating-star.png" alt="" />
+                      <a href="advanced-eye-cream.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('advancedeye',$link,$connErr)." reviews";?></span></a>
 										</div>
 										<div class="item-info">
-											<p>This transforming eye cream helps to hydrate, nourish and protect the...</p>	
+											<p>This transforming eye cream helps to hydrate, nourish and protect the...</p>
 											<p class="item-price">$67</p>
 										</div>
 									</div>
@@ -135,10 +136,10 @@
 											<a href="ageless-moisturizing-cream.php">Ageless Moisturizing Cream</a>
 										</div>
 										<div class="item-rating">
-											<img src="images/img-rating-star.png" alt="" />
+                      <a href="ageless-moisturizing-cream.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('agelessmoisturizing',$link,$connErr)." reviews";?></span></a>
 										</div>
 										<div class="item-info">
-											<p>This moisturizing cream replenishes skin with intense hydration...</p>	
+											<p>This moisturizing cream replenishes skin with intense hydration...</p>
 											<p class="item-price">$59</p>
 										</div>
 									</div>
@@ -155,10 +156,10 @@
 											<a href="intensive-night-serum.php">Intensive Night Serum</a>
 										</div>
 										<div class="item-rating">
-											<img src="images/img-rating-star.png" alt="" />
+                      <a href="intensive-night-serum.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('intensivenightserum',$link,$connErr)." reviews";?></span></a>
 										</div>
 										<div class="item-info">
-											<p>This deep wrinkle night serum uses innovative technology that helps...</p>	
+											<p>This deep wrinkle night serum uses innovative technology that helps...</p>
 											<p class="item-price">$87</p>
 										</div>
 									</div>
@@ -175,10 +176,10 @@
 											<a href="illuminating-dark-spot-corrector.php">Illuminating Dark Spot Corrector</a>
 										</div>
 										<div class="item-rating">
-											<img src="images/img-rating-star.png" alt="" />
+                      <a href="illuminating-dark-spot-corrector.php#review" class="goToProductPage"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span class="review_word"><?php echo getProductCount('illuminatingdarkspot',$link,$connErr)." reviews";?></span></a>
 										</div>
 										<div class="item-info">
-											<p>This dark spot corrector helps reduce the appearance of dark spots, age...</p>	
+											<p>This dark spot corrector helps reduce the appearance of dark spots, age...</p>
 											<p class="item-price">$65</p>
 										</div>
 									</div>
@@ -203,11 +204,23 @@
 			</div>
 		</div>
 
-<?php include ("footer.php"); ?>
-		<script src="js/jquery-3.2.1.min.js"></script>
-    	<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.flexslider.js"></script>
-		<script src="js/owl.carousel.js"></script>
-        <script src="js/scripts.js"></script>
+    <?php
+      include ("footer.php");
+      function getProductCount($pagename,$linkSQL,$connErrSQL){
+          $count = 0;
+          if (!$connErrSQL){
+            //prepare query
+            if($stmt = $linkSQL->prepare("SELECT `rateid` FROM `cc_$pagename` WHERE `approved` = 1 AND `rate` >= 2")){
+              $stmt->execute();
+              $stmt->store_result();
+              $count = $stmt->num_rows;
+              $stmt->free_result();
+              $stmt->close();
+            }
+          }
+        return $count;
+      }
+    ?>
+
     </body>
 </html>

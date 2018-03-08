@@ -49,8 +49,8 @@
     </form>
       </div>
     </div>
+    <hr>
   </div>
-  <hr>
 <div id="review">
   <!--begins display-->
   <?php
@@ -58,7 +58,7 @@
   if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
   $start_from = ($page - 1) * $res_per_page;
   if (!$connErr){
-    if($stmt = $link->prepare("SELECT `rateid` FROM `cc_$pid`")){ //query to get the total of reviews
+    if($stmt = $link->prepare("SELECT `rateid` FROM `cc_$pid` WHERE `rate` >= 2")){ //query to get the total of reviews
       $stmt->execute();
       $stmt->store_result();
       $count = $stmt->num_rows;
@@ -67,7 +67,7 @@
     }
 
     //prepare query
-    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` WHERE approved = 1 OR uid = '$id' ORDER BY rate DESC,postdate DESC LIMIT $start_from,$res_per_page")){
+    if($stmt = $link->prepare("SELECT rateid,fname,email,subject,message,rate,recommend,DATE_FORMAT(postdate, '%m-%d-%Y'),helpful_y,helpful_n FROM `cc_$pid` WHERE (approved = 1 OR uid = '$id') AND rate >= 2 ORDER BY rate DESC,postdate DESC LIMIT $start_from,$res_per_page")){
       $stmt->execute();
 			$stmt->bind_result($rateid,$name,$emailaddr,$subject,$message,$rating,$recommend,$date,$helpful_y,$helpful_n);
 			$stmt->store_result();
@@ -105,24 +105,26 @@
         <div class="linebreak20"></div>
         <p>*Results may vary by individual.</p>
       </div>
-      <div class="visible-sm col-sm-12">
+      <div class="visible-sm col-sm-12 col-xs-12">
           <div class="col-sm-11 col-xs-11 text-left">
             <div id="preview<?php echo $rateid;?>">
               <div class="scorecallback" data-score="<?php echo $rating; ?>"></div>
+              <div class="linebreak10"></div>
               <h5><?php echo $subject;?></h5>
               <div class="linebreak20"></div>
-              <?php echo limit_text($message, 19); ?>
+              <?php echo truncateStr($message, 140); ?>
             </div>
             <div id="review<?php echo $rateid;?>" class="collapse">
-              <img src="../img/stars_rating.png">
+              <div class="scorecallback" data-score="<?php echo $rating; ?>"></div>
+              <div class="linebreak10"></div>
               <div><?php echo $name;?> &nbsp;</div>
               <div class="linebreak10"></div>
               <div><?php echo $date; ?></div>
+              <div class="linebreak20"></div>
+              <h5><?php echo $subject;?></h5>
               <div class="linebreak10"></div>
-              <p><h5><?php echo $subject;?></h5></p>
-              <div class="linebreak20"></div>
               <p><?php echo $message;?></p>
-              <div class="linebreak20"></div>
+              <div class="linebreak10"></div>
               <?php if ($recommend == '1') {
                 echo '<div><img src="images/checked.png" alt="checked box"> I would recommend ' .$page_title. ' to a friend!</div>';
               }
@@ -173,14 +175,17 @@
   </div>
    <?php
 
-  function limit_text($text, $limit) { //function to display the first amount of words of a text
-      if (str_word_count($text, 0) > $limit) {
-          $words = str_word_count($text, 2);
-          $pos = array_keys($words);
-          $text = substr($text, 0, $pos[$limit]) . '...';
-      }
-      return $text;
-    }
+   // function limit_text($text, $limit) { //function to display the first amount of words of a text
+   //    if (str_word_count($text, 0) > $limit) {
+   //        $words = str_word_count($text, 2);
+   //        $pos = array_keys($words);
+   //        $text = substr($text, 0, $pos[$limit]) . '...';
+   //    }
+   //    return $text;
+   //  }
 
+  function truncateStr($string, $length, $dots = "...") {
+      return (strlen($string) > $length) ? substr($string, 0, $length - strlen($dots)) . $dots : $string;
+  }
 ?>
 </div>

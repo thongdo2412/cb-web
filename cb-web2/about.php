@@ -4,10 +4,10 @@
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	
+
         <meta name="description" content="">
     	<meta name="author" content="">
-    	
+
         <title>City Beauty - About Us</title>
 
 <?php  include("header.php"); ?>
@@ -32,7 +32,7 @@
 					<p>Over time, our research team has also discovered cutting-edge solutions to many of the primary cosmetic issues facing women today, including eyelash enhancement, anti-aging skincare, and much more.</p>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="quote-container">
 			<div class="container">
 				<div class="quote">
@@ -42,7 +42,7 @@
 					<img src="images/img-sign-victoria.png" alt="" />
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="featured-on-container">
 			<div class="container">
 				<div class="featured-on-carousel">
@@ -68,10 +68,6 @@
 			</div>
 		</div>
 <?php include ("footer.php"); ?>
-		<script src="js/jquery-3.2.1.min.js"></script>
-    	<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.flexslider.js"></script>
-		<script src="js/owl.carousel.js"></script>
-        <script src="js/scripts.js"></script>
+		
     </body>
 </html>

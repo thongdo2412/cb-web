@@ -78,3 +78,10 @@
   <div><img src="images/upTopArr.png" /></div>
   <div class="gototop_txt">Back to Top</div>
 </div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/jquery.raty.js"></script>
+<script src="js/scripts.js"></script>

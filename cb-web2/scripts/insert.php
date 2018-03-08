@@ -34,12 +34,7 @@
       if(mysqli_query($link, $sql)){
         // close connection
         mysqli_close($link);
-        if ($_SESSION[$page] == 'youthcleanser') {
-          $redirectTo = 'Location: youth-regenerating-cleanser.php';
-        }
-        else {
-          $redirectTo = 'Location:' . $_SESSION[$page] . '.php';
-        }
+        $redirectTo = 'Location:' . basename($_SERVER['PHP_SELF']);
         header($redirectTo);
       } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);

@@ -14,7 +14,7 @@
       <meta name="description" content="">
     	<meta name="author" content="">
 
-        <title>City Lips</title>
+        <title><?php echo $page_title;?></title>
 
 <?php  include("header.php"); ?>
 
@@ -61,7 +61,7 @@
 									<h1>City Lips</h1>
 								</div>
 								<div class="product-rating">
-									<img src="images/img-rating-star.png" alt="">
+									<a href="#" id="goToReview"><img class="star_review_wrap" src="images/img-rating-star.png" alt=""><span id="reviewWord"></span></a>
 								</div>
 								<div class="product-info">
 									<p>City Lips® is a paraben-free plumping lip gloss that contains unique, potent ingredients that provide instant fullness, definition, &amp; hydration with long-lasting plumping benefits. This painless &amp; irritation-free formula helps dramatically diminish and fade the appearance of fine lines and wrinkles, resulting in smoother and fuller-looking lips within minutes of application.</p>
@@ -328,14 +328,8 @@
 				</div>
 			</div>
 		</div>
-
     <?php include ("footer.php"); ?>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.flexslider.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.raty.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/products.js"></script>
 
     <script>
       window.onpageshow = function(event) {
